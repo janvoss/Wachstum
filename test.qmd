@@ -1,0 +1,41 @@
+---
+title: "Untitled"
+#execute: 
+#  enabled: true
+
+code-fold: true
+---
+
+```{python}
+
+
+
+from sympy import *
+
+a = Symbol('a', real=True, positive=True)
+
+r = Symbol('r', real=True, positive=True)
+r_1 = Symbol('r_1', real=True, positive=True)
+r_2 = Symbol('r_2', real=True, positive=True)
+
+t = Symbol('t', real=True)
+T = Symbol('T', real=True)
+y = a * exp(r * t)
+
+integral = integrate(y, (t, 0, T))
+
+#init_printing() 
+
+print(integral)
+
+print(latex(integral))
+
+
+
+
+
+```
+
+
+`{python} latex(integral)`
+
