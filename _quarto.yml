@@ -13,8 +13,8 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - Geschichte.qmd
     - Bedeutung.qmd
+    - Geschichte.qmd
     - Neoklassik.qmd
     - Endogen.qmd
     - Innovation.qmd
