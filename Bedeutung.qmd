@@ -2,16 +2,276 @@
 
 ## Wachstumsbegriff
 
-### Lang- vs. kurzfristige Entwicklung
+### Lang- vs. kurzfristige Perspektive
+
+- **Wirtschaftswachstum** bezeichnet üblicherweise die langfristige (systematische) Veränderung der Wertschöpfung in einer Volkswirtschaft
+
+- Gemeint sind **nicht** kurzfristige Schwankungen des Wirtschaftsgeschehens 
+
+- Rückblickend ist die Unterscheidung empirisch recht gut möglich, am aktuellen Rand sind Wachstums- und Konjunkturphänomene eng miteinadner verknüpft
 
 ### Diskretes vs. kontinuierliches Wachstum
 
+
+#### Diskretes Wachstumsmodell
+
+Verknüpfung zwischen den Perioden
+
+$Y_t=(1+r)Y_{t-1}$
+
+Endwert nach T Perioden
+
+$Y_T=Y_{0}\times (1+r)^T$
+
+Wachstumsrate zwischen 2 Perioden
+
+$r=\frac{Y_t}{Y_{t-1}}-1$
+
+#### Kontinuierliches Wachstumsmodell
+
+Verknüpfung zwischen den Perioden
+
+$Y_t=Y_{t-1}\times e^r$
+
+Endwert nach T Perioden
+
+$Y_T= Y_{0} \times e^{r\times T}$
+
+Wachstumsrate zwischen 2 Perioden:
+
+$r=ln(Y_t)-ln(Y_{t-1})$
+
+
 ## Langfristige Effekte kleiner Wachstumsunterschiede
+
+- 2 Länder starten mit gleichem BIP (100).
+- Land 1 wächst 20 Jahre lang mit einer Wachstumsrate $r_1=1,5\%$.
+- Land wächst mit  $r_2=2\%$
+
+```{python}
+#| message: false
+#| warnings: false
+
+# Python
+
+
+import numpy as np
+import pandas as pd
+#import matplotlib.pyplot as plt
+
+def func1(t):
+  return 100 * np.exp(0.015 * t)
+
+def func2(t):
+  return 100 * np.exp(0.02 * t)
+
+
+t = np.arange(0, 20, 1)
+
+df = pd.DataFrame({
+  "Periode": t,
+  "Funktion 1": func1(t),
+  "Funktion 2": func2(t)
+})
+
+
+import plotnine as plt
+
+(
+plt.ggplot(df)
++plt.aes(x='Periode', y='Funktion 1')
++ plt.geom_line(color="blue")
++plt.geom_line(plt.aes(y='Funktion 2'),  color='green')
++ plt.geom_ribbon(plt.aes(ymin='Funktion 1',
+ymax= 'Funktion 2'), fill="grey", alpha=.2)
++plt.theme_light()
++plt.labs(title="Unterschiedliche Wachstumsraten",
+y="Werte")
+)
+
+```
+
+- Entscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre
+- Unterwegs ist das BIP in Land in Land 2 dauerhaft höher als in Land 1.
+
+- In en 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1
+
+- Dieses zusätzliche BIP steht für Konsum, öffentliche Güter, $\dots$ zur Verfügung
+
+```{python}
+#| message: false
+#| warnings: false
+#| eval: false
+
+
+# Python
+
+from sympy import *
+
+
+
+a = Symbol('a', real=True, positive=True)
+
+r = Symbol('r', real=True, positive=True)
+r_1 = Symbol('r_1', real=True, positive=True)
+r_2 = Symbol('r_2', real=True, positive=True)
+
+t = Symbol('t', real=True)
+T = Symbol('T', real=True)
+y = a * exp(r * t)
+
+integral = integrate(y, (t, 0, T))
+
+print(integral)
+
+print(latex(integral))
+
+a=100
+
+r_1=.015
+r_2=.02
+
+T=20
+
+y_1 = a * exp(r_1 * t)
+y_2 = a * exp(r_2 * t)
+
+print(y_1)
+print(y_2)
+
+print(round(integrate(y_1, (t, 0, T)), 2))
+print(round(integrate(y_2, (t, 0, T)), 2))
+
+print(round(integrate(y_2, (t, 0, T))-integrate(y_1, (t, 0, T)), 2))
+
+```
 
 
 ## Rechnen mit Wachstumsraten
 
+Verdoppelungszeit: $2=e^{r \times t_{doppel}} \iff t_{doppel}=\frac{ln(2)}{r}$
+
 ## Wachstum und expogene Schocks
 
 
+```{r message=F, warning=F}
+
+#| message: false
+#| warning: false
+#| echo: false
+
+
+# r
+
+# Bibliothek laden
+library(tidyverse)
+
+set.seed(123)
+# Datensatz generieren
+
+# Trendgewicht
+a<- .5
+
+
+df <- data.frame(
+  Fall   = rep(c(1:4), 100),
+  normal = rnorm(400)
+) %>% group_by(Fall) %>%
+      arrange(Fall) %>%
+      mutate(cumsum=cumsum(normal),
+      lag_sum = lag(cumsum),
+      zeit=1:100,
+      trend= exp(zeit*.015),
+      kombi = a*trend + (1-a) * lag_sum + normal)
+
+#head(df)
+
+# Plots
+
+df%>% # filter(Fall==1) %>%
+ggplot(aes(x = zeit, y = normal)) +
+  geom_line() +
+  geom_smooth(method="glm")+
+  labs(x = "Zeit", y = "Wert") +
+  ggtitle("Standardnormalverteilte Zufallszahlen")+
+  facet_wrap(~Fall)+
+  theme_light()
+
+df%>% # filter(Fall==1) %>%
+ggplot(aes(x = normal)) +
+  geom_density() +
+  labs(x = "werte", y = "Dichte") +
+ ggtitle("Dichtefunktionem zu standardnormalverteilten Zufallszahlen")+
+  facet_wrap(~Fall)+
+  theme_light()
+
+df%>% # filter(Fall==1) %>%
+ggplot(aes(x = zeit, y = cumsum)) +
+  geom_line() +
+  geom_smooth(method="glm")+
+  labs(x = "Zeit", y = "Wert") +
+  ggtitle("Kumulative Summe von standardnormalverteilten Zufallszahlen")+
+  facet_wrap(~Fall)+
+  theme_light()
+
+
+
+
+
+library(broom)
+
+growth <- df %>% group_by(Fall) %>%
+  do(tidy(lm(log(cumsum) ~ zeit,.))) %>%
+  filter(term=="zeit") %>%
+  select(Fall, estimate) %>%
+  rename( Wachstumsraten=estimate) %>%
+  mutate(Wachstumsraten=round(Wachstumsraten*100))
+
+library(knitr)
+
+kable(growth)
+
+df%>% # filter(Fall==1) %>%
+ggplot(aes(x = zeit, y = +trend+normal)) +
+  geom_line() +
+  geom_smooth(method="glm")+
+  labs(x = "Zeit", y = "Wert") +
+  ggtitle("Trend und Störterm")+
+  facet_wrap(~Fall)+
+  theme_light()
+
+
+growth <- df %>% group_by(Fall) %>%
+  do(tidy(lm(log(trend+normal) ~ zeit,.))) %>%
+  filter(term=="zeit") %>%
+  select(Fall, estimate) %>%
+  rename( Wachstumsraten=estimate) %>%
+  mutate(Wachstumsraten=round(Wachstumsraten*100))
+
+#library(knitr)
+
+kable(growth)
+
+
+df%>% # filter(Fall==1) %>%
+ggplot(aes(x = zeit, y = kombi)) +
+  geom_line() +
+  geom_smooth(method="glm")+
+  labs(x = "Zeit", y = "Wert") +
+  ggtitle("Trend, Autoregression und Störterm")+
+  facet_wrap(~Fall)+
+  theme_light()
+
+growth <- df %>% group_by(Fall) %>%
+  do(tidy(lm(log(kombi) ~ zeit,.))) %>%
+  filter(term=="zeit") %>%
+  select(Fall, estimate) %>%
+  rename( Wachstumsraten=estimate) %>%
+  mutate(Wachstumsraten=round(Wachstumsraten*100))
+
+library(knitr)
+
+kable(growth)
+
+```
 

@@ -1,11 +1,15 @@
 # Einleitung
 
-- Wachstum findet statt
+- Wirtschaftswachstum ist ein regelmäßig auftretendes empirisches Phänomen
 
-- Das war nicht immer so
+- Das war nicht immer so. $\rightarrow$ Warum wachsen Volkswirtschaften?
 
-- Welche (positive und negative) Konsequenzen hat Wachstum
+- Warum wachsen einige Volkswirtschaften stärker als andere?
 
-- Wodurch entsteht Wirtschaftswachstum?
+- Wodurch entsteht Wirtschaftswachstum? (Spoiler: Das ist gar nicht so leichht zu erklären)
 
 - Lässt sich beeinflussen, ob und wie Wirtschaften wachsen?
+
+- Ist "grünes" Wachstum möglich? Ist Wachstumsverzicht eine Strategie für mehr Nachhaltigkeit/Klimaschutz?
+
+- $\dots$

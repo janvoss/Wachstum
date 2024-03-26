@@ -14,7 +14,7 @@
     "href": "Bedeutung.html#wachstumsbegriff",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
     "section": "",
-    "text": "2.1.1 Lang- vs. kurzfristige Entwicklung\n\n\n2.1.2 Diskretes vs. kontinuierliches Wachstum",
+    "text": "2.1.1 Lang- vs. kurzfristige Perspektive\n\nWirtschaftswachstum bezeichnet üblicherweise die langfristige (systematische) Veränderung der Wertschöpfung in einer Volkswirtschaft\nGemeint sind nicht kurzfristige Schwankungen des Wirtschaftsgeschehens\nRückblickend ist die Unterscheidung empirisch recht gut möglich, am aktuellen Rand sind Wachstums- und Konjunkturphänomene eng miteinadner verknüpft\n\n\n\n2.1.2 Diskretes vs. kontinuierliches Wachstum\n\n2.1.2.1 Diskretes Wachstumsmodell\nVerknüpfung zwischen den Perioden\n\\(Y_t=(1+r)Y_{t-1}\\)\nEndwert nach T Perioden\n\\(Y_T=Y_{0}\\times (1+r)^T\\)\nWachstumsrate zwischen 2 Perioden\n\\(r=\\frac{Y_t}{Y_{t-1}}-1\\)\n\n\n2.1.2.2 Kontinuierliches Wachstumsmodell\nVerknüpfung zwischen den Perioden\n\\(Y_t=Y_{t-1}\\times e^r\\)\nEndwert nach T Perioden\n\\(Y_T= Y_{0} \\times e^{r\\times T}\\)\nWachstumsrate zwischen 2 Perioden:\n\\(r=ln(Y_t)-ln(Y_{t-1})\\)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "Bedeutung.html#langfristige-effekte-kleiner-wachstumsunterschiede",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
     "section": "2.2 Langfristige Effekte kleiner Wachstumsunterschiede",
-    "text": "2.2 Langfristige Effekte kleiner Wachstumsunterschiede",
+    "text": "2.2 Langfristige Effekte kleiner Wachstumsunterschiede\n\n2 Länder starten mit gleichem BIP (100).\nLand 1 wächst 20 Jahre lang mit einer Wachstumsrate \\(r_1=1,5\\%\\).\nLand wächst mit \\(r_2=2\\%\\)\n\n\n\nCode\n# Python\n\n\nimport numpy as np\nimport pandas as pd\n#import matplotlib.pyplot as plt\n\ndef func1(t):\n  return 100 * np.exp(0.015 * t)\n\ndef func2(t):\n  return 100 * np.exp(0.02 * t)\n\n\nt = np.arange(0, 20, 1)\n\ndf = pd.DataFrame({\n  \"Periode\": t,\n  \"Funktion 1\": func1(t),\n  \"Funktion 2\": func2(t)\n})\n\n\nimport plotnine as plt\n\n(\nplt.ggplot(df)\n+plt.aes(x='Periode', y='Funktion 1')\n+ plt.geom_line(color=\"blue\")\n+plt.geom_line(plt.aes(y='Funktion 2'),  color='green')\n+ plt.geom_ribbon(plt.aes(ymin='Funktion 1',\nymax= 'Funktion 2'), fill=\"grey\", alpha=.2)\n+plt.theme_light()\n+plt.labs(title=\"Unterschiedliche Wachstumsraten\",\ny=\"Werte\")\n)\n\n\n&lt;Figure Size: (640 x 480)&gt;\n\n&lt;string&gt;:2: FutureWarning: Using repr(plot) to draw and show the plot figure is deprecated and will be removed in a future version. Use plot.show().\n\n\n\n\n\n\n\n\n\n\nEntscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre\nUnterwegs ist das BIP in Land in Land 2 dauerhaft höher als in Land 1.\nIn en 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1\nDieses zusätzliche BIP steht für Konsum, öffentliche Güter, \\(\\dots\\) zur Verfügung\n\n\n\nCode\n# Python\n\nfrom sympy import *\n\n\n\na = Symbol('a', real=True, positive=True)\n\nr = Symbol('r', real=True, positive=True)\nr_1 = Symbol('r_1', real=True, positive=True)\nr_2 = Symbol('r_2', real=True, positive=True)\n\nt = Symbol('t', real=True)\nT = Symbol('T', real=True)\ny = a * exp(r * t)\n\nintegral = integrate(y, (t, 0, T))\n\nprint(integral)\n\nprint(latex(integral))\n\na=100\n\nr_1=.015\nr_2=.02\n\nT=20\n\ny_1 = a * exp(r_1 * t)\ny_2 = a * exp(r_2 * t)\n\nprint(y_1)\nprint(y_2)\n\nprint(round(integrate(y_1, (t, 0, T)), 2))\nprint(round(integrate(y_2, (t, 0, T)), 2))\n\nprint(round(integrate(y_2, (t, 0, T))-integrate(y_1, (t, 0, T)), 2))",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "Bedeutung.html#rechnen-mit-wachstumsraten",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
     "section": "2.3 Rechnen mit Wachstumsraten",
-    "text": "2.3 Rechnen mit Wachstumsraten",
+    "text": "2.3 Rechnen mit Wachstumsraten\nVerdoppelungszeit: \\(2=e^{r \\times t_{doppel}} \\iff t_{doppel}=\\frac{ln(2)}{r}\\)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
     ]
@@ -44,7 +44,7 @@
     "href": "Bedeutung.html#wachstum-und-expogene-schocks",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
     "section": "2.4 Wachstum und expogene Schocks",
-    "text": "2.4 Wachstum und expogene Schocks",
+    "text": "2.4 Wachstum und expogene Schocks\n\n\nCode\n#| message: false\n#| warning: false\n#| echo: false\n\n\n# r\n\n# Bibliothek laden\nlibrary(tidyverse)\n\nset.seed(123)\n# Datensatz generieren\n\n# Trendgewicht\na&lt;- .5\n\n\ndf &lt;- data.frame(\n  Fall   = rep(c(1:4), 100),\n  normal = rnorm(400)\n) %&gt;% group_by(Fall) %&gt;%\n      arrange(Fall) %&gt;%\n      mutate(cumsum=cumsum(normal),\n      lag_sum = lag(cumsum),\n      zeit=1:100,\n      trend= exp(zeit*.015),\n      kombi = a*trend + (1-a) * lag_sum + normal)\n\n#head(df)\n\n# Plots\n\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = normal)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Standardnormalverteilte Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = normal)) +\n  geom_density() +\n  labs(x = \"werte\", y = \"Dichte\") +\n ggtitle(\"Dichtefunktionem zu standardnormalverteilten Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = cumsum)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Kumulative Summe von standardnormalverteilten Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\nlibrary(broom)\n\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(cumsum) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100))\n\nlibrary(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n4\n\n\n2\n0\n\n\n3\n1\n\n\n4\n-1\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = +trend+normal)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Trend und Störterm\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(trend+normal) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100))\n\n#library(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n2\n\n\n2\n2\n\n\n3\n2\n\n\n4\n1\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = kombi)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Trend, Autoregression und Störterm\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(kombi) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100))\n\nlibrary(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n4\n\n\n2\n1\n\n\n3\n1\n\n\n4\n0",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "intro.html",
     "title": "1  Einleitung",
     "section": "",
-    "text": "Wachstum findet statt\nDas war nicht immer so\nWelche (positive und negative) Konsequenzen hat Wachstum\nWodurch entsteht Wirtschaftswachstum?\nLässt sich beeinflussen, ob und wie Wirtschaften wachsen?",
+    "text": "Wirtschaftswachstum ist ein regelmäßig auftretendes empirisches Phänomen\nDas war nicht immer so. \\(\\rightarrow\\) Warum wachsen Volkswirtschaften?\nWarum wachsen einige Volkswirtschaften stärker als andere?\nWodurch entsteht Wirtschaftswachstum? (Spoiler: Das ist gar nicht so leichht zu erklären)\nLässt sich beeinflussen, ob und wie Wirtschaften wachsen?\nIst “grünes” Wachstum möglich? Ist Wachstumsverzicht eine Strategie für mehr Nachhaltigkeit/Klimaschutz?\n\\(\\dots\\)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "index.html",
     "title": "Wachstumstheorie und -politik",
     "section": "",
-    "text": "Organisatorisches",
+    "text": "Organisatorisches\n\n\n\n\n\n\n\n\\({}\\)\n\\({}\\)\n\n\n\n\n\n\n\n\n\n\nUnterlagen: https://janvoss.github.io/Wachstum/\nModul: 209-021 Wachstum und Transformation Modulhandbuch\nWeitere Veranstaltung im ModuL: Strukturpolitik\nPrüfungsleistung: K60, diese VL davon 50%",
     "crumbs": [
       "Organisatorisches"
     ]

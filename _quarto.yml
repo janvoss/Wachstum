@@ -33,6 +33,8 @@ bibliography: Wirtschaftswachstum.bib
 format:
   html:
     theme: cosmo
+    code-fold: true
+    code-overflow: wrap
 
 editor: source
 

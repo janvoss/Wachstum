@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -188,11 +217,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Überblick</h2>
    
   <ul>
-  <li><a href="#organisatorisches" id="toc-organisatorisches" class="nav-link active" data-scroll-target="#organisatorisches">Organisatorisches</a>
-  <ul class="collapse">
-  <li><a href="#unterlagen" id="toc-unterlagen" class="nav-link" data-scroll-target="#unterlagen">Unterlagen</a></li>
-  <li><a href="#prüfungsleistung" id="toc-prüfungsleistung" class="nav-link" data-scroll-target="#prüfungsleistung">Prüfungsleistung</a></li>
-  </ul></li>
+  <li><a href="#organisatorisches" id="toc-organisatorisches" class="nav-link active" data-scroll-target="#organisatorisches">Organisatorisches</a></li>
   </ul>
 </nav>
     </div>
@@ -227,14 +252,32 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="organisatorisches" class="level1 unnumbered">
 <h1 class="unnumbered">Organisatorisches</h1>
-<section id="unterlagen" class="level2">
-<h2 class="anchored" data-anchor-id="unterlagen">Unterlagen</h2>
-</section>
-<section id="prüfungsleistung" class="level2">
-<h2 class="anchored" data-anchor-id="prüfungsleistung">Prüfungsleistung</h2>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\({}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\({}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="logo.png" class="img-fluid" alt="logo"></td>
+<td style="text-align: center;"><img src="qr.svg" class="img-fluid" style="width:30.0%"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Unterlagen: <a href="https://janvoss.github.io/Wachstum/" class="uri">https://janvoss.github.io/Wachstum/</a></p></li>
+<li><p>Modul: 209-021 Wachstum und Transformation <a href="https://www.hfwu.de/fileadmin/user_upload/FAVM/ZuB/Module/Modulhandbuch_spob_zub_2022_WiSe_Stand_2022_WiSe.pdf">Modulhandbuch</a></p></li>
+<li><p>Weitere Veranstaltung im ModuL: Strukturpolitik</p></li>
+<li><p>Prüfungsleistung: K60, diese VL davon 50%</p></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
