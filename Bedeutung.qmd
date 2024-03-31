@@ -204,6 +204,20 @@ kable(growth, digits=2, format.args = list(decimal.mark = ','), col.names=c("Sta
 
 ## Wachstum und expogene Schocks
 
+- Zufällige Schocks in der Gegenwart
+
+- Wir erleben Zeit aber als mehr als die Abfolge zufälliger Schocks.
+
+  - Schocks wirken länger als eine Periode
+
+  - Schocks treffen auf Trends
+
+- Anhaltende Schocks können
+
+  - Wachstum erzeugen und
+
+  - Trends überlagern
+
 
 ```{r message=F, warning=F}
 
