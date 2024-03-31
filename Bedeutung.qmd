@@ -191,13 +191,14 @@ growth <- df %>% filter(Entity %in% selected_counries) %>%
   select(Entity, estimate) %>% 
   rename(Staat=Entity,
          Wachstumsraten=estimate) %>% 
-  mutate(Wachstumsraten=Wachstumsraten*100)
+  mutate(Wachstumsraten=Wachstumsraten*100,
+         Verdopplungszeit= log(2)/Wachstumsraten)
 
 #head(growth)
 
 library(knitr)
 
-kable(growth, digits=2, format.args = list(decimal.mark = ','), col.names=c("Staat", "Wachstumsrate (%)"),
+kable(growth, digits=2, format.args = list(decimal.mark = ','), col.names=c("Staat", "Wachstumsrate (%)", "Verdopplungszeit (Jahre)"),
       caption="geschätzte Durchschnittliche jährliche Wachstumsrate (%) 1990-2021, Daten: Ourworldindata.org")
 
 ```
