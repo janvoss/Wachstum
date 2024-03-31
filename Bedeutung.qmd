@@ -192,18 +192,18 @@ growth <- df %>% filter(Entity %in% selected_counries) %>%
   rename(Staat=Entity,
          Wachstumsraten=estimate) %>% 
   mutate(Wachstumsraten=Wachstumsraten*100,
-         Verdopplungszeit= log(2)/Wachstumsraten)
+         Verdopplungszeit= log(2)/(Wachstumsraten/100))
 
 #head(growth)
 
 library(knitr)
 
 kable(growth, digits=2, format.args = list(decimal.mark = ','), col.names=c("Staat", "Wachstumsrate (%)", "Verdopplungszeit (Jahre)"),
-      caption="geschätzte Durchschnittliche jährliche Wachstumsrate (%) 1990-2021, Daten: Ourworldindata.org")
+      caption="Geschätzte Durchschnittliche jährliche Wachstumsrate (%) 1990-2021, Daten: Ourworldindata.org")
 
 ```
 
-## Wachstum und expogene Schocks
+## Wachstum und exogene Schocks
 
 - Zufällige Schocks in der Gegenwart
 
