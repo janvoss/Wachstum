@@ -291,7 +291,7 @@ growth <- df %>% group_by(Fall) %>%
   filter(term=="zeit") %>%
   select(Fall, estimate) %>%
   rename( Wachstumsraten=estimate) %>%
-  mutate(Wachstumsraten=round(Wachstumsraten*100))
+  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))
 
 library(knitr)
 
@@ -312,7 +312,7 @@ growth <- df %>% group_by(Fall) %>%
   filter(term=="zeit") %>%
   select(Fall, estimate) %>%
   rename( Wachstumsraten=estimate) %>%
-  mutate(Wachstumsraten=round(Wachstumsraten*100))
+  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))
 
 #library(knitr)
 
@@ -333,7 +333,7 @@ growth <- df %>% group_by(Fall) %>%
   filter(term=="zeit") %>%
   select(Fall, estimate) %>%
   rename( Wachstumsraten=estimate) %>%
-  mutate(Wachstumsraten=round(Wachstumsraten*100))
+  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))
 
 library(knitr)
 
