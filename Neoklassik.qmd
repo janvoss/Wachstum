@@ -22,3 +22,19 @@ $
 Investitionen folgen aus heimischer Spartätigkeit
 
 ${I}_t=S_t=s{Y}_t$
+
+Pro-Kopf-Einkommen 
+
+$y=\frac{Y}{N}=\frac{A{K}^{\alpha }{N}^{1-\alpha }}{N}=\frac{A{K}^{\alpha }N}{N^{\alpha }N}=A{\left(\frac{K}{N}\right)}^{\alpha }$
+
+
+
+Kapitalstock pro Kopf
+
+$\frac{K_{t+1}}{N}=\left(1-\delta \right)\left(\frac{{\mathrm{K}}_{\mathrm{t}}}{\mathrm{N}}\right)+\mathrm{s}\left(\frac{{\mathrm{Y}}_{\mathrm{t}}}{\mathrm{N}}\right)$
+
+oder kürzer
+
+$
+{k}_{t+1}=\left(1-\delta \right){k}_t+s{y}_t
+$
