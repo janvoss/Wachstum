@@ -38,3 +38,24 @@ oder kürzer
 $
 {k}_{t+1}=\left(1-\delta \right){k}_t+s{y}_t$
 
+
+Pro-Kopf-Konsum
+
+$c=\left(\frac{C}{N}\right)=\left(1-s\right)\left(\frac{Y}{N}\right)$
+
+
+Langfristiges Gleichgewicht, wenn Investitionen = Abschreibungen 
+
+$s{\left(\frac{\mathrm{K}}{\mathrm{N}}\right)}^{\alpha }=\delta \left(\frac{K}{N}\right)$
+
+$\iff s=\delta {\left(\frac{\mathrm{K}}{\mathrm{N}}\right)}^{1-\alpha }$
+
+$\iff \frac{s}{\delta }={\left(\frac{\mathrm{K}}{\mathrm{N}}\right)}^{1-\alpha }$
+
+$\iff k=\left(\frac{K}{N}\right)={\left(\frac{s}{\delta}\right)}^{\frac{1}{1-\alpha }}$
+
+$\iff y=\left(\frac{\mathrm{Y}}{\mathrm{N}}\right)={\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}$
+
+
+
+
