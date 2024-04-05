@@ -1,1 +1,12 @@
 # Neoklassische Wachstumstheorie
+
+## Produktionsfunktion
+
+Allgemeine Form
+
+$Y=A{K}^{\alpha }{N}^{\beta }$
+
+Konstante Skalenerträge
+
+$Y=A{K}^{\alpha }{N}^{\left(1-\alpha \right)}$
+
