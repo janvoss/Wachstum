@@ -36,5 +36,5 @@ $\frac{K_{t+1}}{N}=\left(1-\delta \right)\left(\frac{{\mathrm{K}}_{\mathrm{t}}}{
 oder kürzer
 
 $
-{k}_{t+1}=\left(1-\delta \right){k}_t+s{y}_t
-$
+{k}_{t+1}=\left(1-\delta \right){k}_t+s{y}_t$
+
