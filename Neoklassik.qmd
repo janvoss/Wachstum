@@ -10,3 +10,15 @@ Konstante Skalenerträge
 
 $Y=A{K}^{\alpha }{N}^{\left(1-\alpha \right)}$
 
+Geschlossene Volkswirtschaft
+
+$I=S$
+
+Veränderung des Kapitalstocks
+
+$
+{K}_{t+1}=\left(1-\delta \right){K}_t+{I}_t$
+
+Investitionen folgen aus heimischer Spartätigkeit
+
+${I}_t=S_t=s{Y}_t$
