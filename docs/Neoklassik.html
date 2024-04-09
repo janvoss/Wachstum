@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -184,7 +213,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Überblick</h2>
+   
+  <ul>
+  <li><a href="#produktionsfunktion" id="toc-produktionsfunktion" class="nav-link active" data-scroll-target="#produktionsfunktion"><span class="header-section-number">4.1</span> Produktionsfunktion</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -208,8 +243,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="produktionsfunktion" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="produktionsfunktion"><span class="header-section-number">4.1</span> Produktionsfunktion</h2>
+<p>Allgemeine Form</p>
+<p><span class="math inline">\(Y=A{K}^{\alpha }{N}^{\beta }\)</span></p>
+<p>Annahme: Konstante Skalenerträge</p>
+<p><span class="math inline">\(Y=A{K}^{\alpha }{L}^{\left(1-\alpha \right)}\)</span></p>
+<p>Geschlossene Volkswirtschaft</p>
+<p><span class="math inline">\(I=S\)</span></p>
+<p>Veränderung des Kapitalstocks</p>
+<p><span class="math inline">\({K}_{t+1}=\left(1-\delta \right){K}_t+{I}_t\)</span></p>
+<p>Investitionen folgen aus heimischer Spartätigkeit</p>
+<p><span class="math inline">\({I}_t=S_t=s{Y}_t\)</span></p>
+<p>Pro-Kopf-Einkommen</p>
+<p><span class="math inline">\(y=\frac{Y}{L}=\frac{A{K}^{\alpha }{L}^{1-\alpha }}{L}=\frac{A{K}^{\alpha }L}{L^{\alpha }L}=A{\left(\frac{K}{L}\right)}^{\alpha }\)</span></p>
+<p>Kapitalstock pro Kopf</p>
+<p><span class="math inline">\(\frac{K_{t+1}}{L}=\left(1-\delta \right)\left(\frac{{\mathrm{K}}_{\mathrm{t}}}{\mathrm{L}}\right)+\mathrm{s}\left(\frac{{\mathrm{Y}}_{\mathrm{t}}}{\mathrm{L}}\right)\)</span></p>
+<p>oder kürzer</p>
+<p>$ {k}_{t+1}=(1-){k}_t+s{y}_t$</p>
+<p>Pro-Kopf-Konsum</p>
+<p><span class="math inline">\(c=\left(\frac{C}{L}\right)=\left(1-s\right)\left(\frac{Y}{L}\right)\)</span></p>
+<p>Langfristiges Gleichgewicht, wenn Investitionen = Abschreibungen</p>
+<p><span class="math inline">\(s{\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{\alpha }=\delta \left(\frac{K}{L}\right)\)</span></p>
+<p><span class="math inline">\(\iff s=\delta {\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{1-\alpha }\)</span></p>
+<p><span class="math inline">\(\iff \frac{s}{\delta }={\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{1-\alpha }\)</span></p>
+<p><span class="math inline">\(\iff k=\left(\frac{K}{L}\right)={\left(\frac{s}{\delta}\right)}^{\frac{1}{1-\alpha }}\)</span></p>
+<p><span class="math inline">\(\iff y=\left(\frac{\mathrm{Y}}{\mathrm{L}}\right)={\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}\)</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

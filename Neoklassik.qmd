@@ -6,9 +6,9 @@ Allgemeine Form
 
 $Y=A{K}^{\alpha }{N}^{\beta }$
 
-Konstante Skalenerträge
+Annahme: Konstante Skalenerträge
 
-$Y=A{K}^{\alpha }{N}^{\left(1-\alpha \right)}$
+$Y=A{K}^{\alpha }{L}^{\left(1-\alpha \right)}$
 
 Geschlossene Volkswirtschaft
 
@@ -16,8 +16,7 @@ $I=S$
 
 Veränderung des Kapitalstocks
 
-$
-{K}_{t+1}=\left(1-\delta \right){K}_t+{I}_t$
+${K}_{t+1}=\left(1-\delta \right){K}_t+{I}_t$
 
 Investitionen folgen aus heimischer Spartätigkeit
 
@@ -25,13 +24,13 @@ ${I}_t=S_t=s{Y}_t$
 
 Pro-Kopf-Einkommen 
 
-$y=\frac{Y}{N}=\frac{A{K}^{\alpha }{N}^{1-\alpha }}{N}=\frac{A{K}^{\alpha }N}{N^{\alpha }N}=A{\left(\frac{K}{N}\right)}^{\alpha }$
+$y=\frac{Y}{L}=\frac{A{K}^{\alpha }{L}^{1-\alpha }}{L}=\frac{A{K}^{\alpha }L}{L^{\alpha }L}=A{\left(\frac{K}{L}\right)}^{\alpha }$
 
 
 
 Kapitalstock pro Kopf
 
-$\frac{K_{t+1}}{N}=\left(1-\delta \right)\left(\frac{{\mathrm{K}}_{\mathrm{t}}}{\mathrm{N}}\right)+\mathrm{s}\left(\frac{{\mathrm{Y}}_{\mathrm{t}}}{\mathrm{N}}\right)$
+$\frac{K_{t+1}}{L}=\left(1-\delta \right)\left(\frac{{\mathrm{K}}_{\mathrm{t}}}{\mathrm{L}}\right)+\mathrm{s}\left(\frac{{\mathrm{Y}}_{\mathrm{t}}}{\mathrm{L}}\right)$
 
 oder kürzer
 
@@ -41,20 +40,20 @@ $
 
 Pro-Kopf-Konsum
 
-$c=\left(\frac{C}{N}\right)=\left(1-s\right)\left(\frac{Y}{N}\right)$
+$c=\left(\frac{C}{L}\right)=\left(1-s\right)\left(\frac{Y}{L}\right)$
 
 
 Langfristiges Gleichgewicht, wenn Investitionen = Abschreibungen 
 
-$s{\left(\frac{\mathrm{K}}{\mathrm{N}}\right)}^{\alpha }=\delta \left(\frac{K}{N}\right)$
+$s{\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{\alpha }=\delta \left(\frac{K}{L}\right)$
 
-$\iff s=\delta {\left(\frac{\mathrm{K}}{\mathrm{N}}\right)}^{1-\alpha }$
+$\iff s=\delta {\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{1-\alpha }$
 
-$\iff \frac{s}{\delta }={\left(\frac{\mathrm{K}}{\mathrm{N}}\right)}^{1-\alpha }$
+$\iff \frac{s}{\delta }={\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{1-\alpha }$
 
-$\iff k=\left(\frac{K}{N}\right)={\left(\frac{s}{\delta}\right)}^{\frac{1}{1-\alpha }}$
+$\iff k=\left(\frac{K}{L}\right)={\left(\frac{s}{\delta}\right)}^{\frac{1}{1-\alpha }}$
 
-$\iff y=\left(\frac{\mathrm{Y}}{\mathrm{N}}\right)={\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}$
+$\iff y=\left(\frac{\mathrm{Y}}{\mathrm{L}}\right)={\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}$
 
 
 

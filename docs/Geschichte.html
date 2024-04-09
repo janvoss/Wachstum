@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -217,7 +251,11 @@ window.Quarto = {
     <h2 id="toc-title">Überblick</h2>
    
   <ul>
-  <li><a href="#phasen-des-wachstums" id="toc-phasen-des-wachstums" class="nav-link active" data-scroll-target="#phasen-des-wachstums"><span class="header-section-number">3.1</span> Phasen des Wachstums</a></li>
+  <li><a href="#lebenserwartung" id="toc-lebenserwartung" class="nav-link active" data-scroll-target="#lebenserwartung"><span class="header-section-number">3.1</span> Lebenserwartung</a></li>
+  <li><a href="#bevölkerung" id="toc-bevölkerung" class="nav-link" data-scroll-target="#bevölkerung"><span class="header-section-number">3.2</span> Bevölkerung</a></li>
+  <li><a href="#wirtschaftskraft" id="toc-wirtschaftskraft" class="nav-link" data-scroll-target="#wirtschaftskraft"><span class="header-section-number">3.3</span> Wirtschaftskraft</a></li>
+  <li><a href="#phasen-des-wachstums" id="toc-phasen-des-wachstums" class="nav-link" data-scroll-target="#phasen-des-wachstums"><span class="header-section-number">3.4</span> Phasen des Wachstums</a></li>
+  <li><a href="#geschichtliche-bedeutung-des-wirtschaftswachstums" id="toc-geschichtliche-bedeutung-des-wirtschaftswachstums" class="nav-link" data-scroll-target="#geschichtliche-bedeutung-des-wirtschaftswachstums"><span class="header-section-number">3.5</span> Geschichtliche Bedeutung des Wirtschaftswachstums</a></li>
   </ul>
 </nav>
     </div>
@@ -243,19 +281,127 @@ window.Quarto = {
 </header>
 
 
+<section id="lebenserwartung" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="lebenserwartung"><span class="header-section-number">3.1</span> Lebenserwartung</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#library(owidR)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">'life-expectancy.csv'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Entity<span class="sc">==</span><span class="st">"World"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Life.expectancy.at.birth..historical.))<span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Lebenserwartung bei Geburt"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle=</span><span class="st">"Weltweit"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Jahr"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Lebenserwartung bei Geburt"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Daten: Our World in Data"</span>)<span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Geschichte_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="bevölkerung" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="bevölkerung"><span class="header-section-number">3.2</span> Bevölkerung</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">'population.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Entity<span class="sc">==</span><span class="st">"World"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Year, Population..historical.estimates.))<span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels=</span><span class="cf">function</span>(x) <span class="fu">format</span>(x, <span class="at">big.mark =</span> <span class="st">"."</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span>))<span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Weltbevölkerung"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Jahr"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Weltbevölkerung"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Daten: Our World in Data"</span>)<span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Geschichte_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="wirtschaftskraft" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="wirtschaftskraft"><span class="header-section-number">3.3</span> Wirtschaftskraft</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file=</span><span class="st">'maddison-data-gdp-per-capita-in-2011us-single-benchmark.csv'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Entity<span class="sc">==</span><span class="st">"World"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Year, GDP.per.capita))<span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bruttoinlandsprodukt pro Kof"</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle=</span><span class="st">"Weltweit"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Jahr"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Bruttoinlandsprodukt pro Kopf"</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Daten: Our World in Data"</span>)<span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Geschichte_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Entity<span class="sc">==</span><span class="st">"France"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Year, GDP.per.capita))<span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Bruttoinlandsprodukt pro Kof"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle=</span><span class="st">"Frankreich"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Jahr"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Bruttoinlandsprodukt pro Kopf"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Daten: Our World in Data"</span>)<span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Geschichte_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="phasen-des-wachstums" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="phasen-des-wachstums"><span class="header-section-number">3.4</span> Phasen des Wachstums</h2>
 <ul>
-<li><p>Menschheitsgeschichtlich ist Wirtschaftswachstum eine neue Erfahrung</p></li>
-<li><p>Unterschiedliche Wachstumsgeschichten in verschiedenen Teilen der Welt</p></li>
-</ul>
-<section id="phasen-des-wachstums" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="phasen-des-wachstums"><span class="header-section-number">3.1</span> Phasen des Wachstums</h2>
-<ul>
-<li>Koginitive Revolution: Ausbreitung über die Welt</li>
+<li>Koginitive Revolution: Ausbreitung der Menschheit über die Welt</li>
 <li>Neolithische Revolution: Bevölkerungswachstum</li>
 <li>Renaissance: Wissenswachstum</li>
 <li>Industrielle Revolution: Produktionswachstum</li>
-<li>Künstliche Intelligenz: <span class="math inline">\(\dots\)</span>?</li>
+<li>Digitale Revolution/Künstliche Intelligenz: <span class="math inline">\(\dots\)</span>?</li>
 </ul>
+</section>
+<section id="geschichtliche-bedeutung-des-wirtschaftswachstums" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="geschichtliche-bedeutung-des-wirtschaftswachstums"><span class="header-section-number">3.5</span> Geschichtliche Bedeutung des Wirtschaftswachstums</h2>
+<p>Bitte lesen Sie folgenden Text: <a href="https://ourworldindata.org/what-is-economic-growth">What is economic growth? And why is it so important?</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="qr.svg" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>“QR-Code”</figcaption>
+</figure>
+</div>
 
 
 </section>

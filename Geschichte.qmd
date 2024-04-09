@@ -1,15 +1,100 @@
 # Geschichte
 
--   Menschheitsgeschichtlich ist Wirtschaftswachstum eine neue Erfahrung
+## Lebenserwartung
 
--   Unterschiedliche Wachstumsgeschichten in verschiedenen Teilen der Welt
+```{r echo=T, warning=F, message=F}
+
+library(tidyverse)
+#library(owidR)
+
+df <- read.csv(file='life-expectancy.csv')
+
+df %>% filter(Entity=="World") %>% 
+  ggplot(aes(x=Year, y=Life.expectancy.at.birth..historical.))+
+  geom_line()+
+  labs(title="Lebenserwartung bei Geburt",
+       subtitle="Weltweit",
+       x="Jahr",
+       y="Lebenserwartung bei Geburt",
+       caption="Daten: Our World in Data")+
+  theme_light()
+
+```
+
+## Bevölkerung
+
+```{r echo=T, warning=F, message=F}
+
+df <- read.csv(file='population.csv')
+
+options(scipen=999)
+
+df %>% filter(Entity=="World") %>% 
+  ggplot(aes(Year, Population..historical.estimates.))+
+  geom_line()+
+  scale_y_continuous(labels=function(x) format(x, big.mark = ".", scientific = FALSE))+
+  labs(title="Weltbevölkerung",
+       x="Jahr",
+       y="Weltbevölkerung",
+       caption="Daten: Our World in Data")+
+  theme_light()
+
+
+```
+
+## Wirtschaftskraft
+
+```{r echo=T, warning=F, message=F}
+
+df <- read.csv(file='maddison-data-gdp-per-capita-in-2011us-single-benchmark.csv')
+
+df %>% filter(Entity=="World") %>% 
+  ggplot(aes(Year, GDP.per.capita))+
+  geom_line()+
+  labs(title="Bruttoinlandsprodukt pro Kof",
+       subtitle="Weltweit",
+       x="Jahr",
+       y="Bruttoinlandsprodukt pro Kopf",
+       caption="Daten: Our World in Data")+
+  theme_light()
+
+df %>% filter(Entity=="France") %>% 
+  ggplot(aes(Year, GDP.per.capita))+
+  geom_line()+
+  labs(title="Bruttoinlandsprodukt pro Kof",
+       subtitle="Frankreich",
+       x="Jahr",
+       y="Bruttoinlandsprodukt pro Kopf",
+       caption="Daten: Our World in Data")+
+  theme_light()
+
+
+```
+
 
 ## Phasen des Wachstums
 
 [spontane Idee]::
 
-- Koginitive Revolution: Ausbreitung über die Welt
+- Koginitive Revolution: Ausbreitung der Menschheit über die Welt
 - Neolithische Revolution: Bevölkerungswachstum
 - Renaissance: Wissenswachstum
 - Industrielle Revolution: Produktionswachstum
-- Künstliche Intelligenz: $\dots$?
+- Digitale Revolution/Künstliche Intelligenz: $\dots$?
+
+## Geschichtliche Bedeutung des Wirtschaftswachstums
+
+Bitte lesen Sie folgenden Text: [What is economic growth? And why is it so important?](https://ourworldindata.org/what-is-economic-growth)
+
+```{r qr,  echo=FALSE, warning=FALSE}
+library(qrcode)
+
+qr <- qr_code('https://ourworldindata.org/what-is-economic-growth')
+#plot(qr)
+
+generate_svg(qr, filename = "qr.svg")
+
+```
+
+
+ !["QR-Code"](qr.svg){width="40%"} 
