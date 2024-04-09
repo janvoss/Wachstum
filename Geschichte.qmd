@@ -97,4 +97,4 @@ generate_svg(qr, filename = "qr.svg")
 ```
 
 
- !["QR-Code"](qr.svg){width="40%"} 
+ ![QR-Code zum Text](qr.svg){width="40%"} 

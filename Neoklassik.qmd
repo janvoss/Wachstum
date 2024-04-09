@@ -4,7 +4,7 @@
 
 Allgemeine Form
 
-$Y=A{K}^{\alpha }{N}^{\beta }$
+$Y=A{K}^{\alpha }{L}^{\beta }$
 
 Annahme: Konstante Skalenerträge
 
@@ -14,13 +14,14 @@ Geschlossene Volkswirtschaft
 
 $I=S$
 
+
+${I}_t=S_t=s{Y}_t$
+
+
 Veränderung des Kapitalstocks
 
 ${K}_{t+1}=\left(1-\delta \right){K}_t+{I}_t$
 
-Investitionen folgen aus heimischer Spartätigkeit
-
-${I}_t=S_t=s{Y}_t$
 
 Pro-Kopf-Einkommen 
 
@@ -34,8 +35,7 @@ $\frac{K_{t+1}}{L}=\left(1-\delta \right)\left(\frac{{\mathrm{K}}_{\mathrm{t}}}{
 
 oder kürzer
 
-$
-{k}_{t+1}=\left(1-\delta \right){k}_t+s{y}_t$
+${k}_{t+1}=\left(1-\delta \right){k}_t+s{y}_t$
 
 
 Pro-Kopf-Konsum
