@@ -1,4 +1,4 @@
-# Neoklassische Wachstumstheorie
+8# Neoklassische Wachstumstheorie
 
 ## Produktionsfunktion
 
@@ -182,3 +182,7 @@ print(gg.ggplot(df, gg.aes('t', 'y')) + gg.geom_line() +
 ## Sparquote für maximalen Komsum
 
 $s^* = \alpha \rightarrow$ Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen
+
+## Bevölkerungswachstum
+
+## Technischer Fortschritt/Humankapital 
