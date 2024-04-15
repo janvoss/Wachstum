@@ -70,3 +70,14 @@ $\rightarrow$ Es gibt einen langfristigen Kapitalstock, der nicht mehr aus sich 
 $\rightarrow$ Damit gibt es auch ein Langfristiges Einkommen und ein Langfristiges Konsumniveau
 
 $\rightarrow$ Dies gilt *unabhängig* von einem Ausgangswert für den Kapitalstock
+
+
+## Entwicklung des Kapitalstocks 
+
+## Entwicklung des Einkommens
+
+## Sparquote für maximales Einkommen
+
+## Sparquote für maximalen Komsum
+
+$s^* = \alpha \rightarrow$ Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen
