@@ -131,27 +131,34 @@ df = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,
                     'Investitionen': I_t, 'Abschreibungen': delta*K_t,
                     'Bevölkerung': L_t, 'Kapital pro Kopf': k_t,
                   'y': y_t})
+```
+
+```{python}
+#|message: false
+#|warning: false
 
 #Grafiken
 
 
-
 print(gg.ggplot(df, gg.aes('t', 'Kapital pro Kopf')) + gg.geom_line() +
- gg.labs(x='Zeit', y='Kapital pro Kopf')+
+ gg.labs(x='Zeit', y='Kapital pro Kopf',
+ title= "Kapital pro Kopf im Zeitverlauf")+
  gg.theme_light()
 )
 
 
 print(gg.ggplot(df, gg.aes('t', 'Investitionen')) + gg.geom_line() +
 gg.geom_line(gg.aes(y='Abschreibungen'), color= 'blue')+
- #gg.labs(x='Zeit', y='Investitionen,  Abschreibungen')+
+ gg.labs(x='Zeit', y='Investitionen,  Abschreibungen',
+ title="Investitionen und Abschreibungen im  Zeitverlauf")+
  gg.theme_light()
 )
 
 
 print(gg.ggplot(df, gg.aes('Kapital pro Kopf', 'Abschreibungen')) + gg.geom_line() +
 gg.geom_line(gg.aes(y='Investitionen'), color= 'blue')+
-gg.labs(x='k', y='I,  Abschreibungen')+
+gg.labs(x='k', y='I,  Abschreibungen',
+title="Investitionen und Abschreibungen als Funktion des Kapitalstocks")+
  gg.theme_light()
 )
 
