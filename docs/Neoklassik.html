@@ -160,6 +160,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Wachstumstheorie und -politik</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/janvoss/Wachstum.git" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -327,7 +330,7 @@ window.Quarto = {
 </section>
 <section id="entwicklung-des-kapitalstocks" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="entwicklung-des-kapitalstocks"><span class="header-section-number">4.5</span> Entwicklung des Kapitalstocks</h2>
-<div id="6576c0bf" class="cell" data-message="false" data-execution_count="1">
+<div id="541dff8e" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine <span class="im">as</span> gg</span>
@@ -384,7 +387,7 @@ window.Quarto = {
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'y'</span>: y_t})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="27f67acb" class="cell" data-message="false" data-execution_count="2">
+<div id="b5f5f469" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Grafiken</span></span>
@@ -404,7 +407,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="3a7defd5" class="cell" data-message="false" data-execution_count="3">
+<div id="4fb6940d" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'Investitionen'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
@@ -422,7 +425,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="e23fa453" class="cell" data-message="false" data-execution_count="4">
+<div id="6660d408" class="cell" data-message="false" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'Kapital pro Kopf'</span>, <span class="st">'Abschreibungen'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
@@ -443,7 +446,7 @@ window.Quarto = {
 </section>
 <section id="entwicklung-des-einkommens" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="entwicklung-des-einkommens"><span class="header-section-number">4.6</span> Entwicklung des Einkommens</h2>
-<div id="da94c65c" class="cell" data-message="false" data-execution_count="5">
+<div id="cc71d16b" class="cell" data-message="false" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'y'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
@@ -471,7 +474,116 @@ window.Quarto = {
 </section>
 <section id="sparquote-für-maximalen-komsum" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="sparquote-für-maximalen-komsum"><span class="header-section-number">4.8</span> Sparquote für maximalen Komsum</h2>
-<p><span class="math inline">\(s^* = \alpha \rightarrow\)</span> Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen</p>
+<p><span class="math inline">\(c=(1-s)y=(1-s){\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}\)</span></p>
+<p>Das sieht so aus, als könne es eine innere Lösung geben.</p>
+<p>Finden wir ein Maximum?</p>
+<div id="2113b6be" class="cell" data-message="false" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Goldene Regel</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Pro-Kopf Konsum</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#y=(s/delta)**(alpha/(1-alpha))</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#c=(1-s)*y</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># schritte für s</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>si <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">101</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Kapitalakkumulation</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>c_si <span class="op">=</span> np.zeros(<span class="dv">101</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>si_si <span class="op">=</span> np.zeros(<span class="bu">len</span>(si))</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>y_si <span class="op">=</span> np.zeros(<span class="bu">len</span>(si))</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">100</span>):</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>   si_si[i]<span class="op">=</span>i<span class="op">/</span><span class="dv">100</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>   c_si[i]<span class="op">=</span> (<span class="dv">1</span><span class="op">-</span>i<span class="op">/</span><span class="dv">100</span>)<span class="op">*</span>((i<span class="op">/</span>(delta<span class="op">*</span><span class="dv">100</span>))<span class="op">**</span>(alpha<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>alpha)))</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>   y_si[i]<span class="op">=</span>           ((i<span class="op">/</span>(delta<span class="op">*</span><span class="dv">100</span>))<span class="op">**</span>(alpha<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>alpha)))</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Datenframe</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'Sparquote'</span>: si_si, <span class="st">'Konsum'</span>: c_si,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'y'</span>: y_si, <span class="st">'Ersparnis'</span>:si_si<span class="op">*</span>y_si})</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div id="0d9ba770" class="cell" data-message="false" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'Sparquote'</span>, <span class="st">'Konsum'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> gg.labs(x<span class="op">=</span><span class="st">'Sparquote'</span>, y<span class="op">=</span><span class="st">'Konsum'</span>)<span class="op">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Neoklassik_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="723162cb" class="cell" data-message="false" data-execution_count="8">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'Sparquote'</span>, <span class="st">'y'</span>)) <span class="op">+</span> gg.geom_line(color<span class="op">=</span><span class="st">"green"</span>) <span class="op">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a> gg.geom_line(gg.aes(y<span class="op">=</span><span class="st">'Ersparnis'</span>), color<span class="op">=</span><span class="st">"red"</span>)<span class="op">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a> gg.labs(x<span class="op">=</span><span class="st">'Sparquote'</span>, y<span class="op">=</span><span class="st">'y'</span>)<span class="op">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Neoklassik_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Wie bestimmt sich denn nun die Sparquote für maximalen Konsum analytisch?</p>
+<div id="5fb04a98" class="cell" data-message="false" data-execution_count="9">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> Symbol, solve, Eq, diff, simplify, print_latex</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> Symbol(<span class="st">'Y'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>L<span class="op">=</span> Symbol(<span class="st">'L'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>K<span class="op">=</span> Symbol(<span class="st">'K'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>alpha<span class="op">=</span> Symbol(<span class="st">'alpha'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>delta<span class="op">=</span>Symbol(<span class="st">'delta'</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>c<span class="op">=</span>Symbol(<span class="st">'c'</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>s<span class="op">=</span>Symbol(<span class="st">'s'</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>L<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>(s<span class="op">/</span>delta)<span class="op">**</span>(alpha<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>alpha))</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>c<span class="op">=</span>(<span class="dv">1</span><span class="op">-</span>s)<span class="op">*</span>y</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>sol<span class="op">=</span>diff(c, s)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>print_latex(simplify(sol))</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(simplify(sol))</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>sol2<span class="op">=</span>solve(Eq(sol, <span class="dv">0</span>), s)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sol2)</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="co">#sol3=diff(y, s)</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="co">#print(sol3)</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="co">#sol4=solve(Eq(sol3, 0), s)</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="co">#print(sol4)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><span class="math inline">\(\frac{\partial c}{\partial s}=\frac{\left(\frac{s}{\delta}\right)^{- \frac{\alpha}{\alpha - 1}} \left(- \alpha + s\right)}{s \left(\alpha - 1\right)}\overset{!}{=} 0\)</span></p>
+<p><span class="math inline">\(\iff s=\alpha\)</span></p>
+<p><span class="math inline">\(s^* = \alpha \rightarrow\)</span> Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen!</p>
 </section>
 <section id="bevölkerungswachstum" class="level2" data-number="4.9">
 <h2 data-number="4.9" class="anchored" data-anchor-id="bevölkerungswachstum"><span class="header-section-number">4.9</span> Bevölkerungswachstum</h2>

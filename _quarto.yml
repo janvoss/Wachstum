@@ -9,6 +9,7 @@ book:
   subtitle: "Sommersemester 2024"
   #lang: de
   language:  _language.yml
+  repo-url: https://github.com/janvoss/Wachstum.git
 #  issued: "Sommersemester 2024"
   chapters:
     - index.qmd
