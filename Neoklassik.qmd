@@ -1,4 +1,4 @@
-8# Neoklassische Wachstumstheorie
+# Neoklassische Wachstumstheorie
 
 ## Produktionsfunktion
 
@@ -18,22 +18,17 @@ Geschlossene Volkswirtschaft
 
 $I=S$
 
-
 ${I}_t=S_t=s{Y}_t$
-
 
 Veränderung des Kapitalstocks
 
 ${K}_{t+1}=\left(1-\delta \right){K}_t+{I}_t$
 
-
 ## Pro-Kopf-Größen
 
-Pro-Kopf-Einkommen 
+Pro-Kopf-Einkommen
 
 $y=\frac{Y}{L}=\frac{A{K}^{\alpha }{L}^{1-\alpha }}{L}=\frac{A{K}^{\alpha }L}{L^{\alpha }L}=A{\left(\frac{K}{L}\right)}^{\alpha }$
-
-
 
 Kapitalstock pro Kopf
 
@@ -43,15 +38,13 @@ oder kürzer
 
 ${k}_{t+1}=\left(1-\delta \right){k}_t+s{y}_t$
 
-
 Pro-Kopf-Konsum
 
 $c=\left(\frac{C}{L}\right)=\left(1-s\right)\left(\frac{Y}{L}\right)$
 
-
 ## Langfristiges Gleichgewicht
 
-Investitionen = Abschreibungen 
+Investitionen = Abschreibungen
 
 $s{\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{\alpha }=\delta \left(\frac{K}{L}\right)$
 
@@ -63,16 +56,13 @@ $\iff k=\left(\frac{K}{L}\right)={\left(\frac{s}{\delta}\right)}^{\frac{1}{1-\al
 
 $\iff y=\left(\frac{\mathrm{Y}}{\mathrm{L}}\right)={\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}$
 
-
-
 $\rightarrow$ Es gibt einen langfristigen Kapitalstock, der nicht mehr aus sich heraus wächst.
 
 $\rightarrow$ Damit gibt es auch ein Langfristiges Einkommen und ein Langfristiges Konsumniveau
 
 $\rightarrow$ Dies gilt *unabhängig* von einem Ausgangswert für den Kapitalstock
 
-
-## Entwicklung des Kapitalstocks 
+## Entwicklung des Kapitalstocks
 
 ```{python}
 #|message: false
@@ -131,6 +121,7 @@ df = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,
                     'Investitionen': I_t, 'Abschreibungen': delta*K_t,
                     'Bevölkerung': L_t, 'Kapital pro Kopf': k_t,
                   'y': y_t})
+      
 ```
 
 ```{python}
@@ -140,30 +131,49 @@ df = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,
 #Grafiken
 
 
-print(gg.ggplot(df, gg.aes('t', 'Kapital pro Kopf')) + gg.geom_line() +
+(gg.ggplot(df, gg.aes('t', 'Kapital pro Kopf')) + gg.geom_line() +
  gg.labs(x='Zeit', y='Kapital pro Kopf',
  title= "Kapital pro Kopf im Zeitverlauf")+
  gg.theme_light()
 )
+```
+
+```{python}
+#|message: false
+#|warning: false
 
 
-print(gg.ggplot(df, gg.aes('t', 'Investitionen')) + gg.geom_line() +
+(gg.ggplot(df, gg.aes('t', 'Investitionen')) + gg.geom_line() +
 gg.geom_line(gg.aes(y='Abschreibungen'), color= 'blue')+
  gg.labs(x='Zeit', y='Investitionen,  Abschreibungen',
  title="Investitionen und Abschreibungen im  Zeitverlauf")+
  gg.theme_light()
 )
 
+```
 
-print(gg.ggplot(df, gg.aes('Kapital pro Kopf', 'Abschreibungen')) + gg.geom_line() +
+```{python}
+#|message: false
+#|warning: false
+
+
+(gg.ggplot(df, gg.aes('Kapital pro Kopf', 'Abschreibungen')) + gg.geom_line() +
 gg.geom_line(gg.aes(y='Investitionen'), color= 'blue')+
 gg.labs(x='k', y='I,  Abschreibungen',
 title="Investitionen und Abschreibungen als Funktion des Kapitalstocks")+
  gg.theme_light()
 )
+```
+
+## Entwicklung des Einkommens
+
+```{python}
+#|message: false
+#|warning: false
 
 
-print(gg.ggplot(df, gg.aes('t', 'y')) + gg.geom_line() +
+
+(gg.ggplot(df, gg.aes('t', 'y')) + gg.geom_line() +
  gg.labs(x='Zeit', y='Pro Kopf Einkommen')+
  gg.theme_light()
 )
@@ -174,10 +184,13 @@ print(gg.ggplot(df, gg.aes('t', 'y')) + gg.geom_line() +
 
 ```
 
-
-## Entwicklung des Einkommens
-
 ## Sparquote für maximales Einkommen
+
+$\iff y={\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}$
+
+Welche Sparquote maximiert das Einkommen? Ist das sinnvoll?
+
+
 
 ## Sparquote für maximalen Komsum
 
@@ -185,4 +198,4 @@ $s^* = \alpha \rightarrow$ Spare das Kapitaleinkommen und konsumiere das Arbeits
 
 ## Bevölkerungswachstum
 
-## Technischer Fortschritt/Humankapital 
+## Technischer Fortschritt/Humankapital

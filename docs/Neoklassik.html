@@ -259,6 +259,8 @@ window.Quarto = {
   <li><a href="#entwicklung-des-einkommens" id="toc-entwicklung-des-einkommens" class="nav-link" data-scroll-target="#entwicklung-des-einkommens"><span class="header-section-number">4.6</span> Entwicklung des Einkommens</a></li>
   <li><a href="#sparquote-für-maximales-einkommen" id="toc-sparquote-für-maximales-einkommen" class="nav-link" data-scroll-target="#sparquote-für-maximales-einkommen"><span class="header-section-number">4.7</span> Sparquote für maximales Einkommen</a></li>
   <li><a href="#sparquote-für-maximalen-komsum" id="toc-sparquote-für-maximalen-komsum" class="nav-link" data-scroll-target="#sparquote-für-maximalen-komsum"><span class="header-section-number">4.8</span> Sparquote für maximalen Komsum</a></li>
+  <li><a href="#bevölkerungswachstum" id="toc-bevölkerungswachstum" class="nav-link" data-scroll-target="#bevölkerungswachstum"><span class="header-section-number">4.9</span> Bevölkerungswachstum</a></li>
+  <li><a href="#technischer-fortschritthumankapital" id="toc-technischer-fortschritthumankapital" class="nav-link" data-scroll-target="#technischer-fortschritthumankapital"><span class="header-section-number">4.10</span> Technischer Fortschritt/Humankapital</a></li>
   </ul>
 </nav>
     </div>
@@ -325,7 +327,7 @@ window.Quarto = {
 </section>
 <section id="entwicklung-des-kapitalstocks" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="entwicklung-des-kapitalstocks"><span class="header-section-number">4.5</span> Entwicklung des Kapitalstocks</h2>
-<div id="3d6f872c" class="cell" data-message="false" data-execution_count="1">
+<div id="6576c0bf" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine <span class="im">as</span> gg</span>
@@ -382,43 +384,17 @@ window.Quarto = {
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'y'</span>: y_t})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="1e1aa146" class="cell" data-message="false" data-execution_count="2">
+<div id="27f67acb" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Grafiken</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'Kapital pro Kopf'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'Kapital pro Kopf'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> gg.labs(x<span class="op">=</span><span class="st">'Zeit'</span>, y<span class="op">=</span><span class="st">'Kapital pro Kopf'</span>,</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> title<span class="op">=</span> <span class="st">"Kapital pro Kopf im Zeitverlauf"</span>)<span class="op">+</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'Investitionen'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>gg.geom_line(gg.aes(y<span class="op">=</span><span class="st">'Abschreibungen'</span>), color<span class="op">=</span> <span class="st">'blue'</span>)<span class="op">+</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> gg.labs(x<span class="op">=</span><span class="st">'Zeit'</span>, y<span class="op">=</span><span class="st">'Investitionen,  Abschreibungen'</span>,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a> title<span class="op">=</span><span class="st">"Investitionen und Abschreibungen im  Zeitverlauf"</span>)<span class="op">+</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gg.ggplot(df, gg.aes(<span class="st">'Kapital pro Kopf'</span>, <span class="st">'Abschreibungen'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>gg.geom_line(gg.aes(y<span class="op">=</span><span class="st">'Investitionen'</span>), color<span class="op">=</span> <span class="st">'blue'</span>)<span class="op">+</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>gg.labs(x<span class="op">=</span><span class="st">'k'</span>, y<span class="op">=</span><span class="st">'I,  Abschreibungen'</span>,</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>title<span class="op">=</span><span class="st">"Investitionen und Abschreibungen als Funktion des Kapitalstocks"</span>)<span class="op">+</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'y'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a> gg.labs(x<span class="op">=</span><span class="st">'Zeit'</span>, y<span class="op">=</span><span class="st">'Pro Kopf Einkommen'</span>)<span class="op">+</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten zeigen</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># print(df)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -427,30 +403,39 @@ window.Quarto = {
 </figure>
 </div>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-
-
-</code></pre>
 </div>
+<div id="3a7defd5" class="cell" data-message="false" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'Investitionen'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>gg.geom_line(gg.aes(y<span class="op">=</span><span class="st">'Abschreibungen'</span>), color<span class="op">=</span> <span class="st">'blue'</span>)<span class="op">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> gg.labs(x<span class="op">=</span><span class="st">'Zeit'</span>, y<span class="op">=</span><span class="st">'Investitionen,  Abschreibungen'</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> title<span class="op">=</span><span class="st">"Investitionen und Abschreibungen im  Zeitverlauf"</span>)<span class="op">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Neoklassik_files/figure-html/cell-3-output-3.png" class="img-fluid figure-img"></p>
+<p><img src="Neoklassik_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
+</div>
+<div id="e23fa453" class="cell" data-message="false" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'Kapital pro Kopf'</span>, <span class="st">'Abschreibungen'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>gg.geom_line(gg.aes(y<span class="op">=</span><span class="st">'Investitionen'</span>), color<span class="op">=</span> <span class="st">'blue'</span>)<span class="op">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>gg.labs(x<span class="op">=</span><span class="st">'k'</span>, y<span class="op">=</span><span class="st">'I,  Abschreibungen'</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>title<span class="op">=</span><span class="st">"Investitionen und Abschreibungen als Funktion des Kapitalstocks"</span>)<span class="op">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Neoklassik_files/figure-html/cell-3-output-4.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Neoklassik_files/figure-html/cell-3-output-5.png" class="img-fluid figure-img"></p>
+<p><img src="Neoklassik_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -458,13 +443,41 @@ window.Quarto = {
 </section>
 <section id="entwicklung-des-einkommens" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="entwicklung-des-einkommens"><span class="header-section-number">4.6</span> Entwicklung des Einkommens</h2>
+<div id="da94c65c" class="cell" data-message="false" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'y'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> gg.labs(x<span class="op">=</span><span class="st">'Zeit'</span>, y<span class="op">=</span><span class="st">'Pro Kopf Einkommen'</span>)<span class="op">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a> gg.theme_light()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten zeigen</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># print(df)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Neoklassik_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="sparquote-für-maximales-einkommen" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="sparquote-für-maximales-einkommen"><span class="header-section-number">4.7</span> Sparquote für maximales Einkommen</h2>
+<p><span class="math inline">\(\iff y={\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}\)</span></p>
+<p>Welche Sparquote maximiert das Einkommen? Ist das sinnvoll?</p>
 </section>
 <section id="sparquote-für-maximalen-komsum" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="sparquote-für-maximalen-komsum"><span class="header-section-number">4.8</span> Sparquote für maximalen Komsum</h2>
 <p><span class="math inline">\(s^* = \alpha \rightarrow\)</span> Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen</p>
+</section>
+<section id="bevölkerungswachstum" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="bevölkerungswachstum"><span class="header-section-number">4.9</span> Bevölkerungswachstum</h2>
+</section>
+<section id="technischer-fortschritthumankapital" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="technischer-fortschritthumankapital"><span class="header-section-number">4.10</span> Technischer Fortschritt/Humankapital</h2>
 
 
 </section>

@@ -214,7 +214,7 @@
     "href": "Neoklassik.html#entwicklung-des-kapitalstocks",
     "title": "4  Neoklassische Wachstumstheorie",
     "section": "4.5 Entwicklung des Kapitalstocks",
-    "text": "4.5 Entwicklung des Kapitalstocks\n\n\nCode\nimport plotnine as gg\nimport numpy as np\nimport pandas as pd\n\n# Parameter\nalpha = 0.4\ndelta = 0.1\ns = 0.2\nL = 1 # einfachster Fall\nn = 0 # Bevölkerungswachstum\n\n# Zeitschritte\nt = np.linspace(0, 100, 101)\n\n# Kapitalakkumulation\n##Vorbeteitung\n\nK_t = np.zeros(len(t))\nY_t = np.zeros(len(t))\nI_t = np.zeros(len(t))\nL_t = np.zeros(len(t))\nk_t = np.zeros(len(t))\ny_t = np.zeros(len(t))\n\n## Ausgangswerte\n\nK_t[0] = 2\nY_t[0] = (K_t[0]**alpha)*(L**(1-alpha)) #CD-Funktion\nI_t[0] = s*Y_t[0]\nL_t[0] = L\ny_t[0] = Y_t[0]/L_t[0]\nk_t[0] = K_t[0]/L_t[0]\n\n## Dynamik\n\n\nfor i in range(1, len(t)):\n\n    K_t[i] = (1-delta)*K_t[i-1] + I_t[i-1]\n    Y_t[i] = (K_t[i]**alpha) * (L**(1-alpha))\n    I_t[i] = s*Y_t[i]\n    L_t[i] = (1+n)*L_t[i-1]\n    k_t[i] = K_t[i]/L_t[i]\n    y_t[i] = Y_t[i]/L_t[i]\n\n\n\n## In Datenframe speichern\ndf = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,\n                    'Investitionen': I_t, 'Abschreibungen': delta*K_t,\n                    'Bevölkerung': L_t, 'Kapital pro Kopf': k_t,\n                  'y': y_t})\n\n\n\n\nCode\n#Grafiken\n\n\nprint(gg.ggplot(df, gg.aes('t', 'Kapital pro Kopf')) + gg.geom_line() +\n gg.labs(x='Zeit', y='Kapital pro Kopf',\n title= \"Kapital pro Kopf im Zeitverlauf\")+\n gg.theme_light()\n)\n\n\nprint(gg.ggplot(df, gg.aes('t', 'Investitionen')) + gg.geom_line() +\ngg.geom_line(gg.aes(y='Abschreibungen'), color= 'blue')+\n gg.labs(x='Zeit', y='Investitionen,  Abschreibungen',\n title=\"Investitionen und Abschreibungen im  Zeitverlauf\")+\n gg.theme_light()\n)\n\n\nprint(gg.ggplot(df, gg.aes('Kapital pro Kopf', 'Abschreibungen')) + gg.geom_line() +\ngg.geom_line(gg.aes(y='Investitionen'), color= 'blue')+\ngg.labs(x='k', y='I,  Abschreibungen',\ntitle=\"Investitionen und Abschreibungen als Funktion des Kapitalstocks\")+\n gg.theme_light()\n)\n\n\nprint(gg.ggplot(df, gg.aes('t', 'y')) + gg.geom_line() +\n gg.labs(x='Zeit', y='Pro Kopf Einkommen')+\n gg.theme_light()\n)\n\n\n# Daten zeigen\n# print(df)",
+    "text": "4.5 Entwicklung des Kapitalstocks\n\n\nCode\nimport plotnine as gg\nimport numpy as np\nimport pandas as pd\n\n# Parameter\nalpha = 0.4\ndelta = 0.1\ns = 0.2\nL = 1 # einfachster Fall\nn = 0 # Bevölkerungswachstum\n\n# Zeitschritte\nt = np.linspace(0, 100, 101)\n\n# Kapitalakkumulation\n##Vorbeteitung\n\nK_t = np.zeros(len(t))\nY_t = np.zeros(len(t))\nI_t = np.zeros(len(t))\nL_t = np.zeros(len(t))\nk_t = np.zeros(len(t))\ny_t = np.zeros(len(t))\n\n## Ausgangswerte\n\nK_t[0] = 2\nY_t[0] = (K_t[0]**alpha)*(L**(1-alpha)) #CD-Funktion\nI_t[0] = s*Y_t[0]\nL_t[0] = L\ny_t[0] = Y_t[0]/L_t[0]\nk_t[0] = K_t[0]/L_t[0]\n\n## Dynamik\n\n\nfor i in range(1, len(t)):\n\n    K_t[i] = (1-delta)*K_t[i-1] + I_t[i-1]\n    Y_t[i] = (K_t[i]**alpha) * (L**(1-alpha))\n    I_t[i] = s*Y_t[i]\n    L_t[i] = (1+n)*L_t[i-1]\n    k_t[i] = K_t[i]/L_t[i]\n    y_t[i] = Y_t[i]/L_t[i]\n\n\n\n## In Datenframe speichern\ndf = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,\n                    'Investitionen': I_t, 'Abschreibungen': delta*K_t,\n                    'Bevölkerung': L_t, 'Kapital pro Kopf': k_t,\n                  'y': y_t})\n\n\n\n\nCode\n#Grafiken\n\n\n(gg.ggplot(df, gg.aes('t', 'Kapital pro Kopf')) + gg.geom_line() +\n gg.labs(x='Zeit', y='Kapital pro Kopf',\n title= \"Kapital pro Kopf im Zeitverlauf\")+\n gg.theme_light()\n)\n\n\n\n\n\n\n\n\n\n\n\nCode\n(gg.ggplot(df, gg.aes('t', 'Investitionen')) + gg.geom_line() +\ngg.geom_line(gg.aes(y='Abschreibungen'), color= 'blue')+\n gg.labs(x='Zeit', y='Investitionen,  Abschreibungen',\n title=\"Investitionen und Abschreibungen im  Zeitverlauf\")+\n gg.theme_light()\n)\n\n\n\n\n\n\n\n\n\n\n\nCode\n(gg.ggplot(df, gg.aes('Kapital pro Kopf', 'Abschreibungen')) + gg.geom_line() +\ngg.geom_line(gg.aes(y='Investitionen'), color= 'blue')+\ngg.labs(x='k', y='I,  Abschreibungen',\ntitle=\"Investitionen und Abschreibungen als Funktion des Kapitalstocks\")+\n gg.theme_light()\n)",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "Neoklassik.html#entwicklung-des-einkommens",
     "title": "4  Neoklassische Wachstumstheorie",
     "section": "4.6 Entwicklung des Einkommens",
-    "text": "4.6 Entwicklung des Einkommens",
+    "text": "4.6 Entwicklung des Einkommens\n\n\nCode\n(gg.ggplot(df, gg.aes('t', 'y')) + gg.geom_line() +\n gg.labs(x='Zeit', y='Pro Kopf Einkommen')+\n gg.theme_light()\n)\n\n\n# Daten zeigen\n# print(df)",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
     ]
@@ -234,7 +234,7 @@
     "href": "Neoklassik.html#sparquote-für-maximales-einkommen",
     "title": "4  Neoklassische Wachstumstheorie",
     "section": "4.7 Sparquote für maximales Einkommen",
-    "text": "4.7 Sparquote für maximales Einkommen",
+    "text": "4.7 Sparquote für maximales Einkommen\n\\(\\iff y={\\left(\\frac{s}{\\delta}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)\nWelche Sparquote maximiert das Einkommen? Ist das sinnvoll?",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
     ]
@@ -245,6 +245,26 @@
     "title": "4  Neoklassische Wachstumstheorie",
     "section": "4.8 Sparquote für maximalen Komsum",
     "text": "4.8 Sparquote für maximalen Komsum\n\\(s^* = \\alpha \\rightarrow\\) Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+    ]
+  },
+  {
+    "objectID": "Neoklassik.html#bevölkerungswachstum",
+    "href": "Neoklassik.html#bevölkerungswachstum",
+    "title": "4  Neoklassische Wachstumstheorie",
+    "section": "4.9 Bevölkerungswachstum",
+    "text": "4.9 Bevölkerungswachstum",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+    ]
+  },
+  {
+    "objectID": "Neoklassik.html#technischer-fortschritthumankapital",
+    "href": "Neoklassik.html#technischer-fortschritthumankapital",
+    "title": "4  Neoklassische Wachstumstheorie",
+    "section": "4.10 Technischer Fortschritt/Humankapital",
+    "text": "4.10 Technischer Fortschritt/Humankapital",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
     ]
