@@ -254,7 +254,7 @@
     "href": "Neoklassik.html#bevölkerungswachstum",
     "title": "4  Neoklassische Wachstumstheorie",
     "section": "4.9 Bevölkerungswachstum",
-    "text": "4.9 Bevölkerungswachstum",
+    "text": "4.9 Bevölkerungswachstum\nAnnahme bisher: Konstante Bevölkerung.\nNun: Bevölkerung wächst mit der Rate \\(n\\) so dass gilt: \\(L_{t+1}=(1+n)L_t\\)\nKapitalstock pro Kopf bleibt konstant, wenn gilt \\(I=sY=s{\\left(\\frac{K}{N}\\right)}^{\\alpha }=\\left(\\delta +n\\right)\\left(\\frac{K}{L}\\right)\\)\n\\(\\iff \\left(\\frac{s}{\\delta +n}\\right)={\\left(\\frac{K}{L}\\right)}^{1-\\alpha }\\)\nDie gleichgewichtige Kapitalintensität beträgt daher\n\\(\\left(\\frac{K}{L}\\right)={\\left(\\frac{s}{\\delta +n}\\right)}^{\\frac{1}{1-\\alpha }}\\)\nDas gleichgewichtige pro-Kopf-Einkommen ist dann\n\\(y=\\left(\\frac{Y}{L}\\right)={\\left(\\frac{K}{L}\\right)}^{\\alpha }={\\left(\\frac{s}{\\delta +n}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
     ]
@@ -264,7 +264,7 @@
     "href": "Neoklassik.html#technischer-fortschritthumankapital",
     "title": "4  Neoklassische Wachstumstheorie",
     "section": "4.10 Technischer Fortschritt/Humankapital",
-    "text": "4.10 Technischer Fortschritt/Humankapital",
+    "text": "4.10 Technischer Fortschritt/Humankapital\nAnnahme bislang: \\(A=1\\)\nNun Annahme: \\(A\\) wächst mit der konstanten (exogenen) Rate \\(g\\), sodass gilt: \\(A_{t+1}=(1+g)A_t\\)\nWenn gilt: \\(y=A(\\frac{K}{L})^\\alpha\\), dann wächst das Pro-Kopf-Einkommen mit der Rate \\(g\\).\nIn der Literatur wird gelegentlich technischer Fortschritt als erhöhte Arbeitseffizienz dargestellt. Es gilt dann: \\(Y=K^\\alpha(AL)^{1-\\alpha}\\)\nBezeichnet \\((\\frac{Y}{AN})\\) das Einkommen pro Arbeitseffizienzeinheit, lässt sich schreiben \\(\\left(\\frac{Y}{AL}\\right)=\\frac{K^{\\alpha }{(AL)}^{1-\\alpha }}{AL}=\\frac{K^{\\alpha }{(AL)}}{(AL){(AL)}^{\\alpha }}={\\left(\\frac{K}{AL}\\right)}^{\\alpha}\\)\nDie Bedingung für für ein langfristiges Gleichgewicht lautet dann\n\\(s{\\left(\\frac{K}{AL}\\right)}^{\\alpha }=\\left(\\delta +n+g\\right)\\left(\\frac{K}{AL}\\right)\\)\nDie Ersparnisse pro Arbeitseffizienzeinheit müssen ausreichen, um die Abschreibungen, das Bevölkerungswachstum und den technischen Fortschritt auszugleichen.\nDas gleichgewichtige Einkommen pro Arbeitseffizienzeinheit ist dann \\(\\left(\\frac{Y}{AL}\\right)={\\left(\\frac{K}{AL}\\right)}^{\\alpha }={\\left(\\frac{s}{\\delta +n+g}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
     ]

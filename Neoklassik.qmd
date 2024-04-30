@@ -305,7 +305,7 @@ $s^* = \alpha \rightarrow$ Spare das Kapitaleinkommen und konsumiere das Arbeits
 
 Annahme bisher: Konstante Bevölkerung.
 
-Nun: Bevölkerung wächst mit der Rate $n=\frac{\Delta L}{L}$
+Nun: Bevölkerung wächst mit der Rate $n$ so dass gilt: $L_{t+1}=(1+n)L_t$
 
 Kapitalstock pro Kopf bleibt konstant, wenn gilt $I=sY=s{\left(\frac{K}{N}\right)}^{\alpha }=\left(\delta +n\right)\left(\frac{K}{L}\right)$
 
@@ -320,3 +320,21 @@ Das gleichgewichtige pro-Kopf-Einkommen ist dann
 $y=\left(\frac{Y}{L}\right)={\left(\frac{K}{L}\right)}^{\alpha }={\left(\frac{s}{\delta +n}\right)}^{\frac{\alpha }{1-\alpha }}$
 
 ## Technischer Fortschritt/Humankapital
+
+Annahme bislang: $A=1$
+
+Nun Annahme: $A$ wächst mit der konstanten (exogenen) Rate $g$, sodass gilt: $A_{t+1}=(1+g)A_t$
+
+Wenn gilt: $y=A(\frac{K}{L})^\alpha$, dann wächst das Pro-Kopf-Einkommen mit der Rate $g$.
+
+In der Literatur wird gelegentlich technischer Fortschritt als erhöhte Arbeitseffizienz dargestellt. Es gilt dann: $Y=K^\alpha(AL)^{1-\alpha}$
+
+Bezeichnet $(\frac{Y}{AN})$ das Einkommen pro Arbeitseffizienzeinheit, lässt sich schreiben $\left(\frac{Y}{AL}\right)=\frac{K^{\alpha }{(AL)}^{1-\alpha }}{AL}=\frac{K^{\alpha }{(AL)}}{(AL){(AL)}^{\alpha }}={\left(\frac{K}{AL}\right)}^{\alpha}$
+
+Die Bedingung für für ein langfristiges Gleichgewicht lautet dann
+
+$s{\left(\frac{K}{AL}\right)}^{\alpha }=\left(\delta +n+g\right)\left(\frac{K}{AL}\right)$
+
+Die Ersparnisse pro Arbeitseffizienzeinheit müssen ausreichen, um die Abschreibungen, das Bevölkerungswachstum und den technischen Fortschritt auszugleichen.
+
+Das gleichgewichtige Einkommen *pro Arbeitseffizienzeinheit* ist dann $\left(\frac{Y}{AL}\right)={\left(\frac{K}{AL}\right)}^{\alpha }={\left(\frac{s}{\delta +n+g}\right)}^{\frac{\alpha }{1-\alpha }}$
