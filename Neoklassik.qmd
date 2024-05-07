@@ -307,7 +307,9 @@ Annahme bisher: Konstante Bevölkerung.
 
 Nun: Bevölkerung wächst mit der Rate $n$ so dass gilt: $L_{t+1}=(1+n)L_t$
 
-Kapitalstock pro Kopf bleibt konstant, wenn gilt $I=sY=s{\left(\frac{K}{N}\right)}^{\alpha }=\left(\delta +n\right)\left(\frac{K}{L}\right)$
+Kapitalstock pro Kopf bleibt konstant, wenn gilt $I=sY$
+
+$s{\left(\frac{K}{L}\right)}^{\alpha }=\left(\delta +n\right)\left(\frac{K}{L}\right)$
 
 $\iff \left(\frac{s}{\delta +n}\right)={\left(\frac{K}{L}\right)}^{1-\alpha }$
 
@@ -325,7 +327,20 @@ Annahme bislang: $A=1$
 
 Nun Annahme: $A$ wächst mit der konstanten (exogenen) Rate $g$, sodass gilt: $A_{t+1}=(1+g)A_t$
 
-Wenn gilt: $y=A(\frac{K}{L})^\alpha$, dann wächst das Pro-Kopf-Einkommen mit der Rate $g$.
+Für das langfristige Gleichgewicht gilt 
+
+
+Investitionen pro Kopf = Abschreibungen pro Kopf  
+$sA(\frac{K}{L})^\alpha=\delta \frac{K}{L}$
+
+$\iff \frac{As}{\delta} = (\frac{K}{L})^\alpha$
+
+$\iff \frac{K}{L}=k=(\frac{As}{\delta})^\frac{1}{1-\alpha}$
+
+$\iff y=(\frac{Y}{L})=(\frac{As}{\delta})^\frac{\alpha}{1-\alpha}$
+
+
+Wenn $A$ wächst, wächst auch $y$ im Gleichgewicht
 
 In der Literatur wird gelegentlich technischer Fortschritt als erhöhte Arbeitseffizienz dargestellt. Es gilt dann: $Y=K^\alpha(AL)^{1-\alpha}$
 
