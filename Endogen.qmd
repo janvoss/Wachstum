@@ -1,1 +1,25 @@
 # Endogene Wachstumstheorie
+
+## Übergang von Neoklassik
+
+Technischer Fortschritt bestimmt Wirtschaftswachstum
+
+$\rightarrow$ Humankapital nötig, das technischen Fortschritt adaptieren kann
+
+Woher kommt der technische Fortschritt?
+
+-   Innovationsanreize
+
+-   Humankapital
+
+Wie entkommen wir der sinkenden Grenzproduktivität des Kapitals?
+
+-   Innovationen erzeugen Spillovers (Nichtrivalität!) und Folgeinnovationen
+
+-   K. Arrow: "Learning by doing".
+
+    -   Investitionsanreize
+
+    -   Höhere Kapitalakkumulation bringt höheren Fortschritt mit sich
+
+-   Infrastruktur

@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -97,6 +126,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Wachstumstheorie und -politik</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/janvoss/Wachstum.git" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -184,7 +216,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Überblick</h2>
+   
+  <ul>
+  <li><a href="#übergang-von-neoklassik" id="toc-übergang-von-neoklassik" class="nav-link active" data-scroll-target="#übergang-von-neoklassik"><span class="header-section-number">5.1</span> Übergang von Neoklassik</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -208,8 +246,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="übergang-von-neoklassik" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="übergang-von-neoklassik"><span class="header-section-number">5.1</span> Übergang von Neoklassik</h2>
+<p>Technischer Fortschritt bestimmt Wirtschaftswachstum</p>
+<p><span class="math inline">\(\rightarrow\)</span> Humankapital nötig, das technischen Fortschritt adaptieren kann</p>
+<p>Woher kommt der technische Fortschritt?</p>
+<ul>
+<li><p>Innovationsanreize</p></li>
+<li><p>Humankapital</p></li>
+</ul>
+<p>Wie entkommen wir der sinkenden Grenzproduktivität des Kapitals?</p>
+<ul>
+<li><p>Innovationen erzeugen Spillovers (Nichtrivalität!) und Folgeinnovationen</p></li>
+<li><p>K. Arrow: “Learning by doing”.</p>
+<ul>
+<li><p>Investitionsanreize</p></li>
+<li><p>Höhere Kapitalakkumulation bringt höheren Fortschritt mit sich</p></li>
+</ul></li>
+<li><p>Infrastruktur</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
