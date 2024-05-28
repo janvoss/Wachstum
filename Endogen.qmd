@@ -21,5 +21,26 @@ Wie entkommen wir der sinkenden Grenzproduktivität des Kapitals?
     -   Investitionsanreize
 
     -   Höhere Kapitalakkumulation bringt höheren Fortschritt mit sich
+    
+    - Arbeitende mit hohem Humankapital bringen Innovationen als Begleiterscheinung mit sich
 
--   Infrastruktur
+-   Öffentliche Infrastruktur erhöht Produktivität von Kapitalgütern (Anbindung an Straßen, Schienen, Telekommunikation, $\dots$)
+
+## Endogene Wachstumstehorie
+
+- Vielzahl theoretischer Ansätze
+
+- Gemeinsame Klammer: Keine sinkenden Grenzerträge des Kapitals: $Y_t=AK_t$
+
+- Unterschiedliche Erklärungsansätze
+
+  - Humankapital
+  - Learning by doing
+  - Schumpetersches Wachstum (schöpferische Zerstörung)
+  - öffentliche Infrastukturgüter
+  - $\dots$
+  
+- Gemeinsames Problem dieser Ansätze: Modellergebnis endogengenen Wachstums ist abhängig von bestimmten Parameterkonstellationen. 
+
+- Offene Frage: Kann man damit wirklich Wachstum als regelmäßiges Phänomen erklären?
+

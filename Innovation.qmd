@@ -1,1 +1,52 @@
 # Innovationsökonomik
+
+## Innovationsbegriff
+
+**Innovation**: Entwicklung und Einführung neuer Ideen, Produkte, Dienstleistungen oder Prozesse. 
+
+Merkmale: neu, nützlich und marktfähig
+
+
+**Neuheit**: Die Innovation muss etwas Neues darstellen, das es so vorher noch nicht gab. Dies kann sich auf die Technologie, das Design, die Funktionsweise oder die Anwendung beziehen.
+
+**Nutzen**: Die Innovation muss einen messbaren Nutzen für den Anwender oder Kunden bieten. Dieser Nutzen kann sich in Form von Kosteneinsparungen, Effizienzsteigerungen, neuen Funktionen oder einer verbesserten Benutzerfreundlichkeit äußern.
+
+(**Marktfähigkeit**: Die Innovation muss am Markt erfolgreich sein können. Das bedeutet, dass sie von den Kunden angenommen und nachgefragt wird.)
+
+Unterschiedliche Arten von Innovationen:
+
+**Produktinnovationen**: Entwicklung neuer Produkte oder die Verbesserung bestehender Produkte.
+
+**Prozessinnovationen**: Entwicklung neuer oder verbesserter Produktionsprozesse.
+
+**Marketinginnovationen**: Entwicklung neuer Marketingstrategien oder -instrumente.
+
+**Organisationsinnovationen**: Entwicklung neuer Unternehmensstrukturen oder -prozesse.
+
+**Geschäftsmodellinnovationen**: Entwicklung neuer Geschäftsmodelle.
+
+
+## Innovationsfähigkeit in Deutschland
+
+Wir lesen @schmidt_ohne_2024 
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2024/heft/4/beitrag/ohne-fleiss-kein-preis-die-deutsche-volkswirtschaft-muss-sich-ihre-innovationsfaehigkeit-immer-wieder-neu-erarbeiten.html')
+plot(qr)
+
+```
+
+... und @hottenrott_wie_2024
+
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2024/heft/4/beitrag/wie-steht-es-um-die-innovationsfaehigkeit-deutschlands.html')
+plot(qr)
+
+```
+
+.
