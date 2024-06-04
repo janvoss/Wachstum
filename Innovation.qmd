@@ -25,6 +25,8 @@ Unterschiedliche Arten von Innovationen:
 
 **Geschäftsmodellinnovationen**: Entwicklung neuer Geschäftsmodelle.
 
+**Soziale Innovation**: [tbd]
+
 
 ## Innovationsfähigkeit in Deutschland
 
@@ -37,6 +39,13 @@ qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2024/heft/4/beitrag/
 plot(qr)
 
 ```
+
+
+Begriff Potenzialwachstum:
+  - Veränderung 
+    - des Arbeitsvolumens
+    - des Kapitalstocks
+    - der totalen Faktorproduktivität
 
 ... und @hottenrott_wie_2024
 

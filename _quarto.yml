@@ -20,7 +20,7 @@ book:
     - Endogen.qmd
     - Innovation.qmd
     - Gruen.qmd
-    - Degrowth.qmd
+   # - Degrowth.qmd
     - Poloek.qmd
     - Ausblick.qmd
    # - summary.qmd

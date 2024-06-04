@@ -1,1 +1,41 @@
-# Grünes Wachstum
+# Grünes Wachstum vs. Degrowth
+
+
+- Geht Wachstum (zwangsläufig) mit einer Zunahme der Umweltzerstörung einher? Dann ließe sich das nicht durchhalten
+
+- Kann/sollte man auf Wachstum verzichten, um nachhaltig zu wirtschaften?
+
+Der Blick in die Literatur soll helfen, diese Fragen zu sortieren
+
+
+Wir lesen @lindner_kein_2023
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2023/heft/8/beitrag/kein-wachstum-ist-auch-keine-loesung.html')
+plot(qr)
+
+```
+ 
+und
+
+@heise_green_2024
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2024/heft/2/beitrag/green-growth-oder-postwachstum-einige-anmerkungen-zum-beitrag-von-fabian-lindner.html')
+plot(qr)
+
+```
+
+Ergänzend/vertiefend: @doring_alternativen_2019
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2019/heft/7/beitrag/alternativen-zum-umweltschaedlichen-wachstum.html')
+plot(qr)
+
+```
