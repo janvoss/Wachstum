@@ -42,6 +42,7 @@ plot(qr)
 
 
 Begriff Potenzialwachstum:
+
   - Veränderung 
     - des Arbeitsvolumens
     - des Kapitalstocks
