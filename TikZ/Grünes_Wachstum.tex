@@ -1,0 +1,97 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{smartdiagram} %für tikz
+\usepackage[ngerman]{babel} %Sprache deutsch (für Silbentrennung)
+\usepackage[utf8]{inputenc} %UTF-Code für Umlaute
+\usepackage[T1]{fontenc} %Trennung von Wörtern mit Umlauten
+\usepackage{lmodern} %Schriftart
+%\usepackage{libertine}
+\renewcommand*\familydefault{\sfdefault} %Serifenlose Schrift als Standard
+\usepackage{microtype}
+\usesmartdiagramlibrary{additions}
+\usetikzlibrary{fit}
+\usetikzlibrary{decorations.pathreplacing}
+
+\tikzstyle{container} = [draw, rectangle, semithick, inner sep=0.3cm
+]
+
+%Aufzählungsstriche
+\AtBeginDocument{
+	\def\labelitemi{\normalfont\bfseries{--}}
+}
+
+
+\begin{document}
+
+		\begin{tikzpicture}[
+		every node/.style = {shape=rectangle, % is not necessary, default node's shape is rectangle
+			rounded corners,
+		%	draw, semithick,
+			text width=7cm,
+			align=center,
+			node distance=0.1cm
+		}
+		]
+		
+%Überschriften
+	\node (Pro)[text depth=.75ex  % Schrift immer auf der gleichen Höhe
+   		]{\textbf{Grünes Wachstum ist möglich}
+     };
+    
+    \node (Contra)[text depth=.75ex, right =  of Pro
+    ]{\textbf{Grünes Wachstum ist unmöglich}
+    };
+
+
+
+%Spalten
+	\node[below= of Pro, align=left](){
+	\begin{itemize}
+		\item Erfolg erneuerbarer Energien ist ein gutes Beispiel
+		
+		\item Es gibt doch Beispiele! China wird z.B. grüner!
+		
+		\item Fondsgesellschaften legen grüne Finanzprodukte auf
+		
+	\end{itemize}
+	};
+
+\node[below= of Contra, align=left](){
+	\begin{itemize}
+
+		
+		\item Historische Erfahrung spricht dagegen
+		
+		\item Lobbyismus spricht dagegen
+		
+		\item Kapitalverwertungsinteresse großer Investoren
+		
+		\item auch grünes Wachstum braucht Ressourcen
+		
+		\item Es fehlt der politische Wille
+		
+	\end{itemize}
+};
+
+
+		
+     
+%Horizontale Linie unter Überschriften	
+	\draw [
+	transform canvas={yshift=-0.1cm}
+	] (Pro.south west) -- (Contra.south east);
+	
+
+	
+%Überschrift
+	\path [draw=none] (Pro) -- (Contra) node [midway] (Mittelpunkt) {};	
+	\node[above= 1cm of Mittelpunkt, text width=15cm] (Ueberschrift) {\huge Grünes Wachstum?};
+	
+	\node[below=of Ueberschrift] () {11. Juni 2024};
+	
+	
+	
+	
+	
+	\end{tikzpicture}
+
+\end{document}

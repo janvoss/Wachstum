@@ -1,0 +1,39 @@
+# Übungsfragen {.unnumbered}
+
+1. Was unterscheidet Wirtschaftswachstum von Konjunktur?
+
+1. Eine Volkswirtschaft hat in der Basisperiode ein BIP von 100. Das BIP wächst 10 Jahre lang jedes Jahr um 3%. Wie hoch ist das BIP nach diesen 10 Jahren?
+
+1. Wie hoch wäre es, wenn das BIP jedes Jahr um 5% gewachsen wäre?
+
+1. Nehmen Sie an, das BIP wächst 5 Jahre lang jährlich um 3% und danach 5 Jahre lang um 5%. Wie hoch ist es nach 10 Jahren?
+
+1. Wie ist es, wenn es zunächst 5 Jahre um 5% wächst und danacht 5 Jahre um 3%?
+
+
+1. Wenn das BIP gleichmäßig um 3% pro Jahr wächst, nach wie vielen Jahren hat es sich verdoppelt?
+
+1. Wenn das BIP gleichmäßig um 5% wächst, nach wie vielen Jahren hat es sich verdoppelt?
+
+1. Eine Volkswirtschaft hat 30 Jahre benötigt, bis sich seine Wirtschaftsleistung verdoppelt hat. Wie hoch war die durchschnittliche Wachstumsrate in dieser Zeit?
+
+1. Welche Art von Skalenerträgen wird üblicherweise in einer neoklassischen makroökonokischen Produktionsfunktion unterstellt?
+
+1. Nehmen Sie die folgende makroökonomische Produktionsfunktion an: $Y_t=K_t^{0,4} L_t^{0,6}$. Nehmen Sie an, dass die Abschreibungsrate 15% beträgt und die Sparquote 20%. Normieren Sie der einfachheit die Bevölkerung konstant auf 1. Wie hoch ist das Einkommen im langfristigen Gleichgewicht?
+
+1. Wie ist das langfristige Einkommen, wenn die Sparquote auf 10% sinkt?
+
+1. Nehemen Sie wieder die ursprüngliche Sparquote an. Wie ist das langfristige Einkommen, wenn die Produktionsfunktion so lautet:$Y_t=K_t^{0,3} L_t^{0,7}$
+
+1. Wie hoch ist jeweils für beide Produktionsfunktionen die Sparquote, die im langfristigen Gleichgewicht den Konsum maximiert? 
+
+1. Wie wirkt ein Aufstocken des Kapitalstocks auf das langfristige Gleichgewicht im neoklassischen Wachstumsmodell?
+
+1. Welche Auswirkung haben höhere Abschreibungen auf den Kapitalstock auf das langfristige Gleichgewicht? Warum?
+
+1. Nehmen Sie an, dass die Bevölkerungsanzahl wächst. Erläutern Sie, ob das gleichgewichtige Einkommen pro Kopf dadurch ceteris paribus steigt oder sinkt (Sie müssen es nicht exakt ausrechnen).
+
+1. Durch welche Faktoren wird Wirtschaftswachstum in Modellen des endogenen Wachstums erklärt?
+
+
+1. Erläutern Sie die Unterschiede zwischen einem *degrowth*-Ansatz und einem *green growth*-Ansatz. Welchen Ansatz halten Sie für plausibler?

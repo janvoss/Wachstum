@@ -20,11 +20,11 @@ book:
     - Endogen.qmd
     - Innovation.qmd
     - Gruen.qmd
-   # - Degrowth.qmd
     - Poloek.qmd
     - Ausblick.qmd
    # - summary.qmd
     - literatur.qmd
+    - Uebungsfragen.qmd
 
 bibliography: Wirtschaftswachstum.bib
 #csl: dresden.csl #Ohne funktioniert es gut, mit nicht. 
