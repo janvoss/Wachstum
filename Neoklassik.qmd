@@ -1,4 +1,4 @@
-# Neoklassische Wachstumstheorie
+# Neoklassische Wachstumstheorie -- exogene Sparquote
 
 ## Produktionsfunktion
 
