@@ -26,7 +26,7 @@ Wie entkommen wir der sinkenden Grenzproduktivität des Kapitals?
 
 -   Öffentliche Infrastruktur erhöht Produktivität von Kapitalgütern (Anbindung an Straßen, Schienen, Telekommunikation, $\dots$)
 
-## Endogene Wachstumstehorie
+## Modellfamilie Endogene Wachstumstehorie
 
 - Vielzahl theoretischer Ansätze
 
@@ -44,3 +44,8 @@ Wie entkommen wir der sinkenden Grenzproduktivität des Kapitals?
 
 - Offene Frage: Kann man damit wirklich Wachstum als regelmäßiges Phänomen erklären?
 
+## Rebelo-Modell
+
+## Lucas-Modell
+
+## Schumpetersches Wachstum
