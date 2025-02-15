@@ -6,17 +6,23 @@ Allgemeine Form Cobb-Douglas Produktionsfunktion
 
 $Y=A{K}^{\alpha }{L}^{\beta }$
 
+[oder das A vor das L?]:;
+
 Annahme: Konstante Skalenerträge
 
 $Y=A{K}^{\alpha }{L}^{\left(1-\alpha \right)}$
 
-Für das Folgende nehmen wir zunächst an $A=1$
+Für das Folgende nehmen wir zunächst an $A=L=1$
+
+
 
 ## Kapitalbildung
 
 Geschlossene Volkswirtschaft
 
 $I=S$
+
+Exogene Sparquote $s$
 
 ${I}_t=S_t=s{Y}_t$
 
@@ -43,6 +49,9 @@ Pro-Kopf-Konsum
 $c=\left(\frac{C}{L}\right)=\left(1-s\right)\left(\frac{Y}{L}\right)$
 
 ## Langfristiges Gleichgewicht
+
+
+Investitionen lassen den Kapitalstock wachsen. Abschreibungen (Verschleiß) lassen ihn schrumpfen.
 
 Investitionen = Abschreibungen
 
