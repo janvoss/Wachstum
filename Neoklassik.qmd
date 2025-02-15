@@ -82,9 +82,14 @@ Die Produktion $Y$ wächst, wenn
 
 Fokus hier: $K$
 
+~~~
+**Pfad zum Gleichgewicht**
+
 Investitionen lassen den Kapitalstock wachsen. Abschreibungen (Verschleiß) lassen ihn schrumpfen.
 
-Investitionen = Abschreibungen
+**Gleichgewicht:** Investitionen = Abschreibungen
+
+~~~
 
 $s{\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{\alpha }=\delta \left(\frac{K}{L}\right)$
 
@@ -98,9 +103,9 @@ $\iff y=\left(\frac{\mathrm{Y}}{\mathrm{L}}\right)={\left(\frac{s}{\delta}\right
 
 $\rightarrow$ Es gibt einen langfristigen Kapitalstock, der nicht mehr aus sich heraus wächst.
 
-$\rightarrow$ Damit gibt es auch ein Langfristiges Einkommen und ein Langfristiges Konsumniveau
+$\rightarrow$ Damit gibt es auch ein langfristig gleichgewichtiges Einkommen und ein Lälangfristig gleichgewichtiges Konsumniveau
 
-$\rightarrow$ Dies gilt *unabhängig* von einem Ausgangswert für den Kapitalstock
+$\rightarrow$ Dies gilt *unabhängig* von dem Ausgangswert des Kapitalstocks
 
 ## Entwicklung des Kapitalstocks
 
