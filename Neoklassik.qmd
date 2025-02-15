@@ -50,6 +50,14 @@ $c=\left(\frac{C}{L}\right)=\left(1-s\right)\left(\frac{Y}{L}\right)$
 
 ## Langfristiges Gleichgewicht
 
+Die Produktion $Y$ wächst, wenn  
+- $A$ wächst (Technischer Fortschritt)
+- $L$ wächst (Bevölkerungswachstum)
+- $K$ wächst (Kapitalakkumulation)
+
+Fokus hier: $K$
+
+Kernbotschaft: Der Kapitalstock kann nicht aus sich heraus über ein bestimmtes Niveau hinaus wachsen.
 
 Investitionen lassen den Kapitalstock wachsen. Abschreibungen (Verschleiß) lassen ihn schrumpfen.
 
