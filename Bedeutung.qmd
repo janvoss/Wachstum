@@ -61,7 +61,7 @@ $$
 
 $$Y_T= Y_{0} \times e^{r\times T}$$
 
-Wachstumsrate n 2 Perioden:
+Wachstumsrate nach einer Periode:
 
 $$ Y(t) = Y_{t-1} \times e^{r}
 $$
@@ -69,6 +69,15 @@ $$
 $$\iff ln(Y_t)= ln(Y_{t-1}) +r$$
 
 $$\iff r=ln(Y_t)-ln(Y_{t-1})$$
+
+Wachstumsrate nach $T$ Perioden
+
+$$ Y(T) = Y_{0} \times e^{Tr}
+$$
+
+$$\iff ln(Y_T)= ln(Y_0) +Tr$$
+
+$$\iff r=\frac{ln(Y_T)-ln(Y_0)}{T}$$
 
 :::
 
