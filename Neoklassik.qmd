@@ -1,22 +1,53 @@
 # Neoklassische Wachstumstheorie -- exogene Sparquote
 
+
+~~~
+**Kernbotschaften:**  
+
+- Der Kapitalstock kann nicht aus sich heraus über ein bestimmtes Niveau hinaus wachsen.
+
+- Das langfristige Wachstum des Einkommens pro Kopf wird durch *technischen Fortschritt* erklärt.
+
+- Der Fortschritt ist im Modell *exogen*.
+
+~~~
+
+::: {.callout-note icon=false}
+
+## Kernbotschaften 
+
+- Der Kapitalstock kann nicht aus sich heraus über ein bestimmtes Niveau hinaus wachsen.
+
+- Das langfristige Wachstum des Einkommens pro Kopf wird durch *technischen Fortschritt* erklärt.
+
+- Der Fortschritt ist im Modell *exogen*.
+
+
+:::
+
 ## Produktionsfunktion
 
 Allgemeine Form Cobb-Douglas Produktionsfunktion
 
 $Y=A{K}^{\alpha }{L}^{\beta }$
 
+[oder das A vor das L?]:;
+
 Annahme: Konstante Skalenerträge
 
 $Y=A{K}^{\alpha }{L}^{\left(1-\alpha \right)}$
 
-Für das Folgende nehmen wir zunächst an $A=1$
+Für das Folgende nehmen wir zunächst an $A=L=1$
+
+
 
 ## Kapitalbildung
 
 Geschlossene Volkswirtschaft
 
 $I=S$
+
+Exogene Sparquote $s$
 
 ${I}_t=S_t=s{Y}_t$
 
@@ -44,7 +75,21 @@ $c=\left(\frac{C}{L}\right)=\left(1-s\right)\left(\frac{Y}{L}\right)$
 
 ## Langfristiges Gleichgewicht
 
-Investitionen = Abschreibungen
+Die Produktion $Y$ wächst, wenn  
+- $A$ wächst (Technischer Fortschritt)
+- $L$ wächst (Bevölkerungswachstum)
+- $K$ wächst (Kapitalakkumulation)
+
+Fokus hier: $K$
+
+~~~
+**Pfad zum Gleichgewicht**
+
+Investitionen lassen den Kapitalstock wachsen. Abschreibungen (Verschleiß) lassen ihn schrumpfen.
+
+**Gleichgewicht:** Investitionen = Abschreibungen
+
+~~~
 
 $s{\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{\alpha }=\delta \left(\frac{K}{L}\right)$
 
@@ -58,9 +103,9 @@ $\iff y=\left(\frac{\mathrm{Y}}{\mathrm{L}}\right)={\left(\frac{s}{\delta}\right
 
 $\rightarrow$ Es gibt einen langfristigen Kapitalstock, der nicht mehr aus sich heraus wächst.
 
-$\rightarrow$ Damit gibt es auch ein Langfristiges Einkommen und ein Langfristiges Konsumniveau
+$\rightarrow$ Damit gibt es auch ein langfristig gleichgewichtiges Einkommen und ein Lälangfristig gleichgewichtiges Konsumniveau
 
-$\rightarrow$ Dies gilt *unabhängig* von einem Ausgangswert für den Kapitalstock
+$\rightarrow$ Dies gilt *unabhängig* von dem Ausgangswert des Kapitalstocks
 
 ## Entwicklung des Kapitalstocks
 
