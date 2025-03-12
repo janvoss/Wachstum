@@ -12,19 +12,24 @@
 
 ### Diskretes vs. kontinuierliches Wachstum
 
-#### Diskretes Wachstumsmodell
+::: {.callout-note title='Wachstum in diskreter Zeit'}
 
 Verknüpfung zwischen den Perioden
 
 $Y_t=(1+r)Y_{t-1}$
 
-Endwert nach T Perioden
+Endwert nach $T$ Perioden
 
 $Y_T=Y_{0}\times (1+r)^T$
 
 Wachstumsrate zwischen 2 Perioden
 
 $r=\frac{Y_t}{Y_{t-1}}-1$
+
+Wachstumsrate zwischen $n$ Perioden
+
+
+:::
 
 #### Kontinuierliches Wachstumsmodell
 
