@@ -1,17 +1,16 @@
-# Bedeutung und Phänomenologie des  Wirtschaftswachstums
+# Bedeutung und Phänomenologie des Wirtschaftswachstums
 
 ## Wachstumsbegriff
 
 ### Lang- vs. kurzfristige Perspektive
 
-- **Wirtschaftswachstum** bezeichnet üblicherweise die langfristige (systematische) Veränderung der Wertschöpfung in einer Volkswirtschaft
+-   **Wirtschaftswachstum** bezeichnet üblicherweise die langfristige (systematische) Veränderung der Wertschöpfung in einer Volkswirtschaft
 
-- Gemeint sind **nicht** kurzfristige Schwankungen des Wirtschaftsgeschehens 
+-   Gemeint sind **nicht** kurzfristige Schwankungen des Wirtschaftsgeschehens
 
-- Rückblickend ist die Unterscheidung empirisch recht gut möglich, am aktuellen Rand sind Wachstums- und Konjunkturphänomene eng miteinadner verknüpft
+-   Rückblickend ist die Unterscheidung empirisch recht gut möglich, am aktuellen Rand sind Wachstums- und Konjunkturphänomene eng miteinadner verknüpft
 
 ### Diskretes vs. kontinuierliches Wachstum
-
 
 #### Diskretes Wachstumsmodell
 
@@ -29,24 +28,45 @@ $r=\frac{Y_t}{Y_{t-1}}-1$
 
 #### Kontinuierliches Wachstumsmodell
 
-Verknüpfung zwischen den Perioden
+Zu jedem Zeitpunkt wächst $Y$ mir der Rate $r$
 
-$Y_t=Y_{t-1}\times e^r$
+$$\frac{dY(t)}{dt} = r \times Y(t)$$
 
-Endwert nach T Perioden
+Umstellen und integrieren
 
-$Y_T= Y_{0} \times e^{r\times T}$
+$$\iff \frac{dY}{Y} = r \, dt
+$$ $$\iff \int \frac{1}{Y} \, dY = \int r \, dt
+$$
+
+Integral auflösen
+
+$$\iff \ln(Y) = r \times t + C
+$$ Nach $Y$ umstellen
+
+$$\iff Y(t) = e^C \times e^{r  t}
+$$
+
+Substitution durch den Startwert
+
+$$\Rightarrow Y(t) = Y_0 \times e^{r t}
+$$
+
+$$Y_T= Y_{0} \times e^{r\times T}$$
 
 Wachstumsrate zwischen 2 Perioden:
 
-$r=ln(Y_t)-ln(Y_{t-1})$
+$$ Y(t) = Y_{t-1} \times e^{r}
+$$
 
+$$\iff ln(Y_t)= ln(Y_{t-1}) +r$$
+
+$$\iff r=ln(Y_t)-ln(Y_{t-1})$$
 
 ## Langfristige Effekte kleiner Wachstumsunterschiede
 
-- 2 Länder starten mit gleichem BIP (100).
-- Land 1 wächst 20 Jahre lang mit einer Wachstumsrate $r_1=1,5\%$.
-- Land wächst mit  $r_2=2\%$
+-   2 Länder starten mit gleichem BIP (100).
+-   Land 1 wächst 20 Jahre lang mit einer Wachstumsrate $r_1=1,5\%$.
+-   Land wächst mit $r_2=2\%$
 
 ```{python}
 #| message: false
@@ -91,12 +111,13 @@ y="Werte")
 
 ```
 
-- Entscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre
-- Unterwegs ist das BIP in Land in Land 2 dauerhaft höher als in Land 1.
+-   Entscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre
 
-- In en 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1
+-   Unterwegs ist das BIP in Land in Land 2 dauerhaft höher als in Land 1.
 
-- Dieses zusätzliche BIP steht für Konsum, öffentliche Güter, $\dots$ zur Verfügung
+-   In 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1
+
+-   Dieses zusätzliche BIP steht für Konsum, öffentliche Güter, $\dots$ zur Verfügung
 
 ```{python}
 #| message: false
@@ -146,14 +167,11 @@ print(round(integrate(y_2, (t, 0, T))-integrate(y_1, (t, 0, T)), 2))
 
 ```
 
-
 ## Rechnen mit Wachstumsraten
 
 Verdoppelungszeit: $2=e^{r \times t_{doppel}} \iff t_{doppel}=\frac{ln(2)}{r}$
 
 ## Wie sieht Wachstum aus?
-
-
 
 ```{r echo=F, warning=F, message=F}
 library(tidyverse)
@@ -205,20 +223,19 @@ kable(growth, digits=2, format.args = list(decimal.mark = ','), col.names=c("Sta
 
 ## Wachstum und exogene Schocks
 
-- Zufällige Schocks in der Gegenwart
+-   Zufällige Schocks in der Gegenwart
 
-- Wir erleben Zeit aber als mehr als die Abfolge zufälliger Schocks.
+-   Wir erleben Zeit aber als mehr als die Abfolge zufälliger Schocks.
 
-  - Schocks wirken länger als eine Periode
+    -   Schocks wirken länger als eine Periode
 
-  - Schocks treffen auf Trends
+    -   Schocks treffen auf Trends
 
-- Anhaltende Schocks können
+-   Anhaltende Schocks können
 
-  - Wachstum erzeugen und
+    -   Wachstum erzeugen und
 
-  - Trends überlagern
-
+    -   Trends überlagern
 
 ```{r message=F, warning=F}
 
@@ -340,4 +357,3 @@ library(knitr)
 kable(growth)
 
 ```
-
