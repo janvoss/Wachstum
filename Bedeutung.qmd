@@ -12,21 +12,29 @@
 
 ### Diskretes vs. kontinuierliches Wachstum
 
-#### Diskretes Wachstumsmodell
+::: {.callout-note title='Wachstum in diskreter Zeit'}
 
 Verknüpfung zwischen den Perioden
 
-$Y_t=(1+r)Y_{t-1}$
+$$Y_t=(1+r)Y_{t-1}$$
 
-Endwert nach T Perioden
+Endwert nach $T$ Perioden
 
-$Y_T=Y_{0}\times (1+r)^T$
+$$Y_T=Y_{0}\times (1+r)^T$$
 
-Wachstumsrate zwischen 2 Perioden
+Wachstumsrate nach einer Periode
 
-$r=\frac{Y_t}{Y_{t-1}}-1$
+$$r=\frac{Y_t}{Y_{t-1}}-1$$
 
-#### Kontinuierliches Wachstumsmodell
+Durchschnittliche jährliche Wachstumsrate nach $T$ Perioden
+
+$$(\frac{Y_t}{Y_{t-1}})^{\frac{1}{T}}-1$$
+
+
+:::
+
+::: {.callout-note title='Wachstum in kontinuierlicher Zeit'}
+
 
 Zu jedem Zeitpunkt wächst $Y$ mir der Rate $r$
 
@@ -35,25 +43,21 @@ $$\frac{dY(t)}{dt} = r \times Y(t)$$
 Umstellen und integrieren
 
 $$\iff \frac{dY}{Y} = r \, dt
-$$ $$\iff \int \frac{1}{Y} \, dY = \int r \, dt
-$$
+$$ $$\iff \int \frac{1}{Y} \, dY = \int r \, dt$$
 
 Integral auflösen
 
-$$\iff \ln(Y) = r \times t + C
-$$ Nach $Y$ umstellen
+$$\iff \ln(Y) = r \times t + C$$ 
 
-$$\iff Y(t) = e^C \times e^{r  t}
-$$
+Nach $Y$ umstellen
+
+$$\iff Y(t) = e^C \times e^{r  t}$$
 
 Substitution durch den Startwert
 
-$$\Rightarrow Y(t) = Y_0 \times e^{r t}
-$$
+$$\Rightarrow Y(t) = Y_0 \times e^{r t}$$
 
-$$Y_T= Y_{0} \times e^{r\times T}$$
-
-Wachstumsrate zwischen 2 Perioden:
+Wachstumsrate nach einer Periode:
 
 $$ Y(t) = Y_{t-1} \times e^{r}
 $$
@@ -62,11 +66,26 @@ $$\iff ln(Y_t)= ln(Y_{t-1}) +r$$
 
 $$\iff r=ln(Y_t)-ln(Y_{t-1})$$
 
+Wachstumsrate nach $T$ Perioden
+
+$$ Y(T) = Y_{0} \times e^{Tr}
+$$
+
+$$\iff ln(Y_T)= ln(Y_0) +Tr$$
+
+$$\iff r=\frac{ln(Y_T)-ln(Y_0)}{T}$$
+
+Verdoppelungszeit
+
+$$2=e^{r \times t_{doppel}} \iff t_{doppel}=\frac{ln(2)}{r}$$
+
+:::
+
 ## Langfristige Effekte kleiner Wachstumsunterschiede
 
 -   2 Länder starten mit gleichem BIP (100).
 -   Land 1 wächst 20 Jahre lang mit einer Wachstumsrate $r_1=1,5\%$.
--   Land wächst mit $r_2=2\%$
+-   Land 2 wächst mit $r_2=2\%$
 
 ```{python}
 #| message: false
@@ -113,7 +132,7 @@ y="Werte")
 
 -   Entscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre
 
--   Unterwegs ist das BIP in Land in Land 2 dauerhaft höher als in Land 1.
+-   Unterwegs ist das BIP in Land 2 dauerhaft höher als in Land 1.
 
 -   In 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1
 
@@ -166,10 +185,6 @@ print(round(integrate(y_2, (t, 0, T)), 2))
 print(round(integrate(y_2, (t, 0, T))-integrate(y_1, (t, 0, T)), 2))
 
 ```
-
-## Rechnen mit Wachstumsraten
-
-Verdoppelungszeit: $2=e^{r \times t_{doppel}} \iff t_{doppel}=\frac{ln(2)}{r}$
 
 ## Wie sieht Wachstum aus?
 
