@@ -1,5 +1,7 @@
 # Einleitung
 
+## Themen
+
 - Wirtschaftswachstum ist ein regelmäßig auftretendes empirisches Phänomen **aber nicht selbstverständlich**
 
 - Historisch ist die Erfahrung von Wirtschaftswachstum relativ neu $\rightarrow$ Warum wachsen Volkswirtschaften?
@@ -13,3 +15,8 @@
 - Ist &bdquo;grünes&ldquo; Wachstum möglich? Ist Wachstumsverzicht eine Strategie für eine nachhaltige Entwicklung und Klimaschutz?
 
 - $\dots$
+
+## Ein Blick in die Daten
+
+```
+```
