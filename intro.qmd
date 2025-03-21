@@ -18,5 +18,47 @@
 
 ## Ein Blick in die Daten
 
-```
+```{r}
+#| message: false
+#| warnings: false
+
+# Daten von OWiD laden
+
+library(tidyverse)
+
+df <- read.csv('https://ourworldindata.org/grapher/gdp-per-capita-worldbank.csv?v=1&csvType=full&useColumnShortNames=true')
+
+#head(df)
+
+# Daten filtern
+
+df <- df %>%
+  filter(!grepl("Europe|countries|WB", Entity),
+         Entity != "World")
+
+#unique(df$Entity)
+
+# Grafik erzeugen 
+
+p <- df %>% group_by(Entity)%>%
+       filter(Year >= 1990,
+             any(Year==1990)) %>%
+       mutate(index=ny_gdp_pcap_pp_kd/ny_gdp_pcap_pp_kd[Year==1990]*100)%>%
+       ggplot(aes(Year, index ))+
+       geom_line(aes(color=Entity), alpha=.3)+
+       geom_quantile()+
+       scale_y_log10()+
+       theme_light()+
+       theme(legend.position="none")+
+       labs(title= 'BIP pro Kopf, Index 1990=100',
+            subtitle= 'KKP, 2021 international $',
+            x= 'Jahr',
+            y= 'Index',
+            color= 'Entity',
+            caption= paste('Darstellung: Jan S. Voßwinkel,  Daten: Ourworldindata.org'))
+
+# Grafik ausgeben
+
+p
+
 ```
