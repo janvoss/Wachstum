@@ -62,3 +62,23 @@ p <- df %>% group_by(Entity)%>%
 p
 
 ```
+
+```{r}
+#| message: false
+#| warnings: false
+
+# Interaktiver Output
+
+
+library(canvasXpress)
+
+
+# Grafik erzeugen 
+p1 <- canvasXpress(p)
+
+# Output 
+
+p1
+
+
+```
