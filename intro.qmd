@@ -20,7 +20,7 @@
 
 ```{r}
 #| message: false
-#| warnings: false
+#| warning: false
 
 # Daten von OWiD laden
 
@@ -65,7 +65,7 @@ p
 
 ```{r}
 #| message: false
-#| warnings: false
+#| warning: false
 
 # Interaktiver Output
 
