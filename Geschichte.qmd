@@ -75,6 +75,8 @@ df %>% filter(Entity=="France") %>%
 ## Phasen des Wachstums
 
 ```{python}
+#| message: false
+#| warning: false
 
 from graphviz import Digraph
 from IPython.display import display
