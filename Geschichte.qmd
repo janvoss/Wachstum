@@ -85,7 +85,7 @@ dot = Digraph()
 
 # Set common attributes for all nodes
 dot.attr('node', width='3', shape='box')
-dot.attr(label='Titel', labelloc='t', labeljust='c', fontsize='20', fontname='Times-Bold')
+dot.attr(label='Menschheitsgeschichtliche Wachstumsphasen', labelloc='t', labeljust='c', fontsize='20', fontname='Times-Bold')
 
 # Increase the vertical distance between title and text
 dot.node('invis1', '', shape='none', width='0')
