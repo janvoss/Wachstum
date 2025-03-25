@@ -199,7 +199,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Neoklassik.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Neoklassische Wachstumstheorie</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Neoklassische Wachstumstheorie – exogene Sparquote</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -260,9 +260,8 @@ window.Quarto = {
   <li><a href="#diskretes-vs.-kontinuierliches-wachstum" id="toc-diskretes-vs.-kontinuierliches-wachstum" class="nav-link" data-scroll-target="#diskretes-vs.-kontinuierliches-wachstum"><span class="header-section-number">2.1.2</span> Diskretes vs.&nbsp;kontinuierliches Wachstum</a></li>
   </ul></li>
   <li><a href="#langfristige-effekte-kleiner-wachstumsunterschiede" id="toc-langfristige-effekte-kleiner-wachstumsunterschiede" class="nav-link" data-scroll-target="#langfristige-effekte-kleiner-wachstumsunterschiede"><span class="header-section-number">2.2</span> Langfristige Effekte kleiner Wachstumsunterschiede</a></li>
-  <li><a href="#rechnen-mit-wachstumsraten" id="toc-rechnen-mit-wachstumsraten" class="nav-link" data-scroll-target="#rechnen-mit-wachstumsraten"><span class="header-section-number">2.3</span> Rechnen mit Wachstumsraten</a></li>
-  <li><a href="#wie-sieht-wachstum-aus" id="toc-wie-sieht-wachstum-aus" class="nav-link" data-scroll-target="#wie-sieht-wachstum-aus"><span class="header-section-number">2.4</span> Wie sieht Wachstum aus?</a></li>
-  <li><a href="#wachstum-und-exogene-schocks" id="toc-wachstum-und-exogene-schocks" class="nav-link" data-scroll-target="#wachstum-und-exogene-schocks"><span class="header-section-number">2.5</span> Wachstum und exogene Schocks</a></li>
+  <li><a href="#wie-sieht-wachstum-aus" id="toc-wie-sieht-wachstum-aus" class="nav-link" data-scroll-target="#wie-sieht-wachstum-aus"><span class="header-section-number">2.3</span> Wie sieht Wachstum aus?</a></li>
+  <li><a href="#wachstum-und-exogene-schocks" id="toc-wachstum-und-exogene-schocks" class="nav-link" data-scroll-target="#wachstum-und-exogene-schocks"><span class="header-section-number">2.4</span> Wachstum und exogene Schocks</a></li>
   </ul>
 </nav>
     </div>
@@ -300,24 +299,61 @@ window.Quarto = {
 </section>
 <section id="diskretes-vs.-kontinuierliches-wachstum" class="level3" data-number="2.1.2">
 <h3 data-number="2.1.2" class="anchored" data-anchor-id="diskretes-vs.-kontinuierliches-wachstum"><span class="header-section-number">2.1.2</span> Diskretes vs.&nbsp;kontinuierliches Wachstum</h3>
-<section id="diskretes-wachstumsmodell" class="level4" data-number="2.1.2.1">
-<h4 data-number="2.1.2.1" class="anchored" data-anchor-id="diskretes-wachstumsmodell"><span class="header-section-number">2.1.2.1</span> Diskretes Wachstumsmodell</h4>
+<div class="callout callout-style-default callout-note callout-titled" title="Wachstum in diskreter Zeit">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wachstum in diskreter Zeit
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Verknüpfung zwischen den Perioden</p>
-<p><span class="math inline">\(Y_t=(1+r)Y_{t-1}\)</span></p>
-<p>Endwert nach T Perioden</p>
-<p><span class="math inline">\(Y_T=Y_{0}\times (1+r)^T\)</span></p>
-<p>Wachstumsrate zwischen 2 Perioden</p>
-<p><span class="math inline">\(r=\frac{Y_t}{Y_{t-1}}-1\)</span></p>
-</section>
-<section id="kontinuierliches-wachstumsmodell" class="level4" data-number="2.1.2.2">
-<h4 data-number="2.1.2.2" class="anchored" data-anchor-id="kontinuierliches-wachstumsmodell"><span class="header-section-number">2.1.2.2</span> Kontinuierliches Wachstumsmodell</h4>
-<p>Verknüpfung zwischen den Perioden</p>
-<p><span class="math inline">\(Y_t=Y_{t-1}\times e^r\)</span></p>
-<p>Endwert nach T Perioden</p>
-<p><span class="math inline">\(Y_T= Y_{0} \times e^{r\times T}\)</span></p>
-<p>Wachstumsrate zwischen 2 Perioden:</p>
-<p><span class="math inline">\(r=ln(Y_t)-ln(Y_{t-1})\)</span></p>
-</section>
+<p><span class="math display">\[Y_t=(1+r)Y_{t-1}\]</span></p>
+<p>Endwert nach <span class="math inline">\(T\)</span> Perioden</p>
+<p><span class="math display">\[Y_T=Y_{0}\times (1+r)^T\]</span></p>
+<p>Wachstumsrate nach einer Periode</p>
+<p><span class="math display">\[r=\frac{Y_t}{Y_{t-1}}-1\]</span></p>
+<p>Durchschnittliche jährliche Wachstumsrate nach <span class="math inline">\(T\)</span> Perioden</p>
+<p><span class="math display">\[(\frac{Y_t}{Y_{t-1}})^{\frac{1}{T}}-1\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Wachstum in kontinuierlicher Zeit">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Wachstum in kontinuierlicher Zeit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Zu jedem Zeitpunkt wächst <span class="math inline">\(Y\)</span> mir der Rate <span class="math inline">\(r\)</span></p>
+<p><span class="math display">\[\frac{dY(t)}{dt} = r \times Y(t)\]</span></p>
+<p>Umstellen und integrieren</p>
+<p><span class="math display">\[\iff \frac{dY}{Y} = r \, dt
+\]</span> <span class="math display">\[\iff \int \frac{1}{Y} \, dY = \int r \, dt\]</span></p>
+<p>Integral auflösen</p>
+<p><span class="math display">\[\iff \ln(Y) = r \times t + C\]</span></p>
+<p>Nach <span class="math inline">\(Y\)</span> umstellen</p>
+<p><span class="math display">\[\iff Y(t) = e^C \times e^{r  t}\]</span></p>
+<p>Substitution durch den Startwert</p>
+<p><span class="math display">\[\Rightarrow Y(t) = Y_0 \times e^{r t}\]</span></p>
+<p>Wachstumsrate nach einer Periode:</p>
+<p><span class="math display">\[ Y(t) = Y_{t-1} \times e^{r}
+\]</span></p>
+<p><span class="math display">\[\iff ln(Y_t)= ln(Y_{t-1}) +r\]</span></p>
+<p><span class="math display">\[\iff r=ln(Y_t)-ln(Y_{t-1})\]</span></p>
+<p>Wachstumsrate nach <span class="math inline">\(T\)</span> Perioden</p>
+<p><span class="math display">\[ Y(T) = Y_{0} \times e^{Tr}
+\]</span></p>
+<p><span class="math display">\[\iff ln(Y_T)= ln(Y_0) +Tr\]</span></p>
+<p><span class="math display">\[\iff r=\frac{ln(Y_T)-ln(Y_0)}{T}\]</span></p>
+<p>Verdoppelungszeit</p>
+<p><span class="math display">\[2=e^{r \times t_{doppel}} \iff t_{doppel}=\frac{ln(2)}{r}\]</span></p>
+</div>
+</div>
 </section>
 </section>
 <section id="langfristige-effekte-kleiner-wachstumsunterschiede" class="level2" data-number="2.2">
@@ -325,7 +361,7 @@ window.Quarto = {
 <ul>
 <li>2 Länder starten mit gleichem BIP (100).</li>
 <li>Land 1 wächst 20 Jahre lang mit einer Wachstumsrate <span class="math inline">\(r_1=1,5\%\)</span>.</li>
-<li>Land wächst mit <span class="math inline">\(r_2=2\%\)</span></li>
+<li>Land 2 wächst mit <span class="math inline">\(r_2=2\%\)</span></li>
 </ul>
 <div class="cell" data-warnings="false">
 <details class="code-fold">
@@ -382,8 +418,8 @@ window.Quarto = {
 </div>
 <ul>
 <li><p>Entscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre</p></li>
-<li><p>Unterwegs ist das BIP in Land in Land 2 dauerhaft höher als in Land 1.</p></li>
-<li><p>In en 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1</p></li>
+<li><p>Unterwegs ist das BIP in Land 2 dauerhaft höher als in Land 1.</p></li>
+<li><p>In 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1</p></li>
 <li><p>Dieses zusätzliche BIP steht für Konsum, öffentliche Güter, <span class="math inline">\(\dots\)</span> zur Verfügung</p></li>
 </ul>
 <div class="cell" data-warnings="false">
@@ -431,12 +467,8 @@ window.Quarto = {
 </details>
 </div>
 </section>
-<section id="rechnen-mit-wachstumsraten" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="rechnen-mit-wachstumsraten"><span class="header-section-number">2.3</span> Rechnen mit Wachstumsraten</h2>
-<p>Verdoppelungszeit: <span class="math inline">\(2=e^{r \times t_{doppel}} \iff t_{doppel}=\frac{ln(2)}{r}\)</span></p>
-</section>
-<section id="wie-sieht-wachstum-aus" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="wie-sieht-wachstum-aus"><span class="header-section-number">2.4</span> Wie sieht Wachstum aus?</h2>
+<section id="wie-sieht-wachstum-aus" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="wie-sieht-wachstum-aus"><span class="header-section-number">2.3</span> Wie sieht Wachstum aus?</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -506,8 +538,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="wachstum-und-exogene-schocks" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="wachstum-und-exogene-schocks"><span class="header-section-number">2.5</span> Wachstum und exogene Schocks</h2>
+<section id="wachstum-und-exogene-schocks" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="wachstum-und-exogene-schocks"><span class="header-section-number">2.4</span> Wachstum und exogene Schocks</h2>
 <ul>
 <li><p>Zufällige Schocks in der Gegenwart</p></li>
 <li><p>Wir erleben Zeit aber als mehr als die Abfolge zufälliger Schocks.</p>

@@ -103,35 +103,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -199,7 +170,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Neoklassik.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Neoklassische Wachstumstheorie</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Neoklassische Wachstumstheorie – exogene Sparquote</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -217,31 +188,31 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Gruen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Grünes Wachstum</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Degrowth.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Degrowth</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Grünes Wachstum vs.&nbsp;Degrowth</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Poloek.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Politische Ökonomie des Wirtschaftswachstums</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Politische Ökonomie des Wirtschaftswachstums</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Ausblick.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Ausblick</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Ausblick</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./literatur.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literatur</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Uebungsfragen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Übungsfragen</span></a>
   </div>
 </li>
     </ul>
@@ -388,13 +359,104 @@ window.Quarto = {
 </section>
 <section id="phasen-des-wachstums" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="phasen-des-wachstums"><span class="header-section-number">3.4</span> Phasen des Wachstums</h2>
-<ul>
-<li>Koginitive Revolution: Ausbreitung der Menschheit über die Welt</li>
-<li>Neolithische Revolution: Bevölkerungswachstum</li>
-<li>Renaissance: Wissenswachstum</li>
-<li>Industrielle Revolution: Produktionswachstum</li>
-<li>Digitale Revolution/Künstliche Intelligenz: <span class="math inline">\(\dots\)</span>?</li>
-</ul>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">##| fig-cap: "Menschheitsgeschichtliche Wachstumsphasen"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> graphviz <span class="im">import</span> Digraph</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Pfad für die permanente PNG-Datei festlegen</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>output_path <span class="op">=</span> <span class="st">"dot-bild.png"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> Digraph()</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Set common attributes</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, width<span class="op">=</span><span class="st">'3'</span>, shape<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>dot.attr(label<span class="op">=</span><span class="st">'Menschheitsgeschichtliche Wachstumsphasen'</span>, </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>         labelloc<span class="op">=</span><span class="st">'t'</span>, </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>         labeljust<span class="op">=</span><span class="st">'c'</span>, </span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>         fontsize<span class="op">=</span><span class="st">'20'</span>, </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>         fontname<span class="op">=</span><span class="st">'Times-Bold'</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Increase the vertical distance between title and text</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'invis1'</span>, <span class="st">''</span>, shape<span class="op">=</span><span class="st">'none'</span>, width<span class="op">=</span><span class="st">'0'</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Sub-nodes with text wrapping</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>sub_nodes_b <span class="op">=</span> [</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Vor 70.000 Jahren'</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Vor 10.000 Jahren'</span>,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">'16. Jh'</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">'19. Jh'</span>,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Gegenwart'</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>sub_nodes_a <span class="op">=</span> [</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Kognitive Revolution:\l Besiedelung der Welt\l'</span>,</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Neolithische Revolution:\l Sesshaftigkeit und\l Ackerbau\l'</span>,</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Wissenschaftliche Revolution:\l Systematische Forschung\l'</span>,</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Industrielle Revolution:\l Industrielle Produktion\l'</span>,</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Digitale Revolution:\l EDV, IKT, KI\l'</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>sub_notes <span class="op">=</span> [<span class="st">'Räumliche Ausdehnung'</span>, <span class="st">'Bevölkerungswachstum'</span>, <span class="st">'Wissenszuwachs'</span>, <span class="st">'Produktionswachstum'</span>, <span class="st">'?'</span>]</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Create nodes and edges</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sub_nodes_a)):</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    a_node <span class="op">=</span> <span class="ss">f'A</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    dot.node(a_node, sub_nodes_a[i])</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    b_node <span class="op">=</span> <span class="ss">f'B</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    dot.node(b_node, <span class="ss">f'</span><span class="sc">{</span>sub_nodes_b[i]<span class="sc">}</span><span class="ch">\r</span><span class="ss">'</span>, shape<span class="op">=</span><span class="st">'none'</span>, width<span class="op">=</span><span class="st">'2.5'</span>)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    c_node <span class="op">=</span> <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    dot.node(c_node, sub_notes[i], shape<span class="op">=</span><span class="st">'none'</span>)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Position nodes in same rank</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> dot.subgraph() <span class="im">as</span> s:</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>        s.attr(rank<span class="op">=</span><span class="st">'same'</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>        s.node(a_node)</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>        s.node(b_node)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>        s.node(c_node)</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Invisible edges for alignment</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>        dot.edge(<span class="ss">f'A</span><span class="sc">{</span>i<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>, a_node, style<span class="op">=</span><span class="st">'invis'</span>, weight<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>        dot.edge(<span class="ss">f'B</span><span class="sc">{</span>i<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>, b_node, weight<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>        dot.edge(<span class="ss">f'C</span><span class="sc">{</span>i<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>, c_node, style<span class="op">=</span><span class="st">'invis'</span>, weight<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'invis1'</span>, <span class="st">'B0'</span>, style<span class="op">=</span><span class="st">'invis'</span>, weight<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Add caption</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'invis'</span>, <span class="st">''</span>, shape<span class="op">=</span><span class="st">'none'</span>, width<span class="op">=</span><span class="st">'0'</span>)</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'caption'</span>, label<span class="op">=</span><span class="st">'Darstellung: Jan S. Voßwinkel in Anlehnung an Groviec (2022)'</span>, </span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>         shape<span class="op">=</span><span class="st">'none'</span>, width<span class="op">=</span><span class="st">'7'</span>, fontsize<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph() <span class="im">as</span> s:</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>    s.attr(rank<span class="op">=</span><span class="st">'same'</span>)</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'caption'</span>)</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'invis'</span>)</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="ss">f'A</span><span class="sc">{</span><span class="bu">len</span>(sub_nodes_a)<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>, <span class="st">'caption'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="ss">f'A</span><span class="sc">{</span><span class="bu">len</span>(sub_nodes_a)<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>, <span class="st">'invis'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Output the DOT source for Quarto to render</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="co">#print(dot.source)</span></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. PNG-Datei permanent speichern (ohne .png-Endung im Pfad)</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>dot.<span class="bu">format</span> <span class="op">=</span> <span class="st">'png'</span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>dot.render(output_path[:<span class="op">-</span><span class="dv">4</span>], cleanup<span class="op">=</span><span class="va">True</span>)  <span class="co"># Entfernt automatisch .dot-Datei</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>'dot-bild.png'</code></pre>
+</div>
+</div>
+<p><img src="dot-bild.png" class="img-fluid"></p>
 </section>
 <section id="geschichtliche-bedeutung-des-wirtschaftswachstums" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="geschichtliche-bedeutung-des-wirtschaftswachstums"><span class="header-section-number">3.5</span> Geschichtliche Bedeutung des Wirtschaftswachstums</h2>
@@ -804,8 +866,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Neoklassik.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Neoklassische Wachstumstheorie</span>">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Neoklassische Wachstumstheorie</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Neoklassik.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Neoklassische Wachstumstheorie – exogene Sparquote</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

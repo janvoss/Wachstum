@@ -6,7 +6,7 @@
     "section": "",
     "text": "2.1 Wachstumsbegriff",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des Wirtschaftswachstums</span>"
     ]
   },
   {
@@ -14,9 +14,9 @@
     "href": "Bedeutung.html#wachstumsbegriff",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
     "section": "",
-    "text": "2.1.1 Lang- vs. kurzfristige Perspektive\n\nWirtschaftswachstum bezeichnet üblicherweise die langfristige (systematische) Veränderung der Wertschöpfung in einer Volkswirtschaft\nGemeint sind nicht kurzfristige Schwankungen des Wirtschaftsgeschehens\nRückblickend ist die Unterscheidung empirisch recht gut möglich, am aktuellen Rand sind Wachstums- und Konjunkturphänomene eng miteinadner verknüpft\n\n\n\n2.1.2 Diskretes vs. kontinuierliches Wachstum\n\n2.1.2.1 Diskretes Wachstumsmodell\nVerknüpfung zwischen den Perioden\n\\(Y_t=(1+r)Y_{t-1}\\)\nEndwert nach T Perioden\n\\(Y_T=Y_{0}\\times (1+r)^T\\)\nWachstumsrate zwischen 2 Perioden\n\\(r=\\frac{Y_t}{Y_{t-1}}-1\\)\n\n\n2.1.2.2 Kontinuierliches Wachstumsmodell\nVerknüpfung zwischen den Perioden\n\\(Y_t=Y_{t-1}\\times e^r\\)\nEndwert nach T Perioden\n\\(Y_T= Y_{0} \\times e^{r\\times T}\\)\nWachstumsrate zwischen 2 Perioden:\n\\(r=ln(Y_t)-ln(Y_{t-1})\\)",
+    "text": "2.1.1 Lang- vs. kurzfristige Perspektive\n\nWirtschaftswachstum bezeichnet üblicherweise die langfristige (systematische) Veränderung der Wertschöpfung in einer Volkswirtschaft\nGemeint sind nicht kurzfristige Schwankungen des Wirtschaftsgeschehens\nRückblickend ist die Unterscheidung empirisch recht gut möglich, am aktuellen Rand sind Wachstums- und Konjunkturphänomene eng miteinadner verknüpft\n\n\n\n2.1.2 Diskretes vs. kontinuierliches Wachstum\n\n\n\n\n\n\nWachstum in diskreter Zeit\n\n\n\nVerknüpfung zwischen den Perioden\n\\[Y_t=(1+r)Y_{t-1}\\]\nEndwert nach \\(T\\) Perioden\n\\[Y_T=Y_{0}\\times (1+r)^T\\]\nWachstumsrate nach einer Periode\n\\[r=\\frac{Y_t}{Y_{t-1}}-1\\]\nDurchschnittliche jährliche Wachstumsrate nach \\(T\\) Perioden\n\\[(\\frac{Y_t}{Y_{t-1}})^{\\frac{1}{T}}-1\\]\n\n\n\n\n\n\n\n\nWachstum in kontinuierlicher Zeit\n\n\n\nZu jedem Zeitpunkt wächst \\(Y\\) mir der Rate \\(r\\)\n\\[\\frac{dY(t)}{dt} = r \\times Y(t)\\]\nUmstellen und integrieren\n\\[\\iff \\frac{dY}{Y} = r \\, dt\n\\] \\[\\iff \\int \\frac{1}{Y} \\, dY = \\int r \\, dt\\]\nIntegral auflösen\n\\[\\iff \\ln(Y) = r \\times t + C\\]\nNach \\(Y\\) umstellen\n\\[\\iff Y(t) = e^C \\times e^{r  t}\\]\nSubstitution durch den Startwert\n\\[\\Rightarrow Y(t) = Y_0 \\times e^{r t}\\]\nWachstumsrate nach einer Periode:\n\\[ Y(t) = Y_{t-1} \\times e^{r}\n\\]\n\\[\\iff ln(Y_t)= ln(Y_{t-1}) +r\\]\n\\[\\iff r=ln(Y_t)-ln(Y_{t-1})\\]\nWachstumsrate nach \\(T\\) Perioden\n\\[ Y(T) = Y_{0} \\times e^{Tr}\n\\]\n\\[\\iff ln(Y_T)= ln(Y_0) +Tr\\]\n\\[\\iff r=\\frac{ln(Y_T)-ln(Y_0)}{T}\\]\nVerdoppelungszeit\n\\[2=e^{r \\times t_{doppel}} \\iff t_{doppel}=\\frac{ln(2)}{r}\\]",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des Wirtschaftswachstums</span>"
     ]
   },
   {
@@ -24,9 +24,9 @@
     "href": "Bedeutung.html#langfristige-effekte-kleiner-wachstumsunterschiede",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
     "section": "2.2 Langfristige Effekte kleiner Wachstumsunterschiede",
-    "text": "2.2 Langfristige Effekte kleiner Wachstumsunterschiede\n\n2 Länder starten mit gleichem BIP (100).\nLand 1 wächst 20 Jahre lang mit einer Wachstumsrate \\(r_1=1,5\\%\\).\nLand wächst mit \\(r_2=2\\%\\)\n\n\n\nCode\n# Python\n\n\nimport numpy as np\nimport pandas as pd\n#import matplotlib.pyplot as plt\n\ndef func1(t):\n  return 100 * np.exp(0.015 * t)\n\ndef func2(t):\n  return 100 * np.exp(0.02 * t)\n\n\nt = np.arange(0, 20, 1)\n\ndf = pd.DataFrame({\n  \"Periode\": t,\n  \"Funktion 1\": func1(t),\n  \"Funktion 2\": func2(t)\n})\n\n\nimport plotnine as plt\n\n(\nplt.ggplot(df)\n+plt.aes(x='Periode', y='Funktion 1')\n+ plt.geom_line(color=\"blue\")\n+plt.geom_line(plt.aes(y='Funktion 2'),  color='green')\n+ plt.geom_ribbon(plt.aes(ymin='Funktion 1',\nymax= 'Funktion 2'), fill=\"grey\", alpha=.2)\n+plt.theme_light()\n+plt.labs(title=\"Unterschiedliche Wachstumsraten\",\ny=\"Werte\")\n)\n\n\n&lt;Figure Size: (640 x 480)&gt;\n\n&lt;string&gt;:2: FutureWarning: Using repr(plot) to draw and show the plot figure is deprecated and will be removed in a future version. Use plot.show().\n\n\n\n\n\n\n\n\n\n\nEntscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre\nUnterwegs ist das BIP in Land in Land 2 dauerhaft höher als in Land 1.\nIn en 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1\nDieses zusätzliche BIP steht für Konsum, öffentliche Güter, \\(\\dots\\) zur Verfügung\n\n\n\nCode\n# Python\n\nfrom sympy import *\n\n\n\na = Symbol('a', real=True, positive=True)\n\nr = Symbol('r', real=True, positive=True)\nr_1 = Symbol('r_1', real=True, positive=True)\nr_2 = Symbol('r_2', real=True, positive=True)\n\nt = Symbol('t', real=True)\nT = Symbol('T', real=True)\ny = a * exp(r * t)\n\nintegral = integrate(y, (t, 0, T))\n\nprint(integral)\n\nprint(latex(integral))\n\na=100\n\nr_1=.015\nr_2=.02\n\nT=20\n\ny_1 = a * exp(r_1 * t)\ny_2 = a * exp(r_2 * t)\n\nprint(y_1)\nprint(y_2)\n\nprint(round(integrate(y_1, (t, 0, T)), 2))\nprint(round(integrate(y_2, (t, 0, T)), 2))\n\nprint(round(integrate(y_2, (t, 0, T))-integrate(y_1, (t, 0, T)), 2))",
+    "text": "2.2 Langfristige Effekte kleiner Wachstumsunterschiede\n\n2 Länder starten mit gleichem BIP (100).\nLand 1 wächst 20 Jahre lang mit einer Wachstumsrate \\(r_1=1,5\\%\\).\nLand 2 wächst mit \\(r_2=2\\%\\)\n\n\n\nCode\n# Python\n\n\nimport numpy as np\nimport pandas as pd\n#import matplotlib.pyplot as plt\n\ndef func1(t):\n  return 100 * np.exp(0.015 * t)\n\ndef func2(t):\n  return 100 * np.exp(0.02 * t)\n\n\nt = np.arange(0, 20, 1)\n\ndf = pd.DataFrame({\n  \"Periode\": t,\n  \"Funktion 1\": func1(t),\n  \"Funktion 2\": func2(t)\n})\n\n\nimport plotnine as plt\n\n(\nplt.ggplot(df)\n+plt.aes(x='Periode', y='Funktion 1')\n+ plt.geom_line(color=\"blue\")\n+plt.geom_line(plt.aes(y='Funktion 2'),  color='green')\n+ plt.geom_ribbon(plt.aes(ymin='Funktion 1',\nymax= 'Funktion 2'), fill=\"grey\", alpha=.2)\n+plt.theme_light()\n+plt.labs(title=\"Unterschiedliche Wachstumsraten\",\ny=\"Werte\")\n)\n\n\n&lt;Figure Size: (640 x 480)&gt;\n\n&lt;string&gt;:2: FutureWarning: Using repr(plot) to draw and show the plot figure is deprecated and will be removed in a future version. Use plot.show().\n\n\n\n\n\n\n\n\n\n\nEntscheidend ist nicht nur das unterschiedlche Ergebnis am Ende der 20 Jahre\nUnterwegs ist das BIP in Land 2 dauerhaft höher als in Land 1.\nIn 20 Jahren akkumuliert sich in Land 2 ein zusätzliches BIP das höher ist als die durchschnittliche Jahresleistung in Land 1\nDieses zusätzliche BIP steht für Konsum, öffentliche Güter, \\(\\dots\\) zur Verfügung\n\n\n\nCode\n# Python\n\nfrom sympy import *\n\n\n\na = Symbol('a', real=True, positive=True)\n\nr = Symbol('r', real=True, positive=True)\nr_1 = Symbol('r_1', real=True, positive=True)\nr_2 = Symbol('r_2', real=True, positive=True)\n\nt = Symbol('t', real=True)\nT = Symbol('T', real=True)\ny = a * exp(r * t)\n\nintegral = integrate(y, (t, 0, T))\n\nprint(integral)\n\nprint(latex(integral))\n\na=100\n\nr_1=.015\nr_2=.02\n\nT=20\n\ny_1 = a * exp(r_1 * t)\ny_2 = a * exp(r_2 * t)\n\nprint(y_1)\nprint(y_2)\n\nprint(round(integrate(y_1, (t, 0, T)), 2))\nprint(round(integrate(y_2, (t, 0, T)), 2))\n\nprint(round(integrate(y_2, (t, 0, T))-integrate(y_1, (t, 0, T)), 2))",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des Wirtschaftswachstums</span>"
     ]
   },
   {
@@ -54,7 +54,7 @@
     "href": "intro.html",
     "title": "1  Einleitung",
     "section": "",
-    "text": "Wirtschaftswachstum ist ein regelmäßig auftretendes empirisches Phänomen\nDas war nicht immer so. \\(\\rightarrow\\) Warum wachsen Volkswirtschaften?\nWarum wachsen einige Volkswirtschaften stärker als andere?\nWodurch entsteht Wirtschaftswachstum? (Spoiler: Das ist gar nicht so leichht zu erklären)\nLässt sich beeinflussen, ob und wie Wirtschaften wachsen?\nIst “grünes” Wachstum möglich? Ist Wachstumsverzicht eine Strategie für mehr Nachhaltigkeit/Klimaschutz?\n\\(\\dots\\)",
+    "text": "1.1 Themen",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "Geschichte.html#phasen-des-wachstums",
     "title": "3  Geschichte",
     "section": "3.4 Phasen des Wachstums",
-    "text": "3.4 Phasen des Wachstums\n\nKoginitive Revolution: Ausbreitung der Menschheit über die Welt\nNeolithische Revolution: Bevölkerungswachstum\nRenaissance: Wissenswachstum\nIndustrielle Revolution: Produktionswachstum\nDigitale Revolution/Künstliche Intelligenz: \\(\\dots\\)?",
+    "text": "3.4 Phasen des Wachstums\n\n\nCode\n##| fig-cap: \"Menschheitsgeschichtliche Wachstumsphasen\"\n#| message: false\n#| output: false\n#| include: false\n\nfrom graphviz import Digraph\nimport os\n\n# 1. Pfad für die permanente PNG-Datei festlegen\noutput_path = \"dot-bild.png\"\n\ndot = Digraph()\n\n# Set common attributes\ndot.attr('node', width='3', shape='box')\ndot.attr(label='Menschheitsgeschichtliche Wachstumsphasen', \n         labelloc='t', \n         labeljust='c', \n         fontsize='20', \n         fontname='Times-Bold')\n\n# Increase the vertical distance between title and text\ndot.node('invis1', '', shape='none', width='0')\n\n# Sub-nodes with text wrapping\nsub_nodes_b = [\n    'Vor 70.000 Jahren',\n    'Vor 10.000 Jahren',\n    '16. Jh',\n    '19. Jh',\n    'Gegenwart'\n]\n\nsub_nodes_a = [\n    'Kognitive Revolution:\\l Besiedelung der Welt\\l',\n    'Neolithische Revolution:\\l Sesshaftigkeit und\\l Ackerbau\\l',\n    'Wissenschaftliche Revolution:\\l Systematische Forschung\\l',\n    'Industrielle Revolution:\\l Industrielle Produktion\\l',\n    'Digitale Revolution:\\l EDV, IKT, KI\\l'\n]\n\nsub_notes = ['Räumliche Ausdehnung', 'Bevölkerungswachstum', 'Wissenszuwachs', 'Produktionswachstum', '?']\n\n# Create nodes and edges\nfor i in range(len(sub_nodes_a)):\n    a_node = f'A{i}'\n    dot.node(a_node, sub_nodes_a[i])\n\n    b_node = f'B{i}'\n    dot.node(b_node, f'{sub_nodes_b[i]}\\r', shape='none', width='2.5')\n\n    c_node = f'C{i}'\n    dot.node(c_node, sub_notes[i], shape='none')\n\n    # Position nodes in same rank\n    with dot.subgraph() as s:\n        s.attr(rank='same')\n        s.node(a_node)\n        s.node(b_node)\n        s.node(c_node)\n\n    # Invisible edges for alignment\n    if i &gt; 0:\n        dot.edge(f'A{i-1}', a_node, style='invis', weight='10')\n        dot.edge(f'B{i-1}', b_node, weight='10')\n        dot.edge(f'C{i-1}', c_node, style='invis', weight='10')\n\ndot.edge('invis1', 'B0', style='invis', weight='10')\n\n# Add caption\ndot.node('invis', '', shape='none', width='0')\ndot.node('caption', label='Darstellung: Jan S. Voßwinkel in Anlehnung an Groviec (2022)', \n         shape='none', width='7', fontsize='10')\n\nwith dot.subgraph() as s:\n    s.attr(rank='same')\n    s.node('caption')\n    s.node('invis')\n\ndot.edge(f'A{len(sub_nodes_a)-1}', 'caption', style='invis')\ndot.edge(f'A{len(sub_nodes_a)-1}', 'invis', style='invis')\n\n# Output the DOT source for Quarto to render\n#print(dot.source)\n\n\n# 3. PNG-Datei permanent speichern (ohne .png-Endung im Pfad)\ndot.format = 'png'\ndot.render(output_path[:-4], cleanup=True)  # Entfernt automatisch .dot-Datei\n\n\n'dot-bild.png'",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Geschichte</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "index.html",
     "title": "Wachstumstheorie und -politik",
     "section": "",
-    "text": "Organisatorisches\n\n\n\n\n\n\n\n\\({}\\)\n\\({}\\)\n\n\n\n\n\n\n\n\n\n\nUnterlagen: https://janvoss.github.io/Wachstum/\nModul: 209-021 Wachstum und Transformation Modulhandbuch\nWeitere Veranstaltung im ModuL: Strukturpolitik\nPrüfungsleistung: K60, diese VL davon 50%",
+    "text": "\\({}\\)\n\\({}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganisatorisches\n\n\n\n\n\n\nUnterlagen: https://janvoss.github.io/Wachstum/\nModul: 209-021 Wachstum und Transformation (Modulhandbuch)\nWeitere Veranstaltung im ModuL: Strukturpolitik\nPrüfungsleistung: K60, diese VL davon 50%",
     "crumbs": [
       "Organisatorisches"
     ]
@@ -123,30 +123,30 @@
     "objectID": "Bedeutung.html#wie-sieht-wachstum-aus",
     "href": "Bedeutung.html#wie-sieht-wachstum-aus",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
-    "section": "2.4 Wie sieht Wachstum aus?",
-    "text": "2.4 Wie sieht Wachstum aus?\n\n\n\n\n\n\n\n\n\n\nGeschätzte Durchschnittliche jährliche Wachstumsrate (%) 1990-2021, Daten: Ourworldindata.org\n\n\nStaat\nWachstumsrate (%)\nVerdopplungszeit (Jahre)\n\n\n\n\nChina\n8,32\n8,33\n\n\nFrance\n0,97\n71,74\n\n\nGermany\n1,25\n55,57\n\n\nGreece\n0,57\n121,41\n\n\nIndia\n4,59\n15,10\n\n\nIreland\n3,71\n18,66\n\n\nItaly\n0,28\n247,34\n\n\nTurkey\n3,05\n22,74\n\n\nUnited States\n1,44\n48,23",
+    "section": "2.3 Wie sieht Wachstum aus?",
+    "text": "2.3 Wie sieht Wachstum aus?\n\n\n\n\n\n\n\n\n\n\nGeschätzte Durchschnittliche jährliche Wachstumsrate (%) 1990-2021, Daten: Ourworldindata.org\n\n\nStaat\nWachstumsrate (%)\nVerdopplungszeit (Jahre)\n\n\n\n\nChina\n8,32\n8,33\n\n\nFrance\n0,97\n71,74\n\n\nGermany\n1,25\n55,57\n\n\nGreece\n0,57\n121,41\n\n\nIndia\n4,59\n15,10\n\n\nIreland\n3,71\n18,66\n\n\nItaly\n0,28\n247,34\n\n\nTurkey\n3,05\n22,74\n\n\nUnited States\n1,44\n48,23",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des Wirtschaftswachstums</span>"
     ]
   },
   {
     "objectID": "Bedeutung.html#wachstum-und-exogene-schocks",
     "href": "Bedeutung.html#wachstum-und-exogene-schocks",
     "title": "2  Bedeutung und Phänomenologie des Wirtschaftswachstums",
-    "section": "2.5 Wachstum und exogene Schocks",
-    "text": "2.5 Wachstum und exogene Schocks\n\nZufällige Schocks in der Gegenwart\nWir erleben Zeit aber als mehr als die Abfolge zufälliger Schocks.\n\nSchocks wirken länger als eine Periode\nSchocks treffen auf Trends\n\nAnhaltende Schocks können\n\nWachstum erzeugen und\nTrends überlagern\n\n\n\n\nCode\n#| message: false\n#| warning: false\n#| echo: false\n\n\n# r\n\n# Bibliothek laden\nlibrary(tidyverse)\n\nset.seed(123)\n# Datensatz generieren\n\n# Trendgewicht\na&lt;- .5\n\n\ndf &lt;- data.frame(\n  Fall   = rep(c(1:4), 100),\n  normal = rnorm(400)\n) %&gt;% group_by(Fall) %&gt;%\n      arrange(Fall) %&gt;%\n      mutate(cumsum=cumsum(normal),\n      lag_sum = lag(cumsum),\n      zeit=1:100,\n      trend= exp(zeit*.015),\n      kombi = a*trend + (1-a) * lag_sum + normal)\n\n#head(df)\n\n# Plots\n\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = normal)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Standardnormalverteilte Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = normal)) +\n  geom_density() +\n  labs(x = \"werte\", y = \"Dichte\") +\n ggtitle(\"Dichtefunktionem zu standardnormalverteilten Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = cumsum)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Kumulative Summe von standardnormalverteilten Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\nlibrary(broom)\n\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(cumsum) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))\n\nlibrary(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n3.55\n\n\n2\n0.11\n\n\n3\n1.39\n\n\n4\n-0.77\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = +trend+normal)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Trend und Störterm\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(trend+normal) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))\n\n#library(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n1.83\n\n\n2\n1.67\n\n\n3\n1.62\n\n\n4\n1.41\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = kombi)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Trend, Autoregression und Störterm\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(kombi) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))\n\nlibrary(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n4.17\n\n\n2\n1.48\n\n\n3\n1.46\n\n\n4\n-0.13",
+    "section": "2.4 Wachstum und exogene Schocks",
+    "text": "2.4 Wachstum und exogene Schocks\n\nZufällige Schocks in der Gegenwart\nWir erleben Zeit aber als mehr als die Abfolge zufälliger Schocks.\n\nSchocks wirken länger als eine Periode\nSchocks treffen auf Trends\n\nAnhaltende Schocks können\n\nWachstum erzeugen und\nTrends überlagern\n\n\n\n\nCode\n#| message: false\n#| warning: false\n#| echo: false\n\n\n# r\n\n# Bibliothek laden\nlibrary(tidyverse)\n\nset.seed(123)\n# Datensatz generieren\n\n# Trendgewicht\na&lt;- .5\n\n\ndf &lt;- data.frame(\n  Fall   = rep(c(1:4), 100),\n  normal = rnorm(400)\n) %&gt;% group_by(Fall) %&gt;%\n      arrange(Fall) %&gt;%\n      mutate(cumsum=cumsum(normal),\n      lag_sum = lag(cumsum),\n      zeit=1:100,\n      trend= exp(zeit*.015),\n      kombi = a*trend + (1-a) * lag_sum + normal)\n\n#head(df)\n\n# Plots\n\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = normal)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Standardnormalverteilte Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = normal)) +\n  geom_density() +\n  labs(x = \"werte\", y = \"Dichte\") +\n ggtitle(\"Dichtefunktionem zu standardnormalverteilten Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = cumsum)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Kumulative Summe von standardnormalverteilten Zufallszahlen\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\nlibrary(broom)\n\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(cumsum) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))\n\nlibrary(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n3.55\n\n\n2\n0.11\n\n\n3\n1.39\n\n\n4\n-0.77\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = +trend+normal)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Trend und Störterm\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(trend+normal) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))\n\n#library(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n1.83\n\n\n2\n1.67\n\n\n3\n1.62\n\n\n4\n1.41\n\n\n\n\n\nCode\ndf%&gt;% # filter(Fall==1) %&gt;%\nggplot(aes(x = zeit, y = kombi)) +\n  geom_line() +\n  geom_smooth(method=\"glm\")+\n  labs(x = \"Zeit\", y = \"Wert\") +\n  ggtitle(\"Trend, Autoregression und Störterm\")+\n  facet_wrap(~Fall)+\n  theme_light()\n\n\n\n\n\n\n\n\n\nCode\ngrowth &lt;- df %&gt;% group_by(Fall) %&gt;%\n  do(tidy(lm(log(kombi) ~ zeit,.))) %&gt;%\n  filter(term==\"zeit\") %&gt;%\n  select(Fall, estimate) %&gt;%\n  rename( Wachstumsraten=estimate) %&gt;%\n  mutate(Wachstumsraten=round(Wachstumsraten*100, 2))\n\nlibrary(knitr)\n\nkable(growth)\n\n\n\n\n\nFall\nWachstumsraten\n\n\n\n\n1\n4.17\n\n\n2\n1.48\n\n\n3\n1.46\n\n\n4\n-0.13",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des  Wirtschaftswachstums</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bedeutung und Phänomenologie des Wirtschaftswachstums</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html",
     "href": "Neoklassik.html",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "",
-    "text": "4.1 Produktionsfunktion\nAllgemeine Form Cobb-Douglas Produktionsfunktion\n\\(Y=A{K}^{\\alpha }{L}^{\\beta }\\)\nAnnahme: Konstante Skalenerträge\n\\(Y=A{K}^{\\alpha }{L}^{\\left(1-\\alpha \\right)}\\)\nFür das Folgende nehmen wir zunächst an \\(A=1\\)",
+    "text": "4.1 Produktionsfunktion\nAllgemeine Form Cobb-Douglas Produktionsfunktion\n\\(Y=A{K}^{\\alpha }{L}^{\\beta }\\)\nAnnahme: Konstante Skalenerträge\n\\(Y=A{K}^{\\alpha }{L}^{\\left(1-\\alpha \\right)}\\)\nFür das Folgende nehmen wir zunächst an \\(A=L=1\\)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
@@ -182,91 +182,91 @@
   {
     "objectID": "Neoklassik.html#kapitalbildung",
     "href": "Neoklassik.html#kapitalbildung",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.2 Kapitalbildung",
-    "text": "4.2 Kapitalbildung\nGeschlossene Volkswirtschaft\n\\(I=S\\)\n\\({I}_t=S_t=s{Y}_t\\)\nVeränderung des Kapitalstocks\n\\({K}_{t+1}=\\left(1-\\delta \\right){K}_t+{I}_t\\)",
+    "text": "4.2 Kapitalbildung\nGeschlossene Volkswirtschaft\n\\(I=S\\)\nExogene Sparquote \\(s\\)\n\\({I}_t=S_t=s{Y}_t\\)\nVeränderung des Kapitalstocks\n\\({K}_{t+1}=\\left(1-\\delta \\right){K}_t+{I}_t\\)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#pro-kopf-größen",
     "href": "Neoklassik.html#pro-kopf-größen",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.3 Pro-Kopf-Größen",
     "text": "4.3 Pro-Kopf-Größen\nPro-Kopf-Einkommen\n\\(y=\\frac{Y}{L}=\\frac{A{K}^{\\alpha }{L}^{1-\\alpha }}{L}=\\frac{A{K}^{\\alpha }L}{L^{\\alpha }L}=A{\\left(\\frac{K}{L}\\right)}^{\\alpha }\\)\nKapitalstock pro Kopf\n\\(\\frac{K_{t+1}}{L}=\\left(1-\\delta \\right)\\left(\\frac{{K}_{t}}{\\mathrm{L}}\\right)+\\mathrm{s}\\left(\\frac{{Y}_{t}}{\\mathrm{L}}\\right)\\)\noder kürzer\n\\({k}_{t+1}=\\left(1-\\delta \\right){k}_t+s{y}_t\\)\nPro-Kopf-Konsum\n\\(c=\\left(\\frac{C}{L}\\right)=\\left(1-s\\right)\\left(\\frac{Y}{L}\\right)\\)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#langfristiges-gleichgewicht",
     "href": "Neoklassik.html#langfristiges-gleichgewicht",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.4 Langfristiges Gleichgewicht",
-    "text": "4.4 Langfristiges Gleichgewicht\nInvestitionen = Abschreibungen\n\\(s{\\left(\\frac{\\mathrm{K}}{\\mathrm{L}}\\right)}^{\\alpha }=\\delta \\left(\\frac{K}{L}\\right)\\)\n\\(\\iff s=\\delta {\\left(\\frac{\\mathrm{K}}{\\mathrm{L}}\\right)}^{1-\\alpha }\\)\n\\(\\iff \\frac{s}{\\delta }={\\left(\\frac{\\mathrm{K}}{\\mathrm{L}}\\right)}^{1-\\alpha }\\)\n\\(\\iff k=\\left(\\frac{K}{L}\\right)={\\left(\\frac{s}{\\delta}\\right)}^{\\frac{1}{1-\\alpha }}\\)\n\\(\\iff y=\\left(\\frac{\\mathrm{Y}}{\\mathrm{L}}\\right)={\\left(\\frac{s}{\\delta}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)\n\\(\\rightarrow\\) Es gibt einen langfristigen Kapitalstock, der nicht mehr aus sich heraus wächst.\n\\(\\rightarrow\\) Damit gibt es auch ein Langfristiges Einkommen und ein Langfristiges Konsumniveau\n\\(\\rightarrow\\) Dies gilt unabhängig von einem Ausgangswert für den Kapitalstock",
+    "text": "4.4 Langfristiges Gleichgewicht\nDie Produktion \\(Y\\) wächst, wenn\n- \\(A\\) wächst (Technischer Fortschritt) - \\(L\\) wächst (Bevölkerungswachstum) - \\(K\\) wächst (Kapitalakkumulation)\nFokus hier: \\(K\\)\n**Pfad zum Gleichgewicht**\n\nInvestitionen lassen den Kapitalstock wachsen. Abschreibungen (Verschleiß) lassen ihn schrumpfen.\n\n**Gleichgewicht:** Investitionen = Abschreibungen\n\n\\(s{\\left(\\frac{\\mathrm{K}}{\\mathrm{L}}\\right)}^{\\alpha }=\\delta \\left(\\frac{K}{L}\\right)\\)\n\\(\\iff s=\\delta {\\left(\\frac{\\mathrm{K}}{\\mathrm{L}}\\right)}^{1-\\alpha }\\)\n\\(\\iff \\frac{s}{\\delta }={\\left(\\frac{\\mathrm{K}}{\\mathrm{L}}\\right)}^{1-\\alpha }\\)\n\\(\\iff k=\\left(\\frac{K}{L}\\right)={\\left(\\frac{s}{\\delta}\\right)}^{\\frac{1}{1-\\alpha }}\\)\n\\(\\iff y=\\left(\\frac{\\mathrm{Y}}{\\mathrm{L}}\\right)={\\left(\\frac{s}{\\delta}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)\n\\(\\rightarrow\\) Es gibt einen langfristigen Kapitalstock, der nicht mehr aus sich heraus wächst.\n\\(\\rightarrow\\) Damit gibt es auch ein langfristig gleichgewichtiges Einkommen und ein Lälangfristig gleichgewichtiges Konsumniveau\n\\(\\rightarrow\\) Dies gilt unabhängig von dem Ausgangswert des Kapitalstocks",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#entwicklung-des-kapitalstocks",
     "href": "Neoklassik.html#entwicklung-des-kapitalstocks",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.5 Entwicklung des Kapitalstocks",
     "text": "4.5 Entwicklung des Kapitalstocks\n\n\nCode\nimport plotnine as gg\nimport numpy as np\nimport pandas as pd\n\n# Parameter\nalpha = 0.4\ndelta = 0.1\ns = 0.2\nL = 1 # einfachster Fall\nn = 0 # Bevölkerungswachstum\n\n# Zeitschritte\nt = np.linspace(0, 100, 101)\n\n# Kapitalakkumulation\n##Vorbeteitung\n\nK_t = np.zeros(len(t))\nY_t = np.zeros(len(t))\nI_t = np.zeros(len(t))\nL_t = np.zeros(len(t))\nk_t = np.zeros(len(t))\ny_t = np.zeros(len(t))\n\n## Ausgangswerte\n\nK_t[0] = 2\nY_t[0] = (K_t[0]**alpha)*(L**(1-alpha)) #CD-Funktion\nI_t[0] = s*Y_t[0]\nL_t[0] = L\ny_t[0] = Y_t[0]/L_t[0]\nk_t[0] = K_t[0]/L_t[0]\n\n## Dynamik\n\n\nfor i in range(1, len(t)):\n\n    K_t[i] = (1-delta)*K_t[i-1] + I_t[i-1]\n    Y_t[i] = (K_t[i]**alpha) * (L**(1-alpha))\n    I_t[i] = s*Y_t[i]\n    L_t[i] = (1+n)*L_t[i-1]\n    k_t[i] = K_t[i]/L_t[i]\n    y_t[i] = Y_t[i]/L_t[i]\n\n\n\n## In Datenframe speichern\ndf = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,\n                    'Investitionen': I_t, 'Abschreibungen': delta*K_t,\n                    'Bevölkerung': L_t, 'Kapital pro Kopf': k_t,\n                  'y': y_t})\n\n\n\n\nCode\n#Grafiken\n\n\n(gg.ggplot(df, gg.aes('t', 'Kapital pro Kopf')) + gg.geom_line() +\n gg.labs(x='Zeit', y='Kapital pro Kopf',\n title= \"Kapital pro Kopf im Zeitverlauf\")+\n gg.theme_light()\n)\n\n\n\n\n\n\n\n\n\n\n\nCode\n(gg.ggplot(df, gg.aes('t', 'Investitionen')) + gg.geom_line() +\ngg.geom_line(gg.aes(y='Abschreibungen'), color= 'blue')+\n gg.labs(x='Zeit', y='Investitionen,  Abschreibungen',\n title=\"Investitionen und Abschreibungen im  Zeitverlauf\")+\n gg.theme_light()\n)\n\n\n\n\n\n\n\n\n\n\n\nCode\n(gg.ggplot(df, gg.aes('Kapital pro Kopf', 'Abschreibungen')) + gg.geom_line() +\ngg.geom_line(gg.aes(y='Investitionen'), color= 'blue')+\ngg.labs(x='k', y='I,  Abschreibungen',\ntitle=\"Investitionen und Abschreibungen als Funktion des Kapitalstocks\")+\n gg.theme_light()\n)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#entwicklung-des-einkommens",
     "href": "Neoklassik.html#entwicklung-des-einkommens",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.6 Entwicklung des Einkommens",
     "text": "4.6 Entwicklung des Einkommens\n\n\nCode\n(gg.ggplot(df, gg.aes('t', 'y')) + gg.geom_line() +\n gg.labs(x='Zeit', y='Pro Kopf Einkommen')+\n gg.theme_light()\n)\n\n\n# Daten zeigen\n# print(df)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#sparquote-für-maximales-einkommen",
     "href": "Neoklassik.html#sparquote-für-maximales-einkommen",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.7 Sparquote für maximales Einkommen",
     "text": "4.7 Sparquote für maximales Einkommen\n\\(\\iff y={\\left(\\frac{s}{\\delta}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)\nWelche Sparquote maximiert das Einkommen? Ist das sinnvoll?",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#sparquote-für-maximalen-komsum",
     "href": "Neoklassik.html#sparquote-für-maximalen-komsum",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.8 Sparquote für maximalen Komsum",
     "text": "4.8 Sparquote für maximalen Komsum\n\\(c=(1-s)y=(1-s){\\left(\\frac{s}{\\delta}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)\nDas sieht so aus, als könne es eine innere Lösung geben.\nFinden wir ein Maximum?\n\n\nCode\n# Goldene Regel\n\n## Pro-Kopf Konsum\n\n#y=(s/delta)**(alpha/(1-alpha))\n#c=(1-s)*y\n\n# schritte für s\nsi = np.linspace(0, 100, 101)\n\n# Kapitalakkumulation\nc_si = np.zeros(101)\nsi_si = np.zeros(len(si))\ny_si = np.zeros(len(si))\n\nfor i in range(0, 100):\n\n   si_si[i]=i/100\n   c_si[i]= (1-i/100)*((i/(delta*100))**(alpha/(1-alpha)))\n   y_si[i]=           ((i/(delta*100))**(alpha/(1-alpha)))\n\n\n# Datenframe\ndf = pd.DataFrame({'Sparquote': si_si, 'Konsum': c_si,\n                    'y': y_si, 'Ersparnis':si_si*y_si})\n\n#print(df)\n\n\n\n\nCode\n(gg.ggplot(df, gg.aes('Sparquote', 'Konsum')) + gg.geom_line() +\n gg.labs(x='Sparquote', y='Konsum')+\n gg.theme_light()\n)\n\n\n\n\n\n\n\n\n\n\n\nCode\n(gg.ggplot(df, gg.aes('Sparquote', 'y')) + gg.geom_line(color=\"green\") +\n gg.geom_line(gg.aes(y='Ersparnis'), color=\"red\")+\n gg.labs(x='Sparquote', y='y')+\n gg.theme_light()\n)\n\n\n\n\n\n\n\n\n\nWie bestimmt sich denn nun die Sparquote für maximalen Konsum analytisch?\n\n\nCode\nfrom sympy import Symbol, solve, Eq, diff, simplify, print_latex\n\n\nY = Symbol('Y')\nL= Symbol('L')\nK= Symbol('K')\nalpha= Symbol('alpha')\ndelta=Symbol('delta')\nc=Symbol('c')\ns=Symbol('s')\n\n\nL=1\n\ny=(s/delta)**(alpha/(1-alpha))\n\nc=(1-s)*y\n\n\nsol=diff(c, s)\n\nprint_latex(simplify(sol))\nprint(simplify(sol))\n\nsol2=solve(Eq(sol, 0), s)\n\nprint(sol2)\n\n#sol3=diff(y, s)\n#print(sol3)\n\n#sol4=solve(Eq(sol3, 0), s)\n#print(sol4)\n\n\n\\(\\frac{\\partial c}{\\partial s}=\\frac{\\left(\\frac{s}{\\delta}\\right)^{- \\frac{\\alpha}{\\alpha - 1}} \\left(- \\alpha + s\\right)}{s \\left(\\alpha - 1\\right)}\\overset{!}{=} 0\\)\n\\(\\iff s=\\alpha\\)\n\\(s^* = \\alpha \\rightarrow\\) Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen!",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#bevölkerungswachstum",
     "href": "Neoklassik.html#bevölkerungswachstum",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.9 Bevölkerungswachstum",
     "text": "4.9 Bevölkerungswachstum\nAnnahme bisher: Konstante Bevölkerung.\nNun: Bevölkerung wächst mit der Rate \\(n\\) so dass gilt: \\(L_{t+1}=(1+n)L_t\\)\nKapitalstock pro Kopf bleibt konstant, wenn gilt \\(I=sY\\)\n\\(s{\\left(\\frac{K}{L}\\right)}^{\\alpha }=\\left(\\delta +n\\right)\\left(\\frac{K}{L}\\right)\\)\n\\(\\iff \\left(\\frac{s}{\\delta +n}\\right)={\\left(\\frac{K}{L}\\right)}^{1-\\alpha }\\)\nDie gleichgewichtige Kapitalintensität beträgt daher\n\\(\\left(\\frac{K}{L}\\right)={\\left(\\frac{s}{\\delta +n}\\right)}^{\\frac{1}{1-\\alpha }}\\)\nDas gleichgewichtige pro-Kopf-Einkommen ist dann\n\\(y=\\left(\\frac{Y}{L}\\right)={\\left(\\frac{K}{L}\\right)}^{\\alpha }={\\left(\\frac{s}{\\delta +n}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
     "objectID": "Neoklassik.html#technischer-fortschritthumankapital",
     "href": "Neoklassik.html#technischer-fortschritthumankapital",
-    "title": "4  Neoklassische Wachstumstheorie",
+    "title": "4  Neoklassische Wachstumstheorie – exogene Sparquote",
     "section": "4.10 Technischer Fortschritt/Humankapital",
     "text": "4.10 Technischer Fortschritt/Humankapital\nAnnahme bislang: \\(A=1\\)\nNun Annahme: \\(A\\) wächst mit der konstanten (exogenen) Rate \\(g\\), sodass gilt: \\(A_{t+1}=(1+g)A_t\\)\nFür das langfristige Gleichgewicht gilt\nInvestitionen pro Kopf = Abschreibungen pro Kopf\n\\(sA(\\frac{K}{L})^\\alpha=\\delta \\frac{K}{L}\\)\n\\(\\iff \\frac{As}{\\delta} = (\\frac{K}{L})^\\alpha\\)\n\\(\\iff \\frac{K}{L}=k=(\\frac{As}{\\delta})^\\frac{1}{1-\\alpha}\\)\n\\(\\iff y=(\\frac{Y}{L})=(\\frac{As}{\\delta})^\\frac{\\alpha}{1-\\alpha}\\)\nWenn \\(A\\) wächst, wächst auch \\(y\\) im Gleichgewicht\nIn der Literatur wird gelegentlich technischer Fortschritt als erhöhte Arbeitseffizienz dargestellt. Es gilt dann: \\(Y=K^\\alpha(AL)^{1-\\alpha}\\)\nBezeichnet \\((\\frac{Y}{AN})\\) das Einkommen pro Arbeitseffizienzeinheit, lässt sich schreiben \\(\\left(\\frac{Y}{AL}\\right)=\\frac{K^{\\alpha }{(AL)}^{1-\\alpha }}{AL}=\\frac{K^{\\alpha }{(AL)}}{(AL){(AL)}^{\\alpha }}={\\left(\\frac{K}{AL}\\right)}^{\\alpha}\\)\nDie Bedingung für für ein langfristiges Gleichgewicht lautet dann\n\\(s{\\left(\\frac{K}{AL}\\right)}^{\\alpha }=\\left(\\delta +n+g\\right)\\left(\\frac{K}{AL}\\right)\\)\nDie Ersparnisse pro Arbeitseffizienzeinheit müssen ausreichen, um die Abschreibungen, das Bevölkerungswachstum und den technischen Fortschritt auszugleichen.\nDas gleichgewichtige Einkommen pro Arbeitseffizienzeinheit ist dann \\(\\left(\\frac{Y}{AL}\\right)={\\left(\\frac{K}{AL}\\right)}^{\\alpha }={\\left(\\frac{s}{\\delta +n+g}\\right)}^{\\frac{\\alpha }{1-\\alpha }}\\)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- exogene Sparquote</span>"
     ]
   },
   {
@@ -377,6 +377,66 @@
     "text": "7.4 Nachgelagerte Diskussion\nNachgelagerte Diskussion grünes Wachstum auf LinkedIn hier: green growth vs degrowth\n\n\n\n\nDöring, Thomas. 2019. “Alternativen zum umweltschädlichen Wachstum.” Wirtschaftsdienst 99 (7): 497–504. https://www.wirtschaftsdienst.eu/inhalt/jahr/2019/heft/7/beitrag/alternativen-zum-umweltschaedlichen-wachstum.html.\n\n\nHeise, Arne. 2024. “Green Growth oder Postwachstum – einige Anmerkungen zum Beitrag von Fabian Lindner.” Wirtschaftsdienst 104 (2): 123–27. https://www.wirtschaftsdienst.eu/inhalt/jahr/2024/heft/2/beitrag/green-growth-oder-postwachstum-einige-anmerkungen-zum-beitrag-von-fabian-lindner.html.\n\n\nLindner, Fabian. 2023. “Kein Wachstum ist auch keine Lösung.” Wirtschaftsdienst 103 (8): 564–69. https://www.wirtschaftsdienst.eu/inhalt/jahr/2023/heft/8/beitrag/kein-wachstum-ist-auch-keine-loesung.html.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Grünes Wachstum vs. Degrowth</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#themen",
+    "href": "intro.html#themen",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "Wirtschaftswachstum ist ein regelmäßig auftretendes empirisches Phänomen aber nicht selbstverständlich\nHistorisch ist die Erfahrung von Wirtschaftswachstum relativ neu \\(\\rightarrow\\) Warum wachsen Volkswirtschaften?\nWarum wachsen einige Volkswirtschaften stärker als andere?\nWodurch entsteht Wirtschaftswachstum? (Spoiler: Das ist gar nicht so leicht zu erklären)\nLässt sich beeinflussen, ob und wie Wirtschaften wachsen?\nIst „grünes“ Wachstum möglich? Ist Wachstumsverzicht eine Strategie für eine nachhaltige Entwicklung und Klimaschutz?\n\\(\\dots\\)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#ein-blick-in-die-daten",
+    "href": "intro.html#ein-blick-in-die-daten",
+    "title": "1  Einleitung",
+    "section": "1.2 Ein Blick in die Daten",
+    "text": "1.2 Ein Blick in die Daten\n\n\nCode\n# Daten von OWiD laden\n\nlibrary(tidyverse)\n\ndf &lt;- read.csv('https://ourworldindata.org/grapher/gdp-per-capita-worldbank.csv?v=1&csvType=full&useColumnShortNames=true')\n\n#head(df)\n\n# Daten filtern\n\ndf &lt;- df %&gt;%\n  filter(!grepl(\"Europe|countries|WB\", Entity),\n         Entity != \"World\")\n\n#unique(df$Entity)\n\n# Grafik erzeugen \n\np &lt;- df %&gt;% group_by(Entity)%&gt;%\n       filter(Year &gt;= 1990,\n             any(Year==1990)) %&gt;%\n       mutate(index=ny_gdp_pcap_pp_kd/ny_gdp_pcap_pp_kd[Year==1990]*100)%&gt;%\n       ggplot(aes(Year, index ))+\n       geom_line(aes(color=Entity), alpha=.3)+\n       geom_quantile()+\n       scale_y_log10()+\n       theme_light()+\n       theme(legend.position=\"none\")+\n       labs(title= 'BIP pro Kopf, Index 1990=100',\n            subtitle= 'KKP, 2021 international $',\n            x= 'Jahr',\n            y= 'Index',\n            color= 'Entity',\n            caption= paste('Darstellung: Jan S. Voßwinkel,  Daten: Ourworldindata.org'))\n\n# Grafik ausgeben\n\np\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Interaktiver Output\n\n\nlibrary(canvasXpress)\n\n\n# Grafik erzeugen \np1 &lt;- canvasXpress(p)\n\n# Output \n\np1",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "Endogen.html#modellfamilie-endogene-wachstumstehorie",
+    "href": "Endogen.html#modellfamilie-endogene-wachstumstehorie",
+    "title": "5  Endogene Wachstumstheorie",
+    "section": "5.2 Modellfamilie Endogene Wachstumstehorie",
+    "text": "5.2 Modellfamilie Endogene Wachstumstehorie\n\nVielzahl theoretischer Ansätze\nGemeinsame Klammer: Keine sinkenden Grenzerträge des Kapitals: \\(Y_t=AK_t\\)\nUnterschiedliche Erklärungsansätze\n\nHumankapital\nLearning by doing\nSchumpetersches Wachstum (schöpferische Zerstörung)\nöffentliche Infrastukturgüter\n\\(\\dots\\)\n\nGemeinsames Problem dieser Ansätze: Modellergebnis endogengenen Wachstums ist abhängig von bestimmten Parameterkonstellationen.\nOffene Frage: Kann man damit wirklich Wachstum als regelmäßiges Phänomen erklären?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+    ]
+  },
+  {
+    "objectID": "Endogen.html#rebelo-modell",
+    "href": "Endogen.html#rebelo-modell",
+    "title": "5  Endogene Wachstumstheorie",
+    "section": "5.3 Rebelo-Modell",
+    "text": "5.3 Rebelo-Modell",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+    ]
+  },
+  {
+    "objectID": "Endogen.html#lucas-modell",
+    "href": "Endogen.html#lucas-modell",
+    "title": "5  Endogene Wachstumstheorie",
+    "section": "5.4 Lucas-Modell",
+    "text": "5.4 Lucas-Modell",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+    ]
+  },
+  {
+    "objectID": "Endogen.html#schumpetersches-wachstum",
+    "href": "Endogen.html#schumpetersches-wachstum",
+    "title": "5  Endogene Wachstumstheorie",
+    "section": "5.5 Schumpetersches Wachstum",
+    "text": "5.5 Schumpetersches Wachstum",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
     ]
   }
 ]
