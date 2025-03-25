@@ -75,17 +75,27 @@ df %>% filter(Entity=="France") %>%
 ## Phasen des Wachstums
 
 ```{python}
+#| label: fig-growth-phases
+##| fig-cap: "Menschheitsgeschichtliche Wachstumsphasen"
 #| message: false
-#| warning: false
+#| output: false
+#| include: false
 
 from graphviz import Digraph
-from IPython.display import display
+import os
+
+# 1. Pfad für die permanente PNG-Datei festlegen
+output_path = "dot-bild.png"
 
 dot = Digraph()
 
-# Set common attributes for all nodes
+# Set common attributes
 dot.attr('node', width='3', shape='box')
-dot.attr(label='Menschheitsgeschichtliche Wachstumsphasen', labelloc='t', labeljust='c', fontsize='20', fontname='Times-Bold')
+dot.attr(label='Menschheitsgeschichtliche Wachstumsphasen', 
+         labelloc='t', 
+         labeljust='c', 
+         fontsize='20', 
+         fontname='Times-Bold')
 
 # Increase the vertical distance between title and text
 dot.node('invis1', '', shape='none', width='0')
@@ -107,55 +117,57 @@ sub_nodes_a = [
     'Digitale Revolution:\l EDV, IKT, KI\l'
 ]
 
-sub_notes = ['Räumliche Ausdehnung', 'Bevölkerungswachstum', 'Wissenszuwachs', 'Produktionswachstum', '?']  # New sub-notes to the right
+sub_notes = ['Räumliche Ausdehnung', 'Bevölkerungswachstum', 'Wissenszuwachs', 'Produktionswachstum', '?']
 
-# Create sub-nodes and set fontface for A3 and A4
+# Create nodes and edges
 for i in range(len(sub_nodes_a)):
-
     a_node = f'A{i}'
     dot.node(a_node, sub_nodes_a[i])
 
     b_node = f'B{i}'
     dot.node(b_node, f'{sub_nodes_b[i]}\r', shape='none', width='2.5')
 
-    c_node = f'C{i}'  # New sub-note node
-    dot.node(c_node, sub_notes[i], shape='none')  # No border for these nodes
+    c_node = f'C{i}'
+    dot.node(c_node, sub_notes[i], shape='none')
 
-    # Positioning sub-nodes A[i] and B[i] in the same rank
+    # Position nodes in same rank
     with dot.subgraph() as s:
         s.attr(rank='same')
         s.node(a_node)
         s.node(b_node)
-        s.node(c_node)  # Add C[i] to the same rank
+        s.node(c_node)
 
-    # Invisible edges to enforce vertical alignment of sub-nodes under A and B
+    # Invisible edges for alignment
     if i > 0:
         dot.edge(f'A{i-1}', a_node, style='invis', weight='10')
         dot.edge(f'B{i-1}', b_node, weight='10')
-        dot.edge(f'C{i-1}', c_node, style='invis', weight='10')  # Align C nodes
+        dot.edge(f'C{i-1}', c_node, style='invis', weight='10')
 
-dot.edge('invis1', 'B0', style='invis', weight='10')  # Positions also b_nodes to the left
+dot.edge('invis1', 'B0', style='invis', weight='10')
 
+# Add caption
 dot.node('invis', '', shape='none', width='0')
-dot.node('caption', label='Darstellung: Jan S. Voßwinkel in Anlehnung an Groviec (2022)', shape='none', width='7', fontsize='10')
+dot.node('caption', label='Darstellung: Jan S. Voßwinkel in Anlehnung an Groviec (2022)', 
+         shape='none', width='7', fontsize='10')
 
 with dot.subgraph() as s:
     s.attr(rank='same')
     s.node('caption')
     s.node('invis')
 
-dot.edge(f'A{len(sub_nodes_a) - 1}', 'caption', style='invis')
-dot.edge(f'A{len(sub_nodes_a) - 1}', 'invis', style='invis')
+dot.edge(f'A{len(sub_nodes_a)-1}', 'caption', style='invis')
+dot.edge(f'A{len(sub_nodes_a)-1}', 'invis', style='invis')
 
-# Render the graph (this will display the source code)
+# Output the DOT source for Quarto to render
 #print(dot.source)
 
-# To render the graph to a file, use dot.render(filename='output.gv') or dot.view()
-#dot.render(view=True)
 
-# Diagramm im Notebook anzeigen
-display(dot)
+# 3. PNG-Datei permanent speichern (ohne .png-Endung im Pfad)
+dot.format = 'png'
+dot.render(output_path[:-4], cleanup=True)  # Entfernt automatisch .dot-Datei
+
 ```
+![](dot-bild.png)
 
 ## Geschichtliche Bedeutung des Wirtschaftswachstums
 
