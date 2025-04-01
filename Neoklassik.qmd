@@ -1,16 +1,4 @@
-# Neoklassische Wachstumstheorie -- exogene Sparquote
-
-
-~~~
-**Kernbotschaften:**  
-
-- Der Kapitalstock kann nicht aus sich heraus über ein bestimmtes Niveau hinaus wachsen.
-
-- Das langfristige Wachstum des Einkommens pro Kopf wird durch *technischen Fortschritt* erklärt.
-
-- Der Fortschritt ist im Modell *exogen*.
-
-~~~
+# Neoklassische Wachstumstheorie -- exogene Sparquote 
 
 ::: {.callout-note icon=false}
 
