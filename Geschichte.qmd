@@ -82,10 +82,6 @@ df %>% filter(Entity=="France") %>%
 #| include: false
 
 from graphviz import Digraph
-import os
-
-# 1. Pfad für die permanente PNG-Datei festlegen
-output_path = "dot-bild.png"
 
 dot = Digraph()
 
@@ -158,16 +154,11 @@ with dot.subgraph() as s:
 dot.edge(f'A{len(sub_nodes_a)-1}', 'caption', style='invis')
 dot.edge(f'A{len(sub_nodes_a)-1}', 'invis', style='invis')
 
-# Output the DOT source for Quarto to render
-#print(dot.source)
-
-
-# 3. PNG-Datei permanent speichern (ohne .png-Endung im Pfad)
-dot.format = 'png'
-dot.render(output_path[:-4], cleanup=True)  # Entfernt automatisch .dot-Datei
-
+#Datei erzeugen 
+dot.format = 'svg'  # Format setzen
+dot.render(filename='Phasen', cleanup=True)  # Erzeugt output.svg
 ```
-![](dot-bild.png)
+![Menschheitshistorische Wachstumsphasen](Phasen.svg)
 
 ## Geschichtliche Bedeutung des Wirtschaftswachstums
 
