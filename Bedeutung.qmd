@@ -89,7 +89,7 @@ $$2=e^{r \times t_{doppel}} \iff t_{doppel}=\frac{ln(2)}{r}$$
 
 ```{python}
 #| message: false
-#| warnings: false
+#| warning: false
 
 # Python
 
@@ -140,7 +140,7 @@ y="Werte")
 
 ```{python}
 #| message: false
-#| warnings: false
+#| warning: false
 #| eval: false
 
 
