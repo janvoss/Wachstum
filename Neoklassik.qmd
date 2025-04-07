@@ -70,14 +70,14 @@ Die Produktion $Y$ wächst, wenn
 
 Fokus hier: $K$
 
-~~~
-**Pfad zum Gleichgewicht**
+::: {.callout-note icon=false}
+## Pfad zum Gleichgewicht {}
 
 Investitionen lassen den Kapitalstock wachsen. Abschreibungen (Verschleiß) lassen ihn schrumpfen.
 
 **Gleichgewicht:** Investitionen = Abschreibungen
 
-~~~
+:::
 
 $s{\left(\frac{\mathrm{K}}{\mathrm{L}}\right)}^{\alpha }=\delta \left(\frac{K}{L}\right)$
 
@@ -176,12 +176,23 @@ df = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,
 #|warning: false
 
 
-(gg.ggplot(df, gg.aes('t', 'Investitionen')) + gg.geom_line() +
-gg.geom_line(gg.aes(y='Abschreibungen'), color= 'blue')+
- gg.labs(x='Zeit', y='Investitionen,  Abschreibungen',
- title="Investitionen und Abschreibungen im  Zeitverlauf")+
- gg.theme_light()
+(
+    gg.ggplot(df, gg.aes('t')) 
+    + gg.geom_line(gg.aes(y='Investitionen', color='"Investitionen"')) 
+    + gg.geom_line(gg.aes(y='Abschreibungen', color='"Abschreibungen"')) 
+    + gg.scale_color_manual(
+        values=["blue", "red"],  # Farben explizit zuweisen
+        name="Kurven"        # Legendentitel
+    )
+    + gg.labs(
+        x='Zeit', 
+        y='Investitionen, Abschreibungen',
+        title="Investitionen und Abschreibungen im Zeitverlauf"
+    )
+    + gg.theme_light()
+    + gg.theme(legend_position="right")  # Legendenposition anpassen
 )
+
 
 ```
 
@@ -189,13 +200,29 @@ gg.geom_line(gg.aes(y='Abschreibungen'), color= 'blue')+
 #|message: false
 #|warning: false
 
-
-(gg.ggplot(df, gg.aes('Kapital pro Kopf', 'Abschreibungen')) + gg.geom_line() +
-gg.geom_line(gg.aes(y='Investitionen'), color= 'blue')+
-gg.labs(x='k', y='I,  Abschreibungen',
-title="Investitionen und Abschreibungen als Funktion des Kapitalstocks")+
- gg.theme_light()
+(
+    gg.ggplot(df, gg.aes('Kapital pro Kopf')) 
+    + gg.geom_line(gg.aes(y='Abschreibungen', color='"Abschreibungen"'))  # Rot für Abschreibungen
+    + gg.geom_line(gg.aes(y='Investitionen', color='"Investitionen"'))   # Blau für Investitionen
+    + gg.scale_color_manual(
+        values=["blue", "red"],  # Neue Reihenfolge: Investitionen blau, Abschreibungen rot
+        name="Kurven",
+        breaks=["Investitionen", "Abschreibungen"]  # Explizite Reihenfolge der Legende
+    )
+    + gg.labs(
+        x='Kapital pro Kopf', 
+        y='Investitionen, Abschreibungen',
+        title="Investitionen und Abschreibungen als Funktion des Kapitalstocks"
+    )
+    + gg.theme_light()
+    + gg.theme(
+        legend_position="right",
+      
+    )
 )
+
+
+
 ```
 
 ## Entwicklung des Einkommens
@@ -210,10 +237,6 @@ title="Investitionen und Abschreibungen als Funktion des Kapitalstocks")+
  gg.labs(x='Zeit', y='Pro Kopf Einkommen')+
  gg.theme_light()
 )
-
-
-# Daten zeigen
-# print(df)
 
 ```
 
@@ -269,7 +292,8 @@ df = pd.DataFrame({'Sparquote': si_si, 'Konsum': c_si,
 #| message: false
 #| warning: false
 (gg.ggplot(df, gg.aes('Sparquote', 'Konsum')) + gg.geom_line() +
- gg.labs(x='Sparquote', y='Konsum')+
+ gg.labs(x='Sparquote', y='Konsum',
+ title='Konsum in Abhängigkeit der Sparquote')+
  gg.theme_light()
 )
 
@@ -279,11 +303,25 @@ df = pd.DataFrame({'Sparquote': si_si, 'Konsum': c_si,
 #| message: false
 #| warning: false
 
-(gg.ggplot(df, gg.aes('Sparquote', 'y')) + gg.geom_line(color="green") +
- gg.geom_line(gg.aes(y='Ersparnis'), color="red")+
- gg.labs(x='Sparquote', y='y')+
- gg.theme_light()
+(
+    gg.ggplot(df, gg.aes(x='Sparquote')) 
+    + gg.geom_line(gg.aes(y='y', color='"Einkommen"'))          # Grün für Einkommen
+    + gg.geom_line(gg.aes(y='Ersparnis', color='"Ersparnis"'))  # Rot für Ersparnis
+    + gg.scale_color_manual(
+        values=["red", "green"],  # Rot für Ersparnis, Grün für Einkommen
+        labels=["Ersparnis", "Einkommen"],  # Explizite Labelzuordnung
+        name="Kurven"                    # Legendentitel
+    )
+    + gg.labs(
+        x='Sparquote', 
+        y='Pro Kopf Einkommen',
+        title="Einkommen und Ersparnis in Abhängigkeit der Sparquote"
+    )
+    + gg.theme_light()
+    + gg.theme(legend_position="right")
 )
+
+
 ```
 
 Wie bestimmt sich denn nun die Sparquote für maximalen Konsum analytisch?
