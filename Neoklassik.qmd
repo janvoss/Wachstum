@@ -308,8 +308,8 @@ df = pd.DataFrame({'Sparquote': si_si, 'Konsum': c_si,
     + gg.geom_line(gg.aes(y='y', color='"Einkommen"'))          # Grün für Einkommen
     + gg.geom_line(gg.aes(y='Ersparnis', color='"Ersparnis"'))  # Rot für Ersparnis
     + gg.scale_color_manual(
-        values=["red", "green"],  # Rot für Ersparnis, Grün für Einkommen
-        labels=["Ersparnis", "Einkommen"],  # Explizite Labelzuordnung
+        values=["green", "red"],  # Rot für Ersparnis, Grün für Einkommen
+        labels=["Einkommen", "Ersparnis"],  # Explizite Labelzuordnung
         name="Kurven"                    # Legendentitel
     )
     + gg.labs(
