@@ -11,7 +11,7 @@ generate_svg(qr, filename = "qr-Titel.svg")
 
 |       ${}$        |  ${}$  |
 |:-----------------:|:--------------------------------------------------:|
-| ![logo](logo.png) |    ![](`{r} plot(qr)`){width="30%"}              |
+| ![logo](logo.png) |    ![](qr-Titel.svg){width="30%"}              |
 
 :::{.callout-note 
     icon=false 
