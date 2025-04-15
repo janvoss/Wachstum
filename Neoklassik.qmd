@@ -64,11 +64,14 @@ $c=\left(\frac{C}{L}\right)=\left(1-s\right)\left(\frac{Y}{L}\right)$
 ## Langfristiges Gleichgewicht
 
 Die Produktion $Y$ wächst, wenn  
+
 - $A$ wächst (Technischer Fortschritt)
+
 - $L$ wächst (Bevölkerungswachstum)
+
 - $K$ wächst (Kapitalakkumulation)
 
-Fokus hier: $K$
+Fokus hier: Wachstum von $K$
 
 ::: {.callout-note icon=false}
 ## Pfad zum Gleichgewicht {}
@@ -212,7 +215,7 @@ df = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,
     + gg.labs(
         x='Kapital pro Kopf', 
         y='Investitionen, Abschreibungen',
-        title="Investitionen und Abschreibungen als Funktion des Kapitalstocks"
+        title="Investitionen und Abschreibungen als Funktion von k"
     )
     + gg.theme_light()
     + gg.theme(
