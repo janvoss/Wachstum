@@ -347,7 +347,42 @@ sp.pprint(sp.simplify(du_dx))
 
 
 Die Krümmung der Nutzenfunktion ist jetzt über $\sigma$ steuerbar
-## Gleichgewichtsbedingung
+
+
+Intertemporaler Ausgleich der Grenznutzen
+
+$x_{t+1}^{-\sigma}=x_t^{-\sigma}e^{i-r}$
+
+$\iff x_{t+1}^{\sigma}=x_t^{\sigma}e^{r-i}$
+
+
+$\iff x_{t+1}=x_te^{\frac{r-i}{\sigma}}$
+
+
+## Gleichgewichtsbedingung Wachstum
+
+Bisher Konsum: $x_t$
+Jetzt makroökonomischer Pro-Kopf Konsum $c_t$
+
+$c_{t+1}=c_te^{\frac{r-i}{\sigma}}$
+
+Der Konsum wächst mit der Rate $\frac{1}{\sigma}(r-i)$
+
+$r$ ist die Pro-Kopf Nettorendite auf das eingesetzte Kapital, also Grenzprodukt abzüglich Abschreibungen
+
+$r_t=k_t'-\delta$
+
+Der Konsum wächst also mit der Rate $\frac{1}{\sigma}(k_t'-\delta-i)$
+
+Bei abnehmender Grenzproduktivität des Kapitals gilt irgendwann
+$k_t'-\delta-i=0 \iff k_t'=\delta+i$ Dann ist kein weiteres Wachstum des Konsums möglich (und damit auch kein Wirtschaftswachstum)
+
+$ \alpha k^{*(\alpha-1)}=\delta-i$
+
+$$\boxed{k^*=\frac{\alpha}{i+\delta}^{\frac{1}{1-\alpha}}}$$
+
+$$\Rightarrow \boxed{y^*=\frac{\alpha}{i+\delta}^{\frac{\alpha}{1-\alpha}}}$$
 
 ## Implikationen für den Wachstumspfad
 
+Welche Rolle spielt $\sigma?$

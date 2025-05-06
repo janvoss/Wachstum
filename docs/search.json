@@ -484,7 +484,7 @@
     "href": "RCK.html#allgemeinere-nutzenfunktion",
     "title": "5  Neoklassische Wachstumstheorie – endogene Sparquote",
     "section": "5.4 Allgemeinere Nutzenfunktion",
-    "text": "5.4 Allgemeinere Nutzenfunktion\nBislang verwendete Nutzenfunktion:\n\\(U= \\int_0^T u(x_t)e^{-it} dt\\)\nmit \\(u(x_t)=ln(x_t)\\)\nNun eine Funktion mit konstanter (aber steuerbarer) Risikoaversion\n\\(u(x_t)=\\frac{x_t^{1-\\sigma}-1}{1-\\sigma}\\)\nDer Grenznutzen ist\n\\(u'(x_t)=x_t^{-\\sigma}\\)\n\n\nCode\nimport sympy as sp\n\n# Symbole definieren\nx, sigma = sp.symbols('x sigma', positive=True, real=True)\n\n# Nutzenfunktion\nu = (x**(1 - sigma) - 1) / (1 - sigma)\n\n# Ableitung nach x\ndu_dx = sp.diff(u, x)\n\nprint(\"Ableitung der Nutzenfunktion nach x:\")\nsp.pprint(sp.simplify(du_dx))",
+    "text": "5.4 Allgemeinere Nutzenfunktion\nBislang verwendete Nutzenfunktion:\n\\(U= \\int_0^T u(x_t)e^{-it} dt\\)\nmit \\(u(x_t)=ln(x_t)\\)\nNun eine Funktion mit konstanter (aber steuerbarer) Risikoaversion\n\\(u(x_t)=\\frac{x_t^{1-\\sigma}-1}{1-\\sigma}\\)\nDer Grenznutzen ist\n\\(u'(x_t)=x_t^{-\\sigma}\\)\n\n\nCode\nimport sympy as sp\n\n# Symbole definieren\nx, sigma = sp.symbols('x sigma', positive=True, real=True)\n\n# Nutzenfunktion\nu = (x**(1 - sigma) - 1) / (1 - sigma)\n\n# Ableitung nach x\ndu_dx = sp.diff(u, x)\n\nprint(\"Ableitung der Nutzenfunktion nach x:\")\nsp.pprint(sp.simplify(du_dx))\n\n\nDie Krümmung der Nutzenfunktion ist jetzt über \\(\\sigma\\) steuerbar\nIntertemporaler Ausgleich der Grenznutzen\n\\(x_{t+1}^{-\\sigma}=x_t^{-\\sigma}e^{i-r}\\)\n\\(\\iff x_{t+1}^{\\sigma}=x_t^{\\sigma}e^{r-i}\\)\n\\(\\iff x_{t+1}=x_te^{\\frac{r-i}{\\sigma}}\\)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- endogene Sparquote</span>"
     ]
@@ -504,7 +504,17 @@
     "href": "RCK.html#implikationen-für-den-wachstumspfad",
     "title": "5  Neoklassische Wachstumstheorie – endogene Sparquote",
     "section": "5.6 Implikationen für den Wachstumspfad",
-    "text": "5.6 Implikationen für den Wachstumspfad",
+    "text": "5.6 Implikationen für den Wachstumspfad\nWelche Rolle spielt \\(\\sigma?\\)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- endogene Sparquote</span>"
+    ]
+  },
+  {
+    "objectID": "RCK.html#gleichgewichtsbedingung-wachstum",
+    "href": "RCK.html#gleichgewichtsbedingung-wachstum",
+    "title": "5  Neoklassische Wachstumstheorie – endogene Sparquote",
+    "section": "5.5 Gleichgewichtsbedingung Wachstum",
+    "text": "5.5 Gleichgewichtsbedingung Wachstum\nBisher Konsum: \\(x_t\\) Jetzt makroökonomischer Pro-Kopf Konsum \\(c_t\\)\n\\(c_{t+1}=c_te^{\\frac{r-i}{\\sigma}}\\)\nDer Konsum wächst mit der Rate \\(\\frac{1}{\\sigma}(r-i)\\)\n\\(r\\) ist die Pro-Kopf Nettorendite auf das eingesetzte Kapital, also Grenzprodukt abzüglich Abschreibungen\n\\(r_t=k_t'-\\delta\\)\nDer Konsum wächst also mit der Rate \\(\\frac{1}{\\sigma}(k_t'-\\delta-i)\\)\nBei abnehmender Grenzproduktivität des Kapitals gilt irgendwann \\(k_t'-\\delta-i=0 \\iff k_t'=\\delta+i\\) Dann ist kein weiteres Wachstum des Konsums möglich (und damit auch kein Wirtschaftswachstum)\n$ k^{*()}=-i$\n\\[\\boxed{k^*=\\frac{\\alpha}{i+\\delta}^{\\frac{1}{1-\\alpha}}}\\]\n\\[\\Rightarrow \\boxed{y^*=\\frac{\\alpha}{i+\\delta}^{\\frac{\\alpha}{1-\\alpha}}}\\]",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- endogene Sparquote</span>"
     ]
