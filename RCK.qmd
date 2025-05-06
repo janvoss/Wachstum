@@ -425,8 +425,8 @@ Welche Rolle spielt $\sigma?$
 
 Interpretation von $\sigma$ als Parameter für Risikoaversion
 
-- niedriges $\sigma$: Gegenwärtiger Mehrkonsum bei Einkommenszuwachs
+- niedriges $\sigma$: nur sehr schwach abnehmender Grenznutzen. $\rightarrow$ starkes Vorziehen des Konsums auf die Gegenwart
 
-- hohes $\sigma$: Geringe Reaktion im gegenwärtigen Konsum auf Einkommensschwankungen. Glättung des Konsumpfades
+- hohes $\sigma$: stark abnehmender Grenznutzen. $\rightarrow$ gleichmäßiges Verteilen des Konsums auf die . Glättung des Konsumpfads.
 
 Das Gleichgewichtige Einkommen ist unabhängig von $\sigma$
