@@ -332,8 +332,8 @@ window.Quarto = {
 </section>
 <section id="grafische-repräsentation-der-lösung" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="grafische-repräsentation-der-lösung"><span class="header-section-number">5.2.3</span> Grafische Repräsentation der Lösung</h3>
-<p><span class="math inline">\(\frac{MU_0}{MU_1} = \frac{\frac{1}{x_0}}{\frac{1}{x_0}\frac{1}{1+i}}\)</span></p>
-<div id="4aa78094" class="cell" data-message="false" data-execution_count="1">
+<p><span class="math inline">\(\frac{MU_0}{MU_1\times \frac{1}{1+i}} = \frac{\frac{1}{x_0}}{\frac{1}{x_1}\frac{1}{1+i}}=1+g\)</span></p>
+<div id="2f64a029" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> Eq, symbols, solve, diff, lambdify, Rational, latex, log</span>
@@ -419,7 +419,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="9PpWVd"></div>
+            <div id="NIkFcp"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -443,22 +443,22 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("9PpWVd").appendChild(div);
+                        document.getElementById("NIkFcp").appendChild(div);
                     };
-                    var e = document.getElementById("9PpWVd");
+                    var e = document.getElementById("NIkFcp");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display">
-   <div id="FiJd9Y"></div>
+   <div id="C5pnEj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("FiJd9Y");
+   var containerDiv = document.getElementById("C5pnEj");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -666,7 +666,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"13"
+"spec_id":"1"
 };
                window.letsPlotCall(function() {
        
@@ -758,7 +758,7 @@ window.Quarto = {
 <p><span class="math display">\[ \boxed{ x_t=\frac{i X_0}{1-e^{iT}}\ e^{(r-i)t}}\]</span></p>
 <p>Mit <span class="math inline">\(T \to \infty\)</span></p>
 <p><span class="math display">\[ \boxed{x_t=i X_0\times e^{(r-i)t}}\]</span></p>
-<div id="822020aa" class="cell" data-message="false" data-execution_count="2">
+<div id="ea9ba641" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -847,7 +847,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="5Z077w"></div>
+            <div id="4CfjyG"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -871,22 +871,22 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("5Z077w").appendChild(div);
+                        document.getElementById("4CfjyG").appendChild(div);
                     };
-                    var e = document.getElementById("5Z077w");
+                    var e = document.getElementById("4CfjyG");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display">
-   <div id="ZIK24O"></div>
+   <div id="DhNrmE"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("ZIK24O");
+   var containerDiv = document.getElementById("DhNrmE");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -954,7 +954,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"14"
+"spec_id":"2"
 };
                window.letsPlotCall(function() {
        
@@ -987,13 +987,13 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="WE4Mrm"></div>
+   <div id="1bagRO"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("WE4Mrm");
+   var containerDiv = document.getElementById("1bagRO");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -1061,7 +1061,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"15"
+"spec_id":"3"
 };
                window.letsPlotCall(function() {
        
@@ -1094,13 +1094,13 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="LsBMiq"></div>
+   <div id="J712yb"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("LsBMiq");
+   var containerDiv = document.getElementById("J712yb");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -1158,7 +1158,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"16"
+"spec_id":"4"
 };
                window.letsPlotCall(function() {
        
@@ -1202,10 +1202,10 @@ window.Quarto = {
 <p><span class="math inline">\(U= \int_0^T u(x_t)e^{-it} dt\)</span></p>
 <p>mit <span class="math inline">\(u(x_t)=ln(x_t)\)</span></p>
 <p>Nun eine Funktion mit konstanter (aber steuerbarer) Risikoaversion</p>
-<p><span class="math inline">\(u(x_t)=\frac{x_t^{1-\sigma}-1}{1-\sigma}\)</span></p>
+<p><span class="math inline">\(u(x_t)=\frac{x_t^{1-\sigma}}{1-\sigma}\)</span></p>
 <p>Der Grenznutzen ist</p>
 <p><span class="math inline">\(u'(x_t)=x_t^{-\sigma}\)</span></p>
-<div id="c59d2c07" class="cell" data-message="false" data-execution_count="3">
+<div id="fc1eb08d" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
@@ -1214,7 +1214,7 @@ window.Quarto = {
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>x, sigma <span class="op">=</span> sp.symbols(<span class="st">'x sigma'</span>, positive<span class="op">=</span><span class="va">True</span>, real<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Nutzenfunktion</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> (x<span class="op">**</span>(<span class="dv">1</span> <span class="op">-</span> sigma) <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> sigma)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> (x<span class="op">**</span>(<span class="dv">1</span> <span class="op">-</span> sigma)) <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> sigma)</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Ableitung nach x</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>du_dx <span class="op">=</span> sp.diff(u, x)</span>
@@ -1224,6 +1224,174 @@ window.Quarto = {
 </details>
 </div>
 <p>Die Krümmung der Nutzenfunktion ist jetzt über <span class="math inline">\(\sigma\)</span> steuerbar</p>
+<div id="a9252735" class="cell" data-message="false" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Wertebereich für x</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">100</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Die drei gewünschten sigma-Werte</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>sigmas <span class="op">=</span> [<span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.8</span>]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>farben <span class="op">=</span> [<span class="st">'blue'</span>, <span class="st">'orange'</span>, <span class="st">'green'</span>]</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Daten für alle sigma-Werte sammeln</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'x'</span>: np.tile(x, <span class="bu">len</span>(sigmas)),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'u'</span>: np.concatenate([(x<span class="op">**</span>(<span class="dv">1</span><span class="op">-</span>s))<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>s) <span class="cf">for</span> s <span class="kw">in</span> sigmas]),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'sigma'</span>: np.repeat([<span class="ss">f'sigma=</span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">'</span> <span class="cf">for</span> s <span class="kw">in</span> sigmas], <span class="bu">len</span>(x))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plot <span class="op">=</span> (ggplot(data, aes(x<span class="op">=</span><span class="st">'x'</span>, y<span class="op">=</span><span class="st">'u'</span>, color<span class="op">=</span><span class="st">'sigma'</span>))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_line(size<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> ggtitle(<span class="st">"Nutzenfunktion für verschiedene Sigma-Werte"</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> scale_color_manual(values<span class="op">=</span>farben)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> xlab(<span class="st">"x"</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> ylab(<span class="st">"u"</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>       )</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+
+            <div id="zAuEql"></div>
+            <script type="text/javascript" data-lets-plot-script="library">
+                if(!window.letsPlotCallQueue) {
+                    window.letsPlotCallQueue = [];
+                }; 
+                window.letsPlotCall = function(f) {
+                    window.letsPlotCallQueue.push(f);
+                };
+                (function() {
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.5.1/js-package/distr/lets-plot.min.js";
+                    script.onload = function() {
+                        window.letsPlotCall = function(f) {f();};
+                        window.letsPlotCallQueue.forEach(function(f) {f();});
+                        window.letsPlotCallQueue = [];
+                        
+                    };
+                    script.onerror = function(event) {
+                        window.letsPlotCall = function(f) {};    // noop
+                        window.letsPlotCallQueue = [];
+                        var div = document.createElement("div");
+                        div.style.color = 'darkred';
+                        div.textContent = 'Error loading Lets-Plot JS';
+                        document.getElementById("zAuEql").appendChild(div);
+                    };
+                    var e = document.getElementById("zAuEql");
+                    e.appendChild(script);
+                })()
+            </script>
+            
+</div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+   <div id="LKHzBr"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("LKHzBr");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"x":[0.0,0.5050505050505051,1.0101010101010102,1.5151515151515151,2.0202020202020203,2.5252525252525255,3.0303030303030303,3.5353535353535355,4.040404040404041,4.545454545454546,5.050505050505051,5.555555555555556,6.0606060606060606,6.565656565656566,7.070707070707071,7.575757575757576,8.080808080808081,8.585858585858587,9.090909090909092,9.595959595959597,10.101010101010102,10.606060606060607,11.111111111111112,11.616161616161618,12.121212121212121,12.626262626262626,13.131313131313131,13.636363636363637,14.141414141414142,14.646464646464647,15.151515151515152,15.656565656565657,16.161616161616163,16.666666666666668,17.171717171717173,17.67676767676768,18.181818181818183,18.68686868686869,19.191919191919194,19.6969696969697,20.202020202020204,20.70707070707071,21.212121212121215,21.71717171717172,22.222222222222225,22.72727272727273,23.232323232323235,23.73737373737374,24.242424242424242,24.747474747474747,25.252525252525253,25.757575757575758,26.262626262626263,26.767676767676768,27.272727272727273,27.77777777777778,28.282828282828284,28.78787878787879,29.292929292929294,29.7979797979798,30.303030303030305,30.80808080808081,31.313131313131315,31.81818181818182,32.323232323232325,32.82828282828283,33.333333333333336,33.83838383838384,34.343434343434346,34.84848484848485,35.35353535353536,35.85858585858586,36.36363636363637,36.86868686868687,37.37373737373738,37.87878787878788,38.38383838383839,38.88888888888889,39.3939393939394,39.8989898989899,40.40404040404041,40.909090909090914,41.41414141414142,41.919191919191924,42.42424242424243,42.929292929292934,43.43434343434344,43.939393939393945,44.44444444444445,44.949494949494955,45.45454545454546,45.959595959595966,46.46464646464647,46.969696969696976,47.47474747474748,47.979797979797986,48.484848484848484,48.98989898989899,49.494949494949495,50.0,0.0,0.5050505050505051,1.0101010101010102,1.5151515151515151,2.0202020202020203,2.5252525252525255,3.0303030303030303,3.5353535353535355,4.040404040404041,4.545454545454546,5.050505050505051,5.555555555555556,6.0606060606060606,6.565656565656566,7.070707070707071,7.575757575757576,8.080808080808081,8.585858585858587,9.090909090909092,9.595959595959597,10.101010101010102,10.606060606060607,11.111111111111112,11.616161616161618,12.121212121212121,12.626262626262626,13.131313131313131,13.636363636363637,14.141414141414142,14.646464646464647,15.151515151515152,15.656565656565657,16.161616161616163,16.666666666666668,17.171717171717173,17.67676767676768,18.181818181818183,18.68686868686869,19.191919191919194,19.6969696969697,20.202020202020204,20.70707070707071,21.212121212121215,21.71717171717172,22.222222222222225,22.72727272727273,23.232323232323235,23.73737373737374,24.242424242424242,24.747474747474747,25.252525252525253,25.757575757575758,26.262626262626263,26.767676767676768,27.272727272727273,27.77777777777778,28.282828282828284,28.78787878787879,29.292929292929294,29.7979797979798,30.303030303030305,30.80808080808081,31.313131313131315,31.81818181818182,32.323232323232325,32.82828282828283,33.333333333333336,33.83838383838384,34.343434343434346,34.84848484848485,35.35353535353536,35.85858585858586,36.36363636363637,36.86868686868687,37.37373737373738,37.87878787878788,38.38383838383839,38.88888888888889,39.3939393939394,39.8989898989899,40.40404040404041,40.909090909090914,41.41414141414142,41.919191919191924,42.42424242424243,42.929292929292934,43.43434343434344,43.939393939393945,44.44444444444445,44.949494949494955,45.45454545454546,45.959595959595966,46.46464646464647,46.969696969696976,47.47474747474748,47.979797979797986,48.484848484848484,48.98989898989899,49.494949494949495,50.0,0.0,0.5050505050505051,1.0101010101010102,1.5151515151515151,2.0202020202020203,2.5252525252525255,3.0303030303030303,3.5353535353535355,4.040404040404041,4.545454545454546,5.050505050505051,5.555555555555556,6.0606060606060606,6.565656565656566,7.070707070707071,7.575757575757576,8.080808080808081,8.585858585858587,9.090909090909092,9.595959595959597,10.101010101010102,10.606060606060607,11.111111111111112,11.616161616161618,12.121212121212121,12.626262626262626,13.131313131313131,13.636363636363637,14.141414141414142,14.646464646464647,15.151515151515152,15.656565656565657,16.161616161616163,16.666666666666668,17.171717171717173,17.67676767676768,18.181818181818183,18.68686868686869,19.191919191919194,19.6969696969697,20.202020202020204,20.70707070707071,21.212121212121215,21.71717171717172,22.222222222222225,22.72727272727273,23.232323232323235,23.73737373737374,24.242424242424242,24.747474747474747,25.252525252525253,25.757575757575758,26.262626262626263,26.767676767676768,27.272727272727273,27.77777777777778,28.282828282828284,28.78787878787879,29.292929292929294,29.7979797979798,30.303030303030305,30.80808080808081,31.313131313131315,31.81818181818182,32.323232323232325,32.82828282828283,33.333333333333336,33.83838383838384,34.343434343434346,34.84848484848485,35.35353535353536,35.85858585858586,36.36363636363637,36.86868686868687,37.37373737373738,37.87878787878788,38.38383838383839,38.88888888888889,39.3939393939394,39.8989898989899,40.40404040404041,40.909090909090914,41.41414141414142,41.919191919191924,42.42424242424243,42.929292929292934,43.43434343434344,43.939393939393945,44.44444444444445,44.949494949494955,45.45454545454546,45.959595959595966,46.46464646464647,46.969696969696976,47.47474747474748,47.979797979797986,48.484848484848484,48.98989898989899,49.494949494949495,50.0],
+"u":[0.0,0.7237321421551516,1.2600908480573558,1.7429096102691113,2.1939455951612437,2.622731692919745,3.0345818859880063,3.432861585321273,3.8198811474173424,4.1973179476630245,4.566441105291763,4.928241810851078,5.283513940430146,5.632906502020909,5.976959173638121,6.31612720575735,6.650799369216825,6.981311204598391,7.307955007341956,7.630987489555874,7.95063575294064,8.267102010922503,8.580567368991833,8.891194885328488,9.199132074048778,9.504512971556029,9.807459856657404,10.108084693533787,10.406490350817204,10.702771638261984,10.99701619364407,11.289305245792004,11.579714274482429,11.868313583923985,12.155168803417343,12.440341326306168,12.72388869636854,13.00586494922564,13.286320915077088,13.565304488044868,13.842860866569557,14.119032768614938,14.39386062487021,14.667382752668919,14.939635512952366,15.210653452277812,15.480469431596667,15.749114743295635,16.016619217797214,16.2830113208488,16.54831824248684,16.81256597854053,17.075779405434456,17.337982348959322,17.59919764760154,17.859447210955008,18.1187520736792,18.377132445416596,18.634607757037504,18.89119670354109,19.14691728390689,19.401786838160742,19.655822081892236,19.90903913843722,20.161453568917697,20.413080400313095,20.66393415172013,20.91402885894381,21.16337809754889,21.4119950044895,21.659892298423777,21.907082298811197,22.153576943881642,22.399387807557495,22.644526115403398,22.88900275967178,23.13282831350687,23.376013044364676,23.618566926701803,23.860499653981815,24.101820650044,24.342539079875987,24.582663859828337,24.822203667306585,25.06116694997333,25.299561934490747,25.53739663483157,25.774678860184583,26.011416222478925,26.247616143549592,26.48328586196517,26.718432439537278,26.953062767529822,27.18718357258512,27.420801422382617,27.65392273104505,27.886553764305784,28.118700644450353,28.35036935504418,28.5815657454579,0.0,1.4213381090374029,2.010075630518424,2.461829819586655,2.8426762180748057,3.178208630818641,3.481553119113957,3.760507165451775,4.020151261036848,4.264014327112209,4.494665749754947,4.714045207910317,4.92365963917331,5.1247074319053825,5.318160234783105,5.504818825631803,5.6853524361496115,5.860327153276884,6.030226891555273,6.195469181897234,6.356417261637282,6.513389472789297,6.666666666666667,6.816498108607268,6.963106238227914,7.106690545187014,7.247430753394787,7.385489458759964,7.52101433090355,7.654139963827326,7.78498944161523,7.913675671030664,8.040302522073697,8.16496580927726,8.28775414010748,8.408749651825218,8.528028654224418,8.64566219253764,8.761716542303613,8.876253645985946,8.989331499509895,9.101004495564368,9.211323729436767,9.320337272260424,9.428090415820634,9.534625892455924,9.63998407308295,9.744203145947592,9.84731927834662,9.94936676326182,10.05037815259212,10.150384378451045,10.249414863810765,10.34749762361447,10.44465935734187,10.540925533894598,10.63632046956621,10.730867399773196,10.824588545146517,10.917505172516256,11.009637651263606,11.101005505463153,11.19162746219357,11.281521496355325,11.370704872299223,11.45919418253881,11.547005383792516,11.634153830577253,11.720654306553769,11.806521053804945,11.891767800211262,11.976407785072427,12.060453783110546,12.14391812697811,12.22681272838304,12.309149097933274,12.390938363794469,12.472191289246473,12.552918289216958,12.63312944586414,12.712834523274564,12.792042981336627,12.870763988845638,12.949006435891818,13.026778945578593,13.104089885114941,13.18094737632215,13.257359305592338,13.333333333333334,13.40887690293187,13.483997249264842,13.558701406786119,13.632996217214536,13.70688833684684,13.780384243517664,13.853490243227226,13.926212476455827,13.998556924183148,14.07052941362897,14.142135623730951,0.0,4.361510941279932,5.010060443549827,5.43326912302401,5.755048189941402,6.017706014471544,6.241187303873862,6.436600791141916,6.610814388714353,6.768391449808677,6.912528999679227,7.045559766521666,7.169241589188285,7.284934255633633,7.393712740557333,7.496442567737588,7.593831613506906,7.68646670932973,7.774840124371224,7.859369125795544,7.940410690800828,8.0182727514792,8.093222913836732,8.165495306014524,8.235296020076913,8.30280748211994,8.368191995707903,8.431594640455796,8.493145662398828,8.552962460037056,8.611151245889914,8.66780844552055,8.723021882559863,8.77687178806632,8.829431664746535,8.880769030523222,8.930946061230166,8.980020148516388,9.028044386115827,9.075067995307755,9.121136698523781,9.166293048549093,9.210576719541708,9.25402476509485,9.296671847748565,9.338550443681505,9.379691025754894,9.420122227615483,9.459870991175977,9.4989626994655,9.53742129656825,9.575269396136719,9.612528379769024,9.649218486372584,9.685358893493389,9.720967791467693,9.756062451147736,9.79065928586247,9.82477390819596,9.858421182098233,9.891615270784413,9.924369680826707,9.956697302798862,9.988610448793683,10.020120887099655,10.0512398742926,10.081978184971668,10.112346139345416,10.142353628853076,10.172010139987568,10.20132477647064,10.230306279915855,10.258963049102341,10.287303157970538,10.315334372441006,10.34306416614802,10.370499735171466,10.397648011843053,10.424515677696258,10.451109175623344,10.477434721297355,10.503498313912159,10.529305746289099,10.554862614394873,10.580174326311546,10.605246110696408,10.630083024766277,10.654689961838208,10.67907165845602,10.703232701129842,10.727177532713776,10.750910458444901,10.7744356516651,10.79775715924563,10.82087890673291,10.843804703232609,10.866538246048016,10.889083125087407,10.911442827054215,10.933620739432781],
+"sigma":["sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.2","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.5","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8","sigma=0.8"]
+},
+"mapping":{
+"x":"x",
+"y":"u",
+"color":"sigma"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"float",
+"column":"x"
+},{
+"type":"float",
+"column":"u"
+},{
+"type":"str",
+"column":"sigma"
+}]
+},
+"ggtitle":{
+"text":"Nutzenfunktion für verschiedene Sigma-Werte"
+},
+"guides":{
+"x":{
+"title":"x"
+},
+"y":{
+"title":"u"
+}
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"color",
+"values":["blue","orange","green"]
+}],
+"layers":[{
+"geom":"line",
+"mapping":{
+},
+"data_meta":{
+},
+"size":1.0,
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"5"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
 <p>Intertemporaler Ausgleich der Grenznutzen</p>
 <p><span class="math inline">\(x_{t+1}^{-\sigma}=x_t^{-\sigma}e^{i-r}\)</span></p>
 <p><span class="math inline">\(\iff x_{t+1}^{\sigma}=x_t^{\sigma}e^{r-i}\)</span></p>
@@ -1238,13 +1406,19 @@ window.Quarto = {
 <p><span class="math inline">\(r_t=k_t'-\delta\)</span></p>
 <p>Der Konsum wächst also mit der Rate <span class="math inline">\(\frac{1}{\sigma}(k_t'-\delta-i)\)</span></p>
 <p>Bei abnehmender Grenzproduktivität des Kapitals gilt irgendwann <span class="math inline">\(k_t'-\delta-i=0 \iff k_t'=\delta+i\)</span> Dann ist kein weiteres Wachstum des Konsums möglich (und damit auch kein Wirtschaftswachstum)</p>
-<p>$ k^{*()}=-i$</p>
+<p><span class="math inline">\(\alpha k^{*(\alpha-1)}=\delta-i\)</span></p>
 <p><span class="math display">\[\boxed{k^*=\frac{\alpha}{i+\delta}^{\frac{1}{1-\alpha}}}\]</span></p>
 <p><span class="math display">\[\Rightarrow \boxed{y^*=\frac{\alpha}{i+\delta}^{\frac{\alpha}{1-\alpha}}}\]</span></p>
 </section>
 <section id="implikationen-für-den-wachstumspfad" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="implikationen-für-den-wachstumspfad"><span class="header-section-number">5.6</span> Implikationen für den Wachstumspfad</h2>
 <p>Welche Rolle spielt <span class="math inline">\(\sigma?\)</span></p>
+<p>Interpretation von <span class="math inline">\(\sigma\)</span> als Parameter für Risikoaversion</p>
+<ul>
+<li><p>niedriges <span class="math inline">\(\sigma\)</span>: Gegenwärtiger Mehrkonsum bei Einkommenszuwachs</p></li>
+<li><p>hohes <span class="math inline">\(\sigma\)</span>: Geringe Reaktion im gegenwärtigen Konsum auf Einkommensschwankungen. Glättung des Konsumpfades</p></li>
+</ul>
+<p>Das Gleichgewichtige Einkommen ist unabhängig von <span class="math inline">\(\sigma\)</span></p>
 
 
 </section>

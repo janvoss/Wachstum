@@ -30,7 +30,7 @@ $x_1 = (X_0 -x_0)(1+g)$
 
 ### Grafische Repräsentation der Lösung 
 
-$\frac{MU_0}{MU_1} = \frac{\frac{1}{x_0}}{\frac{1}{x_0}\frac{1}{1+i}}$
+$\frac{MU_0}{MU_1\times \frac{1}{1+i}} = \frac{\frac{1}{x_0}}{\frac{1}{x_1}\frac{1}{1+i}}=1+g$
 
 ```{python}
 #| warning: false
@@ -318,7 +318,7 @@ mit $u(x_t)=ln(x_t)$
 
 Nun eine Funktion mit konstanter (aber steuerbarer) Risikoaversion
 
-$u(x_t)=\frac{x_t^{1-\sigma}-1}{1-\sigma}$
+$u(x_t)=\frac{x_t^{1-\sigma}}{1-\sigma}$
 
 Der Grenznutzen ist 
 
@@ -335,7 +335,7 @@ import sympy as sp
 x, sigma = sp.symbols('x sigma', positive=True, real=True)
 
 # Nutzenfunktion
-u = (x**(1 - sigma) - 1) / (1 - sigma)
+u = (x**(1 - sigma)) / (1 - sigma)
 
 # Ableitung nach x
 du_dx = sp.diff(u, x)
@@ -348,6 +348,42 @@ sp.pprint(sp.simplify(du_dx))
 
 Die Krümmung der Nutzenfunktion ist jetzt über $\sigma$ steuerbar
 
+
+```{python}
+#| warning: false
+#| message: false
+
+import numpy as np
+import pandas as pd
+from lets_plot import *
+LetsPlot.setup_html()
+
+# Wertebereich für x
+x = np.linspace(0, 50, 100)
+
+# Die drei gewünschten sigma-Werte
+sigmas = [0.2, 0.5, 0.8]
+farben = ['blue', 'orange', 'green']
+
+# Daten für alle sigma-Werte sammeln
+data = pd.DataFrame({
+    'x': np.tile(x, len(sigmas)),
+    'u': np.concatenate([(x**(1-s))/(1-s) for s in sigmas]),
+    'sigma': np.repeat([f'sigma={s}' for s in sigmas], len(x))
+})
+
+# Plot
+plot = (ggplot(data, aes(x='x', y='u', color='sigma'))
+        + geom_line(size=1)
+        + ggtitle("Nutzenfunktion für verschiedene Sigma-Werte")
+        + scale_color_manual(values=farben)
+        + xlab("x")
+        + ylab("u")
+       )
+plot
+
+
+```
 
 Intertemporaler Ausgleich der Grenznutzen
 
@@ -377,7 +413,7 @@ Der Konsum wächst also mit der Rate $\frac{1}{\sigma}(k_t'-\delta-i)$
 Bei abnehmender Grenzproduktivität des Kapitals gilt irgendwann
 $k_t'-\delta-i=0 \iff k_t'=\delta+i$ Dann ist kein weiteres Wachstum des Konsums möglich (und damit auch kein Wirtschaftswachstum)
 
-$ \alpha k^{*(\alpha-1)}=\delta-i$
+$\alpha k^{*(\alpha-1)}=\delta-i$
 
 $$\boxed{k^*=\frac{\alpha}{i+\delta}^{\frac{1}{1-\alpha}}}$$
 
@@ -386,3 +422,11 @@ $$\Rightarrow \boxed{y^*=\frac{\alpha}{i+\delta}^{\frac{\alpha}{1-\alpha}}}$$
 ## Implikationen für den Wachstumspfad
 
 Welche Rolle spielt $\sigma?$
+
+Interpretation von $\sigma$ als Parameter für Risikoaversion
+
+- niedriges $\sigma$: Gegenwärtiger Mehrkonsum bei Einkommenszuwachs
+
+- hohes $\sigma$: Geringe Reaktion im gegenwärtigen Konsum auf Einkommensschwankungen. Glättung des Konsumpfades
+
+Das Gleichgewichtige Einkommen ist unabhängig von $\sigma$
