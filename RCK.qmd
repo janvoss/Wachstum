@@ -430,3 +430,19 @@ Interpretation von $\sigma$ als Parameter für Risikoaversion
 - hohes $\sigma$: stark abnehmender Grenznutzen. $\rightarrow$ gerinere Schwankungen des Konsums werden toleriert $\rightarrow$ langsameres Wachstum des Konsums
 
 Das Gleichgewichtige Einkommen ist unabhängig von $\sigma$
+
+## Wo kommt denn nun das Wachstum her?
+
+- Effizienzsteigerungen (Forschung, Weitergabe von Wissen)
+
+- Wie entstehen neue Problemlösungen?
+
+  - Anreiz: Mangel beseitigen
+  - Gewinn steigern
+  - Learning-by-doing
+  
+- Komplementäre Güter für das Wachstum
+
+  - Verkehrsinfrastruktur
+  - Kommunikationsinfrastruktur
+  - Ermöglichung komplementärer Unternehmensansiedelung
