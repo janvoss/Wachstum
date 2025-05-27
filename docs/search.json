@@ -272,21 +272,21 @@
   {
     "objectID": "Endogen.html",
     "href": "Endogen.html",
-    "title": "5  Endogene Wachstumstheorie",
+    "title": "6  Endogene Wachstumstheorie",
     "section": "",
-    "text": "5.1 Übergang von Neoklassik\nTechnischer Fortschritt bestimmt Wirtschaftswachstum\n\\(\\rightarrow\\) Humankapital nötig, das technischen Fortschritt adaptieren kann\nWoher kommt der technische Fortschritt?\nWie entkommen wir der sinkenden Grenzproduktivität des Kapitals?",
+    "text": "6.1 Übergang von Neoklassik\nTechnischer Fortschritt bestimmt Wirtschaftswachstum\n\\(\\rightarrow\\) Humankapital nötig, das technischen Fortschritt adaptieren kann\nWoher kommt der technische Fortschritt?\nWie entkommen wir der sinkenden Grenzproduktivität des Kapitals?",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
     ]
   },
   {
     "objectID": "Endogen.html#übergang-von-neoklassik",
     "href": "Endogen.html#übergang-von-neoklassik",
-    "title": "5  Endogene Wachstumstheorie",
+    "title": "6  Endogene Wachstumstheorie",
     "section": "",
     "text": "Innovationsanreize\nHumankapital\n\n\n\nInnovationen erzeugen Spillovers (Nichtrivalität!) und Folgeinnovationen\nK. Arrow: “Learning by doing”.\n\nInvestitionsanreize\nHöhere Kapitalakkumulation bringt höheren Fortschritt mit sich\nArbeitende mit hohem Humankapital bringen Innovationen als Begleiterscheinung mit sich\n\nÖffentliche Infrastruktur erhöht Produktivität von Kapitalgütern (Anbindung an Straßen, Schienen, Telekommunikation, \\(\\dots\\))",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
     ]
   },
   {
@@ -402,11 +402,11 @@
   {
     "objectID": "Endogen.html#modellfamilie-endogene-wachstumstehorie",
     "href": "Endogen.html#modellfamilie-endogene-wachstumstehorie",
-    "title": "5  Endogene Wachstumstheorie",
-    "section": "5.2 Modellfamilie Endogene Wachstumstehorie",
-    "text": "5.2 Modellfamilie Endogene Wachstumstehorie\n\nVielzahl theoretischer Ansätze\nGemeinsame Klammer: Keine sinkenden Grenzerträge des Kapitals: \\(Y_t=AK_t\\)\nUnterschiedliche Erklärungsansätze\n\nHumankapital\nLearning by doing\nSchumpetersches Wachstum (schöpferische Zerstörung)\nöffentliche Infrastukturgüter\n\\(\\dots\\)\n\nGemeinsames Problem dieser Ansätze: Modellergebnis endogengenen Wachstums ist abhängig von bestimmten Parameterkonstellationen.\nOffene Frage: Kann man damit wirklich Wachstum als regelmäßiges Phänomen erklären?",
+    "title": "6  Endogene Wachstumstheorie",
+    "section": "6.2 Modellfamilie Endogene Wachstumstehorie",
+    "text": "6.2 Modellfamilie Endogene Wachstumstehorie\n\nVielzahl theoretischer Ansätze\nGemeinsame Klammer: Keine sinkenden Grenzerträge des Kapitals: \\(Y_t=AK_t\\)\nUnterschiedliche Erklärungsansätze\n\nHumankapital\nLearning by doing\nSchumpetersches Wachstum (schöpferische Zerstörung)\nöffentliche Infrastukturgüter\n\\(\\dots\\)\n\nGemeinsames Problem dieser Ansätze: Modellergebnis endogengenen Wachstums ist abhängig von bestimmten Parameterkonstellationen.\nOffene Frage: Kann man damit wirklich Wachstum als regelmäßiges Phänomen erklären?",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
     ]
   },
   {
@@ -432,11 +432,11 @@
   {
     "objectID": "Endogen.html#schumpetersches-wachstum",
     "href": "Endogen.html#schumpetersches-wachstum",
-    "title": "5  Endogene Wachstumstheorie",
-    "section": "5.5 Schumpetersches Wachstum",
-    "text": "5.5 Schumpetersches Wachstum",
+    "title": "6  Endogene Wachstumstheorie",
+    "section": "6.5 Schumpetersches Wachstum",
+    "text": "6.5 Schumpetersches Wachstum",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
     ]
   },
   {
@@ -527,6 +527,36 @@
     "text": "5.7 Wo kommt denn nun das Wachstum her?\n\nEffizienzsteigerungen (Forschung, Weitergabe von Wissen)\nWie entstehen neue Problemlösungen?\n\nAnreiz: Mangel beseitigen\nGewinn steigern\nLearning-by-doing\n\nKomplementäre Güter für das Wachstum\n\nVerkehrsinfrastruktur\nKommunikationsinfrastruktur\nErmöglichung komplementärer Unternehmensansiedelung",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Neoklassische Wachstumstheorie -- endogene Sparquote</span>"
+    ]
+  },
+  {
+    "objectID": "Endogen.html#harrod-domar-modell-limitationale-produktinsfunktion",
+    "href": "Endogen.html#harrod-domar-modell-limitationale-produktinsfunktion",
+    "title": "6  Endogene Wachstumstheorie",
+    "section": "6.3 Harrod-Domar Modell (limitationale Produktinsfunktion)",
+    "text": "6.3 Harrod-Domar Modell (limitationale Produktinsfunktion)\n\n6.3.1 Produktionsfunktion\n\\(Y= min\\{AK, BL\\}\\)\nMit \\(AK &lt; BL\\) ergibt sich \\(Y=AK\\)\nArbeitsnachfrage \\(\\frac{1}{B} Y &lt; L\\), \\(\\rightarrow\\) strukturelle Arbeitslosigkeit\n\n\n6.3.2 Entwicklung des Kapitalstocks\n\\(\\dot{K}= sAK - \\delta K\\)\n\n\n6.3.3 Wachstumsrate\n\\(g=\\frac{\\dot{K}}{K}= s-\\delta = \\frac{\\dot{Y}}{Y}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+    ]
+  },
+  {
+    "objectID": "Endogen.html#externe-erträge-des-kapitals-wissensspillovers",
+    "href": "Endogen.html#externe-erträge-des-kapitals-wissensspillovers",
+    "title": "6  Endogene Wachstumstheorie",
+    "section": "6.4 Externe Erträge des Kapitals/ Wissensspillovers",
+    "text": "6.4 Externe Erträge des Kapitals/ Wissensspillovers\n\n6.4.1 Individuelle Produktionsfunktion\nFirma \\(j \\in \\{1, 2, \\dots, N \\}\\)\n\\(y_k=\\bar{A} k_j^\\alpha L_j^{1-\\alpha}\\)\nMit \\(\\bar{A}=A_0 (\\sum_{j=1}^N k_j)^\\eta\\)\nAnnahme: \\(L_j=1\\) für alle j\nSei \\(K=\\sum_{j=1}^N k_j\\) Und \\(Y=\\sum_{j=1}^N y_j\\)\nFirmen sind gleich: \\(k_j=\\frac{K}{N}\\) für alle \\(j\\)\nIm Gleichgewicht ist daher\n\\(\\bar{A}=A_0 K^\\eta\\)\n\\(y_j=A_0 K^\\eta (\\frac{K}{N})^\\alpha\\)\n\n\n6.4.2 Aggregierter Output\nDer aggregierte Output ist\n\\(Y=NA_0 K^\\eta (\\frac{K}{N})^\\alpha\\)\nMit \\(A=A_0 N^{1-\\alpha}\\):\n\\(Y=AK^{\\eta + \\alpha}\\)\nAnnahme konstante Sparrate \\(s\\)\n\\(\\dot{K}=sAK^{\\eta + \\alpha} - \\delta K\\)\n\\(g_K = \\frac{\\dot{K}}{K}=sAK^{\\eta + \\alpha -1}-\\delta\\)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
+    ]
+  },
+  {
+    "objectID": "SVR.html",
+    "href": "SVR.html",
+    "title": "Das aktuelle Frühjahrsgutachten des Sachverständigenrates",
+    "section": "",
+    "text": "Der Sachverständigenrat zur Begutachtung der gesamtwirtschaftlichen Entwicklung hat kürzlich sein Frühjahrsgutachten veröffentlicht.\nEs beinhaltet Einschätzungen zur aktuellen wirtschaftlichen Lage in Deutschland und insbesondere zum Wirtschaftswachstum",
+    "crumbs": [
+      "Das aktuelle Frühjahrsgutachten des Sachverständigenrates"
     ]
   }
 ]

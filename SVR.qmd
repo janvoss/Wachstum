@@ -1,0 +1,17 @@
+# Das aktuelle Frühjahrsgutachten des Sachverständigenrates {-}
+
+- Der Sachverständigenrat zur Begutachtung der gesamtwirtschaftlichen Entwicklung hat kürzlich sein [Frühjahrsgutachten](https://www.sachverstaendigenrat-wirtschaft.de/fruehjahrsgutachten-2025.html?returnUrl=%2Findex.html&cHash=2634b3bf5093301757fc6d923d7bb23a) veröffentlicht.
+
+- Es beinhaltet Einschätzungen zur aktuellen wirtschaftlichen Lage in Deutschland und insbesondere zum Wirtschaftswachstum
+
+```{r qr,  echo=FALSE, warning=FALSE}
+library(qrcode)
+
+qr <- qr_code('https://www.sachverstaendigenrat-wirtschaft.de/fruehjahrsgutachten-2025.html?returnUrl=%2Findex.html&cHash=2634b3bf5093301757fc6d923d7bb23a')
+#plot(qr)
+
+generate_svg(qr, filename = "qr-SVR.svg")
+
+```
+
+![](qr-SVR.svg){width="30%"} 

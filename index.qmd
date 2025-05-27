@@ -23,7 +23,7 @@ generate_svg(qr, filename = "qr-Titel.svg")
 
 - Modul: 209-021 Wachstum und Transformation ([Modulhandbuch](https://www.hfwu.de/fileadmin/user_upload/FAVM/ZuB/Module/Modulhandbuch_spob_zub_2022_WiSe_Stand_2022_WiSe.pdf))
 
-- Weitere Veranstaltung im ModuL: Strukturpolitik
+- Weitere Veranstaltung im ModuL: Strukturpolitik 
 
 - Prüfungsleistung: K60, diese VL davon 50%
 

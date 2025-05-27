@@ -2,7 +2,7 @@
 
 ## Übergang von Neoklassik
 
-Technischer Fortschritt bestimmt Wirtschaftswachstum
+Technischer Fortschritt bestimmt Wirtschaftswachstum 
 
 $\rightarrow$ Humankapital nötig, das technischen Fortschritt adaptieren kann
 
@@ -44,8 +44,64 @@ Wie entkommen wir der sinkenden Grenzproduktivität des Kapitals?
 
 - Offene Frage: Kann man damit wirklich Wachstum als regelmäßiges Phänomen erklären?
 
-## Rebelo-Modell
+## Harrod-Domar Modell (limitationale Produktinsfunktion)
 
-## Lucas-Modell
+### Produktionsfunktion
+
+$Y= min\{AK, BL\}$
+
+Mit $AK < BL$ ergibt sich $Y=AK$
+
+Arbeitsnachfrage $\frac{1}{B} Y < L$, $\rightarrow$ strukturelle Arbeitslosigkeit
+
+### Entwicklung des Kapitalstocks
+
+$\dot{K}= sAK - \delta K$
+
+### Wachstumsrate
+
+$g=\frac{\dot{K}}{K}= s-\delta = \frac{\dot{Y}}{Y}$
+
+
+
+## Externe Erträge des Kapitals/ Wissensspillovers
+
+### Individuelle Produktionsfunktion
+
+Firma $j \in \{1, 2, \dots, N \}$
+
+$y_k=\bar{A} k_j^\alpha L_j^{1-\alpha}$
+
+Mit $\bar{A}=A_0 (\sum_{j=1}^N k_j)^\eta$
+
+Annahme: $L_j=1$ für alle j
+
+Sei $K=\sum_{j=1}^N k_j$
+Und $Y=\sum_{j=1}^N y_j$
+
+Firmen sind gleich: $k_j=\frac{K}{N}$ für alle $j$
+
+Im Gleichgewicht ist daher
+
+$\bar{A}=A_0 K^\eta$
+
+$y_j=A_0 K^\eta (\frac{K}{N})^\alpha$
+
+### Aggregierter Output
+
+Der aggregierte Output ist
+
+$Y=NA_0 K^\eta (\frac{K}{N})^\alpha$
+
+Mit $A=A_0 N^{1-\alpha}$:
+
+$Y=AK^{\eta + \alpha}$
+
+Annahme konstante Sparrate $s$
+
+$\dot{K}=sAK^{\eta + \alpha} - \delta K$
+
+$g_K = \frac{\dot{K}}{K}=sAK^{\eta + \alpha -1}-\delta$
+
 
 ## Schumpetersches Wachstum
