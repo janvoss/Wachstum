@@ -534,7 +534,7 @@
     "href": "Endogen.html#harrod-domar-modell-limitationale-produktinsfunktion",
     "title": "6  Endogene Wachstumstheorie",
     "section": "6.3 Harrod-Domar Modell (limitationale Produktinsfunktion)",
-    "text": "6.3 Harrod-Domar Modell (limitationale Produktinsfunktion)\n\n6.3.1 Produktionsfunktion\n\\(Y= min\\{AK, BL\\}\\)\nMit \\(AK &lt; BL\\) ergibt sich \\(Y=AK\\)\nArbeitsnachfrage \\(\\frac{1}{B} Y &lt; L\\), \\(\\rightarrow\\) strukturelle Arbeitslosigkeit\n\n\n6.3.2 Entwicklung des Kapitalstocks\n\\(\\dot{K}= sAK - \\delta K\\)\n\n\n6.3.3 Wachstumsrate\n\\(g=\\frac{\\dot{K}}{K}= s-\\delta = \\frac{\\dot{Y}}{Y}\\)",
+    "text": "6.3 Harrod-Domar Modell (limitationale Produktinsfunktion)\n\n6.3.1 Produktionsfunktion\n\\(Y= min\\{AK, BL\\}\\)\nMit \\(AK &lt; BL\\) ergibt sich \\(Y=AK\\)\nArbeitsnachfrage \\(\\frac{1}{B} Y &lt; L\\), \\(\\rightarrow\\) strukturelle Arbeitslosigkeit\n\n\n6.3.2 Entwicklung des Kapitalstocks\nDer Kapitalstock wächst durch Ersparnis und sinkt durch Abschreibungen\n\\(\\dot{K}= sAK - \\delta K\\)\n\n\n6.3.3 Wachstumsrate\n\\(g=\\frac{\\dot{K}}{K}= s-\\delta = \\frac{\\dot{Y}}{Y}\\)\n\nSofern \\(s&gt;\\delta\\), ist konstantes Wachstum möglich\nAllerdings: Irgendwann ist der Kapitalstock so groß, dass er wohl nicht mehr der limitierende Faktor ist\nInsbesondere in Industriegesellschaften wächst der Kapitalstock schneller als die Bevölkerung",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Endogene Wachstumstheorie</span>"
     ]

@@ -56,13 +56,19 @@ Arbeitsnachfrage $\frac{1}{B} Y < L$, $\rightarrow$ strukturelle Arbeitslosigkei
 
 ### Entwicklung des Kapitalstocks
 
+Der Kapitalstock wächst durch Ersparnis und sinkt durch Abschreibungen
+
 $\dot{K}= sAK - \delta K$
 
 ### Wachstumsrate
 
 $g=\frac{\dot{K}}{K}= s-\delta = \frac{\dot{Y}}{Y}$
 
+- Sofern $s>\delta$, ist konstantes Wachstum möglich
 
+- Allerdings: Irgendwann ist der Kapitalstock so groß, dass er wohl nicht mehr der limitierende Faktor ist
+
+- Insbesondere in Industriegesellschaften wächst der Kapitalstock schneller als die Bevölkerung
 
 ## Externe Erträge des Kapitals/ Wissensspillovers
 
