@@ -110,4 +110,120 @@ $\dot{K}=sAK^{\eta + \alpha} - \delta K$
 $g_K = \frac{\dot{K}}{K}=sAK^{\eta + \alpha -1}-\delta$
 
 
+### Drei Fälle sind zu unterscheiden
+
+1. $\alpha +\eta < 1$
+  - Die Externalität kann die sinkenden Grenzerträge nicht aufwiegen
+  - $K^*=(\frac{sA}{\delta})^\frac{1}{1-\alpha-\eta}$
+  
+2. $\alpha +\eta > 1$
+  - Das Wachstum explodiert 
+  - passt das zur Empirie?
+
+3. $\alpha +\eta = 1$
+  - $Y=AK$, $g=sA-\delta$
+
+- Der Fall 1 "rettet" uns nicht vor dem wachstumslosen Gleichgewicht des neoklassischen Modells
+
+- der Fall 2 passt nicht zur Empirie 
+
+- der Fall 3 ist elegant, aber warum sollte er gelten?
+
+$\rightarrow$ Diese Form von endogenem Wachstum verlagert die Suche nach den Wachstumsursachen von *exogenen* Wachstumsursachen (exogener technischer Fortschritt) hin zu *exogenen* Annahmen über Modellparameter
 ## Schumpetersches Wachstum
+
+### Produktionsfunktion
+
+$$
+Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
+$$
+
+### Gesamtproduktion
+
+Vorleistungen werden abgezogen
+
+$$GDP_t = Y_t - x_t$$
+
+### Zwischenprodukt
+
+- Wird von Monopolisten produziert
+- Nachfrage als Input in vollk Wettbewerb
+- Preis also gleich Grenzproduktivität
+
+$$\Pi_t = p_t x_t - x_t$$
+
+$$p_t= \frac{\partial Y_t}{\partial x_t}= \alpha(A_t L)^{1-\alpha} x_t^{\alpha -1}$$
+
+Einsetzen
+
+$$\Pi_t=  \alpha(A_t L)^{1-\alpha} x_t^{\alpha}- x_t$$
+
+Gewinnmaximale Menge
+
+$$x_t = \alpha^{\frac{2}{1-\alpha}} A_t L$$
+
+Man kann also schreiben
+
+$\Pi_t=\pi A_t L$, mit $\pi \equiv (1-\alpha) \alpha^{\frac{1+\alpha}{1-\alpha}}$
+
+### Innovationen
+
+#### Produktivitätssteigerung
+
+Unternehmen investieren in Innovationen, die die Produktivität erhöhen, indem $A_t$ um den Faktor $\gamma>1$ wächst.
+Das innovierende Verhalten ist unsicher. Mit der Wahrscheinlichkeit $\mu\leq 1 $ gelingt in einer Periode eine produktivitätssteigernde Innovation. Im Durchschnitt erhöht sich die Produktivität also um $\mu \gamma$.
+
+#### Innovationskosten
+
+Innovative Tätigkeit geht mit Kosten einher. Die Wahrscheinlichkeit einer erfolgreichen Innovation ist eine Funktion der Forschungsausgaben $R_t$: Je höher die Ausgaben sind, desto höher ist auch die Wahrscheinlichkeit eines Forschungserfolgs.
+Es wird aber immer schwieriger, eine erfolgreiche Innovation zu tätigen. Daher werden die Forschungsausgaben auf den nächsten zu erreichenden Produktivitätsschritt $A^*_t=\gamma A_{t-1}$ normiert.
+
+  $\mu_t=\phi(\frac{R_t}{A^*_t})$, mit $A^*_t=\gamma A_{t-1}$
+
+Notation: $n_t=\frac{R_t}{A^*_t}$
+
+Konkrete Form der Kostenfunktion:
+
+$\phi_t(n_t)=\lambda n_t^\sigma$
+
+$\lambda$: Produktivitätsparameter des Forschungssektors
+
+$0\leq \sigma \leq 1$: Elastizität
+
+Positive aber abnehmende Grenzproduktivität im Forschungssektor
+
+$\phi'=\sigma \lambda n_t^{\sigma-1}>0$, $\phi''=\sigma (\sigma-1)< \lambda n_t^{\sigma-2}<0$
+
+#### Forschungsarbitrage
+
+Ein Unternehmen, dem eine erfolgreiche Innovation gelingt, wird für diese Periode Monopolist für das Zwischenprodukt $x_t$. Gelingt eine Innovation nicht, wird das Monopol für eine Periode an ein zufällig ausgewähltes Unternehmen übergeben.
+
+Der erwartete Gewinn aus dem Monopol beträgt also $\phi(n_t)\Pi^*$
+
+Allerdings gehen damit Kosten einher, der Netto-Gewinn beträgt also $\phi(\frac{R_t}{A^*_t})\Pi^*-R_t$
+
+Ausweitung der Forschungstätigkeit also solange, bis der Netto-Grenzgewinn Null ist $\phi'(\frac{R_t}{A^*_t}) \frac{\Pi^*}{A^*_t}-1=0$
+
+oder
+$\phi'(n_t)\pi L=1$
+
+links: Grenznutzen der Forschung
+rechs: Grenzkosten der Forschung
+
+Mit $\phi_t(n_t)=\lambda n_t^\sigma$ gilt also
+
+$\sigma \lambda n_t^{\sigma -1} \pi L=1$
+$\iff n_t= \frac{1}{\sigma \lambda \pi L}^{\frac{1}{\sigma -1}}=(\sigma \lambda \pi L)^{\frac{1}{1-\sigma}}$
+
+Die Wahrscheinlichkeit einer erfolgreichen Innovation ist also $\mu=\lambda n_t^\sigma=\lambda^{\frac{1-\sigma}{1-\sigma}} \lambda^{\frac{\sigma}{1-\sigma}} (\sigma \pi L)^{\frac{\sigma}{1-\sigma}}=\lambda^{\frac{1}{1-\sigma}} (\sigma \pi L)^{\frac{\sigma}{1-\sigma}}$
+
+### Wachstum
+
+Die Wachstumsrate im Fall einer erfolgreichen Innovation ist $g=\frac{\gamma A_{t-1} - A_{t-1}}{A_{t-1}}=\gamma -1$
+Dieser Fall tritt mit der Wahrscheinlichkeit \mu ein, andernfalls ist das Wachstum Null.
+
+Die durchschnittliche Wachstumsrate beträgt also $g=\mu (\gamma -1)$
+
+Subsituieren:
+
+$g= \lambda^{\frac{1}{1-\sigma}} (\sigma \pi L)^{\frac{\sigma}{1-\sigma}}(\gamma-1)$
