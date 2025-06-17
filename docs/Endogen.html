@@ -346,23 +346,24 @@ window.Quarto = {
 <section id="individuelle-produktionsfunktion" class="level3" data-number="6.4.1">
 <h3 data-number="6.4.1" class="anchored" data-anchor-id="individuelle-produktionsfunktion"><span class="header-section-number">6.4.1</span> Individuelle Produktionsfunktion</h3>
 <p>Firma <span class="math inline">\(j \in \{1, 2, \dots, N \}\)</span></p>
-<p><span class="math inline">\(y_k=\bar{A} k_j^\alpha L_j^{1-\alpha}\)</span></p>
-<p>Mit <span class="math inline">\(\bar{A}=A_0 (\sum_{j=1}^N k_j)^\eta\)</span></p>
+<p><span class="math inline">\(y_j=\bar{A} k_j^\alpha L_j^{1-\alpha}\)</span>,</p>
+<p>mit <span class="math inline">\(\bar{A}=A_0 (\sum_{j=1}^N k_j)^\eta\)</span></p>
 <p>Annahme: <span class="math inline">\(L_j=1\)</span> für alle j</p>
 <p>Sei <span class="math inline">\(K=\sum_{j=1}^N k_j\)</span> Und <span class="math inline">\(Y=\sum_{j=1}^N y_j\)</span></p>
-<p>Firmen sind gleich: <span class="math inline">\(k_j=\frac{K}{N}\)</span> für alle <span class="math inline">\(j\)</span></p>
+<p>Annahme: Firmen sind gleich: <span class="math inline">\(k_j=\frac{K}{N}\)</span> für alle <span class="math inline">\(j\)</span></p>
 <p>Im Gleichgewicht ist daher</p>
 <p><span class="math inline">\(\bar{A}=A_0 K^\eta\)</span></p>
-<p><span class="math inline">\(y_j=A_0 K^\eta (\frac{K}{N})^\alpha\)</span></p>
+<p>Daher lässt sich schreiben: <span class="math inline">\(y_j=A_0 K^\eta (\frac{K}{N})^\alpha\)</span></p>
 </section>
 <section id="aggregierter-output" class="level3" data-number="6.4.2">
 <h3 data-number="6.4.2" class="anchored" data-anchor-id="aggregierter-output"><span class="header-section-number">6.4.2</span> Aggregierter Output</h3>
-<p>Der aggregierte Output ist</p>
-<p><span class="math inline">\(Y=NA_0 K^\eta (\frac{K}{N})^\alpha\)</span></p>
-<p>Mit <span class="math inline">\(A=A_0 N^{1-\alpha}\)</span>:</p>
-<p><span class="math inline">\(Y=AK^{\eta + \alpha}\)</span></p>
+<p>Der aggregierte Output ist der <span class="math inline">\(N\)</span> identischen Firmen ist einfach <span class="math inline">\(N\)</span> mal der individuelle Output:</p>
+<p><span class="math inline">\(Y=NA_0 K^\eta (\frac{K}{N})^\alpha\)</span>,</p>
+<p>Mit <span class="math inline">\(A=A_0 N^{1-\alpha}\)</span> lässt sich schreiben:</p>
+<p><span class="math display">\[\boxed{Y=AK^{\eta + \alpha}}\]</span></p>
 <p>Annahme konstante Sparrate <span class="math inline">\(s\)</span></p>
-<p><span class="math inline">\(\dot{K}=sAK^{\eta + \alpha} - \delta K\)</span></p>
+<p>Die Veränderung des Kapitalstocks über die Zeit (<span class="math inline">\(\frac{dK}{dt}=\dot{K}\)</span>) ergibt sich dann als <span class="math inline">\(\dot{K}=sAK^{\eta + \alpha} - \delta K\)</span></p>
+<p>Die Wachstumsrate des Kapitalstocks <span class="math inline">\(g_K\)</span> beträgt dann</p>
 <p><span class="math inline">\(g_K = \frac{\dot{K}}{K}=sAK^{\eta + \alpha -1}-\delta\)</span></p>
 </section>
 <section id="drei-fälle-sind-zu-unterscheiden" class="level3" data-number="6.4.3">
@@ -397,13 +398,15 @@ window.Quarto = {
 <h2 data-number="6.5" class="anchored" data-anchor-id="schumpetersches-wachstum"><span class="header-section-number">6.5</span> Schumpetersches Wachstum</h2>
 <section id="produktionsfunktion-1" class="level3" data-number="6.5.1">
 <h3 data-number="6.5.1" class="anchored" data-anchor-id="produktionsfunktion-1"><span class="header-section-number">6.5.1</span> Produktionsfunktion</h3>
+<p>In der Volkswirtschaft wird ein Konsumgut <span class="math inline">\(Y\)</span> produziert unter Verwendung von Arbeit (<span class="math inline">\(L\)</span>) und einem Zwischenprodukt (<span class="math inline">\(x\)</span>). Das Gut <span class="math inline">\(Y\)</span> wird unter vollkommenem Wettbewerb hergestellt.</p>
 <p><span class="math display">\[
 Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 \]</span></p>
+<p>Das Zwischenprodukt <span class="math inline">\(x\)</span> wird von einem Monopolisten produziert.</p>
 </section>
 <section id="gesamtproduktion" class="level3" data-number="6.5.2">
 <h3 data-number="6.5.2" class="anchored" data-anchor-id="gesamtproduktion"><span class="header-section-number">6.5.2</span> Gesamtproduktion</h3>
-<p>Vorleistungen werden abgezogen</p>
+<p>Vorleistungen (<span class="math inline">\(x\)</span>) werden abgezogen</p>
 <p><span class="math display">\[GDP_t = Y_t - x_t\]</span></p>
 </section>
 <section id="zwischenprodukt" class="level3" data-number="6.5.3">
@@ -418,6 +421,7 @@ Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 <p>Einsetzen</p>
 <p><span class="math display">\[\Pi_t=  \alpha(A_t L)^{1-\alpha} x_t^{\alpha}- x_t\]</span></p>
 <p>Gewinnmaximale Menge</p>
+<p>(Bedingung erster Ordnung: <span class="math inline">\(\alpha^2(A_t L)^{1-\alpha} x_t^{\alpha-1}-1=0\)</span> )</p>
 <p><span class="math display">\[x_t = \alpha^{\frac{2}{1-\alpha}} A_t L\]</span></p>
 <p>Man kann also schreiben</p>
 <p><span class="math inline">\(\Pi_t=\pi A_t L\)</span>, mit <span class="math inline">\(\pi \equiv (1-\alpha) \alpha^{\frac{1+\alpha}{1-\alpha}}\)</span></p>
@@ -426,7 +430,7 @@ Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 <h3 data-number="6.5.4" class="anchored" data-anchor-id="innovationen"><span class="header-section-number">6.5.4</span> Innovationen</h3>
 <section id="produktivitätssteigerung" class="level4" data-number="6.5.4.1">
 <h4 data-number="6.5.4.1" class="anchored" data-anchor-id="produktivitätssteigerung"><span class="header-section-number">6.5.4.1</span> Produktivitätssteigerung</h4>
-<p>Unternehmen investieren in Innovationen, die die Produktivität erhöhen, indem <span class="math inline">\(A_t\)</span> um den Faktor <span class="math inline">\(\gamma&gt;1\)</span> wächst. Das innovierende Verhalten ist unsicher. Mit der Wahrscheinlichkeit $ $ gelingt in einer Periode eine produktivitätssteigernde Innovation. Im Durchschnitt erhöht sich die Produktivität also um <span class="math inline">\(\mu \gamma\)</span>.</p>
+<p>In jeder Periode investiert ein Unternehmenin Innovationen, die die Produktivität erhöhen, indem <span class="math inline">\(A_t\)</span> um den Faktor <span class="math inline">\(\gamma&gt;1\)</span> wächst. Das innovierende Verhalten ist unsicher. Mit der Wahrscheinlichkeit $ $ gelingt in einer Periode eine produktivitätssteigernde Innovation. Im Durchschnitt erhöht sich die Produktivität also um <span class="math inline">\(\mu \gamma\)</span>.</p>
 </section>
 <section id="innovationskosten" class="level4" data-number="6.5.4.2">
 <h4 data-number="6.5.4.2" class="anchored" data-anchor-id="innovationskosten"><span class="header-section-number">6.5.4.2</span> Innovationskosten</h4>
@@ -455,7 +459,7 @@ Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 </section>
 <section id="wachstum" class="level3" data-number="6.5.5">
 <h3 data-number="6.5.5" class="anchored" data-anchor-id="wachstum"><span class="header-section-number">6.5.5</span> Wachstum</h3>
-<p>Die Wachstumsrate im Fall einer erfolgreichen Innovation ist <span class="math inline">\(g=\frac{\gamma A_{t-1} - A_{t-1}}{A_{t-1}}=\gamma -1\)</span> Dieser Fall tritt mit der Wahrscheinlichkeit ein, andernfalls ist das Wachstum Null.</p>
+<p>Die Wachstumsrate im Fall einer erfolgreichen Innovation ist <span class="math inline">\(g=\frac{\gamma A_{t-1} - A_{t-1}}{A_{t-1}}=\gamma -1\)</span> Dieser Fall tritt mit der Wahrscheinlichkeit <span class="math inline">\(\mu\)</span> ein, andernfalls ist das Wachstum Null.</p>
 <p>Die durchschnittliche Wachstumsrate beträgt also <span class="math inline">\(g=\mu (\gamma -1)\)</span></p>
 <p>Subsituieren:</p>
 <p><span class="math inline">\(g= \lambda^{\frac{1}{1-\sigma}} (\sigma \pi L)^{\frac{\sigma}{1-\sigma}}(\gamma-1)\)</span></p>

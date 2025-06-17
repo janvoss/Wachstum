@@ -76,36 +76,40 @@ $g=\frac{\dot{K}}{K}= s-\delta = \frac{\dot{Y}}{Y}$
 
 Firma $j \in \{1, 2, \dots, N \}$
 
-$y_k=\bar{A} k_j^\alpha L_j^{1-\alpha}$
+$y_j=\bar{A} k_j^\alpha L_j^{1-\alpha}$,
 
-Mit $\bar{A}=A_0 (\sum_{j=1}^N k_j)^\eta$
+mit $\bar{A}=A_0 (\sum_{j=1}^N k_j)^\eta$
 
 Annahme: $L_j=1$ für alle j
 
 Sei $K=\sum_{j=1}^N k_j$
 Und $Y=\sum_{j=1}^N y_j$
 
-Firmen sind gleich: $k_j=\frac{K}{N}$ für alle $j$
+Annahme: Firmen sind gleich: $k_j=\frac{K}{N}$ für alle $j$
 
 Im Gleichgewicht ist daher
 
 $\bar{A}=A_0 K^\eta$
 
+Daher lässt sich schreiben: 
 $y_j=A_0 K^\eta (\frac{K}{N})^\alpha$
 
 ### Aggregierter Output
 
-Der aggregierte Output ist
+Der aggregierte Output ist der $N$ identischen Firmen ist einfach $N$ mal der individuelle Output:
 
-$Y=NA_0 K^\eta (\frac{K}{N})^\alpha$
+$Y=NA_0 K^\eta (\frac{K}{N})^\alpha$,
 
-Mit $A=A_0 N^{1-\alpha}$:
+Mit $A=A_0 N^{1-\alpha}$ lässt sich schreiben:
 
-$Y=AK^{\eta + \alpha}$
+$$\boxed{Y=AK^{\eta + \alpha}}$$
 
 Annahme konstante Sparrate $s$
 
+Die Veränderung des Kapitalstocks über die Zeit ($\frac{dK}{dt}=\dot{K}$) ergibt sich dann als
 $\dot{K}=sAK^{\eta + \alpha} - \delta K$
+
+Die Wachstumsrate des Kapitalstocks $g_K$ beträgt dann
 
 $g_K = \frac{\dot{K}}{K}=sAK^{\eta + \alpha -1}-\delta$
 
@@ -136,13 +140,17 @@ $\rightarrow$ Diese Form von endogenem Wachstum verlagert die Suche nach den Wac
 
 ### Produktionsfunktion
 
+In der Volkswirtschaft wird ein Konsumgut $Y$ produziert unter Verwendung von Arbeit ($L$) und einem Zwischenprodukt ($x$). Das Gut $Y$ wird unter vollkommenem Wettbewerb hergestellt.
+
 $$
 Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 $$
 
+Das Zwischenprodukt $x$ wird von einem Monopolisten produziert.
+
 ### Gesamtproduktion
 
-Vorleistungen werden abgezogen
+Vorleistungen ($x$) werden abgezogen
 
 $$GDP_t = Y_t - x_t$$
 
@@ -162,6 +170,8 @@ $$\Pi_t=  \alpha(A_t L)^{1-\alpha} x_t^{\alpha}- x_t$$
 
 Gewinnmaximale Menge
 
+(Bedingung erster Ordnung: $\alpha^2(A_t L)^{1-\alpha} x_t^{\alpha-1}-1=0$ )
+
 $$x_t = \alpha^{\frac{2}{1-\alpha}} A_t L$$
 
 Man kann also schreiben
@@ -172,7 +182,7 @@ $\Pi_t=\pi A_t L$, mit $\pi \equiv (1-\alpha) \alpha^{\frac{1+\alpha}{1-\alpha}}
 
 #### Produktivitätssteigerung
 
-Unternehmen investieren in Innovationen, die die Produktivität erhöhen, indem $A_t$ um den Faktor $\gamma>1$ wächst.
+In jeder Periode investiert  ein Unternehmenin Innovationen, die die Produktivität erhöhen, indem $A_t$ um den Faktor $\gamma>1$ wächst.
 Das innovierende Verhalten ist unsicher. Mit der Wahrscheinlichkeit $\mu\leq 1 $ gelingt in einer Periode eine produktivitätssteigernde Innovation. Im Durchschnitt erhöht sich die Produktivität also um $\mu \gamma$.
 
 #### Innovationskosten
@@ -222,7 +232,7 @@ Die Wahrscheinlichkeit einer erfolgreichen Innovation ist also $\mu=\lambda n_t^
 ### Wachstum
 
 Die Wachstumsrate im Fall einer erfolgreichen Innovation ist $g=\frac{\gamma A_{t-1} - A_{t-1}}{A_{t-1}}=\gamma -1$
-Dieser Fall tritt mit der Wahrscheinlichkeit \mu ein, andernfalls ist das Wachstum Null.
+Dieser Fall tritt mit der Wahrscheinlichkeit $\mu$ ein, andernfalls ist das Wachstum Null.
 
 Die durchschnittliche Wachstumsrate beträgt also $g=\mu (\gamma -1)$
 
