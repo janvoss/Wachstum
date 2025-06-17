@@ -130,6 +130,8 @@ $g_K = \frac{\dot{K}}{K}=sAK^{\eta + \alpha -1}-\delta$
 - der Fall 3 ist elegant, aber warum sollte er gelten?
 
 $\rightarrow$ Diese Form von endogenem Wachstum verlagert die Suche nach den Wachstumsursachen von *exogenen* Wachstumsursachen (exogener technischer Fortschritt) hin zu *exogenen* Annahmen über Modellparameter
+
+
 ## Schumpetersches Wachstum
 
 ### Produktionsfunktion
