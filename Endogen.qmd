@@ -183,7 +183,7 @@ $\Pi_t=\pi A_t L$, mit $\pi \equiv (1-\alpha) \alpha^{\frac{1+\alpha}{1-\alpha}}
 #### Produktivitätssteigerung
 
 In jeder Periode investiert  ein Unternehmenin Innovationen, die die Produktivität erhöhen, indem $A_t$ um den Faktor $\gamma>1$ wächst.
-Das innovierende Verhalten ist unsicher. Mit der Wahrscheinlichkeit $\mu\leq 1 $ gelingt in einer Periode eine produktivitätssteigernde Innovation. Im Durchschnitt erhöht sich die Produktivität also um $\mu \gamma$.
+Das innovierende Verhalten ist unsicher. Mit der Wahrscheinlichkeit $\mu\leq 1$ gelingt in einer Periode eine produktivitätssteigernde Innovation. Im Durchschnitt erhöht sich die Produktivität also um $\mu \gamma$.
 
 #### Innovationskosten
 
