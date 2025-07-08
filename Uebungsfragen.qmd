@@ -42,4 +42,16 @@
 -------------
 **Neue Fragen**
 
-1. 
+1. Welche Bedingung gilt für den Grenznutzen im Vergleich zweiter aufeinander folgenden Perioden/Zeitpunkte bei intertemporler Optimierung nach der Euler-Gleichung?
+
+1. Welche Form hat die makroökonomische Produktionsfunktion im Wachstumsmodell nach Harrod und Domar?
+
+1. Halten Sie diese Form uneingeschränkt für plausibel?
+
+1. Kann man mit dem Model von Harrod und Domar wirklich dauerhaftes Wachstum erklären?
+
+1. Wie wird Wachstum im Rahmen eines Modells von learniny by doing/Wissensspillovers/Externalitäten der Investitionen erzeugt
+
+1. Von welcher Parameterkontellation hängt bei diesem Modell/diesen Modellen ab, ob es einen plausiblen Wachstumspfad gibt?
+
+1. Erläutern Sie verbal, wodurch im Rahmen eines Modelles mit Schumpeterschem Wachstum dauerhaftes Wachstum erzeugt wird. 
