@@ -1,0 +1,526 @@
+---
+title: "RCK-R-test"
+---
+
+# Gemini
+
+```{r}
+# Notwendige Pakete installieren, falls nicht vorhanden:
+# install.packages("R6")
+# install.packages("deSolve")
+
+library(R6)
+library(deSolve)
+
+# Class implementation
+
+RCKmod <- R6Class("RCKmod",
+  public = list(
+    # Parameter definieren
+    rho = NULL,
+    alpha = NULL,
+    theta = NULL,
+    xi = NULL,
+    delta = NULL,
+    phi = NULL,
+    
+    # Abgeleitete Werte und Funktionen
+    cFunc = NULL,
+    kmax = NULL,
+    kss = NULL,
+    css = NULL,
+    
+    initialize = function(rho, alpha, theta, xi, delta, phi) {
+      # """
+      # Inputs:
+      # - rho:   relative risk aversion coefficient for CRRA utility.
+      # - alpha: capital's share of production in Cobb-Douglas output function.
+      # - theta: time preference/discount rate.
+      # - xi:    population growth rate.
+      # - delta: capital depreciation rate.
+      # - phi:   labor productivity growth rate.        
+      # """
+      
+      # Assign parameter values
+      self$rho <- rho
+      self$alpha <- alpha
+      self$theta <- theta
+      self$xi <- xi
+      self$delta <- delta
+      self$phi <- phi
+      
+      # Maximum capital
+      self$kmax <- (1/(self$phi + self$xi + self$delta))^(1/(1-self$alpha))
+      
+      # Steady state capital
+      self$kss <- (alpha/(theta + xi + delta + rho*phi))^(1/(1-alpha))
+      
+      # Steady state consumption
+      self$css <- self$kss^alpha - (xi + delta + phi)*self$kss
+      
+      # Solve the model to create its consumption function
+      self$solve()
+    },
+    
+    output = function(k) {
+      # """
+      # Cobb-Douglas normalized production function
+      # """
+      return(k^self$alpha)
+    },
+    
+    dcdt = function(c, k) {
+      # """
+      # Consumption differential equation
+      # """
+      dc <- c/self$rho * (self$alpha * k^(self$alpha - 1) - self$theta - (self$xi + self$delta) - self$rho*self$phi)
+      return(dc)
+    },
+    
+    dkdt = function(c, k) {
+      # """
+      # Capital differential equation
+      # """
+      dk <- self$output(k) - c - (self$phi + self$xi + self$delta)*k
+      return(dk)
+    },
+    
+    dcdk = function(k, state, parms) {
+      # """
+      # Differential equation for the time elimination method.
+      # This corresponds to dc/dk = (dc/dt)/(dk/dt)
+      # WICHTIG: deSolve erwartet die Signatur func(time, state, parms). 
+      # Hier ist 'k' die Zeit (unabhängige Variable) und 'c' der Zustand.
+      # """
+      c_val <- state[1] 
+      # Verhindern von negativen Werten während der numerischen Lösung
+      if(c_val < 0) c_val <- 1e-10
+      
+      dc_val <- self$dcdt(c_val, k)
+      dk_val <- self$dkdt(c_val, k)
+      
+      return(list(c(dc_val / dk_val)))
+    },
+    
+    solve = function(eps = 10^(-8), npoints = 400) {
+      # """
+      # Solves for the model's consumption rule through the time elimination method.
+      # """
+      
+      # K ranges
+      # In R erzeugen wir Sequenzen. 
+      k_below <- seq(self$kss, 0.0001, length.out = npoints)
+      k_above <- seq(self$kss, self$kmax, length.out = npoints)
+      
+      # Solve for c on each side of the steady state capital
+      # deSolve::ode wird genutzt. Beachte: 'times' ist hier 'k'.
+      
+      # Nach unten (Rückwärtsintegration sozusagen, da k abnimmt)
+      c_below_out <- ode(y = c(c = self$css - eps), times = k_below, func = self$dcdk, parms = NULL)
+      # Nach oben
+      c_above_out <- ode(y = c(c = self$css + eps), times = k_above, func = self$dcdk, parms = NULL)
+      
+      # Daten zusammenfügen für Interpolation
+      # Wir müssen die 'below' Werte umkehren, damit k strikt aufsteigend ist für approxfun
+      k_vals <- c(rev(k_below), k_above[-1]) # -1 um Duplikat beim SS zu vermeiden
+      c_vals <- c(rev(c_below_out[,"c"]), c_above_out[-1,"c"])
+      
+      # Create consumption function as an interpolation
+      # approxfun entspricht scipy.interpolate.interp1d
+      self$cFunc <- approxfun(k_vals, c_vals, rule = 2) # rule=2 erlaubt Extrapolation (constant) am Rand
+    },
+    
+    dkdt_opt = function(t, state, parms) {
+      # """
+      # Differential equation for k assuming optimal c decisions.
+      # deSolve Signatur: (t, state, parms)
+      # """
+      k_val <- state[1]
+      c_val <- self$cFunc(k_val)
+      return(list(c(self$dkdt(c_val, k_val))))
+    },
+    
+    k_dynamics = function(k0, t) {
+      # """
+      # Simulates optimal capital dynamics from a given starting point.
+      # """
+      out <- ode(y = c(k = k0), times = t, func = self$dkdt_opt, parms = NULL)
+      return(out) # Gibt Matrix mit Spalten 'time' und 'k' zurück
+    },
+    
+    k0locus = function(k) {
+      # """
+      # Returns the consumption value that leaves a given amount of
+      # effective capital unchanged.
+      # """
+      return(self$output(k) - (self$phi + self$xi + self$delta)*k)
+    },
+    
+    phase_diagram = function(npoints = 200, arrows = FALSE, n_arrows = 5) {
+      # """
+      # Plots the model's phase diagram.
+      # """
+      
+      k <- seq(0.01, self$kmax, length.out = npoints)
+      
+      # Setup Plot
+      # k_dot = 0 Locus
+      plot(k, self$k0locus(k), type = "l", col = "blue", lwd = 2,
+           ylim = c(0, max(self$cFunc(k))*1.2),
+           xlab = "k", ylab = "c",
+           main = "Phase diagram and consumption rule\n(normalized by efficiency units)")
+      
+      # c_dot = 0 Locus (Vertical line)
+      abline(v = self$kss, lty = 2, col = "black")
+      
+      # Saddle path
+      lines(k, self$cFunc(k), col = "green", lwd = 2)
+      
+      # Steady state
+      points(self$kss, self$css, pch = 8, col = "red", cex = 1.5)
+      
+      legend("topright", legend = c(expression(dot(k)==0 ~ locus), 
+                                    expression(dot(c)==0 ~ locus), 
+                                    "Saddle path", "Steady state"),
+             col = c("blue", "black", "green", "red"), 
+             lty = c(1, 2, 1, NA), pch = c(NA, NA, NA, 8))
+      
+      # Add arrows
+      if (arrows) {
+        x <- seq(min(k), max(k), length.out = n_arrows)
+        y <- seq(min(self$cFunc(k)), max(self$cFunc(k)), length.out = n_arrows)
+        
+        grid <- expand.grid(k = x, c = y)
+        
+        dc_vals <- self$dcdt(grid$c, grid$k)
+        dk_vals <- self$dkdt(grid$c, grid$k)
+        
+        # Normalize length for visualization (quiver logic)
+        M <- sqrt(dk_vals^2 + dc_vals^2)
+        M[M == 0] <- 1
+        dk_vals <- dk_vals / M
+        dc_vals <- dc_vals / M
+        
+        # Skalierungsfaktor für Pfeile (in R muss man Länge explizit angeben)
+        scale_x <- (max(k) - min(k)) / n_arrows * 0.4
+        scale_y <- (max(y) - min(y)) / n_arrows * 0.4
+        
+        arrows(grid$k, grid$c, 
+               grid$k + dk_vals * scale_x, 
+               grid$c + dc_vals * scale_y, 
+               length = 0.05, col = rgb(0,0,0,0.3))
+      }
+    }
+  )
+)
+
+# --- Ausführung (Main Block) ---
+
+# Create and solve model
+RCKmodExample <- RCKmod$new(rho = 2, alpha = 0.3, theta = 0.02, xi = 0.01, delta = 0.08, phi = 0.03)
+# Note: $new() ruft automatisch initialize() und darin solve() auf.
+
+# Test the consumption rule
+cat(sprintf('Consumption at k = %1.2f is c = %1.2f\n', 
+            RCKmodExample$kss/2, RCKmodExample$cFunc(RCKmodExample$kss/2)))
+
+# Phase Diagram
+RCKmodExample$phase_diagram(arrows = TRUE, n_arrows = 12)
+
+# Create grid of time points
+t <- seq(0, 100, length.out = 100)
+
+# Find capital dynamics
+k0 <- 4
+out_sim <- RCKmodExample$k_dynamics(k0, t)
+k_sim <- out_sim[,"k"] # Extrahiere k Spalte
+
+# Plot Capital
+plot(t, k_sim, type = "l", col = "blue", lwd = 2,
+     xlab = "Time", ylab = "Capital", main = "Capital")
+abline(h = RCKmodExample$kss, lty = 2, col = "black")
+legend("bottomright", legend = c("Trajectory", expression(bar(k))),
+       col = c("blue", "black"), lty = c(1, 2))
+
+# Find consumption
+c_sim <- RCKmodExample$cFunc(k_sim)
+
+# Plot Consumption
+plot(t, c_sim, type = "l", col = "blue", lwd = 2,
+     xlab = "Time", ylab = "Consumption", main = "Consumption")
+abline(h = RCKmodExample$css, lty = 2, col = "black")
+legend("bottomright", legend = c("Trajectory", expression(bar(c))),
+       col = c("blue", "black"), lty = c(1, 2))
+```
+
+# Deep Seek
+
+```{r}
+# Preamble
+library(deSolve)
+library(ggplot2)
+library(reshape2)
+
+# Class implementation
+RCKmod <- function(rho, alpha, theta, xi, delta, phi) {
+  #' @param rho: relative risk aversion coefficient for CRRA utility
+  #' @param alpha: capital's share of production in Cobb-Douglas output function
+  #' @param theta: time preference/discount rate
+  #' @param xi: population growth rate
+  #' @param delta: capital depreciation rate
+  #' @param phi: labor productivity growth rate
+  
+  # Assign parameter values
+  model <- list(
+    rho = rho,
+    alpha = alpha,
+    theta = theta,
+    xi = xi,
+    delta = delta,
+    phi = phi
+  )
+  
+  # Maximum capital
+  model$kmax <- (1/(phi + xi + delta))^(1/(1 - alpha))
+  
+  # Steady state capital
+  model$kss <- (alpha/(theta + xi + delta + rho*phi))^(1/(1 - alpha))
+  # Steady state consumption
+  model$css <- model$kss^alpha - (xi + delta + phi)*model$kss
+  
+  # Function definitions
+  model$output <- function(k) {
+    # Cobb-Douglas normalized production function
+    return(k^alpha)
+  }
+  
+  model$dcdt <- function(c, k) {
+    # Consumption differential equation
+    return(c/rho*(alpha*k^(alpha - 1) - theta - (xi + delta) - rho*phi))
+  }
+  
+  model$dkdt <- function(c, k) {
+    # Capital differential equation
+    return(k^alpha - c - (phi + xi + delta)*k)
+  }
+  
+  model$dcdk <- function(c, k) {
+    # Differential equation for the time elimination method
+    # This corresponds to dc/dk = (dc/dt)/(dk/dt)
+    return(model$dcdt(c, k)/model$dkdt(c, k))
+  }
+  
+  model$solve <- function(eps = 10^(-8), npoints = 400) {
+    # Solves for the model's consumption rule through the time elimination method
+    # Parameters:
+    # - eps: disturbance used to prevent dc/dk from becoming 0/0 at
+    #        the steady state value of capital
+    # - npoints: number of points used on each side of the steady
+    #            state capital for solving the dc/dk equation
+    
+    # K ranges
+    k_below <- seq(from = model$kss, to = 0.0001, length.out = npoints)
+    k_above <- seq(from = model$kss, to = model$kmax, length.out = npoints)
+    k <- c(k_below, k_above)
+    
+    # Solve for c on each side of the steady state capital,
+    # adding a disturbance to prevent dc/dk = 0/0
+    c_below <- ode(y = model$css - eps, times = k_below, func = function(t, y, parms) {
+      list(model$dcdk(y, t))
+    }, parms = NULL)[, 2]
+    
+    c_above <- ode(y = model$css + eps, times = k_above, func = function(t, y, parms) {
+      list(model$dcdk(y, t))
+    }, parms = NULL)[, 2]
+    
+    c <- c(c_below, c_above)
+    
+    # Create consumption function as an interpolation of the numerical solutions
+    model$cFunc <- approxfun(k, c, rule = 2)
+    return(model)
+  }
+  
+  model$dkdt_opt <- function(t, k, parms) {
+    # Differential equation for k assuming optimal c decisions
+    return(list(model$dkdt(model$cFunc(k), k)))
+  }
+  
+  model$k_dynamics <- function(k0, t) {
+    # Simulates optimal capital dynamics from a given starting point
+    # Parameters:
+    # - t: vector of time points at which to solve for capital
+    # - k0: value of capital at t[0]
+    result <- ode(y = k0, times = t, func = model$dkdt_opt, parms = NULL)
+    return(result[, 2])
+  }
+  
+  model$k0locus <- function(k) {
+    # Returns the consumption value that leaves a given amount of
+    # effective capital unchanged
+    return(k^alpha - (phi + xi + delta)*k)
+  }
+  
+  model$phase_diagram <- function(npoints = 200, arrows = FALSE, n_arrows = 5) {
+    # Plots the model's phase diagram
+    # - npoints: number of ticks in the k axis
+    # - arrows: boolean to indicate whether or not to draw arrow grid
+    # - n_arrows: controls the number of arrows in the grid
+    
+    k <- seq(from = 0.01, to = model$kmax, length.out = npoints)
+    
+    # Create data frame for plotting
+    plot_data <- data.frame(
+      k = k,
+      k0_locus = model$k0locus(k),
+      saddle_path = model$cFunc(k)
+    )
+    
+    # Create base plot
+    p <- ggplot(plot_data, aes(x = k)) +
+      geom_line(aes(y = k0_locus, color = "k_dot=0 locus"), linewidth = 1) +
+      geom_vline(xintercept = model$kss, linetype = "dashed", 
+                 aes(color = "c_dot=0 locus"), linewidth = 1) +
+      geom_line(aes(y = saddle_path, color = "Saddle path"), linewidth = 1) +
+      geom_point(aes(x = model$kss, y = model$css, color = "Steady state"), 
+                 size = 3, shape = 8) +
+      labs(title = "Phase diagram and consumption rule\n(normalized by efficiency units)",
+           x = "k", y = "c", color = "Legend") +
+      theme_minimal() +
+      scale_color_manual(
+        values = c(
+          "k_dot=0 locus" = "blue", 
+          "c_dot=0 locus" = "red",
+          "Saddle path" = "green",
+          "Steady state" = "black"
+        )
+      ) +
+      theme(legend.position = "bottom")
+    
+    # Add arrows illustrating behavior in different parts of the diagram
+    if (arrows) {
+      x <- seq(from = min(k), to = max(k), length.out = n_arrows)
+      y <- seq(from = min(plot_data$saddle_path, na.rm = TRUE), 
+               to = max(plot_data$saddle_path, na.rm = TRUE), 
+               length.out = n_arrows)
+      
+      grid <- expand.grid(k = x, c_val = y)
+      grid$dc <- mapply(model$dcdt, grid$c_val, grid$k)
+      grid$dk <- mapply(model$dkdt, grid$c_val, grid$k)
+      
+      # Normalize arrows
+      M <- sqrt(grid$dk^2 + grid$dc^2)
+      M[M == 0] <- 1
+      grid$dk_norm <- grid$dk / M
+      grid$dc_norm <- grid$dc / M
+      
+      # Scale factor for arrows
+      scale_factor <- 0.05
+      
+      p <- p + geom_segment(
+        data = grid, 
+        aes(x = k, y = c_val, 
+            xend = k + dk_norm * scale_factor * diff(range(k)), 
+            yend = c_val + dc_norm * scale_factor * diff(range(plot_data$saddle_path, na.rm = TRUE))),
+        arrow = arrow(length = unit(0.2, "cm")), 
+        alpha = 0.3
+      )
+    }
+    
+    print(p)
+  }
+  
+  # Solve the model to create its consumption function
+  model <- model$solve()
+  
+  return(model)
+}
+
+# Create and solve model
+RCKmodExample <- RCKmod(
+  rho = 2, 
+  alpha = 0.3, 
+  theta = 0.02, 
+  xi = 0.01, 
+  delta = 0.08, 
+  phi = 0.03
+)
+
+# Test the consumption rule
+test_k <- RCKmodExample$kss/2
+test_c <- RCKmodExample$cFunc(test_k)
+cat(sprintf("Consumption at k = %1.2f is c = %1.2f\n", test_k, test_c))
+
+# Plot phase diagram
+RCKmodExample$phase_diagram(arrows = TRUE, n_arrows = 12)
+
+# Create grid of time points
+t_vec <- seq(0, 100, length.out = 100)
+
+# Find capital dynamics at the desired time points with given starting capital
+k0 <- 4
+k_vals <- RCKmodExample$k_dynamics(k0, t_vec)
+
+# Create data frame for capital plot
+capital_data <- data.frame(
+  time = t_vec,
+  capital = k_vals
+)
+
+# Plot capital dynamics
+ggplot(capital_data, aes(x = time, y = capital)) +
+  geom_line(linewidth = 1) +
+  geom_hline(yintercept = RCKmodExample$kss, linetype = "dashed", 
+             color = "black", linewidth = 1) +
+  labs(
+    title = "Capital Dynamics",
+    x = "Time",
+    y = "Capital (k)"
+  ) +
+  theme_minimal()
+
+# Find consumption values - verwende einen anderen Variablennamen als "c"
+consumption_vals <- RCKmodExample$cFunc(k_vals)
+
+# Create data frame for consumption plot
+consumption_data <- data.frame(
+  time = t_vec,
+  consumption = consumption_vals
+)
+
+# Plot consumption dynamics
+ggplot(consumption_data, aes(x = time, y = consumption)) +
+  geom_line(linewidth = 1) +
+  geom_hline(yintercept = RCKmodExample$css, linetype = "dashed", 
+             color = "black", linewidth = 1) +
+  labs(
+    title = "Consumption Dynamics",
+    x = "Time",
+    y = "Consumption (c)"
+  ) +
+  theme_minimal()
+
+# Optional: Kombinierter Plot von Kapital und Konsum
+combined_data <- data.frame(
+  time = rep(t_vec, 2),
+  value = c(k_vals, consumption_vals),
+  variable = rep(c("Capital", "Consumption"), each = length(t_vec))
+)
+
+ggplot(combined_data, aes(x = time, y = value, color = variable)) +
+  geom_line(linewidth = 1) +
+  geom_hline(data = data.frame(
+    variable = c("Capital", "Consumption"),
+    steady_state = c(RCKmodExample$kss, RCKmodExample$css)
+  ), aes(yintercept = steady_state, color = variable), 
+  linetype = "dashed", linewidth = 1) +
+  labs(
+    title = "RCK Model Dynamics",
+    x = "Time",
+    y = "Value",
+    color = "Variable"
+  ) +
+  theme_minimal() +
+  facet_wrap(~variable, scales = "free_y", ncol = 1) +
+  theme(legend.position = "none")
+```
+
