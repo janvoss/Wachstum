@@ -1,0 +1,13 @@
+name: RamseyCassKoopmans-R
+title: RamseyCassKoopmans-R
+username: janvoss
+account: janvoss
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16246786
+bundleId: 11278957
+url: https://janvoss.shinyapps.io/RamseyCassKoopmans-R/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: __pycache__/app.cpython-313.pyc|app.py
