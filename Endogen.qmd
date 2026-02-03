@@ -185,16 +185,18 @@ $\Pi_t=\pi A_t L$, mit $\pi \equiv (1-\alpha) \alpha^{\frac{1+\alpha}{1-\alpha}}
 In jeder Periode investiert  ein Unternehmenin Innovationen, die die Produktivität erhöhen, indem $A_t$ um den Faktor $\gamma>1$ wächst.
 Das innovierende Verhalten ist unsicher. Mit der Wahrscheinlichkeit $\mu\leq 1$ gelingt in einer Periode eine produktivitätssteigernde Innovation. Im Durchschnitt erhöht sich die Produktivität also um $\mu \gamma$.
 
-#### Innovationskosten
+#### Innovationsfunktion
 
 Innovative Tätigkeit geht mit Kosten einher. Die Wahrscheinlichkeit einer erfolgreichen Innovation ist eine Funktion der Forschungsausgaben $R_t$: Je höher die Ausgaben sind, desto höher ist auch die Wahrscheinlichkeit eines Forschungserfolgs.
 Es wird aber immer schwieriger, eine erfolgreiche Innovation zu tätigen. Daher werden die Forschungsausgaben auf den nächsten zu erreichenden Produktivitätsschritt $A^*_t=\gamma A_{t-1}$ normiert.
+
+Die Wahrscheinlichkeit einer produktivitätssteigernden Innovation folgt also der Innovationsfunktion $\phi$:
 
   $\mu_t=\phi(\frac{R_t}{A^*_t})$, mit $A^*_t=\gamma A_{t-1}$
 
 Notation: $n_t=\frac{R_t}{A^*_t}$
 
-Konkrete Form der Kostenfunktion:
+Konkrete Form der Innovationsfunktion:
 
 $\phi_t(n_t)=\lambda n_t^\sigma$
 
@@ -204,7 +206,11 @@ $0\leq \sigma \leq 1$: Elastizität
 
 Positive aber abnehmende Grenzproduktivität im Forschungssektor
 
-$\phi'=\sigma \lambda n_t^{\sigma-1}>0$, $\phi''=\sigma (\sigma-1)< \lambda n_t^{\sigma-2}<0$
+$\phi'=\sigma \lambda n_t^{\sigma-1}>0$, $\phi''=\sigma (\sigma-1) \lambda n_t^{\sigma-2}<0$
+
+
+[Einfluss von A_t auf R_t für gleiches mu]::
+[Einfluss von sigma]::
 
 #### Forschungsarbitrage
 
