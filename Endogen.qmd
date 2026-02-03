@@ -245,3 +245,5 @@ Die durchschnittliche Wachstumsrate beträgt also $g=\mu (\gamma -1)$
 Subsituieren:
 
 $g= \lambda^{\frac{1}{1-\sigma}} (\sigma \pi L)^{\frac{\sigma}{1-\sigma}}(\gamma-1)$
+
+[Komparative Statik, s. Lehrbuch]::
