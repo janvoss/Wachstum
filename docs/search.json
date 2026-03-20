@@ -94,7 +94,7 @@
     "href": "index.html",
     "title": "Wachstumstheorie und -politik",
     "section": "",
-    "text": "\\({}\\)\n\\({}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganisatorisches\n\n\n\n\n\n\nUnterlagen: https://janvoss.github.io/Wachstum/\nModul: 209-021 Wachstum und Transformation (Modulhandbuch)\nWeitere Veranstaltung im ModuL: Strukturpolitik\nPrüfungsleistung: K60, diese VL davon 50%",
+    "text": "\\({}\\)\n\\({}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganisatorisches\n\n\n\n\n\n\nUnterlagen: https://janvoss.github.io/Wachstum/\nModul: 209-021 Wachstum und Transformation (Modulhandbuch)\nWeitere Veranstaltung im Modul: Strukturpolitik\nPrüfungsleistung: K60, diese VL davon 50%\n\n\n\n\n\n\n\n\n\n\nTechnische Anmerkung\n\n\n\n\n\nDie Unterlagen beinhalten Elemente, die mit R oder mit Python erstellt wurden. Der jeweilige Code wird (fast immer) an der entsprechenden Stelle angezeigt.\nDie Unterlagen selbst werden mit Quarto in der Sprache Markdown erstellt und beinhalten auch Elemente von \\(\\LaTeX\\). Das Literaturverzeichnis beruht auf einem BibTeX-Export aus Zotero Der Quellcode ist auf GitHub einsehbar.\nDie Kenntnis dieser Sprachen/Programme wird für die Modulprüfung nicht vorausgesetzt. Sie ist aber für das weitere Studium und das Leben danach vermutlich hilfreich.",
     "crumbs": [
       "Organisatorisches"
     ]
