@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -279,6 +299,7 @@ window.Quarto = {
   <li><a href="#themen" id="toc-themen" class="nav-link active" data-scroll-target="#themen"><span class="header-section-number">1.1</span> Themen</a></li>
   <li><a href="#ein-blick-in-die-daten" id="toc-ein-blick-in-die-daten" class="nav-link" data-scroll-target="#ein-blick-in-die-daten"><span class="header-section-number">1.2</span> Ein Blick in die Daten</a></li>
   <li><a href="#warum-ist-wirtschaftswachstum-wichtig" id="toc-warum-ist-wirtschaftswachstum-wichtig" class="nav-link" data-scroll-target="#warum-ist-wirtschaftswachstum-wichtig"><span class="header-section-number">1.3</span> (Warum) ist Wirtschaftswachstum wichtig?</a></li>
+  <li><a href="#wie-entsteht-wachstum" id="toc-wie-entsteht-wachstum" class="nav-link" data-scroll-target="#wie-entsteht-wachstum"><span class="header-section-number">1.4</span> Wie entsteht Wachstum?</a></li>
   </ul>
 </nav>
     </div>
@@ -385,8 +406,8 @@ window.Quarto = {
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="htmlwidget-e485c8caa7f98790b27a" style="width:100%;height:433px;" class="canvasXpress html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e485c8caa7f98790b27a">{"x":{
+<div id="htmlwidget-5787e54b457f7f3c0abc" style="width:100%;height:433px;" class="canvasXpress html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5787e54b457f7f3c0abc">{"x":{
   "renderTo": "canvas",
   "data": [
     ["Id", "entity", "code", "year", "ny_gdp_pcap_pp_kd", "owid_region", "index", ".group"],
@@ -7100,11 +7121,133 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Ueberblick.svg" class="img-fluid figure-img"></p>
-<figcaption>Überblick</figcaption>
+<figcaption>Überblick: Warum ist Wirtschaftswachstum wichtig?</figcaption>
 </figure>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Der Text zum Bild
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Wirtschaftswachstum wird üblicherweise als die langfristige jährliche Steigerungsrate des Bruttoinlandsprodukts eines Landes definiert <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>. Es beschreibt einen Prozess, bei dem eine Volkswirtschaft im Zeitverlauf mehr Güter sowie eine höhere Qualität der Gütern hervorbringt <span class="citation" data-cites="braun_warum_2025">(<a href="#ref-braun_warum_2025" role="doc-biblioref">Braun, 2025</a>)</span>. Ein zentraler Indikator ist dabei das Bruttoinlandsprodukt pro Kopf, das die Wirtschaftsleistung ins Verhältnis zur Bevölkerungszahl setzt und als Maßstab für den durchschnittlichen Lebensstandard dient <span class="citation" data-cites="braun_warum_2025">(<a href="#ref-braun_warum_2025" role="doc-biblioref">Braun, 2025</a>)</span>.</p>
+<p>Die Relevanz dieses Wachstums ergibt sich primär daraus, dass es maßgeblich das materielle Wohlergehen von Milliarden von Menschen bestimmt. Historisch gesehen ermöglichte erst das mit der industriellen Revolution einsetzende Wachstum einen massiven Anstieg von Einkommen, Gesundheit und Lebenserwartung. In Ländern wie Indien hat ein beschleunigtes Wachstum beispielsweise zu einer erheblichen Reduzierung der Armut geführt <span class="citation" data-cites="aghion_economics_2008 braun_warum_2025">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>; <a href="#ref-braun_warum_2025" role="doc-biblioref">Braun, 2025</a>)</span>.</p>
+<p>Darüber hinaus fungiert Wachstum in modernen Gesellschaften als ein entscheidender Stabilitätsfaktor. Es schafft die notwendigen Anreize für Unternehmen zu investieren, wodurch neue Arbeitsplätze entstehen und die Einkommen der Bevölkerung steigen können. Ebenso bildet die wirtschaftliche Expansion die fiskalische Grundlage für die Finanzierung des Sozialstaats. Durch steigende Steuereinnahmen und Sozialbeiträge können staatliche Aufgaben in den Bereichen Rente, Gesundheit, Bildung und Infrastruktur gewährleistet werden. Ein Ausbleiben von Wachstum verschärft hingegen gesellschaftliche Verteilungskonflikte und gefährdet stabile politische Verhältnisse <span class="citation" data-cites="braun_warum_2025">(<a href="#ref-braun_warum_2025" role="doc-biblioref">Braun, 2025</a>)</span>.</p>
+<p>Wachstum ist zudem ein wesentlicher Motor für Innovation und technischen Fortschritt. In einer expandierenden Wirtschaft haben Unternehmen höhere Renditeerwartungen, was riskante Investitionen in Forschung und Entwicklung rechtfertigt. Dieser technologische Fortschritt ist wiederum die Voraussetzung für langfristige Produktivitätssteigerungen, die den Lebensstandard weiter erhöhen können <span class="citation" data-cites="braun_warum_2025">(<a href="#ref-braun_warum_2025" role="doc-biblioref">Braun, 2025</a>)</span>.</p>
+<p>In der aktuellen Debatte wird Wachstum zudem als notwendige Bedingung für die ökologische Transformation angesehen. Der Umbau zu einer klimaneutralen Wirtschaft erfordert Investitionen in einem bislang unbekannten Ausmaß, die ohne eine starke ökonomische Basis kaum zu bewältigen wären. Technologische Innovationen können dabei helfen, das Wirtschaftswachstum vom Ressourcenverbrauch zu entkoppeln <span class="citation" data-cites="braun_warum_2025">(<a href="#ref-braun_warum_2025" role="doc-biblioref">Braun, 2025</a>)</span>.</p>
+<p>Trotz dieser Funktionen steht das Wachstumsparadigma heute aufgrund ökologischer Grenzen und der Endlichkeit natürlicher Ressourcen verstärkt in der Kritik. Kritische Stimmen fordern daher teilweise eine Abkehr vom stetigen Wachstum oder sogar ein Schrumpfen der Wirtschaftsleistung, um die Umweltbelastung zu reduzieren <span class="citation" data-cites="herrmann_wir_2025 plumpe_wachstum_2025">(<a href="#ref-herrmann_wir_2025" role="doc-biblioref">Herrmann, 2025</a>; <a href="#ref-plumpe_wachstum_2025" role="doc-biblioref">Plumpe, 2025</a>)</span>.</p>
+<p>Dennoch bleibt nach Ansicht von Befürwortern das Streben nach Fortschritt und Verbesserung eine starke menschliche Triebkraft, die für die Bewältigung zukünftiger Aufgaben zentral bleibt <span class="citation" data-cites="braun_warum_2025">(<a href="#ref-braun_warum_2025" role="doc-biblioref">Braun, 2025</a>)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="wie-entsteht-wachstum" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="wie-entsteht-wachstum"><span class="header-section-number">1.4</span> Wie entsteht Wachstum?</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Graphen (Top-Down)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Strukturmodell Wirtschaftswachstum'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Design-Vorgaben für maximale Klarheit</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TB'</span>, nodesep<span class="op">=</span><span class="st">'0.5'</span>, ranksep<span class="op">=</span><span class="st">'0.8'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'box'</span>, style<span class="op">=</span><span class="st">'filled, rounded'</span>, color<span class="op">=</span><span class="st">'none'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Das Fundament (Institutionen)</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_foundation'</span>) <span class="im">as</span> c:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    c.attr(label<span class="op">=</span><span class="st">'1. INSTITUTIONELLES FUNDAMENT'</span>, style<span class="op">=</span><span class="st">'filled'</span>, color<span class="op">=</span><span class="st">'#F5F5F5'</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'INST'</span>, <span class="st">'Rechtssicherheit &amp; Eigentumsrechte</span><span class="ch">\n</span><span class="st">Finanzsystem (Kapitalallokation)'</span>, fillcolor<span class="op">=</span><span class="st">'#EEEEEE'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Die Säulen (Produktionsfaktoren)</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_factors'</span>) <span class="im">as</span> c:</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    c.attr(label<span class="op">=</span><span class="st">'2. PRODUKTIONSFAKTOREN (INPUT)'</span>, style<span class="op">=</span><span class="st">'filled'</span>, color<span class="op">=</span><span class="st">'#E3F2FD'</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'K'</span>, <span class="st">'Sachkapital</span><span class="ch">\n</span><span class="st">(Maschinen &amp; Infrastruktur)'</span>, fillcolor<span class="op">=</span><span class="st">'#BBDEFB'</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'H'</span>, <span class="st">'Humankapital</span><span class="ch">\n</span><span class="st">(Bildung &amp; Know-how)'</span>, fillcolor<span class="op">=</span><span class="st">'#BBDEFB'</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Der Motor (Innovation)</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_engine'</span>) <span class="im">as</span> c:</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    c.attr(label<span class="op">=</span><span class="st">'3. TECHNISCHER FORTSCHRITT (MOTOR)'</span>, style<span class="op">=</span><span class="st">'filled'</span>, color<span class="op">=</span><span class="st">'#E8F5E9'</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'RD'</span>, <span class="st">'Forschung &amp; Entwicklung (F&amp;E)'</span>, fillcolor<span class="op">=</span><span class="st">'#C8E6C9'</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'INNO'</span>, <span class="st">'Schöpferische Zerstörung</span><span class="ch">\n</span><span class="st">&amp; Spezialisierung'</span>, fillcolor<span class="op">=</span><span class="st">'#C8E6C9'</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Das Ergebnis</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'OUT'</span>, <span class="st">'WIRTSCHAFTSWACHSTUM</span><span class="ch">\n</span><span class="st">(Steigerung des Wohlstands)'</span>,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>         shape<span class="op">=</span><span class="st">'doubleoctagon'</span>, fillcolor<span class="op">=</span><span class="st">'#FFF9C4'</span>, style<span class="op">=</span><span class="st">'filled, bold'</span>, fontsize<span class="op">=</span><span class="st">'13'</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Logische Verbindungen</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'INST'</span>, <span class="st">'K'</span>)</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'INST'</span>, <span class="st">'RD'</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'K'</span>, <span class="st">'OUT'</span>, label<span class="op">=</span><span class="st">'sinkende</span><span class="ch">\n</span><span class="st"> Grenzerträge?'</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'H'</span>, <span class="st">'RD'</span>, label<span class="op">=</span><span class="st">'Basis für Ideen'</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'RD'</span>, <span class="st">'INNO'</span>)</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'INNO'</span>, <span class="st">'OUT'</span>, label<span class="op">=</span><span class="st">'hinreichend hohe</span><span class="ch">\n</span><span class="st"> Grenzerträge'</span>, penwidth<span class="op">=</span><span class="st">'2.0'</span>)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Spezial-Knoten für die Zukunft</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'GREEN'</span>, <span class="st">'Grüne Transformation</span><span class="ch">\n</span><span class="st">(Nachhaltiges Wachstum)'</span>, color<span class="op">=</span><span class="st">'green'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'OUT'</span>, <span class="st">'GREEN'</span>, style<span class="op">=</span><span class="st">'dotted'</span>)</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co">#display(dot)</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Speichern des Graphen als SVG-Datei</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>dot.render(<span class="st">'Ursachen'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'svg'</span>, cleanup<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Ursachen.svg" class="img-fluid figure-img"></p>
+<figcaption>Überblick: Wie entsteht Wachstum?</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Der Text zum Bild
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Wirtschaftswachstum wird üblichwerweise als die langfristige durchschnittliche jährliche Steigerungsrate des Bruttoinlandsprodukts eines Landes definiert <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>.</p>
+<p>Ein grundlegender Erklärungsansatz ist das neoklassische Wachstumsmodell nach Solow und Swan, das die Akkumulation von Sachkapital und Arbeit als zentrale Triebkräfte ansieh. In diesem Modell führen abnehmende Grenzerträge des Kapitals dazu, dass allein durch Investitionen kein dauerhaftes Pro-Kopf-Wachstum erzielt werden kann, weshalb langfristiges Wachstum in diesem Rahmen durch exogenen technischen Fortschritt erklärt werden muss <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>.</p>
+<p>Im Gegensatz dazu gehen endogene Wachstumstheorien davon aus, dass der technologische Fortschritt das Ergebnis ökonomischer Entscheidungen innerhalb des Systems ist. Das sogenannte AK-Modell bildet hierbei eine einfache Form, bei der Investitionen in physisches, menschliches und intellektuelles Kapital zusammengefasst werden und keine abnehmenden Grenzerträge aufweisen, sodass eine höhere Ersparnis zu dauerhaft höheren Wachstumsraten führt <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>.</p>
+<p>Ein weiterer Zweig endogener Modelle betont die Produktheterogenität, wobei Wachstum durch eine stetige Ausweitung der Vielfalt an Zwischenprodukten entsteht. Diese Modelle basieren auf der Idee, dass Forschungs- und Entwicklungsaktivitäten durch Monopolrenten für neue Entwürfe motiviert werden <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>.</p>
+<p>Die schumpeterianische Wachstumstheorie erklärt Fortschritt hingegen durch qualitätsverbessernde Innovationen, die bestehende Produkte verdrängen und somit einen Prozess der schöpferischen Zerstörung auslösen <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>.</p>
+<p>Neben Kapital und Innovation spielen Institutionen eine entscheidende Rolle, wobei historische Faktoren wie rechtliche Ursprünge oder koloniale Hintergründe die langfristige wirtschaftliche Leistungsfähigkeit prägen <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>. Die Wirksamkeit bestimmter Institutionen hängt dabei oft von der Nähe einer Volkswirtschaft zur globalen technologischen Grenze ab, wobei länderferne Staaten eher von Imitation und erfahrungsbasierten Strukturen profitieren, während Staaten an der technologischen Grenze auf innovationsfördernde Maßnahmen angewiesen sind <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>.</p>
+<p>Auch Bildungsinvestitionen wirken sich differenziert aus, da eine breite Primärbildung den technologischen Anschluss erleichtert, während tertiäre Bildung vor allem die Innovationsfähigkeit an der technologischen Grenze stärkt <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>. Historisch gesehen gelang der Ausbruch aus der malthusianischen Stagnation, in der die Landknappheit den Lebensstandard begrenzte, erst durch die Industrialisierung und den damit verbundenen Wissenszuwachs <span class="citation" data-cites="aghion_economics_2008">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>)</span>. Schließlich unterstützen gut funktionierende Finanzsysteme das Wachstum, indem sie Kapital effizient an erfolgversprechende Projekte vermitteln und Agenturprobleme durch Überwachung reduzieren <span class="citation" data-cites="aghion_economics_2008 novales_economic_2022">(<a href="#ref-aghion_economics_2008" role="doc-biblioref">Aghion &amp; Howitt, 2008</a>; <a href="#ref-novales_economic_2022" role="doc-biblioref">Novales et al., 2022</a>)</span>.</p>
+</div>
+</div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-aghion_economics_2008" class="csl-entry" role="listitem">
+Aghion, P., &amp; Howitt, P. W. (2008). <em>The economics of growth</em>. <span>MIT</span> Press.
+</div>
+<div id="ref-braun_warum_2025" class="csl-entry" role="listitem">
+Braun, J. (2025, November 7). <em><a href="https://www.bpb.de/shop/zeitschriften/apuz/wachstum-2025/572531/warum-moderne-gesellschaften-wachstum-brauchen/">Warum moderne Gesellschaften Wachstum brauchen <span></span> Wachstum. bpb.de</a></em>.
+</div>
+<div id="ref-herrmann_wir_2025" class="csl-entry" role="listitem">
+Herrmann, U. (2025, November 7). <em><a href="https://www.bpb.de/shop/zeitschriften/apuz/wachstum-2025/572533/wir-muessen-schrumpfen/">Wir müssen schrumpfen <span></span> Wachstum. bpb.de</a></em>.
+</div>
+<div id="ref-novales_economic_2022" class="csl-entry" role="listitem">
+Novales, A., Fernandez, E., &amp; Ruiz, J. (2022). <em><a href="https://link.springer.com/book/10.1007/978-3-662-63982-5">Economic growth</a></em>. Springer.
+</div>
+<div id="ref-plumpe_wachstum_2025" class="csl-entry" role="listitem">
+Plumpe, W. (2025, November 7). <em><a href="https://www.bpb.de/shop/zeitschriften/apuz/wachstum-2025/572530/wachstum-und-wachstumskritik/">Wachstum und Wachstumskritik. bpb.de</a></em>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
