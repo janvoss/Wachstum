@@ -1,14 +1,17 @@
 ---
 title: "Solow Modell"
-format:
+
+format: 
   html:
-    grid:
-      sidebar-width: 300px
+    embed-resources: false
 filters:
   - shinylive
 ---
 
 ```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 600
+
 
 # Falls Pakete fehlen: install.packages(c("shiny", "dplyr", "ggplot2", "tidyr"))
 library(shiny)
