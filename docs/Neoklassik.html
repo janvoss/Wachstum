@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -278,8 +298,9 @@ window.Quarto = {
   <li><a href="#armutsfalle" id="toc-armutsfalle" class="nav-link" data-scroll-target="#armutsfalle"><span class="header-section-number">4.8</span> Armutsfalle</a></li>
   <li><a href="#sparquote-für-maximales-einkommen" id="toc-sparquote-für-maximales-einkommen" class="nav-link" data-scroll-target="#sparquote-für-maximales-einkommen"><span class="header-section-number">4.9</span> Sparquote für maximales Einkommen</a></li>
   <li><a href="#sparquote-für-maximalen-konsum" id="toc-sparquote-für-maximalen-konsum" class="nav-link" data-scroll-target="#sparquote-für-maximalen-konsum"><span class="header-section-number">4.10</span> Sparquote für maximalen Konsum</a></li>
-  <li><a href="#bevölkerungswachstum" id="toc-bevölkerungswachstum" class="nav-link" data-scroll-target="#bevölkerungswachstum"><span class="header-section-number">4.11</span> Bevölkerungswachstum</a></li>
-  <li><a href="#technischer-fortschritthumankapital" id="toc-technischer-fortschritthumankapital" class="nav-link" data-scroll-target="#technischer-fortschritthumankapital"><span class="header-section-number">4.12</span> Technischer Fortschritt/Humankapital</a></li>
+  <li><a href="#die-grenzen-des-wachstums-durch-erhöhung-der-inputs" id="toc-die-grenzen-des-wachstums-durch-erhöhung-der-inputs" class="nav-link" data-scroll-target="#die-grenzen-des-wachstums-durch-erhöhung-der-inputs"><span class="header-section-number">4.11</span> Die Grenzen des Wachstums durch Erhöhung der Inputs</a></li>
+  <li><a href="#bevölkerungswachstum" id="toc-bevölkerungswachstum" class="nav-link" data-scroll-target="#bevölkerungswachstum"><span class="header-section-number">4.12</span> Bevölkerungswachstum</a></li>
+  <li><a href="#technischer-fortschritthumankapital" id="toc-technischer-fortschritthumankapital" class="nav-link" data-scroll-target="#technischer-fortschritthumankapital"><span class="header-section-number">4.13</span> Technischer Fortschritt/Humankapital</a></li>
   </ul>
 </nav>
     </div>
@@ -406,7 +427,7 @@ Pfad zum Gleichgewicht
 </section>
 <section id="entwicklung-des-kapitalstocks" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="entwicklung-des-kapitalstocks"><span class="header-section-number">4.6</span> Entwicklung des Kapitalstocks</h2>
-<div id="bb2fae17" class="cell" data-message="false" data-execution_count="1">
+<div id="1fb4acbc" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine <span class="im">as</span> gg</span>
@@ -463,7 +484,7 @@ Pfad zum Gleichgewicht
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'y'</span>: y_t})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="e2130859" class="cell" data-message="false" data-execution_count="2">
+<div id="4d25c970" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Grafiken</span></span>
@@ -483,7 +504,7 @@ Pfad zum Gleichgewicht
 </div>
 </div>
 </div>
-<div id="5594faf5" class="cell" data-message="false" data-execution_count="3">
+<div id="35bbca19" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(</span>
@@ -511,7 +532,7 @@ Pfad zum Gleichgewicht
 </div>
 </div>
 </div>
-<div id="32ab7667" class="cell" data-message="false" data-execution_count="4">
+<div id="2b1c7a03" class="cell" data-message="false" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(</span>
@@ -546,7 +567,7 @@ Pfad zum Gleichgewicht
 </section>
 <section id="entwicklung-des-einkommens" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="entwicklung-des-einkommens"><span class="header-section-number">4.7</span> Entwicklung des Einkommens</h2>
-<div id="6ec6d989" class="cell" data-message="false" data-execution_count="5">
+<div id="ab7b92d4" class="cell" data-message="false" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'t'</span>, <span class="st">'y'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
@@ -660,7 +681,7 @@ Interaktives Solow-Modell mit Armutsfalle
 <p><span class="math inline">\(c=(1-s)y=(1-s){\left(\frac{s}{\delta}\right)}^{\frac{\alpha }{1-\alpha }}\)</span></p>
 <p>Das sieht so aus, als könne es eine innere Lösung geben.</p>
 <p>Finden wir ein Maximum?</p>
-<div id="3012e556" class="cell" data-message="false" data-execution_count="6">
+<div id="1d264bdd" class="cell" data-message="false" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Goldene Regel</span></span>
@@ -692,7 +713,7 @@ Interaktives Solow-Modell mit Armutsfalle
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#print(df)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="31483665" class="cell" data-message="false" data-execution_count="7">
+<div id="2c22a504" class="cell" data-message="false" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(gg.ggplot(df, gg.aes(<span class="st">'Sparquote'</span>, <span class="st">'Konsum'</span>)) <span class="op">+</span> gg.geom_line() <span class="op">+</span></span>
@@ -709,7 +730,7 @@ Interaktives Solow-Modell mit Armutsfalle
 </div>
 </div>
 </div>
-<div id="e0dda19d" class="cell" data-message="false" data-execution_count="8">
+<div id="42de46da" class="cell" data-message="false" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(</span>
@@ -739,7 +760,7 @@ Interaktives Solow-Modell mit Armutsfalle
 </div>
 </div>
 <p>Wie bestimmt sich denn nun die Sparquote für maximalen Konsum analytisch?</p>
-<div id="8fe0a913" class="cell" data-message="false" data-execution_count="9">
+<div id="79b40197" class="cell" data-message="false" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> Symbol, solve, Eq, diff, simplify, print_latex</span>
@@ -781,8 +802,18 @@ Interaktives Solow-Modell mit Armutsfalle
 <p><span class="math inline">\(\iff s=\alpha\)</span></p>
 <p><span class="math inline">\(s^* = \alpha \rightarrow\)</span> Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen!</p>
 </section>
-<section id="bevölkerungswachstum" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="bevölkerungswachstum"><span class="header-section-number">4.11</span> Bevölkerungswachstum</h2>
+<section id="die-grenzen-des-wachstums-durch-erhöhung-der-inputs" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="die-grenzen-des-wachstums-durch-erhöhung-der-inputs"><span class="header-section-number">4.11</span> Die Grenzen des Wachstums durch Erhöhung der Inputs</h2>
+<ul>
+<li><p>Im Solow-Modell kann man durch eine Erhöhung des akkumulierbaren Faktors kein dauerhaftes Wachstum erzeugen</p></li>
+<li><p>Es gelingt nicht einmal eine Verschiebung des Niveaus im Steady State</p></li>
+<li><p>Auch durch eine Ausweitung von Erwerbsbeteiligung, Arbeitszeit usw. sind keine dauerhaften Wachstumseffekte zu erwarten, sondern bestenfalls Veschiebungen im Niveau.</p></li>
+<li><p>Input-bezogene Wachstumsstrategien stoßen daher an enge Grenzen.</p></li>
+<li><p>Dies war die Erfahrung mit dem Wachstum in der Sowietunion in den 1950er Jahren und einigen ostasiatischen Staaten in den 1990er Jahren <span class="citation" data-cites="young_tyranny_1994 krugman_myth_1994">(<a href="#ref-krugman_myth_1994" role="doc-biblioref">Krugman, 1994</a>; <a href="#ref-young_tyranny_1994" role="doc-biblioref">Young, 1994</a>)</span>.</p></li>
+</ul>
+</section>
+<section id="bevölkerungswachstum" class="level2" data-number="4.12">
+<h2 data-number="4.12" class="anchored" data-anchor-id="bevölkerungswachstum"><span class="header-section-number">4.12</span> Bevölkerungswachstum</h2>
 <p>Annahme bisher: Konstante Bevölkerung.</p>
 <p>Nun: Bevölkerung wächst mit der Rate <span class="math inline">\(n\)</span> so dass gilt: <span class="math inline">\(L_{t+1}=(1+n)L_t\)</span></p>
 <p>Kapitalstock pro Kopf bleibt konstant, wenn gilt <span class="math inline">\(I=sY\)</span></p>
@@ -793,8 +824,8 @@ Interaktives Solow-Modell mit Armutsfalle
 <p>Das gleichgewichtige pro-Kopf-Einkommen ist dann</p>
 <p><span class="math inline">\(y=\left(\frac{Y}{L}\right)={\left(\frac{K}{L}\right)}^{\alpha }={\left(\frac{s}{\delta +n}\right)}^{\frac{\alpha }{1-\alpha }}\)</span></p>
 </section>
-<section id="technischer-fortschritthumankapital" class="level2" data-number="4.12">
-<h2 data-number="4.12" class="anchored" data-anchor-id="technischer-fortschritthumankapital"><span class="header-section-number">4.12</span> Technischer Fortschritt/Humankapital</h2>
+<section id="technischer-fortschritthumankapital" class="level2" data-number="4.13">
+<h2 data-number="4.13" class="anchored" data-anchor-id="technischer-fortschritthumankapital"><span class="header-section-number">4.13</span> Technischer Fortschritt/Humankapital</h2>
 <p>Annahme bislang: <span class="math inline">\(A=1\)</span></p>
 <p>Nun Annahme: <span class="math inline">\(A\)</span> wächst mit der konstanten (exogenen) Rate <span class="math inline">\(g\)</span>, sodass gilt: <span class="math inline">\(A_{t+1}=(1+g)A_t\)</span></p>
 <p>Für das langfristige Gleichgewicht gilt</p>
@@ -812,6 +843,14 @@ Interaktives Solow-Modell mit Armutsfalle
 <p>Das gleichgewichtige Einkommen <em>pro Arbeitseffizienzeinheit</em> ist dann <span class="math inline">\(\left(\frac{Y}{AL}\right)={\left(\frac{K}{AL}\right)}^{\alpha }={\left(\frac{s}{\delta +n+g}\right)}^{\frac{\alpha }{1-\alpha }}\)</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-krugman_myth_1994" class="csl-entry" role="listitem">
+Krugman, P. (1994). The myth of asia’s miracle. <em>Foreign Affairs</em>, 73. vol., pp. 62–78.
+</div>
+<div id="ref-young_tyranny_1994" class="csl-entry" role="listitem">
+Young, A. (1994). <span>THE</span> <span>TYRANNY</span> <span>OF</span> <span>NUMBERS</span>: <span>CONFRONTING</span> <span>THE</span> <span>STATISTICAL</span> <span>REALiTIES</span> <span>OF</span> <span>THE</span> <span>EAST</span> <span>ASIAN</span> <span>GROWTH</span> <span>EXPERIENCE</span>. <em><span>NBER</span> Workling Paper Series</em>, 4680. vol.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

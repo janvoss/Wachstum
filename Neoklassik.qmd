@@ -285,8 +285,6 @@ df = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,
 | **Entwicklung** | $k_0 > k_{crit}$ | Konvergenz gegen reichen Steady State: $k \to k^*$ |
 | **Keine Hoffnung** | $s(Ak^\alpha - \bar{c}) < (n + \delta)k$ für alle $k$ | Kein Schnittpunkt; Kollaps für jedes $k_0$ |
 
-[s. Armutsfalle.r]::
-
 ![Armutsfalle](solow_armutsfalle.png)
 
 ::: {.callout-note icon="false" collapse="true"}
@@ -428,6 +426,18 @@ $\frac{\partial c}{\partial s}=\frac{\left(\frac{s}{\delta}\right)^{- \frac{\alp
 $\iff s=\alpha$
 
 $s^* = \alpha \rightarrow$ Spare das Kapitaleinkommen und konsumiere das Arbeitseinkommen!
+
+## Die Grenzen des Wachstums durch Erhöhung der Inputs
+
+-   Im Solow-Modell kann man durch eine Erhöhung des akkumulierbaren Faktors kein dauerhaftes Wachstum erzeugen
+
+-   Es gelingt nicht einmal eine Verschiebung des Niveaus im Steady State
+
+-   Auch durch eine Ausweitung von Erwerbsbeteiligung, Arbeitszeit usw. sind keine dauerhaften Wachstumseffekte zu erwarten, sondern bestenfalls Veschiebungen im Niveau.
+
+-   Input-bezogene Wachstumsstrategien stoßen daher an enge Grenzen.
+
+-   Dies war die Erfahrung mit dem Wachstum in der Sowietunion in den 1950er Jahren und einigen ostasiatischen Staaten in den 1990er Jahren [@young_tyranny_1994; @krugman_myth_1994].
 
 ## Bevölkerungswachstum
 
