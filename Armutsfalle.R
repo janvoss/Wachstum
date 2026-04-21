@@ -1,13 +1,4 @@
-```{r}
-#| message: false
-#| warning: false
-#| output: false
-#| eval: false
-#| include: false
 
-
-# Benötigte Pakete laden
-if(!require(ggplot2)) install.packages("ggplot2")
 library(ggplot2)
 
 # 1. Parameter definieren
@@ -94,8 +85,7 @@ ggsave(
   dpi = 300,                          # Auflösung (300 ist Standard für Druckqualität)
   bg = "white"                        # Hintergrundfarbe (verhindert Transparenzprobleme)
 )
-#print(plot)
+print(plot)
 
+plot
 
-
-```
