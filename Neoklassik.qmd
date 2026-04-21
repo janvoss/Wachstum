@@ -437,7 +437,7 @@ $s^* = \alpha \rightarrow$ Spare das Kapitaleinkommen und konsumiere das Arbeits
 
 -   Input-bezogene Wachstumsstrategien stoßen daher an enge Grenzen.
 
--   Dies war die Erfahrung mit dem Wachstum in der Sowietunion in den 1950er Jahren und einigen ostasiatischen Staaten in den 1990er Jahren [@young_tyranny_1994; @krugman_myth_1994].
+-   Dies war die Erfahrung mit dem Wachstum in der Sowjetunion in den 1950er Jahren und einigen ostasiatischen Staaten in den 1990er Jahren [@young_tyranny_1994; @krugman_myth_1994].
 
 ## Bevölkerungswachstum
 
