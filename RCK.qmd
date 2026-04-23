@@ -14,120 +14,67 @@
 
    - Wachstum ermöglicht mehr Konsum in der Zukunft bei Verzicht in der Gegenwart 
    
-## Zwei-Perioden-Modell
+## Ein Einstieg: Zwei-Perioden-Modell
 
 ### Nutzenfunktion 
 
-$U=u(x_0) + \frac{u(x_1)}{1+i}$
+$u(c_t) = \begin{cases} \dfrac{c_t^{1-\sigma}}{1-\sigma} &\text{für } \sigma \neq 1 \\[15pt]\ln(c_t) & \text{für } \sigma= 1 \end{cases}$
 
-hier mit $u(x_t) = ln(x_t)$
+Wobei $\sigma$ der Koeffizient der relativen Risikoaversion (bzw. der Kehrwert der intertemporalen Substitutionselastizität) ist.
 
-$\Rightarrow u'(x_t) = \frac{1}{x_t}$ (sehr einfache Form des abnehmenden Grenznutzens)
+- Die Krümmung der Nutzenfunktion hängt nur von $\sigma$ ab. 
+
+- Ein höheres $\sigma$ bedeutet eine stärkere Krümmung der Kurve. Je krummer die Kurve, desto geringer ist der zusätzliche Nutzen aus sehr hohen Gewinnen und desto schwerer wiegen Verluste. Der Akteur ist also risikoaverser.
+
+- Die intertemporale Substitutionselastizität gibt an, wie bereitwillig ein Konsument seinen Konsum verschiebt, wenn sich der Anreiz dafür (der Zinssatz $r$) ändert. Sie ist definiert als die prozentuale Änderung des Konsumverhältnisses bei einer prozentualen Änderung des Grenznutzens (bzw. des Preises). In unserer Nutzenfunktion ist sie der Kehrwert von $\sigma$.
+
+  - Hohes $\sigma$ (kleine EIS): Der Konsument will seinen Konsum unbedingt glätten (Consumption Smoothing). Er reagiert kaum auf hohe Zinsen, weil er heute nicht hungern will, nur um morgen im Luxus zu leben. Die Indifferenzkurven sind stark gekrümmt (fast rechtwinklig).
+  
+  - Niedriges $\sigma$ (große EIS): Der Konsument ist flexibel. Wenn die Zinsen steigen, verzichtet er gerne heute auf Konsum, um morgen deutlich mehr zu haben. Die Indifferenzkurven sind eher flach.
+  
+  
+Indifferenzkurve
+
+$$\bar{U} = u(c_0) + \frac{1}{1+i} u(c_1)$$
+
+Grenzrate der Substitution als Grenznutzenverhältnis:  $$MRS=(1+i) \frac{u'(c_0)}{u'(c_1)}$$
+
+Die Indifferenzkurve beinhaltet also sowohl Informationen zur Nutzenfunktion als auch zur Zeitpräferenz
+
+
+Zunächst hier Spezialfall mit mit $u(c_t) = ln(c_t)$
+
+$\Rightarrow u'(c_t) = \frac{1}{c_t}$ (sehr einfache Form des abnehmenden Grenznutzens)
+
+
+<iframe src="https://shinylive.io/r/app/#code=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"
+width="100%" height="800" title="Nutzenfunktion und Indifferenzkurve">
 
 ### Budgetbeschränkung
 
-$x_1 = (X_0 -x_0)(1+g)$
+$c_1 = (y_0 -c_0)(1+r)$
+mit $r$: Kapitalrendite/Wachstumsrate (hier exogen)
 
 ### Grafische Repräsentation der Lösung 
 
-$\frac{MU_0}{MU_1\times \frac{1}{1+i}} = \frac{\frac{1}{x_0}}{\frac{1}{x_1}\frac{1}{1+i}}=1+g$
+Im Optimum entspricht die Steigung der Indifferenzkurve  der Steigung der Budgetgerade
 
-```{python}
-#| warning: false
-#| message: false
-#| eval: true
-
-from sympy import Eq, symbols, solve, diff, lambdify, Rational, latex, log
-from lets_plot import *
-import numpy as np  # Import NumPy
-
-# Setup Lets-Plot for HTML output
-LetsPlot.setup_html()
-
-# Define symbols
-X, alpha, i, g, x1, x2, U, lambda_ = symbols('X alpha i g x1 x2 U lambda_')
-
-# Given values for substitution
-given_values = {alpha: .5, i: .1, g: .05, X: 100}
-
-# Define utility function
-Utility = Eq(U, log(x1) + 1 / (1 + i) * log(x2)).subs(given_values)
-
-# Define budget constraint
-budget = Eq(x2, (X - x1) * (1 + g)).subs(given_values)
-
-# Lagrange function
-L = Utility.rhs + lambda_ * (budget.lhs - budget.rhs)
-
-# Solve for optimal values
-solutions = solve((diff(L, x1), diff(L, x2), diff(L, lambda_)), (x1, x2, lambda_), dict=True)
-
-# Substitute solution into utility function
-U_opt = Utility.rhs.subs(solutions[0])
-
-# Extract optimal values of x1 and x2
-x1_opt = float(solutions[0][x1])
-x2_opt = float(solutions[0][x2])
-
-# Budget line endpoints
-x1_budget = float(given_values[X])  # Maximum value of x1
-x2_budget = float(given_values[X] * (1 + given_values[g]))  # Maximum value of x2
-
-# Indifference curve utility levels
-U_values = [float(U_opt) - 1, float(U_opt), float(U_opt) + 1]
-colors = ['blue', 'green', 'blue']
-
-# Budget line function
-budget_line = lambdify(x1, solve(budget, x2)[0].subs(given_values))
-
-# Generate x-values for plotting
-x_values = np.arange(0.01, x1_budget + 0.5, 0.1)
-data = {'x': x_values.tolist()}
-
-# Plotting with Lets-Plot
-p = ggplot() + \
-    geom_function(aes('x'), data=data,
-                  fun=lambda t: budget_line(t), color='red')
-
-for idx, u in enumerate(U_values):
-    Indifference_curve = solve(Utility.subs(U, u), x2)[0]
-    Ind_graph = lambdify(x1, Indifference_curve)
-    p += geom_function(aes('x'), data=data,
-                       fun=lambda t: Ind_graph(t), color=colors[idx], size=1) + \
-         geom_text(x=x1_budget + 0.5,
-                   y=Ind_graph(x1_budget),
-                   label=f"U={round(u, 2)}")
-
-p += geom_segment(x=x1_opt, y=0,
-                  xend=x1_opt, yend=x2_opt,
-                  linetype='dashed', size=0.5) + \
-     geom_segment(x=0, y=x2_opt,
-                  xend=x1_opt, yend=x2_opt,
-                  linetype='dashed', size=0.5) + \
-     geom_point(x=x1_opt, y=x2_opt) + \
-     labs(title='Intertemporale Konsumoptimierung im Zwei-Perioden-Model',
-          x=r'\(x_0\)',
-          y=r'\(x_1\)',
-          caption='Abbildung: Jan S. Voßwinkel') + \
-     coord_cartesian(xlim=[0, x1_budget + 5.
-], ylim=[0, x2_budget + 10]) + \
-     scale_x_continuous(breaks=[0, round(x1_opt, 2), round(x1_budget)]) + \
-     scale_y_continuous(breaks=[0, round(x2_opt, 2), round(x2_budget)]) + \
-     theme_light()
-
-# Display the plot
-p.show()
+$MRS=(1+i) \frac{u'(c_0)}{u'(c_1)}=1+r$
 
 
-```
+<iframe src="https://shinylive.io/r/app/#code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKAZwAtaJWAlAB0IdJiw71OY4aIbM27AOZLU1IqQBMskQGIABAFUAkvoAicAGZ9apWiREBXWvoA8AWn2ooSuAH1OWgATOHoWdhF9fTtSajh9AF59ITBjMjhGchhUImY4-QBpEk5HGCJUOxhaDMcIJRTcSP1AkLDGRObg0PCmqJj8pJSABRZYOHJGBt7muhDGNNRHUgiwVgAGBuSwAFE+AGsiGHgIfXZ1gURNqpOkgFY13H0YKAAPDs01h-0ANyhqR3iSQAjJ9HpxyKgOiCBI0TlEZl15hBFssUpM8FsAFp8TicKCkABep0YFyufA6X2ebySawwmkev3+gP0tLWtzBEIpGDWQJh02kiIWSxWtE2KTMtE4BzIzHIp1opIx1wpjypXPpPz+AK5aw14LgkJp3N5sPhCLmQtRYECSmeYrAAGVaLaoKdAMPAitV5KNQNVrw67M1TKhHINXJN024cGoqAAKnAXlaABJ8ADucEliH0TpdUP0FFInFQjFoBG4pH0c30ABkiEp3AA5JYEiiWWp7OwkDApWRRPlwggsIIROFRNQaADySxRK2lJRgQ3UpE2Ued5Y6KQAbJ9UC8e01ZDoIAYHRlvhka3XaHsRJwzxePPo2xACJ2IOw+CjHkRp0sBPoQCaJof1IFEABI51KRcNDcTxGAoOZoOWQDR30AwRmYeAJn0KBHE4IxTG4Ig4ggaZ1lg-RPyWMD1mmdpHyo0gwMmVCXAY5FqNFVCbWeCjGLAnioGmaYDCBDB9AnCpaGeEjCmKUp9HoDI4DLCAKFOABBaBqFYOxODLeJqwAN5KOonwAH-aABhLAsA03t4QMbZHDiRh3AAcTiUtuFqJQswIIEAHoCDWDp2HYIEAGoSUCiLIoVAQAD0IsCwSHKiJRGCIVNSG4PxLCgV9cgo8KgX0SL9BJfRAtOMqKoS5KypqtLhNQgwACFHCCXxSH80KKoC2KoqqpJaNQkK-HKCtH3ImqIvK-RMuy3L8sK0hirmurKoEdL9ACyaKhK8jPAmqb-wAKlqhaSVas0DAAWVeaS-gvJtCXU6SJKkmBSmmWhLFOKApC4Z1eM8Xk3H0IE4HcW5-xQs0okcA7ps8dQlHYU6Kn-Cr5s2haEv0S70cxoEUd2gBffNqDvADpiRlGSqx0hGv0Tw0v-fH2dBqAceSVDEcFvGrvqnaidOfaptZ7mXTFrnOll6YKduxz9E0cSzHxdTLEswpHEYc8Tl8NSS2U0jxrWPxGXwx87wARwix5yMusTAxIpRcowECA0+XaRP0TruvGeDwRLDt7HNs16C6nqjtCk7Leti6Re2lWogMNIgn+ywzYJPZ9fPP6AfYIHOBB3Nwf-VwoZhuG6YFyiCEZx8E1QUqCeT9hkamtn9BJiak52pXqdphHEYMQwYH1ah-jqLNDA6ELGvcTgBCGle+ZSuLCcugLl9X9fV-p6IMhgEru8OzxMcTv5OGlhXnjlq6ZcfzutoVcX5pf3nj9LZvPH+tGO87AJhnwAHwskeKA1m8sOaPAbPZJWadKwA0fEEfEUAMCWEwnAa+i8b400eIHWOSRo5B1II8YwVkOh-zOsggwABmcSGkyx3mgFIVStg5TsHavBKAewj4Wz8FnIsFEsq1GHMzR42hpj7REZCR84iICSLJlNaRftUIvD8EwOA-Cbbs1yMsWotA7YAkxuwYs4xSAcAIOwL4zsoYYF5DCPalt5E7V2qwbRfCBEUU4IYruEATFmNsZY0g1jzH2NCpdeaFUqouycTtR4cjJSoA8fQ-QAAWcSSF8yMGniRaYKhxzLCCJYR4UA4Bl2pK4sWkVj6+EOH4OgakS5VLOB0Yh4xknEWKoMMAXTSAhyGdeN8PZHgtLgKmYIuUoR0hxg0uATTJltLLqwDoVCenqHaP0zO2dc75wNnAcZfc+BTJmdwOZ2hyqLKaTkPgyxKnVPwSjJ2i9VHYy2X0rY9BqCFRvBiQILYOiZIWQ3Y+BgUzUEsAKIJFBbkwACHAW0BZVnsBqVI-Q6yaSPBeAhF5aisX4qSJLT5-NBYUsFpM6xqBmQpCCBocgQRNjEG2RuMAmUoCsEyRsMAYLBaNMRXeFFZA0U1Pse815+g8XKIJRUJ2xK9ofNIC44+lLEbUtYLS9lDLwlwGZRiVl3yUicu5by-liMIUByqWWEslhSC+UrBeKaz1ZIAHUMhyizvBDslEz65PYC6kgfxdpRCgBACAGgtYrHIImTYGLLaEuxUqqVfylLUHZZJSov0MTfAAFZ4QrEkdwrtHiWBIKQAqBA6VgHoMRA1FqzTH30i9PwWjiBkD4I4H8ZcdF6I6FovtAjG3whbXEPwXiO12AgN2vC7Ah34VGt43Rw6bngobsQXIQQ-CDkyFU2g4b0V0DPiSuxTtomOO0I8NV6rBasGPYvM9WKL2xO2uLMSV7yW3u-a3cNQQOgADENLVgdNsEdURm2DnHUaxgfhngzr+OwRkAJF17RWIM4ZYcxlgHZboMwtxbjbE+GKBu36yOUpSHsywOd4IQDzgXY5OH+m6E+AAdk0O1TQPZwN91LiA2wAwthpAmFkHIeR4hFAgPOAs+lVxBF8lMUjZoSj0H6MyegpiNC4IXgkJI2DCqY2AGsAAuolEAQIV48wpo8CzaUFr6dsb6KG8V-wAD8nzMFsQQYAQJTPmcsy6azUMAuv1NLempKRJPzn0FGJY8Rr7CDwDe+EybIvyTPmURgxsJa8kU9+mD7LqzIoQnAS4fK12C1ynAeAcGbAyXnVAO8ARaDAuBKCiriMqvwHYHEY2QQMA5ECG+dldbwmHDy9+7walqAYEysEDA1xvnRmqwWbRfyIB7HYEPOEFNZDK3NgYDS6BmikBYOQc2PA+CsCO23ZwHRnBgnvDs5oT2BBgApsZoAA"
+width="100%" height="800" title="Konsumoptimierung in 2 Perioden">
+
+</iframe>
+
 
 ### Die Euler-Gleichung 
 
 - Aus der Grafik: Steigung der Budgetbeschränkung = Steigung der Indifferenzkurve
 
 
-- $- \frac{u_0' (1+i)}{u_1'} = -(1+g)$   
-$\iff \boxed{u_1' = \frac{1+i}{1+g} u_0'}$
+- $- \frac{u_0' (1+i)}{u_1'} = -(1+r)$   
+$\iff \boxed{u_1' = \frac{1+i}{1+r} u_0'}$
 
 - Der *korrigierte* Grenznutzen ist in allen Perioden gleich
 
@@ -136,23 +83,25 @@ $\iff \boxed{u_1' = \frac{1+i}{1+g} u_0'}$
 - korrigiert:  
    - $(1+i)$: Der Grenznutzen der zukünftigen Periode ist um den Faktor (1+i) *höher*, da der Nutzen der zukünftigen Periode mit $\frac{1}{1+i}$ diskontiert wird.  
 
-  - $(1+g)$: Der Grenznutzen der zukünftigen Periode ist um den Faktor $\frac{1}{1+g}$ *geringer*, da durch Wachstum die Ressource weniger knapp ist und daher mehr konsumiert (und damit der geringere Grenznutzen ausgeglichen) werden kann.
+  - $(1+r)$: Der Grenznutzen der zukünftigen Periode ist um den Faktor $\frac{1}{1+r}$ *geringer*, da durch Wachstum die Ressource weniger knapp ist und daher mehr konsumiert (und damit der geringere Grenznutzen ausgeglichen) werden kann.
 
-- Für die Nutzenfunktion $u(x_t)= ln(x_t)$ heißt das: $\frac{1}{x_1} = \frac{1+i}{1+g} \frac{1}{x_0}$ $\iff \boxed{x_1 = \frac{1+g}{1+i} x_0}$
+- Für die Nutzenfunktion $u(c_t)= ln(c_t)$ heißt das: $\frac{1}{c_1} = \frac{1+i}{1+r} \frac{1}{c_0}$
+
+$\iff \boxed{c_1 = \frac{1+r}{1+i} c_0}$
   
   
 Für Lösung gleichsetzen:
-$x_0 \frac{1+g}{1+i}=(X_0-x_0)(1+g)$
+$c_0 \frac{1+r}{1+i}=(y_0-c_0)(1+r)$
 
-$\iff \frac{x_0}{1+i}=X_0-x_0$
+$\iff \frac{c_0}{1+i}=y_0-c_0$
 
-$\iff \frac{X_0-x_0}{x_0}=\frac{1}{1+i}$
+$\iff \frac{y_0-c_0}{c_0}=\frac{1}{1+i}$
 
-$\iff \frac{X_0}{x_0}-1=\frac{1}{1+i}$
+$\iff \frac{y_0}{c_0}-1=\frac{1}{1+i}$
 
-$\iff \frac{X_0}{x_0}=1+\frac{1}{1+i}$
+$\iff \frac{y_0}{c_0}=1+\frac{1}{1+i}$
 
-$$\iff \boxed{x_0 = X_0 \frac{1 + i}{2 + i}}$$  
+$$\iff \boxed{c_0 = y_0 \frac{1 + i}{2 + i}}$$  
   
 
 ## T-Perioden-Modell, kontinuierliche Zeit

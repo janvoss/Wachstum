@@ -332,6 +332,6 @@ p_c <- ggplot(sim_data_c, aes(x = Time, y = c)) +
 print(p_c) # ist das so richtig?
 
 
-## Phasendiagramm
+x## Phasendiagramm
 
 RCKmodExample$phase_diagram(arrows = TRUE, n_arrows = 12)

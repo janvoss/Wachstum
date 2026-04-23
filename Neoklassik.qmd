@@ -280,7 +280,7 @@ df = pd.DataFrame({'t': t, 'Kapital': K_t, 'Y': Y_t,
 **Zusammenfassung der Bedingungen**
 
 | Zustand | Bedingung | Resultat |
-|:-----------------------|:-----------------------|:-----------------------|
+|:---|:---|:---|
 | **Armutsfalle** | $k_0 < k_{crit}$ | Kapitalstock sinkt Richtung 0: $\dot{k} < 0$ |
 | **Entwicklung** | $k_0 > k_{crit}$ | Konvergenz gegen reichen Steady State: $k \to k^*$ |
 | **Keine Hoffnung** | $s(Ak^\alpha - \bar{c}) < (n + \delta)k$ für alle $k$ | Kein Schnittpunkt; Kollaps für jedes $k_0$ |
