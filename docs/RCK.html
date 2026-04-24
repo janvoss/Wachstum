@@ -386,36 +386,40 @@ window.Quarto = {
 <p><span class="math inline">\(\iff \frac{y_0}{c_0}-1=\frac{1}{1+i}\)</span></p>
 <p><span class="math inline">\(\iff \frac{y_0}{c_0}=1+\frac{1}{1+i}\)</span></p>
 <p><span class="math display">\[\iff \boxed{c_0 = y_0 \frac{1 + i}{2 + i}}\]</span></p>
+<p>Für die allgemeinere Nutzenfunktion gilt <span class="math display">\[MRS = \frac{c_0^{-\sigma}}{\frac{1}{1+i} c_1^{-\sigma}} = (1 + i) \left( \frac{c_1}{c_0} \right)^\sigma\]</span></p>
+<p>Die Gleichheit der Steigungen heißt also <span class="math display">\[(1 + i) \left( \frac{c_1}{c_0} \right)^\sigma = (1 + r)\]</span> bzw</p>
+<p><span class="math display">\[\left( \frac{c_1}{c_0} \right)^\sigma = \frac{1+r}{1+i} \implies c_1 = \left( \frac{1+r}{1+i} \right)^{\frac{1}{\sigma}}c_0\]</span> und</p>
+<p><span class="math display">\[c_0 = \frac{y_0}{1 + (1+r)^{\frac{1-\sigma}{\sigma}} (1+i)^{-\frac{1}{\sigma}}}\]</span> für <span class="math inline">\(\sigma=1\)</span> entspricht das dem Ausdruck für <span class="math inline">\(u(c_t)=ln(c_t)\)</span>.</p>
 </section>
 </section>
 <section id="t-perioden-modell-kontinuierliche-zeit" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="t-perioden-modell-kontinuierliche-zeit"><span class="header-section-number">5.3</span> T-Perioden-Modell, kontinuierliche Zeit</h2>
 <section id="vorüberlegungen" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="vorüberlegungen"><span class="header-section-number">5.3.1</span> Vorüberlegungen</h3>
-<p>Wenn eine Ressource in kontinuierlicher Zeit mit der Wachstumsrate <span class="math inline">\(g\)</span> wächst, und sie ursprünglich <span class="math inline">\(X_0\)</span> beträgt, dann beträgt sie nach <span class="math inline">\(T\)</span> Perioden <span class="math inline">\(X_T=X_0 \times  e^{g\times T}\)</span> Einheiten.</p>
-<p>Wenn der Nutzen zukünftiger Prioden mit der Rate <span class="math inline">\(i\)</span> diskontiert wird, dann beträgt der Gegenwartswert zukünftigesn Nutzens in Periode <span class="math inline">\(T\)</span> <span class="math inline">\(u_{PV}(x_T)=u(x_T) \times e^{-i \times T}\)</span>.</p>
-<p>Die <strong>Euler-Gleichung</strong> in kontinuierlicher Zeit lautet dann <span class="math display">\[u'(x_1)=u'(x_0) e^{(i-r)}\]</span></p>
+<p>Wenn eine Ressource in kontinuierlicher Zeit mit der Wachstumsrate <span class="math inline">\(r\)</span> wächst, und sie ursprünglich <span class="math inline">\(y_0\)</span> beträgt, dann beträgt sie nach <span class="math inline">\(T\)</span> Perioden <span class="math inline">\(y_T=y_0 \times  e^{r\times T}\)</span> Einheiten.</p>
+<p>Wenn der Nutzen zukünftiger Prioden mit der Rate <span class="math inline">\(i\)</span> diskontiert wird, dann beträgt der Gegenwartswert zukünftigesn Nutzens in Periode <span class="math inline">\(T\)</span> <span class="math inline">\(u_{PV}(c_T)=u(c_T) \times e^{-i \times T}\)</span>.</p>
+<p>Die <strong>Euler-Gleichung</strong> in kontinuierlicher Zeit lautet dann <span class="math display">\[u'(c_1)=u'(c_0) e^{(i-r)}\]</span></p>
 <p>Der Gegenwartswert mehrerer zukünftiger Perioden ergibt sich aus dem Integral der absdiskontierten Nutzenwerte über die Zeit.</p>
-<p><span class="math inline">\(U= \int_0^T u(x_t)e^{-it} dt\)</span></p>
+<p><span class="math inline">\(U= \int_0^T u(c_t)e^{-it} dt\)</span></p>
 <p>Zunächst sei hier wieder von folgender Nutzenfunktion ausgegangen:</p>
-<p><span class="math inline">\(u(x_t)=ln(x_t)\)</span></p>
-<p>Aus der Ableitung der Nutzenfunktion <span class="math inline">\(u'(x_t)= \frac{1}{x_t}\)</span> folgt der optimale Konsumpfad: <span class="math display">\[\boxed{x_{t+1}=x_t \times e^{r-i}}\]</span>.</p>
-<p>Da dies für alle Perioden gilt, ist <span class="math display">\[x_t= x_0\ e^{(r-i)t}\]</span></p>
+<p><span class="math inline">\(u(c_t)=ln(c_t)\)</span></p>
+<p>Aus der Ableitung der Nutzenfunktion <span class="math inline">\(u'(c_t)= \frac{1}{c_t}\)</span> folgt der optimale Konsumpfad: <span class="math display">\[\boxed{c_{t+1}=c_t \times e^{r-i}}\]</span>.</p>
+<p>Da dies für alle Perioden gilt, ist <span class="math display">\[c_t= c_0\ e^{(r-i)t}\]</span></p>
 </section>
 <section id="ressourcenbeschränkung" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="ressourcenbeschränkung"><span class="header-section-number">5.3.2</span> Ressourcenbeschränkung</h3>
-<p>Zu jedem Zeitpunkt wächst die Ressource mit der Rate <span class="math inline">\(r\)</span> vermindert um die Entnahme zu dem Zeitpunkt <span class="math inline">\(x_t\)</span>. Der Anfangsbestand der Ressource ist <span class="math inline">\(X_0\)</span>, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, <span class="math inline">\(X_T=0\)</span>.</p>
-<p><span class="math inline">\(\dot{X}(t) = rX(t) - x(t), \quad X(0) = X_0, \quad X(T) = 0\)</span></p>
-<p><span class="math inline">\(\dot{X}(t) = rX(t) - x(0) e^{(r - i)t}\)</span></p>
+<p>Zu jedem Zeitpunkt wächst die Ressource mit der Rate <span class="math inline">\(r\)</span> vermindert um die Entnahme zu dem Zeitpunkt <span class="math inline">\(c_t\)</span>. Der Anfangsbestand der Ressource ist <span class="math inline">\(y_0\)</span>, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, <span class="math inline">\(y_T=0\)</span>.</p>
+<p><span class="math inline">\(\dot{c}(t) = ry(t) - c(t), \quad y(0) = y_0, \quad y(T) = 0\)</span></p>
+<p><span class="math inline">\(\dot{y}(t) = ry(t) - c(0) e^{(r - i)t}\)</span></p>
 <p>Auflösen:</p>
-<p><span class="math inline">\(X(t) = e^{rt} \left( X_0 - x(0) \int_0^t e^{-is} \, ds \right)\)</span></p>
+<p><span class="math inline">\(y(t) = e^{rt} \left( y_0 - c(0) \int_0^t e^{-is} \, ds \right)\)</span></p>
 <p>Integral auflösen</p>
-<p><span class="math inline">\(X(t) = e^{rt} \left( X_0 - \frac{x(0)}{i} \left( 1 - e^{-it} \right) \right)\)</span></p>
-<p><span class="math inline">\(X_T=0\)</span>, also</p>
-<p><span class="math inline">\(X_0=\frac{x(0)}{i}( 1 - e^{-iT})\)</span></p>
-<p><span class="math inline">\(\iff x_0 = \frac{i X_0}{1-e^{iT}}\)</span></p>
-<p><span class="math inline">\(x_t= x_0\ e^{(r-i)t}\)</span></p>
-<p><span class="math display">\[ \iff \boxed{ x_t=\frac{i X_0}{1-e^{iT}}\ e^{(r-i)t}}\]</span></p>
+<p><span class="math inline">\(y(t) = e^{rt} \left( y_0 - \frac{c(0)}{i} \left( 1 - e^{-it} \right) \right)\)</span></p>
+<p><span class="math inline">\(y_T=0\)</span>, also</p>
+<p><span class="math inline">\(y_0=\frac{c(0)}{i}( 1 - e^{-iT})\)</span></p>
+<p><span class="math inline">\(\iff c_0 = \frac{i y_0}{1-e^{iT}}\)</span></p>
+<p><span class="math inline">\(c_t= c_0\ e^{(r-i)t}\)</span></p>
+<p><span class="math display">\[ \iff \boxed{ c_t=\frac{i y_0}{1-e^{iT}}\ e^{(r-i)t}}\]</span></p>
 </section>
 <section id="effizienter-intertemporaler-konsumpfad" class="level3" data-number="5.3.3">
 <h3 data-number="5.3.3" class="anchored" data-anchor-id="effizienter-intertemporaler-konsumpfad"><span class="header-section-number">5.3.3</span> Effizienter intertemporaler Konsumpfad</h3>
@@ -423,7 +427,7 @@ window.Quarto = {
 <p><span class="math display">\[ \boxed{ x_t=\frac{i X_0}{1-e^{-iT}}\ e^{(r-i)t}}\]</span></p>
 <p>Mit <span class="math inline">\(T \to \infty\)</span></p>
 <p><span class="math display">\[ \boxed{x_t=i X_0\times e^{(r-i)t}}\]</span></p>
-<div id="6eb98e6a" class="cell" data-message="false" data-execution_count="1">
+<div id="0bc21660" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -512,7 +516,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="Uu6OBh"></div>
+            <div id="EvXsgC"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -536,16 +540,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("Uu6OBh").appendChild(div);
+                        document.getElementById("EvXsgC").appendChild(div);
                     };
-                    var e = document.getElementById("Uu6OBh");
+                    var e = document.getElementById("EvXsgC");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display">
-   <div id="SdE4Sf"></div>
+   <div id="K04NiR"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -570,7 +574,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("SdE4Sf");
+   const containerDiv = document.getElementById("K04NiR");
    let fig = null;
    
    function renderPlot() {
@@ -631,7 +635,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"9"
+"spec_id":"1"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -676,7 +680,7 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="MUNR7L"></div>
+   <div id="NQaIrw"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -701,7 +705,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("MUNR7L");
+   const containerDiv = document.getElementById("NQaIrw");
    let fig = null;
    
    function renderPlot() {
@@ -762,7 +766,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"10"
+"spec_id":"2"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -807,7 +811,7 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="p6XG8v"></div>
+   <div id="MTVHhw"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -832,7 +836,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("p6XG8v");
+   const containerDiv = document.getElementById("MTVHhw");
    let fig = null;
    
    function renderPlot() {
@@ -883,7 +887,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"11"
+"spec_id":"3"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -942,7 +946,7 @@ window.Quarto = {
 <p><span class="math inline">\(u(x_t)=\frac{x_t^{1-\sigma}}{1-\sigma}\)</span></p>
 <p>Der Grenznutzen ist</p>
 <p><span class="math inline">\(u'(x_t)=x_t^{-\sigma}\)</span></p>
-<div id="2244aa09" class="cell" data-message="false" data-execution_count="2">
+<div id="af885195" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
@@ -961,7 +965,7 @@ window.Quarto = {
 </details>
 </div>
 <p>Die Krümmung der Nutzenfunktion ist jetzt über <span class="math inline">\(\sigma\)</span> steuerbar</p>
-<div id="11cc8eba" class="cell" data-message="false" data-execution_count="3">
+<div id="92286554" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -995,7 +999,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="s36C0k"></div>
+            <div id="zGF3to"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -1019,16 +1023,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("s36C0k").appendChild(div);
+                        document.getElementById("zGF3to").appendChild(div);
                     };
-                    var e = document.getElementById("s36C0k");
+                    var e = document.getElementById("zGF3to");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-   <div id="4qohaA"></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+   <div id="vA5SNI"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -1053,7 +1057,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("4qohaA");
+   const containerDiv = document.getElementById("vA5SNI");
    let fig = null;
    
    function renderPlot() {
@@ -1108,7 +1112,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"12"
+"spec_id":"4"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {

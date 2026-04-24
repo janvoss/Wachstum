@@ -103,55 +103,67 @@ $\iff \frac{y_0}{c_0}=1+\frac{1}{1+i}$
 
 $$\iff \boxed{c_0 = y_0 \frac{1 + i}{2 + i}}$$  
   
+Für die allgemeinere Nutzenfunktion gilt $$MRS = \frac{c_0^{-\sigma}}{\frac{1}{1+i} c_1^{-\sigma}} = (1 + i) \left( \frac{c_1}{c_0} \right)^\sigma$$
+
+
+Die Gleichheit der Steigungen heißt also $$(1 + i) \left( \frac{c_1}{c_0} \right)^\sigma = (1 + r)$$
+bzw
+
+$$\left( \frac{c_1}{c_0} \right)^\sigma = \frac{1+r}{1+i} \implies c_1 = \left( \frac{1+r}{1+i} \right)^{\frac{1}{\sigma}}c_0$$
+und 
+
+$$c_0 = \frac{y_0}{1 + (1+r)^{\frac{1-\sigma}{\sigma}} (1+i)^{-\frac{1}{\sigma}}}$$
+für $\sigma=1$ entspricht das dem Ausdruck für $u(c_t)=ln(c_t)$.
+
 
 ## T-Perioden-Modell, kontinuierliche Zeit
 
 ### Vorüberlegungen
 
-Wenn eine Ressource in kontinuierlicher Zeit mit der Wachstumsrate $g$ wächst, und sie ursprünglich $X_0$ beträgt, dann beträgt sie nach $T$ Perioden $X_T=X_0 \times  e^{g\times T}$ Einheiten.
+Wenn eine Ressource in kontinuierlicher Zeit mit der Wachstumsrate $r$ wächst, und sie ursprünglich $y_0$ beträgt, dann beträgt sie nach $T$ Perioden $y_T=y_0 \times  e^{r\times T}$ Einheiten.
 
-Wenn der Nutzen zukünftiger Prioden mit der Rate $i$ diskontiert wird, dann beträgt der Gegenwartswert zukünftigesn Nutzens in Periode $T$ $u_{PV}(x_T)=u(x_T) \times e^{-i \times T}$.
+Wenn der Nutzen zukünftiger Prioden mit der Rate $i$ diskontiert wird, dann beträgt der Gegenwartswert zukünftigesn Nutzens in Periode $T$ $u_{PV}(c_T)=u(c_T) \times e^{-i \times T}$.
 
 
-Die **Euler-Gleichung** in kontinuierlicher Zeit lautet dann $$u'(x_1)=u'(x_0) e^{(i-r)}$$
+Die **Euler-Gleichung** in kontinuierlicher Zeit lautet dann $$u'(c_1)=u'(c_0) e^{(i-r)}$$
 
 Der Gegenwartswert mehrerer zukünftiger Perioden ergibt sich aus dem Integral der absdiskontierten Nutzenwerte über die Zeit.
 
-$U= \int_0^T u(x_t)e^{-it} dt$
+$U= \int_0^T u(c_t)e^{-it} dt$
 
 Zunächst sei hier wieder von folgender Nutzenfunktion ausgegangen:
 
-$u(x_t)=ln(x_t)$
+$u(c_t)=ln(c_t)$
 
-Aus der Ableitung der Nutzenfunktion $u'(x_t)= \frac{1}{x_t}$ folgt der optimale Konsumpfad: $$\boxed{x_{t+1}=x_t \times e^{r-i}}$$.
+Aus der Ableitung der Nutzenfunktion $u'(c_t)= \frac{1}{c_t}$ folgt der optimale Konsumpfad: $$\boxed{c_{t+1}=c_t \times e^{r-i}}$$.
 
-Da dies für alle Perioden gilt, ist $$x_t= x_0\ e^{(r-i)t}$$
+Da dies für alle Perioden gilt, ist $$c_t= c_0\ e^{(r-i)t}$$
 
 ### Ressourcenbeschränkung
 
-Zu jedem Zeitpunkt wächst die Ressource mit der Rate $r$ vermindert um die Entnahme zu dem Zeitpunkt $x_t$. Der Anfangsbestand der Ressource ist $X_0$, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, $X_T=0$.
+Zu jedem Zeitpunkt wächst die Ressource mit der Rate $r$ vermindert um die Entnahme zu dem Zeitpunkt $c_t$. Der Anfangsbestand der Ressource ist $y_0$, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, $y_T=0$.
 
-$\dot{X}(t) = rX(t) - x(t), \quad X(0) = X_0, \quad X(T) = 0$
+$\dot{c}(t) = ry(t) - c(t), \quad y(0) = y_0, \quad y(T) = 0$
 
-$\dot{X}(t) = rX(t) - x(0) e^{(r - i)t}$
+$\dot{y}(t) = ry(t) - c(0) e^{(r - i)t}$
 
 Auflösen:
 
-$X(t) = e^{rt} \left( X_0 - x(0) \int_0^t e^{-is} \, ds \right)$
+$y(t) = e^{rt} \left( y_0 - c(0) \int_0^t e^{-is} \, ds \right)$
 
 Integral auflösen
 
-$X(t) = e^{rt} \left( X_0 - \frac{x(0)}{i} \left( 1 - e^{-it} \right) \right)$
+$y(t) = e^{rt} \left( y_0 - \frac{c(0)}{i} \left( 1 - e^{-it} \right) \right)$
 
-$X_T=0$, also
+$y_T=0$, also
 
-$X_0=\frac{x(0)}{i}( 1 - e^{-iT})$
+$y_0=\frac{c(0)}{i}( 1 - e^{-iT})$
 
-$\iff x_0 = \frac{i X_0}{1-e^{iT}}$
+$\iff c_0 = \frac{i y_0}{1-e^{iT}}$
 
-$x_t= x_0\ e^{(r-i)t}$
+$c_t= c_0\ e^{(r-i)t}$
 
-$$ \iff \boxed{ x_t=\frac{i X_0}{1-e^{iT}}\ e^{(r-i)t}}$$
+$$ \iff \boxed{ c_t=\frac{i y_0}{1-e^{iT}}\ e^{(r-i)t}}$$
 
 
 ### Effizienter intertemporaler Konsumpfad
