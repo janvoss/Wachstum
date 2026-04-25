@@ -145,7 +145,7 @@ Da dies für alle Perioden gilt, ist $$c_t= c_0\ e^{(r-i)t}$$
 
 Zu jedem Zeitpunkt wächst die Ressource mit der Rate $r$ vermindert um die Entnahme zu dem Zeitpunkt $c_t$. Der Anfangsbestand der Ressource ist $y_0$, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, $y_T=0$.
 
-$\dot{c}(t) = ry(t) - c(t), \quad y(0) = y_0, \quad y(T) = 0$
+$\dot{y}(t) = ry(t) - c(t), \quad y(0) = y_0, \quad y(T) = 0$
 
 $\dot{y}(t) = ry(t) - c(0) e^{(r - i)t}$
 

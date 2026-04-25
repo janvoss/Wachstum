@@ -410,7 +410,7 @@ window.Quarto = {
 <section id="ressourcenbeschränkung" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="ressourcenbeschränkung"><span class="header-section-number">5.3.2</span> Ressourcenbeschränkung</h3>
 <p>Zu jedem Zeitpunkt wächst die Ressource mit der Rate <span class="math inline">\(r\)</span> vermindert um die Entnahme zu dem Zeitpunkt <span class="math inline">\(c_t\)</span>. Der Anfangsbestand der Ressource ist <span class="math inline">\(y_0\)</span>, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, <span class="math inline">\(y_T=0\)</span>.</p>
-<p><span class="math inline">\(\dot{c}(t) = ry(t) - c(t), \quad y(0) = y_0, \quad y(T) = 0\)</span></p>
+<p><span class="math inline">\(\dot{y}(t) = ry(t) - c(t), \quad y(0) = y_0, \quad y(T) = 0\)</span></p>
 <p><span class="math inline">\(\dot{y}(t) = ry(t) - c(0) e^{(r - i)t}\)</span></p>
 <p>Auflösen:</p>
 <p><span class="math inline">\(y(t) = e^{rt} \left( y_0 - c(0) \int_0^t e^{-is} \, ds \right)\)</span></p>
@@ -428,7 +428,7 @@ window.Quarto = {
 <p><span class="math display">\[ \boxed{ x_t=\frac{i X_0}{1-e^{-iT}}\ e^{(r-i)t}}\]</span></p>
 <p>Mit <span class="math inline">\(T \to \infty\)</span></p>
 <p><span class="math display">\[ \boxed{x_t=i X_0\times e^{(r-i)t}}\]</span></p>
-<div id="ae561be4" class="cell" data-message="false" data-execution_count="1">
+<div id="ac821f09" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -517,7 +517,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="xNwSV5"></div>
+            <div id="yhGAix"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -541,16 +541,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("xNwSV5").appendChild(div);
+                        document.getElementById("yhGAix").appendChild(div);
                     };
-                    var e = document.getElementById("xNwSV5");
+                    var e = document.getElementById("yhGAix");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display">
-   <div id="7EE6aT"></div>
+   <div id="bPvvSp"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -575,7 +575,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("7EE6aT");
+   const containerDiv = document.getElementById("bPvvSp");
    let fig = null;
    
    function renderPlot() {
@@ -681,7 +681,7 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="Xz9qX9"></div>
+   <div id="oJU7FC"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -706,7 +706,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("Xz9qX9");
+   const containerDiv = document.getElementById("oJU7FC");
    let fig = null;
    
    function renderPlot() {
@@ -812,7 +812,7 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="fqQ7X8"></div>
+   <div id="rOZmUv"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -837,7 +837,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("fqQ7X8");
+   const containerDiv = document.getElementById("rOZmUv");
    let fig = null;
    
    function renderPlot() {
@@ -947,7 +947,7 @@ window.Quarto = {
 <p><span class="math inline">\(u(x_t)=\frac{x_t^{1-\sigma}}{1-\sigma}\)</span></p>
 <p>Der Grenznutzen ist</p>
 <p><span class="math inline">\(u'(x_t)=x_t^{-\sigma}\)</span></p>
-<div id="a2e06cbd" class="cell" data-message="false" data-execution_count="2">
+<div id="75822426" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
@@ -966,7 +966,7 @@ window.Quarto = {
 </details>
 </div>
 <p>Die Krümmung der Nutzenfunktion ist jetzt über <span class="math inline">\(\sigma\)</span> steuerbar</p>
-<div id="2cbc5a11" class="cell" data-message="false" data-execution_count="3">
+<div id="7a9f8ffb" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1000,7 +1000,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="CF1BPy"></div>
+            <div id="oYGdqR"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -1024,16 +1024,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("CF1BPy").appendChild(div);
+                        document.getElementById("oYGdqR").appendChild(div);
                     };
-                    var e = document.getElementById("CF1BPy");
+                    var e = document.getElementById("oYGdqR");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-   <div id="wiv4IH"></div>
+   <div id="q3xpQ0"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -1058,7 +1058,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("wiv4IH");
+   const containerDiv = document.getElementById("q3xpQ0");
    let fig = null;
    
    function renderPlot() {
