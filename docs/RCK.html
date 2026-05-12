@@ -285,11 +285,10 @@ window.Quarto = {
   <li><a href="#t-perioden-modell-kontinuierliche-zeit" id="toc-t-perioden-modell-kontinuierliche-zeit" class="nav-link" data-scroll-target="#t-perioden-modell-kontinuierliche-zeit"><span class="header-section-number">5.3</span> T-Perioden-Modell, kontinuierliche Zeit</a>
   <ul class="collapse">
   <li><a href="#vorüberlegungen" id="toc-vorüberlegungen" class="nav-link" data-scroll-target="#vorüberlegungen"><span class="header-section-number">5.3.1</span> Vorüberlegungen</a></li>
-  <li><a href="#ressourcenbeschränkung" id="toc-ressourcenbeschränkung" class="nav-link" data-scroll-target="#ressourcenbeschränkung"><span class="header-section-number">5.3.2</span> Ressourcenbeschränkung</a></li>
-  <li><a href="#effizienter-intertemporaler-konsumpfad" id="toc-effizienter-intertemporaler-konsumpfad" class="nav-link" data-scroll-target="#effizienter-intertemporaler-konsumpfad"><span class="header-section-number">5.3.3</span> Effizienter intertemporaler Konsumpfad</a></li>
+  <li><a href="#effizienter-intertemporaler-konsumpfad" id="toc-effizienter-intertemporaler-konsumpfad" class="nav-link" data-scroll-target="#effizienter-intertemporaler-konsumpfad"><span class="header-section-number">5.3.2</span> Effizienter intertemporaler Konsumpfad</a></li>
   </ul></li>
   <li><a href="#allgemeinere-nutzenfunktion" id="toc-allgemeinere-nutzenfunktion" class="nav-link" data-scroll-target="#allgemeinere-nutzenfunktion"><span class="header-section-number">5.4</span> Allgemeinere Nutzenfunktion</a></li>
-  <li><a href="#gleichgewichtsbedingung-wachstum" id="toc-gleichgewichtsbedingung-wachstum" class="nav-link" data-scroll-target="#gleichgewichtsbedingung-wachstum"><span class="header-section-number">5.5</span> Gleichgewichtsbedingung Wachstum</a></li>
+  <li><a href="#gleichgewichtsbedingung-für-neoklassisches-wachstum-mit-endogener-ersparnis" id="toc-gleichgewichtsbedingung-für-neoklassisches-wachstum-mit-endogener-ersparnis" class="nav-link" data-scroll-target="#gleichgewichtsbedingung-für-neoklassisches-wachstum-mit-endogener-ersparnis"><span class="header-section-number">5.5</span> Gleichgewichtsbedingung für neoklassisches Wachstum mit endogener Ersparnis</a></li>
   <li><a href="#implikationen-für-den-wachstumspfad" id="toc-implikationen-für-den-wachstumspfad" class="nav-link" data-scroll-target="#implikationen-für-den-wachstumspfad"><span class="header-section-number">5.6</span> Implikationen für den Wachstumspfad</a></li>
   <li><a href="#wo-kommt-denn-nun-das-wachstum-her" id="toc-wo-kommt-denn-nun-das-wachstum-her" class="nav-link" data-scroll-target="#wo-kommt-denn-nun-das-wachstum-her"><span class="header-section-number">5.7</span> Wo kommt denn nun das Wachstum her?</a></li>
   </ul>
@@ -371,6 +370,7 @@ window.Quarto = {
 <section id="die-euler-gleichung" class="level3" data-number="5.2.4">
 <h3 data-number="5.2.4" class="anchored" data-anchor-id="die-euler-gleichung"><span class="header-section-number">5.2.4</span> Die Euler-Gleichung</h3>
 <ul>
+<li><p>Zunächst für <span class="math inline">\(\sigma=1\)</span></p></li>
 <li><p>Aus der Grafik: Steigung der Budgetbeschränkung = Steigung der Indifferenzkurve</p></li>
 <li><p><span class="math inline">\(- \frac{u_0' (1+i)}{u_1'} = -(1+r)\)</span><br>
 <span class="math inline">\(\iff \boxed{u_1' = \frac{1+i}{1+r} u_0'}\)</span></p></li>
@@ -390,7 +390,7 @@ window.Quarto = {
 <p><span class="math inline">\(\iff \frac{y_0}{c_0}-1=\frac{1}{1+i}\)</span></p>
 <p><span class="math inline">\(\iff \frac{y_0}{c_0}=1+\frac{1}{1+i}\)</span></p>
 <p><span class="math display">\[\iff \boxed{c_0 = y_0 \frac{1 + i}{2 + i}}\]</span></p>
-<p>Für die allgemeinere Nutzenfunktion gilt <span class="math display">\[MRS = \frac{c_0^{-\sigma}}{\frac{1}{1+i} c_1^{-\sigma}} = (1 + i) \left( \frac{c_1}{c_0} \right)^\sigma\]</span></p>
+<p>Für die allgemeinere Nutzenfunktion <span class="math inline">\(\sigma \neq 1\)</span> gilt <span class="math display">\[MRS = \frac{c_0^{-\sigma}}{\frac{1}{1+i} c_1^{-\sigma}} = (1 + i) \left( \frac{c_1}{c_0} \right)^\sigma\]</span></p>
 <p>Die Gleichheit der Steigungen heißt also <span class="math display">\[(1 + i) \left( \frac{c_1}{c_0} \right)^\sigma = (1 + r)\]</span> bzw</p>
 <p><span class="math display">\[\left( \frac{c_1}{c_0} \right)^\sigma = \frac{1+r}{1+i} \implies c_1 = \left( \frac{1+r}{1+i} \right)^{\frac{1}{\sigma}}c_0\]</span> und</p>
 <p><span class="math display">\[c_0 = \frac{y_0}{1 + (1+r)^{\frac{1-\sigma}{\sigma}} (1+i)^{-\frac{1}{\sigma}}}\]</span> für <span class="math inline">\(\sigma=1\)</span> entspricht das dem Ausdruck für <span class="math inline">\(u(c_t)=ln(c_t)\)</span>.</p>
@@ -409,9 +409,25 @@ window.Quarto = {
 <p><span class="math inline">\(u(c_t)=ln(c_t)\)</span></p>
 <p>Aus der Ableitung der Nutzenfunktion <span class="math inline">\(u'(c_t)= \frac{1}{c_t}\)</span> folgt der optimale Konsumpfad: <span class="math display">\[\boxed{c_{t+1}=c_t \times e^{r-i}}\]</span>.</p>
 <p>Da dies für alle Perioden gilt, ist <span class="math display">\[c_t= c_0\ e^{(r-i)t}\]</span></p>
-</section>
-<section id="ressourcenbeschränkung" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="ressourcenbeschränkung"><span class="header-section-number">5.3.2</span> Ressourcenbeschränkung</h3>
+<p>Wie bestimmt sich aber <span class="math inline">\(c_0\)</span>?</p>
+<p>Hier angenommen: Unendlich langer (bzw. hinreichend langer) Plannungshorizont: <span class="math inline">\(T \rightarrow \infty\)</span></p>
+<p>Die Ressource wächst mit der Rate <span class="math inline">\(r\)</span>. Aus der Euler-Gleichung folgt bei der Nutzenfunktion <span class="math inline">\(u(c_t)=ln(c_t)\)</span>, dass der Konsum mit der Rate <span class="math inline">\(r-i\)</span> wachsen soll.</p>
+<p>Von den Erträgen auf die Resourcenausstattung <span class="math inline">\(r\times y_0\)</span> muss also der Anteil <span class="math inline">\(r-i\)</span> zurückgelegt werden, damit die Erträge in der nächsten Perioden entsprechend höher sein können. Der Rest kann konsumiert werden.</p>
+<p>Also: <span class="math inline">\(x_0=\underbrace{y_0\times r }_{\text{Erträge auf den Bestand} \underbrace{- y_0 \times (r-i)}_{\text{Rücklage für späteren Konsum}}=y_0(r-r+i)=iy_0\)</span></p>
+<p>Der intertemporale Konsumpfad ergibt sich also als</p>
+<p><span class="math display">\[ \boxed{c_t=i y_0\times e^{(r-i)t}}\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exakte Herleitung mit Ressourcenbeschränkung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Zu jedem Zeitpunkt wächst die Ressource mit der Rate <span class="math inline">\(r\)</span> vermindert um die Entnahme zu dem Zeitpunkt <span class="math inline">\(c_t\)</span>. Der Anfangsbestand der Ressource ist <span class="math inline">\(y_0\)</span>, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, <span class="math inline">\(y_T=0\)</span>.</p>
 <p><span class="math inline">\(\dot{y}(t) = ry(t) - c(t), \quad y(0) = y_0, \quad y(T) = 0\)</span></p>
 <p><span class="math inline">\(\dot{y}(t) = ry(t) - c(0) e^{(r - i)t}\)</span></p>
@@ -423,15 +439,18 @@ window.Quarto = {
 <p><span class="math inline">\(y_0=\frac{c(0)}{i}( 1 - e^{-iT})\)</span></p>
 <p><span class="math inline">\(\iff c_0 = \frac{i y_0}{1-e^{iT}}\)</span></p>
 <p><span class="math inline">\(c_t= c_0\ e^{(r-i)t}\)</span></p>
-<p><span class="math display">\[ \iff \boxed{ c_t=\frac{i y_0}{1-e^{iT}}\ e^{(r-i)t}}\]</span></p>
+<p><span class="math display">\[ \iff \boxed{ c_t=\frac{i y_0}{1-e^{-}}\ e^{(r-i)t}}\]</span></p>
+</div>
+</div>
+</div>
 </section>
-<section id="effizienter-intertemporaler-konsumpfad" class="level3" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="effizienter-intertemporaler-konsumpfad"><span class="header-section-number">5.3.3</span> Effizienter intertemporaler Konsumpfad</h3>
+<section id="effizienter-intertemporaler-konsumpfad" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="effizienter-intertemporaler-konsumpfad"><span class="header-section-number">5.3.2</span> Effizienter intertemporaler Konsumpfad</h3>
 <p><span class="math inline">\(x_t= x_0\ e^{(r-i)t}\)</span></p>
 <p><span class="math display">\[ \boxed{ x_t=\frac{i X_0}{1-e^{-iT}}\ e^{(r-i)t}}\]</span></p>
 <p>Mit <span class="math inline">\(T \to \infty\)</span></p>
 <p><span class="math display">\[ \boxed{x_t=i X_0\times e^{(r-i)t}}\]</span></p>
-<div id="0207fcf3" class="cell" data-message="false" data-execution_count="1">
+<div id="398e653f" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -520,7 +539,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="nIum3t"></div>
+            <div id="OkFPic"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -544,16 +563,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("nIum3t").appendChild(div);
+                        document.getElementById("OkFPic").appendChild(div);
                     };
-                    var e = document.getElementById("nIum3t");
+                    var e = document.getElementById("OkFPic");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display">
-   <div id="jdUkbY"></div>
+   <div id="xAm6ZH"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -578,7 +597,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("jdUkbY");
+   const containerDiv = document.getElementById("xAm6ZH");
    let fig = null;
    
    function renderPlot() {
@@ -684,7 +703,7 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="NIqqVv"></div>
+   <div id="xEbryL"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -709,7 +728,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("NIqqVv");
+   const containerDiv = document.getElementById("xEbryL");
    let fig = null;
    
    function renderPlot() {
@@ -815,7 +834,7 @@ window.Quarto = {
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="BgAPIV"></div>
+   <div id="zLtXQh"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -840,7 +859,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("BgAPIV");
+   const containerDiv = document.getElementById("zLtXQh");
    let fig = null;
    
    function renderPlot() {
@@ -947,10 +966,10 @@ window.Quarto = {
 <p><span class="math inline">\(U= \int_0^T u(x_t)e^{-it} dt\)</span></p>
 <p>mit <span class="math inline">\(u(x_t)=ln(x_t)\)</span></p>
 <p>Nun eine Funktion mit konstanter (aber steuerbarer) Risikoaversion</p>
-<p><span class="math inline">\(u(x_t)=\frac{x_t^{1-\sigma}}{1-\sigma}\)</span></p>
+<p><span class="math inline">\(u(c_t)=\frac{c_t^{1-\sigma}}{1-\sigma}\)</span></p>
 <p>Der Grenznutzen ist</p>
-<p><span class="math inline">\(u'(x_t)=x_t^{-\sigma}\)</span></p>
-<div id="d09541f6" class="cell" data-message="false" data-execution_count="2">
+<p><span class="math inline">\(u'(c_t)=c_t^{-\sigma}\)</span></p>
+<div id="c80579bf" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
@@ -969,7 +988,7 @@ window.Quarto = {
 </details>
 </div>
 <p>Die Krümmung der Nutzenfunktion ist jetzt über <span class="math inline">\(\sigma\)</span> steuerbar</p>
-<div id="30828298" class="cell" data-message="false" data-execution_count="3">
+<div id="24af7bbf" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1003,7 +1022,7 @@ window.Quarto = {
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="EE5zTh"></div>
+            <div id="S1IS38"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -1027,16 +1046,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("EE5zTh").appendChild(div);
+                        document.getElementById("S1IS38").appendChild(div);
                     };
-                    var e = document.getElementById("EE5zTh");
+                    var e = document.getElementById("S1IS38");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-   <div id="U5Vchz"></div>
+   <div id="wtYBJC"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -1061,7 +1080,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("U5Vchz");
+   const containerDiv = document.getElementById("wtYBJC");
    let fig = null;
    
    function renderPlot() {
@@ -1162,13 +1181,20 @@ window.Quarto = {
 </div>
 </div>
 <p>Intertemporaler Ausgleich der Grenznutzen</p>
-<p><span class="math inline">\(x_{t+1}^{-\sigma}=x_t^{-\sigma}e^{i-r}\)</span></p>
-<p><span class="math inline">\(\iff x_{t+1}^{\sigma}=x_t^{\sigma}e^{r-i}\)</span></p>
-<p><span class="math inline">\(\iff x_{t+1}=x_te^{\frac{r-i}{\sigma}}\)</span></p>
+<p><span class="math inline">\(c_{t+1}^{-\sigma}=c_t^{-\sigma}e^{i-r}\)</span></p>
+<p><span class="math inline">\(\iff c_{t+1}^{\sigma}=c_t^{\sigma}e^{r-i}\)</span></p>
+<p><span class="math inline">\(\iff c_{t+1}=c_t e^{\frac{r-i}{\sigma}}\)</span></p>
+<p>Damit gilt auch <span class="math inline">\(\iff c_{t}=c_0 e^{\frac{r-i}{\sigma}t}\)</span></p>
+<p>Wie bestimmt sich <span class="math inline">\(c_0\)</span>?</p>
+<p>Die Ressource wächst mit der Rate <span class="math inline">\(r\)</span>. Aus der Euler-Gleichung folgt, dass der Konsum mit der Rate <span class="math inline">\(\frac{r-i}{\sigma}\)</span> wachsen soll.</p>
+<p>Von den Erträgen auf die Resourcenausstattung <span class="math inline">\(r\times y_0\)</span> muss also der Anteil <span class="math inline">\(\frac{r-i}{\sigma}\)</span> zurückgelegt werden, damit die Erträge in der nächsten Perioden entsprechend höher sein können. Der Rest kann konsumiert werden.</p>
+<p>Also: <span class="math inline">\(x_0=\underbrace{y_0\times r }_{\text{Erträge auf den Bestand}\underbrace{- y_0 \times\frac{r-i}{\sigma}}_{\text{Rücklage für späteren Konsum}}\)</span></p>
+<p>Ein höheres <span class="math inline">\(\sigma\)</span> führt dazu, dass mehr in der ersten Periode konsumiert wird</p>
+<iframe src="https://shinylive.io/r/app/#code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKAZwAtaJWAlAB0IIgMQACACJwAZn1qlaJCQBM4jCQCEKAV1IAvDUXobZ1ACcFucCewCqASWERdtCQB4AtBPNvVAApQAOZw7CISEkqk1HBBEHDU4WAA8qhKMFCxmgDSJJy6MBIAZBIAahowAG+hEHb2CRCqdNYaEgASRIy0BiSkwmACuBESI5y06vQsADJQrET64XWREuOTLPGJSysrnHTqjI4QqItCYADqZ7ijYADKpCykAG6VNRR25wKIVxIwfBIAXgkAEYAAzXTIAD0BINBcOuTyyulsQLB4NW5FQMLBQxGOz2Ew0RxOpGSjB+ZwAWnxOJwoIY7Iwvj8-nUgeioTDQRgAEwIpEoiTc4HXTiYrkYUHA3HLfH7InHU5gRjcIgUsCUuCKVCMCyyDQUAx2QCDwMy8L9-uyIVBoezefzqMiJaCAKyi8V2qUynaRAkHYlK8bBTLqrC0cYAayIUBejHGKnYgGHgM0Qy1CjBu342mEuyUOp1Anl5jFwLF26XDWW7eWHRWks4AFQA+qhqERSOrNYpmIU7AApKDcRhwFMWtmw622iQ8+ESRGOwVo92l7Gg70+ofsdc7GzUVANuCQ+tgKS0WyhE4QCPkch1aYKd5GWi1CS0GDwTSqM-aKCcRJ8WxZAAH80RNsTsNtghYRRuD+ThWk0AA5fQjAgAQMDOFwdm3UYq0yPhNiSPEVj8CYsCIAB3bYfUiYhHRgCB2AAFmuCjEmoQj2G4F1knuR4owgAoigIdg10whENCmDIDyPFJ9BJZICFBJsFg7QYBBwnY6MKRiWIkNjqA4qAEiSbjknOKBrDFQpOGYcgJGCJsCHEudJPpN8ZNIOTSAUs5ggIFT9EwjTKxo2iiHo3TWPYzizLOABRJpY2qWoXNjKSPMPLz5KVCimwoVRArUjSsJ9TSJEkdoqhsCQoF0WQJAAdjhVBoQ0bhqtIXwQIkAw2PcAI21IThiMiVt2283ywDgYgIEG9sfhsZ9uC6oEzma0FWsw4jSpcFxxGkOQFCUFQDgkW4NFjLxpiIYJaAjEQ-0YWNPB8WRdAgAgTsYvgSWuVSSQECQQBGEZVHpKAnKyAhXokYdLKUF52BBqtzlh379AAEkuKtNG8V860x8lcdVdHCZVNUqyDTIyZJTHqagYjm05fGMdITHm3Gjsq2Irr8b-ABHUTrmZm1rliCBglIbgMFUnM4VKyJiMkYEMG0A1rFcSX3mAz93lCCiLG4ahbwJ8hmGvWgXjqAJZCgVRiMcmH8fYTQfApoGAHpVmfEMqyU2G0YAKkZCQfCdxWJFmoT0mUOp8YDkPD1QdgnYkEP+mItismlwP04kZPU6c-PM55qtJCLdXh01j6X11tRvy0X9-wSOwGexSOnabKY-1ht24dVYilO75u85DincK0-JCljkgR97hPlJ72wk8hFOu+XkvI+zk3uHn2x8eDgu16LgLN4zyPiLoMV2FWqJrlGrSYWjmfvtYmEd+lh+qx9M-R6BF+MBZ4QH3qxfeH84A5z3svUKYUo6gmfuifyMII4jAAL6lRGADLGM0SDzT5u7AqGh8HI2IqoWG4MHhQ2oCJS+eEbTF3xlCdgIlmGqExgQIYWZITsHYX-P8JV86q2BMRKETYKKw2Yawm0vDMYUS4WwuR+9BEh2EcRZWEgABiFAxRtH+DyCQXYJYSA+uQ4E51UA51sHVWQ5BaAS2IpYxg7AYCyEYJRZ+7A+QggUSwTxek9IAGZrg8iBgAanTNKdR5dAQAjifEhJiSknJJSYkjRARpgpAbCCRAEgcgpEQrcewABZDRqTykVMqY4oasjSDXD4dcUgrBUCCjOKIc0j8ViQmoFAegMIqRai6uwAcQ4Rw-FYD0vpa0wB9iNowFoNhcjT2ErfAYsCwoTLfJ4jkDDOHrJonRDAkz+nKiIKwLI9AFw-EOTacMJz3HnOoJc5EVxOmRHwuOM4eRBKFAoKQCitACARkdJLbaZcdjBG6KoFhEUTl0GCCtSFcwfgm1YCc1Q7ZyAO0GNEnYdAEicFqfUjhoCo6wumQQe2cBSDPLgIElFFFyGFnFk0mEgSgaSCbn+fFcAr4AUJewupagOHXDovcs5FyrnmmoIytlLK0WoiBjRSQRxzZQEtk8XFKxYi1GhWcUgRBWxyDUt-OB2q4C6s8ZwHUfBSCyGSN8oSdhEwAgAKQYGBLINZBM6YMy4WcLlLdbBJgBKrMSgx9lhTFQAskEqnlSofoQKlNKFz0ojZPM1EhUWeJFBIdl4tZUxuCdOLh9BWXTPaXQnYkhKm1rrfE9JmTsk8lyWUeKWBikADWADi8VEJlPrYO8p1T2xEuFRRRpzTWmQFeT-HY3TeknK7EMkZw5vUTMXdMiojAUrvHOKs2dZrNlFBjTsyE4jyorEOcc6Z8hhxMEBQ9c0NzIR3NvbQe93QgWHrgR8k527d2CT+QCoFILghgp2I7KFMLqBwuWqQJFrAUXlpuBi0gWKIMrD5QSsd7C8owLJbB6Z8KVqoD4E+gtTLpzyrZRyn83KAIaIA28Oo4YuoACtqUGC6lqVuqhdCMGsKEXotRbD3ggGeepUAC6cALgBOoWpRM2yGhIbg9JsNwAFZjIVeHRXkpuHeuAD7v3SsLXmmjirlUSFVRodViMtWRB1QVZIBqjW2IpHOn0TmmhWptWQe1ZxmMvhDe6z13q2b019lAf1YBA08udaGyUAxL1TyI1HZIhnjMUZuCRny5GXJvO1ShkSub81ZrMyJYtoTrhloVTcSt6DMHLEkDkCgEADCDgll4TyvLljYPZsPOW+NhxNA0J5ZGGbIiyC6JkUgABhXhENqG0I4eiabO76QAjOLIH4X47rDRhN4+gz4MCZEYBGLbeBMIZowaDPrOV2b+SKn3IhjBxsgEmxISxujQSuwWE0RbVDKU0K3JjZBqjZzVZuBIV113Gt3ciP1pRBVnvDde+9z763ZsLYePYwHkNgcrYnT464WPNvbd28+RQsmrQSGO8EU7LALuvMGDdlwaCRAHQAILoAxI8Cgj1eD8B5ynNwMI3Cikum0IET1YwCDAGggAukAA" width="100%" height="800" title="Effiziente Konsumpfade">
+</iframe>
 </section>
-<section id="gleichgewichtsbedingung-wachstum" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="gleichgewichtsbedingung-wachstum"><span class="header-section-number">5.5</span> Gleichgewichtsbedingung Wachstum</h2>
-<p>Bisher Konsum: <span class="math inline">\(x_t\)</span> Jetzt makroökonomischer Pro-Kopf Konsum <span class="math inline">\(c_t\)</span></p>
+<section id="gleichgewichtsbedingung-für-neoklassisches-wachstum-mit-endogener-ersparnis" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="gleichgewichtsbedingung-für-neoklassisches-wachstum-mit-endogener-ersparnis"><span class="header-section-number">5.5</span> Gleichgewichtsbedingung für neoklassisches Wachstum mit endogener Ersparnis</h2>
 <p><span class="math inline">\(c_{t+1}=c_te^{\frac{r-i}{\sigma}}\)</span></p>
 <p>Der Konsum wächst mit der Rate <span class="math inline">\(\frac{1}{\sigma}(r-i)\)</span></p>
 <p><span class="math inline">\(r\)</span> ist die Pro-Kopf Nettorendite auf das eingesetzte Kapital, also Grenzprodukt abzüglich Abschreibungen</p>
@@ -1188,6 +1214,8 @@ window.Quarto = {
 <li><p>hohes <span class="math inline">\(\sigma\)</span>: stark abnehmender Grenznutzen. <span class="math inline">\(\rightarrow\)</span> gerinere Schwankungen des Konsums werden toleriert <span class="math inline">\(\rightarrow\)</span> langsameres Wachstum des Konsums</p></li>
 </ul>
 <p>Das Gleichgewichtige Einkommen ist unabhängig von <span class="math inline">\(\sigma\)</span></p>
+<iframe src="https://shinylive.io/r/app/#code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKAZwAtaJWAlAB0IIgMQACALQyJAOQCu8RrU4FucRhIDyAEQCiUgDIA3zponssAaQAsA6TJGMA1rYD6ARgAmEgDxSEgBmChAEpLQk7KwADLgSEfCc8SFh8agsMJwOICISEhDunOSonP6B1BQA5qTc7Ilw2XkSrOUFSpq0BOyFxXClwhD5rMCeALptsc1BRFrstN4AHhJ8Ep6IPUUlZYGeAjnN+dxtDZzAC8sA1GsTgafnS2OHCe60J7RJD4tPQ-ktr5Mvj8-hIXJ42qluqRXvFWDCJBlGFkBMBRmNgX8XAAmCGhKEA67cAD0WNhBMsxKxDgAVKDPOlMtlUeMMfkXABmXFherkylkt7XdiUmmg0kIxkotGs0G2Ln4gUSbj8iSEiS0jkMpFMqXPEYXFU3SbkoUSIkSABsIvYYINWOp2Nt9s51zcg3yAF9mow4KQFIwIOxvFBSFAMEFmPB6h84BIALwJaPJFpxlr7ESe0QQSQyQJYADC1gkAFkiN44NRqBIjEQqrQXI4pM4CC53N4CN56wFgniIlEXPECJrYNkJLlfpxaFUYFA2ojhwASCdTqDNKDUVDcGddudZedrjcr35vEHblgL2jNX5-U8RzjzzP5MvUEOzs+7p8h5ob4+v2-z7-NM0LacFAQQxl206LNa8SeHAUiWs0BBFKB4GBJB7AEGiMFwQhvzNJIADilRdNwoRVMEAA-WhtkS3ikBIoS+B2tGkM0batvRXYYchYGmhIS7Tla+6bmqljAShAB67DCTOuz7NIKwKT0BoflADiBAJM60t+boSB2HFtOJYESTJClISBvGBOw34GkM1yqSKRlwIBR5BJYUD0JwgYtnRDh+GscEAJwHFeentp2uxwOaolLgG7G+RIzTuhI5bmKOzxth2bTxfRZr6XRSVej6foBnQxSBuFaYQBm4gNhIACqACSDYiAobxdkE1Btd4AAKUBVHA7DNCGVR3hoUDeENoUjXexSsJU7AABIACpFkYQ1gM8IIggAAh8qCzPRfrUOwADk3CkKQpSIESRIzGQnAYFURA1pUaCqBgxAwESBCcJwWIAPxBLAtDUKwsaNWQmiIAA7lUF07bYMQxAA3AA7MjABk3iqKg1BQODnAw2gp0CCjW3bfk9Clq0IDBCQpBSMDMCg6wiASKdkPkIwp3xCBECcFI5gqEEKMSPQUDNlUjBEIxUjENQszs2IQRo6rqtixmlOUxgE5lhLWh0xk3g4xAVTs1iMSoIsYsS1LMtywrSsSCrQRu27tuzGWjBSMwOMKJw7OeFi1ue4sQubt4RAw+zMQSLY1trCHyyMFUEvsHEme4DEGB7JrFM63jRCM8QZBQHwFh09Oqd8FI1OXUQMDs+yVs2+KJt8ObawAKyh+LXvQ2siecEQdC+GIcAxJPk+e4w3u+xNtAB+zAAcfd2y40uyxA3jy6Pzuu6LEha9rIK64LstXQo9F0xvW+O-vjDK1FQQxB7-dz4PnjD6PCwuwQBBJ7v2pp-H2fsl6BwkGvNuxtTZd08L3NuJ9KZCDAFVfIAhcAuXyBEUglQ+oQHLBtLmmgoAuAiAAN0aBIfMhYADqktuDFCUJwGApZyyVnYAAISgGlLAwg0FYLwuOBYcADZGAJpfKaII9ZiJYAQohFMCD4z+imVBsiDaoKEZTbgtgNolifOuN8PpNCoMwRTTgY9NCQ1QNfDamktESHxvQcsKYVprQ2lgcsGAaGqDrEQKAVDGAThIJYTGmkUYCEQGY+ILMhjxk8BgOIEhIIpm7kk+IFC1wKBjPGLEGT+IlBTDnPY2jtqWNEYwGxdjUEyUcc41x8Z3HrVQdYd6IZ8ZQ1BmEmSkTomCJSaseMJTYlQGWMMjAgVMnZNyRIHO7I+ZFImTEUpFirFVIgLY0gG0Lx4G2g0ysTTVotLAAALTgLQK6jAAAnYFvQQAAF7MHIJYWgUSYmDPiXMpJ9IUljOKbnaZXVZk5xiGKPoqAAXI27uY0K+QKne2qds1Bog9kggOW445G0uFwAoSYagLhNBkSJow5hMBLAQHeQMuJULRnjO+TEbuQKclQt+RCqFjLYWUwRdYzZNSwCqXqR5RpEhmkbQAIKeXUN6BgxLnkxnYNjcsIY+kfJpcs35qSJkIOZSCpJK9Fn9A5TCspMj1lIo2gBNFTjhWHNFVi1BPUZbeAUOQ2gFDLnXNICS9QZKwnflVdSoZDK6VQqZRILJwKoULMKUa5ZnLTV-G4IwdgXLtq6I2gAZQ+AofGvYBY7hMYwGJazKkWtQS4GIQqXF2tQZmkMjBSAuHaWuMSgAAgipbE4NIy-n0s8KC3VKZbAFPZdqtNZqy18uRWAaEFBvDVpFag85lzmBKEsMtTtny0nJK1RIS2yTI0soScjQ1kLj26QwYm5404+AKJOhTEMnkfR3ukdrR9L7HWbnMDvWg-UIwwEcTjChGEVFlHjKgouJcGbl0IcWvZkHtDXy2Zar9cAeqK1YnsjQk4LpqLAOaZG1szH7ETSCd9UBCH3rORc0g3hWDQBZi4RxBdT6PndSB3hYHEpgEg3vMuFc4PpAw4hq+06XDoeLo47D8N6LgbAOyburdiOkdY38IDHHVFyd46XEMAnHEIaQ-yggEnMPxGk7huTCmlNoPHapkE6nlGcbw9p6Den4PCcM9O1gJmpMXJk3hqzRGbO2bIx5D9YB61wAmq0etwZnJ7LaiJ5D6jODuEvls4jFML0SF0oMQYtUcwSEzZoIJLUBYlYsB1HskQAx8C2fEdL18Qr5GaGwp87gdypdUV2b0ktKGDTHCCTrbQyrbM0imOr19FyTmnPEUy8ZJukD3OuTc8Q3gLanfOWg8QvmLfvPEVSE3NuqXSLwI7Wz-y8Gy88SQLhaQ4u9OoCAZEMoUEbr+c8BpOv3i+2+O8h3rjffG9pP7l2LyhRcN1qy33TJ5TezAAQUlwRmnYOCQIMOVtqWy79MoXZIecAkhjg8Slvt2XFH+AH5OFw6VEvj3UUPQR-UJ6DupoUbugncKkoIVEJAmelhQB5FBr3uGIMUD7u4bKA9B2T77gqIepK4sjlJIuiDFER6jviGv0cs8x+gv4zxvS+n9OwUb1pNOM6TDjlMOPYTm9YH9eILhd1O7GUOLIKZOt6-dLpZoIETaVA68Gbg7hIRtF6+Ed1A3ngM7a+WQPt4iheWy8Nrsf1-x-eeP0XHkUpC2GeOzkh0tgw1YYlDRgm5qD0FL74IgLjy9rir3d54LYa3RzaOYAAjlwO8+P4igt+ZUM2tQMCXxTAgmI2WR7UHcFXnrbgvCTTT1bwIWfHcz-LNHeIjBmytnCm7pobOIfuA8kQKh7e4Bd7T73-iPfUm0hzoFKZTjqjD9HwkxTk-R7H7D-Pnw3f5xW7XCr4c4n5UJb476ZT9hU7Ij56hTeBuQ9b0B8CL5f70B8xf5qTPAMaNCBhBB+SBDdAVrMaEBmIZQIGBDwHAADwprwHzguCYISDSjwHZRBDAAACELqeMXQcWk0tB9BEgmMEgbBH00AuBABDB0ozwtAQQPQMsMMuBfkEgMKEghuJU7Acg9URgRgk+XBhCqQYhUBtBg4KSPo3ApYeG3ArA04qKuk3u2Cek9GIMv0rYwYW4gQ4e-W7Ag2fwnAkKqeE03gAeGQtQIeeIqa0e2eKS7C0+nWie4RoU0h8wj0z2FYXAqA8kqhxuGhWh12R+Uc0IoeVWYQ+a9Qju6QzW20SEka7eqA1oaI2Wj4EUoIaIhOy2xOBB7g1R0OYOX2P2gO84DktOaIFMmRpUqg2yHYeuHosBZGRQF+5+XeySe2s6O88Qg+NQ3AI+18KYLcE+0eo8P+Hgf+e2la8Q0Inea++RoRaQN+6et42W2BXkU++BEghBM60YxBTGaC+x1AABNRXAo8dBn+vxrQqegJLgEkaeROm4BuxUxuU+wAU+fxAAfMMvEGMLYT7r8I1ktn9Glp5mHnOpoE1F4REW0LHjEX9nEdlg5qBnhn9FIDiVJnonWuQNFlILFi8nQpoOQP0iFn8DNPOLmvUP1HeHQGkSoGQDIa0i2pwndlEhIAAKQYC2BBCOJX5-QkYsanyCnim+GSmkDSlgDWAkCcBroYTUgKnKmqnql3g45alwp2a6m0ASl8CGkbRJbbHRCWnszWlql7Jp727ZD7CYn2E4mXa8JoYYaEk7yaAmakmhQx7RHx7DjUlix0ZDBdgZlOGpZBghippiy+Ht4BFBFB7XHdDZYtjSx-yp4X4Zw-J8y37-K0iJID4v6bFv57rIzY7uCKwuAByGTuDVneCQl3jQmySWBQmg6S63Gk4GhTkU7KpqS05DkqDzqH5DYYbWirkLADi9lED9lJikCsCoBwCxioLUCOIKznlgD0DAr1IwzeCxhijzQfCxjdA7pjLcR9kBwCDUiJJUgqZ-CLDOI3ltKoCXKtrWgCKwigWtKmnmkEAwV-J8A3k9SoY-p-qwAAbfGhQeR0CELsAUIpgamW6jw3nejzp7LPjgxUhSEyHCHJG5onS+HyQEU4FVlrl8y1GcULAMHXmoJBiuD85C7UWPmxjsjZaJGMUYApEnQZnyTeHooVxeQZl0EHb0YAEDjkWoKzAUYDQPlPlig0USUNEIhEBumqWaUuBYQOEQAAG2WoDqCxieDmjaXUA3l6VmzxbZbILmWWX-7X5L4O4IjOWuUDhwCLAuUYAwrPCVADQ7wbSkBECoAqAyb1JwAJVPlvEdixhVp7KCUEB5XEGZrBjkDrjAxUXxCoLLTMAABWcA5CswtAPl1VjplR5Fbxd5OSxBlFxBQlm83ool1VYAXlBlAyJl3Q9IpI9Ikl8Q9Ax5N5NhSUWJ+Q4Z4m0ZPWRJjA8ZSlek2UjhLMzheZUABZN+5JyZsRf08RIIiRIhzFgYGRcJAYyeW53g84DQB26lCQJ5Z5F5V5OlYAYgyMtg3gj+hlz58QIFHkN5y6pmLQcFYAXxoyqFMpEFHSoI9QAi2W+FFcQosYpFaxi1dFvwdhwia1nmABJmMZ3su1GUB1DGXQuZrhZ1SZ7WV1Se9FSRslD13gT1RuL1zwkGgYH10YX1xhx5p5N5l5eyAlQNWIK89Atg5o7IENYo0N9AsNNGji80MNqCBAjiN6EAYFCF5KUI2NzwuNhF3ABNdpIVJlJNHoq1Eg4Z3mm17h21dNcBDNOZLh+ZZM51EEl1VJ11UlMh91qRfNDgoxN1fwwt71n1ek84rAZxv10tANHlqCE85oaMcAWIWIatUNiNcNOtiNrAhtMGN5np9EHApAFteFd5eNNtgZ9txNoZ1UIgIgPAfArA4q6A7AbUfMFWjAgwYA7oYwQAA" width="100%" height="1400" title="Neoklassische Wachstumspfade mit endogener Sparquote">
+</iframe>
 </section>
 <section id="wo-kommt-denn-nun-das-wachstum-her" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="wo-kommt-denn-nun-das-wachstum-her"><span class="header-section-number">5.7</span> Wo kommt denn nun das Wachstum her?</h2>
