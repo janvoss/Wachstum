@@ -158,7 +158,7 @@ Aus der Euler-Gleichung folgt bei der Nutzenfunktion $u(c_t)=ln(c_t)$, dass der 
 
 Von den Erträgen auf die Resourcenausstattung $r\times y_0$ muss also der Anteil $r-i$ zurückgelegt werden, damit die Erträge in der nächsten Perioden entsprechend höher sein können. Der Rest kann konsumiert werden.
 
-Also: $x_0=\underbrace{y_0\times r }_{\text{Erträge auf den Bestand} \underbrace{- y_0 \times (r-i)}_{\text{Rücklage für späteren Konsum}}=y_0(r-r+i)=iy_0$
+Also:  $x_0=\underbrace{y_0\times r}_{\text{Erträge auf den Bestand}\underbrace{- y_0\times (r-i)}_{\text{Rücklage für späteren Konsum}}=y_0(r-r+i)=iy_0$
 
 
 Der intertemporale Konsumpfad ergibt sich also als

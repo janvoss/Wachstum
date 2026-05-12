@@ -413,7 +413,7 @@ window.Quarto = {
 <p>Hier angenommen: Unendlich langer (bzw. hinreichend langer) Plannungshorizont: <span class="math inline">\(T \rightarrow \infty\)</span></p>
 <p>Die Ressource wächst mit der Rate <span class="math inline">\(r\)</span>. Aus der Euler-Gleichung folgt bei der Nutzenfunktion <span class="math inline">\(u(c_t)=ln(c_t)\)</span>, dass der Konsum mit der Rate <span class="math inline">\(r-i\)</span> wachsen soll.</p>
 <p>Von den Erträgen auf die Resourcenausstattung <span class="math inline">\(r\times y_0\)</span> muss also der Anteil <span class="math inline">\(r-i\)</span> zurückgelegt werden, damit die Erträge in der nächsten Perioden entsprechend höher sein können. Der Rest kann konsumiert werden.</p>
-<p>Also: <span class="math inline">\(x_0=\underbrace{y_0\times r }_{\text{Erträge auf den Bestand} \underbrace{- y_0 \times (r-i)}_{\text{Rücklage für späteren Konsum}}=y_0(r-r+i)=iy_0\)</span></p>
+<p>Also: <span class="math inline">\(x_0=\underbrace{y_0\times r}_{\text{Erträge auf den Bestand}\underbrace{- y_0\times (r-i)}_{\text{Rücklage für späteren Konsum}}=y_0(r-r+i)=iy_0\)</span></p>
 <p>Der intertemporale Konsumpfad ergibt sich also als</p>
 <p><span class="math display">\[ \boxed{c_t=i y_0\times e^{(r-i)t}}\]</span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
@@ -450,7 +450,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 <p><span class="math display">\[ \boxed{ x_t=\frac{i X_0}{1-e^{-iT}}\ e^{(r-i)t}}\]</span></p>
 <p>Mit <span class="math inline">\(T \to \infty\)</span></p>
 <p><span class="math display">\[ \boxed{x_t=i X_0\times e^{(r-i)t}}\]</span></p>
-<div id="398e653f" class="cell" data-message="false" data-execution_count="1">
+<div id="8ccc11b6" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -539,7 +539,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="OkFPic"></div>
+            <div id="PhoRET"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -563,16 +563,16 @@ Exakte Herleitung mit Ressourcenbeschränkung
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("OkFPic").appendChild(div);
+                        document.getElementById("PhoRET").appendChild(div);
                     };
-                    var e = document.getElementById("OkFPic");
+                    var e = document.getElementById("PhoRET");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 <div class="cell-output cell-output-display">
-   <div id="xAm6ZH"></div>
+   <div id="916KEu"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -597,7 +597,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
        };
    }
    
-   const containerDiv = document.getElementById("xAm6ZH");
+   const containerDiv = document.getElementById("916KEu");
    let fig = null;
    
    function renderPlot() {
@@ -658,7 +658,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 }
 }],
 "metainfo_list":[],
-"spec_id":"1"
+"spec_id":"5"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -703,7 +703,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="xEbryL"></div>
+   <div id="rVyPb6"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -728,7 +728,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
        };
    }
    
-   const containerDiv = document.getElementById("xEbryL");
+   const containerDiv = document.getElementById("rVyPb6");
    let fig = null;
    
    function renderPlot() {
@@ -789,7 +789,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 }
 }],
 "metainfo_list":[],
-"spec_id":"2"
+"spec_id":"6"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -834,7 +834,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
    </script>
 </div>
 <div class="cell-output cell-output-display">
-   <div id="zLtXQh"></div>
+   <div id="36JQlU"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -859,7 +859,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
        };
    }
    
-   const containerDiv = document.getElementById("zLtXQh");
+   const containerDiv = document.getElementById("36JQlU");
    let fig = null;
    
    function renderPlot() {
@@ -910,7 +910,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 }
 }],
 "metainfo_list":[],
-"spec_id":"3"
+"spec_id":"7"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -969,7 +969,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 <p><span class="math inline">\(u(c_t)=\frac{c_t^{1-\sigma}}{1-\sigma}\)</span></p>
 <p>Der Grenznutzen ist</p>
 <p><span class="math inline">\(u'(c_t)=c_t^{-\sigma}\)</span></p>
-<div id="c80579bf" class="cell" data-message="false" data-execution_count="2">
+<div id="e2b32d2f" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
@@ -988,7 +988,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 </details>
 </div>
 <p>Die Krümmung der Nutzenfunktion ist jetzt über <span class="math inline">\(\sigma\)</span> steuerbar</p>
-<div id="24af7bbf" class="cell" data-message="false" data-execution_count="3">
+<div id="8cf1f958" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1022,7 +1022,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="S1IS38"></div>
+            <div id="HYL8Wk"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -1046,16 +1046,16 @@ Exakte Herleitung mit Ressourcenbeschränkung
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("S1IS38").appendChild(div);
+                        document.getElementById("HYL8Wk").appendChild(div);
                     };
-                    var e = document.getElementById("S1IS38");
+                    var e = document.getElementById("HYL8Wk");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-   <div id="wtYBJC"></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+   <div id="Vp93n0"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -1080,7 +1080,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
        };
    }
    
-   const containerDiv = document.getElementById("wtYBJC");
+   const containerDiv = document.getElementById("Vp93n0");
    let fig = null;
    
    function renderPlot() {
@@ -1135,7 +1135,7 @@ Exakte Herleitung mit Ressourcenbeschränkung
 }
 }],
 "metainfo_list":[],
-"spec_id":"4"
+"spec_id":"8"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
