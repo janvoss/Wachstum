@@ -78,6 +78,8 @@ width="100%" height="800" title="Konsumoptimierung in 2 Perioden">
 
 ### Die Euler-Gleichung 
 
+- Zunächst für $\sigma=1$
+
 - Aus der Grafik: Steigung der Budgetbeschränkung = Steigung der Indifferenzkurve
 
 
@@ -111,7 +113,7 @@ $\iff \frac{y_0}{c_0}=1+\frac{1}{1+i}$
 
 $$\iff \boxed{c_0 = y_0 \frac{1 + i}{2 + i}}$$  
   
-Für die allgemeinere Nutzenfunktion gilt $$MRS = \frac{c_0^{-\sigma}}{\frac{1}{1+i} c_1^{-\sigma}} = (1 + i) \left( \frac{c_1}{c_0} \right)^\sigma$$
+Für die allgemeinere Nutzenfunktion $\sigma \neq 1$ gilt $$MRS = \frac{c_0^{-\sigma}}{\frac{1}{1+i} c_1^{-\sigma}} = (1 + i) \left( \frac{c_1}{c_0} \right)^\sigma$$
 
 
 Die Gleichheit der Steigungen heißt also $$(1 + i) \left( \frac{c_1}{c_0} \right)^\sigma = (1 + r)$$
@@ -147,7 +149,26 @@ Aus der Ableitung der Nutzenfunktion $u'(c_t)= \frac{1}{c_t}$ folgt der optimale
 
 Da dies für alle Perioden gilt, ist $$c_t= c_0\ e^{(r-i)t}$$
 
-### Ressourcenbeschränkung
+Wie bestimmt sich aber $c_0$?
+
+Hier angenommen: Unendlich langer (bzw. hinreichend langer) Plannungshorizont: $T \rightarrow \infty$
+
+Die Ressource wächst mit der Rate $r$.
+Aus der Euler-Gleichung folgt bei der Nutzenfunktion $u(c_t)=ln(c_t)$, dass der Konsum mit der Rate $r-i$ wachsen soll.
+
+Von den Erträgen auf die Resourcenausstattung $r\times y_0$ muss also der Anteil $r-i$ zurückgelegt werden, damit die Erträge in der nächsten Perioden entsprechend höher sein können. Der Rest kann konsumiert werden.
+
+Also: $x_0=\underbrace{y_0\times r }_{\text{Erträge auf den Bestand} \underbrace{- y_0 \times (r-i)}_{\text{Rücklage für späteren Konsum}}=y_0(r-r+i)=iy_0$
+
+
+Der intertemporale Konsumpfad ergibt sich also als
+
+$$ \boxed{c_t=i y_0\times e^{(r-i)t}}$$
+
+:::{.callout-note 
+    icon=false 
+    collapse=true }
+### Exakte Herleitung mit Ressourcenbeschränkung
 
 Zu jedem Zeitpunkt wächst die Ressource mit der Rate $r$ vermindert um die Entnahme zu dem Zeitpunkt $c_t$. Der Anfangsbestand der Ressource ist $y_0$, am Ende des Planungshorizontes soll die Ressource aufgebraucht sein, $y_T=0$.
 
@@ -171,8 +192,8 @@ $\iff c_0 = \frac{i y_0}{1-e^{iT}}$
 
 $c_t= c_0\ e^{(r-i)t}$
 
-$$ \iff \boxed{ c_t=\frac{i y_0}{1-e^{iT}}\ e^{(r-i)t}}$$
-
+$$ \iff \boxed{ c_t=\frac{i y_0}{1-e^{-}}\ e^{(r-i)t}}$$
+:::
 
 ### Effizienter intertemporaler Konsumpfad
 
@@ -287,11 +308,11 @@ mit $u(x_t)=ln(x_t)$
 
 Nun eine Funktion mit konstanter (aber steuerbarer) Risikoaversion
 
-$u(x_t)=\frac{x_t^{1-\sigma}}{1-\sigma}$
+$u(c_t)=\frac{c_t^{1-\sigma}}{1-\sigma}$
 
 Der Grenznutzen ist 
 
-$u'(x_t)=x_t^{-\sigma}$
+$u'(c_t)=c_t^{-\sigma}$
 
 ```{python}
 #| warning: false
@@ -356,18 +377,30 @@ plot
 
 Intertemporaler Ausgleich der Grenznutzen
 
-$x_{t+1}^{-\sigma}=x_t^{-\sigma}e^{i-r}$
+$c_{t+1}^{-\sigma}=c_t^{-\sigma}e^{i-r}$
 
-$\iff x_{t+1}^{\sigma}=x_t^{\sigma}e^{r-i}$
+$\iff c_{t+1}^{\sigma}=c_t^{\sigma}e^{r-i}$
 
 
-$\iff x_{t+1}=x_te^{\frac{r-i}{\sigma}}$
+$\iff c_{t+1}=c_t e^{\frac{r-i}{\sigma}}$
+
+
+Damit gilt auch $\iff c_{t}=c_0 e^{\frac{r-i}{\sigma}t}$
+
+
+Wie bestimmt sich $c_0$?
+
+Die Ressource wächst mit der Rate $r$.
+Aus der Euler-Gleichung folgt, dass der Konsum mit der Rate $\frac{r-i}{\sigma}$ wachsen soll.
+
+Von den Erträgen auf die Resourcenausstattung $r\times y_0$ muss also der Anteil $\frac{r-i}{\sigma}$ zurückgelegt werden, damit die Erträge in der nächsten Perioden entsprechend höher sein können. Der Rest kann konsumiert werden.
+
+Also: $x_0=\underbrace{y_0\times r }_{\text{Erträge auf den Bestand} \underbrace{- y_0 \times \frac{r-i}{\sigma}}_{\text{Rücklage für späteren Konsum}}$
+
+Ein höheres $\sigma$ führt dazu, dass mehr in der ersten Periode konsumiert wird
 
 
 ## Gleichgewichtsbedingung Wachstum
-
-Bisher Konsum: $x_t$
-Jetzt makroökonomischer Pro-Kopf Konsum $c_t$
 
 $c_{t+1}=c_te^{\frac{r-i}{\sigma}}$
 
