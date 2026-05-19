@@ -44,7 +44,7 @@ Wie entkommen wir der sinkenden Grenzproduktivität des Kapitals?
 
 - Offene Frage: Kann man damit wirklich Wachstum als regelmäßiges Phänomen erklären?
 
-## Harrod-Domar Modell (limitationale Produktinsfunktion)
+## Harrod-Domar Modell (limitationale Produktionsfunktion)
 
 ### Produktionsfunktion
 
@@ -69,6 +69,35 @@ $g=\frac{\dot{K}}{K}= s-\delta = \frac{\dot{Y}}{Y}$
 - Allerdings: Irgendwann ist der Kapitalstock so groß, dass er wohl nicht mehr der limitierende Faktor ist
 
 - Insbesondere in Industriegesellschaften wächst der Kapitalstock schneller als die Bevölkerung
+
+- Der Staat müsste also permanent entweder die Bevölkerungsentwicklung oder die Entwicklung des Kapialtocks oder beides so steuern, dass weiterhin Wachstum möglich ist. 
+
+
+## Wachstum mit "breitem Kapitalbegriff"
+
+- Breiter Kapitalbegriff: 
+
+  - Physisches Kapital
+  - Humankapital
+  - Wissen
+  - Sozialkapital (?)
+  
+- Idee: Keine abnehmenden Grenzerträge bei breitem Kapitalbegriff:
+
+$$Y_t=AK_t$$
+
+- Jetzt wächst $Y$ mit konstanter Rate in $K$.
+
+- Erwartete Wachstumrate (Euler-Gleichung):
+
+
+$$g=\frac{A-\delta-i}{\sigma}$$
+
+Sofern der $\text{Zähler}>0$ ist dauerhaftes Wachstum möglich.
+
+Das Wachstum wäre auch effizient, da das individuelle Spar-  und Konsumverhalten genau zu den Plänen des sozialen Planers passt.
+
+Aber: Ist der "breite" Kapitalbegriff nicht etwas *ad hoc*?
 
 ## Externe Erträge des Kapitals/ Wissensspillovers
 
@@ -135,6 +164,13 @@ $g_K = \frac{\dot{K}}{K}=sAK^{\eta + \alpha -1}-\delta$
 
 $\rightarrow$ Diese Form von endogenem Wachstum verlagert die Suche nach den Wachstumsursachen von *exogenen* Wachstumsursachen (exogener technischer Fortschritt) hin zu *exogenen* Annahmen über Modellparameter
 
+### Endogene Sparentscheidung
+
+Annahme: $\alpha+\eta=1$
+P
+$g_\text{privat}=\frac{A\alpha-\delta}{\sigma}$
+
+$g_\text{optimal}=\frac{A-\delta}{\sigma}$
 
 ## Schumpetersches Wachstum
 
