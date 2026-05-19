@@ -167,10 +167,12 @@ $\rightarrow$ Diese Form von endogenem Wachstum verlagert die Suche nach den Wac
 ### Endogene Sparentscheidung
 
 Annahme: $\alpha+\eta=1$
-P
-$g_\text{privat}=\frac{A\alpha-\delta}{\sigma}$
 
-$g_\text{optimal}=\frac{A-\delta}{\sigma}$
+
+$g_\text{privat}=\frac{A\alpha-\delta-i}{\sigma}$
+
+
+$g_\text{optimal}=\frac{A-\delta-i}{\sigma}$
 
 ## Schumpetersches Wachstum
 
