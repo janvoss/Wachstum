@@ -168,6 +168,8 @@ $\rightarrow$ Diese Form von endogenem Wachstum verlagert die Suche nach den Wac
 
 Annahme: $\alpha+\eta=1$
 
+Zur Vereinfachung hier: $N=1$
+
 
 $g_\text{privat}=\frac{A\alpha-\delta-i}{\sigma}$
 
