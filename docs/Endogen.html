@@ -515,18 +515,18 @@ Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 <h3 data-number="6.7.2" class="anchored" data-anchor-id="produktion-und-gewinn"><span class="header-section-number">6.7.2</span> Produktion und Gewinn</h3>
 <p>Wir nehmen nun an, dass es nicht nur ein einziges Zwischenprodukt gibt, sondern ein Kontinuum von Zwischenprodukten, die über das Intervall <span class="math inline">\([0, 1]\)</span> durch den Index <span class="math inline">\(i\)</span> indiziert sind.</p>
 <p>Die Produktionsfunktion für das Endgut ändert sich zu einem Integral über alle Zwischenprodukte:</p>
-<p><span class="math display">\[Y_t = L^{1-\alpha} \int_0^1 A_{it}^{1-\alpha} x_{it}^\alpha di \quad \quad (4.10)\]</span></p>
+<p><span class="math display">\[Y_t = L^{1-\alpha} \int_0^1 A_{it}^{1-\alpha} x_{it}^\alpha di \quad \quad\]</span></p>
 <ul>
 <li><span class="math inline">\(x_{it}\)</span>: Menge des eingesetzten Zwischenprodukts <span class="math inline">\(i\)</span> zum Zeitpunkt <span class="math inline">\(t\)</span>.</li>
 <li><span class="math inline">\(A_{it}\)</span>: Sektorspezifischer Qualitätsparameter (Produktivität) des Zwischenprodukts <span class="math inline">\(i\)</span>.</li>
 </ul>
 <p>Da sich der Output des Endguts additiv aus den Beiträgen der einzelnen Sektoren zusammensetzt, gilt für den Output, der durch ein spezifisches Zwischenprodukt <span class="math inline">\(i\)</span> erzeugt wird, analog zum Ein-Sektor-Modell:</p>
-<p><span class="math display">\[Y_{it} = (A_{it} L)^{1-\alpha} x_{it}^\alpha \quad \quad (4.11)\]</span></p>
+<p><span class="math display">\[Y_{it} = (A_{it} L)^{1-\alpha} x_{it}^\alpha \quad \quad\]</span></p>
 <p>Jedes Zwischenprodukt <span class="math inline">\(i\)</span> wird von einem eigenen Monopolisten hergestellt, dessen Preis <span class="math inline">\(p_{it}\)</span> dem Grenzprodukt im Endgütersektor entspricht. Die Gewinnfunktion des Monopolisten im Sektor <span class="math inline">\(i\)</span> lautet:</p>
-<p><span class="math display">\[\Pi_{it} = p_{it}x_{it} - x_{it} = \alpha(A_{it}L)^{1-\alpha} x_{it}^\alpha - x_{it} \quad \quad (4.12)\]</span></p>
+<p><span class="math display">\[\Pi_{it} = p_{it}x_{it} - x_{it} = \alpha(A_{it}L)^{1-\alpha} x_{it}^\alpha - x_{it} \quad \quad\]</span></p>
 <p>Die Maximierung dieses Gewinns liefert für jeden Sektor <span class="math inline">\(i\)</span> die Gleichgewichtsmenge und den Gleichgewichtsgewinn, die exakt der Struktur aus dem Ein-Sektor-Modell entsprechen:</p>
-<p><span class="math display">\[x_{it} = \alpha^{\frac{2}{1-\alpha}} A_{it} L \quad \quad (4.13)\]</span></p>
-<p><span class="math display">\[\Pi_{it} = \pi A_{it} L \quad \quad (4.14)\]</span></p>
+<p><span class="math display">\[x_{it} = \alpha^{\frac{2}{1-\alpha}} A_{it} L \quad \quad\]</span></p>
+<p><span class="math display">\[\Pi_{it} = \pi A_{it} L \quad \quad\]</span></p>
 <p><strong>Aggregation:</strong> Das gesamtwirtschaftliche Verhalten hängt nun vom <em>aggregierten Produktivitätsparameter</em> <span class="math inline">\(A_t\)</span> ab. Dieser ist schlicht der ungewichtete Durchschnitt aller individuellen Produktivitätsparameter:</p>
 <p><span class="math display">\[A_t = \int_0^1 A_{it} di\]</span></p>
 <p>Setzt man die individuellen Mengen <span class="math inline">\(x_{it}\)</span> in die Produktions- und BIP-Gleichungen ein, zeigt sich, dass Output und GDP durch exakt dieselben Formeln bestimmt werden wie im Ein-Sektor-Modell, wobei lediglich <span class="math inline">\(A_t\)</span> nun den Durchschnittswert repräsentiert:</p>
@@ -551,10 +551,10 @@ Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 <section id="wachstum-1" class="level3" data-number="6.7.4">
 <h3 data-number="6.7.4" class="anchored" data-anchor-id="wachstum-1"><span class="header-section-number">6.7.4</span> Wachstum</h3>
 <p>Da das Pro-Kopf-BIP wiederum proportional zum aggregierten Parameter <span class="math inline">\(A_t\)</span> ist, entspricht die gesamtwirtschaftliche Wachstumsrate <span class="math inline">\(g_t\)</span> der proportionalen Wachstumsrate von <span class="math inline">\(A_t\)</span>:</p>
-<p><span class="math display">\[g_t = \frac{A_t - A_{t-1}}{A_{t-1}} \quad \quad (4.15)\]</span></p>
+<p><span class="math display">\[g_t = \frac{A_t - A_{t-1}}{A_{t-1}} \quad \quad\]</span></p>
 <p>Im Gegensatz zum Ein-Sektor-Modell ist diese aggregierte Wachstumsrate nun <strong>nicht mehr zufällig</strong>.</p>
 <p>In jedem einzelnen Sektor <span class="math inline">\(i\)</span> gilt weiterhin:</p>
-<p><span class="math display">\[A_{it} = \begin{cases} \gamma A_{i,t-1} &amp; \text{mit Wahrscheinlichkeit } \mu \\ A_{i,t-1} &amp; \text{mit Wahrscheinlichkeit } 1-\mu \end{cases} \quad \quad (4.16)\]</span></p>
+<p><span class="math display">\[A_{it} = \begin{cases} \gamma A_{i,t-1} &amp; \text{mit Wahrscheinlichkeit } \mu \\ A_{i,t-1} &amp; \text{mit Wahrscheinlichkeit } 1-\mu \end{cases} \quad \quad\]</span></p>
 <p>Da wir jedoch ein Kontinuum von Sektoren (unendlich viele) haben, greift das <strong>Gesetz der großen Zahlen </strong>. Es garantiert, dass in jeder Periode exakt der Anteil <span class="math inline">\(\mu\)</span> aller Sektoren erfolgreich innoviert, während der Anteil <span class="math inline">\((1-\mu)\)</span> stagniert.</p>
 <p>Der aggregierte Produktivitätsparameter <span class="math inline">\(A_t\)</span> ist das gewichtete Mittel der Sektoren:</p>
 <p><span class="math display">\[A_t = \mu A_{1t} + (1-\mu) A_{2t}\]</span></p>
@@ -564,9 +564,9 @@ Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 </ul>
 <p>Eingesetzt ergibt dies:</p>
 <p><span class="math display">\[A_t = \mu \gamma A_{t-1} + (1-\mu) A_{t-1}\]</span></p>
-<p>Setzen wir dies in unsere Wachstumsformel (4.15) ein, erhalten wir die konstante, deterministische Wachstumsrate der Volkswirtschaft:</p>
+<p>Setzen wir dies in unsere Wachstumsgkeichung ein, erhalten wir die konstante, deterministische Wachstumsrate der Volkswirtschaft:</p>
 <p><span class="math display">\[g = \mu \cdot (\gamma - 1)\]</span></p>
-<p>Das Mehr-Sektoren-Modell liefert somit exakt den gleichen Ausdruck für das makroökonomische Wachstum wie die <em>langfristig erwartete</em> Wachstumsrate des Ein-Sektor-Modells. Alle zuvor abgeleiteten komparativ-statischen Ergebnisse (z.B. Effekte von Bevölkerungsgröße oder Innovationshöhe) behalten ihre Gültigkeit.</p>
+<p>Das Mehr-Sektoren-Modell liefert somit exakt den gleichen Ausdruck für das makroökonomische Wachstum wie die <em>langfristig erwartete</em> Wachstumsrate des Ein-Sektor-Modells.</p>
 
 
 </section>
