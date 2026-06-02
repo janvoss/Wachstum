@@ -176,7 +176,7 @@ $g_\text{privat}=\frac{A\alpha-\delta-i}{\sigma}$
 
 $g_\text{optimal}=\frac{A-\delta-i}{\sigma}$
 
-## Schumpetersches Wachstum
+## Schumpetersches Wachstum -- Ein-Sektoren-Modell
 
 ### Produktionsfunktion
 
@@ -287,3 +287,107 @@ Subsituieren:
 $g= \lambda^{\frac{1}{1-\sigma}} (\sigma \pi L)^{\frac{\sigma}{1-\sigma}}(\gamma-1)$
 
 [Komparative Statik, s. Lehrbuch]::
+
+## Schumpetersches Wachstum -- Mehr-Sektoren-Modell
+
+### Einleitung
+Im vorherigen Ein-Sektor-Modell war das gesamtwirtschaftliche Wachstum von Periode zu Periode extrem volatil: Entweder die Wirtschaft wuchs um die Rate $\gamma - 1$, oder sie stagnierte komplett. In diesem Abschnitt erweitern wir das Modell um ein Kontinuum von Innovationssektoren, was durch das Gesetz der großen Zahlen zu einem glatten, deterministischen Wachstumspfad auf aggregierter Ebene führt.
+
+### Produktion und Gewinn 
+
+Wir nehmen nun an, dass es nicht nur ein einziges Zwischenprodukt gibt, sondern ein Kontinuum von Zwischenprodukten, die über das Intervall $[0, 1]$ durch den Index $i$ indiziert sind.
+
+Die Produktionsfunktion für das Endgut ändert sich zu einem Integral über alle Zwischenprodukte:
+
+
+$$Y_t = L^{1-\alpha} \int_0^1 A_{it}^{1-\alpha} x_{it}^\alpha di \quad \quad (4.10)$$
+
+* $x_{it}$: Menge des eingesetzten Zwischenprodukts $i$ zum Zeitpunkt $t$.
+* $A_{it}$: Sektorspezifischer Qualitätsparameter (Produktivität) des Zwischenprodukts $i$.
+
+Da sich der Output des Endguts additiv aus den Beiträgen der einzelnen Sektoren zusammensetzt, gilt für den Output, der durch ein spezifisches Zwischenprodukt $i$ erzeugt wird, analog zum Ein-Sektor-Modell:
+
+
+$$Y_{it} = (A_{it} L)^{1-\alpha} x_{it}^\alpha \quad \quad (4.11)$$
+
+Jedes Zwischenprodukt $i$ wird von einem eigenen Monopolisten hergestellt, dessen Preis $p_{it}$ dem Grenzprodukt im Endgütersektor entspricht. Die Gewinnfunktion des Monopolisten im Sektor $i$ lautet:
+
+
+$$\Pi_{it} = p_{it}x_{it} - x_{it} = \alpha(A_{it}L)^{1-\alpha} x_{it}^\alpha - x_{it} \quad \quad (4.12)$$
+
+Die Maximierung dieses Gewinns liefert für jeden Sektor $i$ die Gleichgewichtsmenge und den Gleichgewichtsgewinn, die exakt der Struktur aus dem Ein-Sektor-Modell entsprechen:
+
+
+$$x_{it} = \alpha^{\frac{2}{1-\alpha}} A_{it} L \quad \quad (4.13)$$
+
+$$\Pi_{it} = \pi A_{it} L \quad \quad (4.14)$$
+
+**Aggregation:**
+Das gesamtwirtschaftliche Verhalten hängt nun vom *aggregierten Produktivitätsparameter* $A_t$ ab. Dieser ist schlicht der ungewichtete Durchschnitt aller individuellen Produktivitätsparameter:
+
+
+$$A_t = \int_0^1 A_{it} di$$
+
+Setzt man die individuellen Mengen $x_{it}$ in die Produktions- und BIP-Gleichungen ein, zeigt sich, dass Output und GDP durch exakt dieselben Formeln bestimmt werden wie im Ein-Sektor-Modell, wobei lediglich $A_t$ nun den Durchschnittswert repräsentiert:
+
+
+$$GDP_t = \alpha^{\frac{2\alpha}{1-\alpha}}(1-\alpha^2) A_t L$$
+
+---
+
+### Innovation und Forschungsarbitrage
+
+Die Innovation findet in jedem Sektor separat, aber nach denselben Regeln wie im Ein-Sektor-Modell statt. Ein Entrepreneur im Sektor $i$ wählt die Forschungsausgaben $R_{it}$, um seinen Nettonutzen zu maximieren:
+
+
+$$\phi(R_{it}/A_{it}^*)\Pi_{it}^* - R_{it}$$
+
+* $A_{it}^* = \gamma A_{i,t-1}$: Die neue, angestrebte Produktivität bei Erfolg.
+* $\Pi_{it}^*$: Der erwartete Monopolgewinn bei Erfolg.
+
+Die Bedingung erster Ordnung (First-Order Condition) führt zur identischen Forschungsarbitrage-Gleichung wie zuvor:
+
+
+$$\phi'(n_{it})\pi L = 1 \quad \quad (R)$$
+
+> **Ökonomische Intuition zur konstanten Innovationsrate:**
+> Eine zentrale und auf den ersten Blick überraschende Eigenschaft dieses Modells ist, dass die Innovationswahrscheinlichkeit $\mu$ in *allen* Sektoren exakt gleich ist, völlig unabhängig davon, wie hoch das Startniveau $A_{i,t-1}$ eines Sektors ist.
+> *Warum ist das so?* Zwar ist die absolute Belohnung $\Pi_{it}^* = \pi \gamma A_{i,t-1} L$ für eine erfolgreiche Innovation in technologisch fortgeschrittenen Sektoren höher, aber dieser Vorteil wird exakt dadurch kompensiert, dass auch die Kosten für die Innovation proportional steigen. Forschungsausgaben müssen stets im Verhältnis zum technologischen Zielniveau $n_{it} = R_{it}/A_{it}^*$ skaliert werden.
+
+---
+
+### Wachstum
+
+Da das Pro-Kopf-BIP wiederum proportional zum aggregierten Parameter $A_t$ ist, entspricht die gesamtwirtschaftliche Wachstumsrate $g_t$ der proportionalen Wachstumsrate von $A_t$:
+
+
+$$g_t = \frac{A_t - A_{t-1}}{A_{t-1}} \quad \quad (4.15)$$
+
+Im Gegensatz zum Ein-Sektor-Modell ist diese aggregierte Wachstumsrate nun **nicht mehr zufällig**.
+
+In jedem einzelnen Sektor $i$ gilt weiterhin:
+
+
+$$A_{it} = \begin{cases} \gamma A_{i,t-1} & \text{mit Wahrscheinlichkeit } \mu \\ A_{i,t-1} & \text{mit Wahrscheinlichkeit } 1-\mu \end{cases} \quad \quad (4.16)$$
+
+Da wir jedoch ein Kontinuum von Sektoren (unendlich viele) haben, greift das **Gesetz der großen Zahlen **. Es garantiert, dass in jeder Periode exakt der Anteil $\mu$ aller Sektoren erfolgreich innoviert, während der Anteil $(1-\mu)$ stagniert.
+
+Der aggregierte Produktivitätsparameter $A_t$ ist das gewichtete Mittel der Sektoren:
+
+
+$$A_t = \mu A_{1t} + (1-\mu) A_{2t}$$
+
+* $A_{1t}$: Durchschnitt der *innovierenden* Sektoren ($= \gamma A_{t-1}$).
+* $A_{2t}$: Durchschnitt der *nicht-innovierenden* Sektoren ($= A_{t-1}$).
+
+Eingesetzt ergibt dies:
+
+
+$$A_t = \mu \gamma A_{t-1} + (1-\mu) A_{t-1}$$
+
+Setzen wir dies in unsere Wachstumsformel (4.15) ein, erhalten wir die konstante, deterministische Wachstumsrate der Volkswirtschaft:
+
+
+$$g = \mu \cdot (\gamma - 1)$$
+
+Das Mehr-Sektoren-Modell liefert somit exakt den gleichen Ausdruck für das makroökonomische Wachstum wie die *langfristig erwartete* Wachstumsrate des Ein-Sektor-Modells. Alle zuvor abgeleiteten komparativ-statischen Ergebnisse (z.B. Effekte von Bevölkerungsgröße oder Innovationshöhe) behalten ihre Gültigkeit.
