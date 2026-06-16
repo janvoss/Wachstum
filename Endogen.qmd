@@ -391,3 +391,114 @@ Setzen wir dies in unsere Wachstumsgkeichung ein, erhalten wir die konstante, de
 $$g = \mu \cdot (\gamma - 1)$$
 
 Das Mehr-Sektoren-Modell liefert somit exakt den gleichen Ausdruck für das makroökonomische Wachstum wie die *langfristig erwartete* Wachstumsrate des Ein-Sektor-Modells. 
+
+## Schumpeterianisches Wachstum mit einer erschöpfbaren Ressource
+
+### Einleitung 
+
+**Motivation:** Im Gegensatz zum Ein-Sektor-AK-Modell (welches bei erschöpfbaren Ressourcen eine "sich selbst in den Schwanz beißende Schlange" darstellt, da technischer Fortschritt mehr Kapital und damit mehr Ressourcen erfordert) kann in einer schumpeterianischen Welt nachhaltiges Wachstum erreicht werden. Die Grundidee ist, dass Innovationen **"grüner"** sind (weniger ressourcenintensiv) als reine Kapitalakkumulation.
+
+### Modellaufbau und Produktionsfunktion
+
+Wir betrachten eine Volkswirtschaft mit einem Kontinuum von Individuen (Masse $M=1$). Jedes Individuum verfügt über eine Einheit Arbeit, die entweder in der Güterproduktion ($L$) oder in der Forschung/Entwicklung ($n$) eingesetzt werden kann.
+
+Die Produktion des Endguts (Final Output) $Y$ erfolgt gemäß Gleichung:
+
+$$Y = L^{1-\alpha} A^{1-\alpha} x^\alpha R^\phi \quad \quad$$
+
+**Erläuterung der Variablen:**
+
+* $L$: Arbeitseinsatz in der Endgüterproduktion (Manufacturing)
+* $A$: Produktivitätsniveau (technologisches Wissen)
+* $x$: Menge an eingesetzten Zwischenprodukten (Intermediate Input)
+* $R$: Aktueller Fluss der abgebauten erschöpfbaren Ressource
+* $\alpha, \phi$: Produktionselastizitäten
+
+### Ressourcenabbau und Arbeitsmarkt
+
+Der Bestand der natürlichen Ressource $S$ schrumpft um die exakt abgesetzte Menge $R$:
+
+
+$$\dot{S} = -R$$
+
+Zudem gilt die Markträumungsbedingung auf dem Arbeitsmarkt. Da die gesamte Arbeitskraft auf 1 normiert ist, gilt:
+
+
+$$L + n = 1$$
+
+
+*(Hinweis: $n$ ist die Arbeit, die in den Forschungssektor fließt, um Innovationen zu erzeugen).*
+
+### Der Zwischenproduktsektor und Gewinnmaximierung
+
+Der Produzent des Zwischenprodukts nutzt das Endgut im Verhältnis 1:1, um den Input $x$ herzustellen. Wenn wir das Endgut als *Numéraire* (Preis = 1) festlegen und einen perfekten Wettbewerb im Endgütersektor annehmen, ergibt sich der Preis $p(x)$ für das Zwischenprodukt aus dem Grenzwertprodukt:
+
+$$p(x) = \frac{\partial Y}{\partial x} = \alpha L^{1-\alpha} A^{1-\alpha} x^{\alpha-1} R^\phi$$
+
+Der Zwischenprodukthersteller ist ein Monopolist und wählt die Menge $x$, um seinen Gewinn $\pi$ zu maximieren:
+
+
+$$\pi = \max_x \{p(x)x - x\}$$
+
+Die Lösung dieses Optimierungsproblems liefert die optimale Menge $x$:
+
+
+$$x = \alpha^{\frac{2}{1-\alpha}} A L R^{\frac{\phi}{1-\alpha}}$$
+
+### Das gesamtwirtschaftliche Gleichgewicht
+
+Setzt man dieses optimale $x$ wieder in die ursprüngliche Produktionsfunktion ein, erhält man die aggregierte Produktion der Volkswirtschaft:
+
+$$Y = \alpha^{\frac{2\alpha}{1-\alpha}} L A R^{\frac{\phi}{1-\alpha}} \quad \quad $$
+
+
+
+### Wachstumsdynamik und Nachhaltigkeit
+
+Nehmen wir nun an, der Staat (oder der soziale Planer) gibt vor, dass der Ressourcenabbau $R$ mit einer konstanten, exponentiellen Rate $q > 0$ sinken muss, damit die Ressource nie vollständig verschwindet ($S$ bleibt positiv):
+
+
+$$\dot{R} = -qR \implies \frac{\dot{R}}{R} = -q$$
+
+**Kann bei schrumpfendem Ressourceneinsatz noch ein positives Wirtschaftswachstum erzielt werden?**
+Um das zu prüfen, bilden wir die logarithmische Ableitung von $Y$ nach der Zeit (Wachstumsrate des Outputs):
+
+$$\frac{\dot{Y}}{Y} = \frac{\dot{A}}{A} + \phi \frac{\dot{R}}{R} = g_A - \phi q$$
+
+
+*(Hierbei bezeichnet $g_A$ die Wachstumsrate der Produktivität).*
+
+**Treiber des Produktivitätswachstums ($g_A$):**
+In einem schumpeterianischen Modell resultiert Wachstum aus Innovationen, welche wiederum durch den Arbeitseinsatz im F&E-Sektor ($n$) entstehen:
+
+
+$$g_A = (\gamma - 1)\lambda n$$
+
+* $n$: Menge der Forschungsarbeit im Gleichgewicht
+* $\gamma$: Größe des Innovationssprungs (wie viel besser ist die neue Technologie?)
+* $\lambda$: Produktivitätsparameter der Forschung (wie effizient ist F&E?)
+
+### Die Bedingung für langfristiges Wachstum
+
+Damit die Volkswirtschaft langfristig wächst ($\frac{\dot{Y}}{Y} > 0$), muss der technische Fortschritt den negativen Effekt des Ressourcenentzugs überkompensieren:
+
+
+$$(\gamma - 1)\lambda n > \phi q$$
+
+Aufgelöst nach dem Forschungsaufwand $n$ ergibt dies Gleichung:
+
+
+$$n > \frac{\phi q}{(\gamma - 1)\lambda} \quad \quad$$
+
+**Fazit & Ökonomische Interpretation:**
+Da der Arbeitsmarkt durch $L + n = 1$ begrenzt ist, kann $n$ maximal den Wert 1 annehmen. Daraus resultiert die **notwendige und hinreichende Bedingung** für langfristig positives Wachstum trotz erschöpfbarer Ressourcen:
+
+$$\frac{\phi q}{(\gamma - 1)\lambda} < 1$$
+
+Damit diese Bedingung erfüllt ist (und somit genug Forschungsarbeit $n$ zur Verfügung steht, um den Ressourcenverlust auszugleichen), muss Folgendes gelten:
+
+1. Die Forschungsproduktivität $\lambda$ ist hinreichend groß.
+2. Die Innovationssprünge $\gamma$ sind hinreichend groß.
+3. Die von der Regierung gewählte Ressourcen-Abbaurate $q$ ist hinreichend klein.
+
+Im Gegensatz zum einfachen AK-Modell ist hier **nachhaltiges Wachstum möglich**, da durch zielgerichtete Forschung ("grüne Innovationen") systematisch Ressourcen eingespart werden können.
