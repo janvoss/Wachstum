@@ -511,8 +511,12 @@ Im Gegensatz zum einfachen AK-Modell ist hier **nachhaltiges Wachstum möglich**
 
 Wir nehmen an, dass die sauberen und schmutzigen Input-Körbe in der finalen Produktion perfekte Substitute sind. Für den aggregierten Output $Y_t$ gilt gemäß Gleichung:$$Y_t = \begin{cases} Y_{ct} + Y_{dt} & \text{falls } S_t > 0 \\ 0 & \text{andernfalls} \end{cases} \quad \quad$$
 
-Dabei beschreibt $S_t$ den Zustand des Umweltkapitalstocks. Sobald $S_t \le 0$ erreicht wird, kommt es zum unumkehrbaren ökologischen Kollaps und die Produktion bricht vollständig zusammen.Die Dynamik der Umweltqualität folgt Gleichung:$$S_{t+1} - S_t = -\phi Y_{dt} + \omega S_t \quad \quad$$ 
-$\phi > 0$: Schadensintensität der schmutzigen Produktion.$\omega \ge 0$: Natürliche Regenerationsrate der Umwelt.
+Dabei beschreibt $S_t$ den Zustand des Umweltkapitalstocks. Sobald $S_t \le 0$ erreicht wird, kommt es zum unumkehrbaren ökologischen Kollaps und die Produktion bricht vollständig zusammen.
+
+Die Dynamik der Umweltqualität folgt Gleichung:$$S_{t+1} - S_t = -\phi Y_{dt} + \omega S_t \quad \quad$$ 
+$\phi > 0$: Schadensintensität der schmutzigen Produktion.
+
+$\omega \ge 0$: Natürliche Regenerationsrate der Umwelt.
 
 Das **"Geschwindigkeitslimit"** der Natur:  Wächst $Y_{dt}$ dauerhaft mit einer Rate $g > \omega$, sinkt $S_t$ unweigerlich gegen Null – eine Umweltkatastrophe tritt ein.
 
@@ -541,7 +545,9 @@ Ist $A_{dt} > A_{ct}$, folgt $L_{ct} = 0 \implies Y_{ct} = 0$ (reine schmutzige 
 
 Befindet sich die Wirtschaft im schmutzigen Zustand ($A_{dt} > A_{ct}$), muss der Staat intervenieren. Er erhebt eine Steuer $\tau$ auf jede Einheit schmutzigen Outputs, wodurch der Netto-Verkaufspreis des braunen Guts auf $1-\tau$ sinkt.
 
-Dadurch ändern sich die Bedingungen im schmutzigen Sektor:Preis für Inputs: $p_{dit} = (1-\tau)\alpha L_{dt}^{1-\alpha} A_{dit}^{1-\alpha} x_{dit}^{\alpha-1}$
+Dadurch ändern sich die Bedingungen im schmutzigen Sektor:
+
+Preis für Inputs: $p_{dit} = (1-\tau)\alpha L_{dt}^{1-\alpha} A_{dit}^{1-\alpha} x_{dit}^{\alpha-1}$
 
 Gleichgewichtsmenge: $x_{dt} = (1-\tau)^{\frac{1}{1-\alpha}} \alpha^{\frac{2}{1-\alpha}} A_{dt} L_{dt}$
 
@@ -558,7 +564,7 @@ Wird in einem Sektor $j \in \{c, d\}$ produziert, versuchen dort ansässige Entr
 
 Um mit einer Wahrscheinlichkeit $z$ erfolgreich zu sein, müssen $\epsilon z$ Einheiten Arbeit in die Forschung investiert werden. Der Unternehmer maximiert:$$\max_{z} \{ z \beta \pi_{jt} - w_{t-1} \epsilon z \} \quad$$
 
-Dies liefert die Arbitrage-Bedingung erster Ordnung:$$\beta \pi_{jt} = \epsilon w_{t-1} \quad \quad (16.13)$$
+Dies liefert die Arbitrage-Bedingung erster Ordnung:$$\beta \pi_{jt} = \epsilon w_{t-1} \quad \quad$$
 
 Durch Einsetzen der Monopolgewinne und der Arbeitsmarkträumungsbedingung ($L_j + \epsilon z = 1$) erhalten wir für beide Sektoren die identische Gleichgewichtswahrscheinlichkeit für Innovationen:$$z = \frac{1}{\epsilon} - \frac{1}{\alpha \beta \gamma} \quad \quad$$
 
