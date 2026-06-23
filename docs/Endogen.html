@@ -274,6 +274,14 @@ window.Quarto = {
   <li><a href="#wachstumsdynamik-und-nachhaltigkeit" id="toc-wachstumsdynamik-und-nachhaltigkeit" class="nav-link" data-scroll-target="#wachstumsdynamik-und-nachhaltigkeit"><span class="header-section-number">6.8.6</span> Wachstumsdynamik und Nachhaltigkeit</a></li>
   <li><a href="#die-bedingung-für-langfristiges-wachstum" id="toc-die-bedingung-für-langfristiges-wachstum" class="nav-link" data-scroll-target="#die-bedingung-für-langfristiges-wachstum"><span class="header-section-number">6.8.7</span> Die Bedingung für langfristiges Wachstum</a></li>
   </ul></li>
+  <li><a href="#schumpeterianisches-wachstum-mit-gerichtetem-technischen-fortschritt" id="toc-schumpeterianisches-wachstum-mit-gerichtetem-technischen-fortschritt" class="nav-link" data-scroll-target="#schumpeterianisches-wachstum-mit-gerichtetem-technischen-fortschritt"><span class="header-section-number">6.9</span> Schumpeterianisches Wachstum mit gerichtetem technischen Fortschritt</a>
+  <ul class="collapse">
+  <li><a href="#modellaufbau" id="toc-modellaufbau" class="nav-link" data-scroll-target="#modellaufbau"><span class="header-section-number">6.9.1</span> Modellaufbau</a></li>
+  <li><a href="#marktgleichgewicht-produktion-und-gewinne" id="toc-marktgleichgewicht-produktion-und-gewinne" class="nav-link" data-scroll-target="#marktgleichgewicht-produktion-und-gewinne"><span class="header-section-number">6.9.2</span> Marktgleichgewicht: Produktion und Gewinne</a></li>
+  <li><a href="#staatliche-regulierung-besteuerung-der-schmutzigen-produktion" id="toc-staatliche-regulierung-besteuerung-der-schmutzigen-produktion" class="nav-link" data-scroll-target="#staatliche-regulierung-besteuerung-der-schmutzigen-produktion"><span class="header-section-number">6.9.3</span> Staatliche Regulierung: Besteuerung der schmutzigen Produktion</a></li>
+  <li><a href="#innovationsgleichgewicht-und-dynamische-effekte" id="toc-innovationsgleichgewicht-und-dynamische-effekte" class="nav-link" data-scroll-target="#innovationsgleichgewicht-und-dynamische-effekte"><span class="header-section-number">6.9.4</span> Innovationsgleichgewicht und dynamische Effekte</a></li>
+  <li><a href="#gesamtwirtschaftliches-wachstum-und-die-kosten-der-steuer" id="toc-gesamtwirtschaftliches-wachstum-und-die-kosten-der-steuer" class="nav-link" data-scroll-target="#gesamtwirtschaftliches-wachstum-und-die-kosten-der-steuer"><span class="header-section-number">6.9.5</span> Gesamtwirtschaftliches Wachstum und die Kosten der Steuer</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -651,6 +659,59 @@ Y = L^{1-\alpha} A_j^{1-\alpha} x_j^{\alpha}.
 <li>Die von der Regierung gewählte Ressourcen-Abbaurate <span class="math inline">\(q\)</span> ist hinreichend klein.</li>
 </ol>
 <p>Im Gegensatz zum einfachen AK-Modell ist hier <strong>nachhaltiges Wachstum möglich</strong>, da durch zielgerichtete Forschung (“grüne Innovationen”) systematisch Ressourcen eingespart werden können.</p>
+</section>
+</section>
+<section id="schumpeterianisches-wachstum-mit-gerichtetem-technischen-fortschritt" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="schumpeterianisches-wachstum-mit-gerichtetem-technischen-fortschritt"><span class="header-section-number">6.9</span> Schumpeterianisches Wachstum mit gerichtetem technischen Fortschritt</h2>
+<p><strong>Motivation</strong>: Wir erweitern unser Modell nun auf eine Welt mit diskreter Zeit (<span class="math inline">\(t\)</span>) und zwei konkurrierenden Innovations- und Produktionsaktivitäten: saubere (clean) und schmutzige (dirty) Aktivitäten. Schmutzige Produktion baut den Umweltkapitalstock ab, während dieser sich mit einer exogenen Rate regeneriert. Wir untersuchen die Bedingungen für ein Marktgleichgewicht, das Risiko einer Umweltkatastrophe und die Wirkung einer staatlichen Steuer auf schmutzige Produktion.</p>
+<section id="modellaufbau" class="level3" data-number="6.9.1">
+<h3 data-number="6.9.1" class="anchored" data-anchor-id="modellaufbau"><span class="header-section-number">6.9.1</span> Modellaufbau</h3>
+<p>Wir nehmen an, dass die sauberen und schmutzigen Input-Körbe in der finalen Produktion perfekte Substitute sind. Für den aggregierten Output <span class="math inline">\(Y_t\)</span> gilt gemäß Gleichung:<span class="math display">\[Y_t = \begin{cases} Y_{ct} + Y_{dt} &amp; \text{falls } S_t &gt; 0 \\ 0 &amp; \text{andernfalls} \end{cases} \quad \quad\]</span></p>
+<p>Dabei beschreibt <span class="math inline">\(S_t\)</span> den Zustand des Umweltkapitalstocks. Sobald <span class="math inline">\(S_t \le 0\)</span> erreicht wird, kommt es zum unumkehrbaren ökologischen Kollaps und die Produktion bricht vollständig zusammen.Die Dynamik der Umweltqualität folgt Gleichung:<span class="math display">\[S_{t+1} - S_t = -\phi Y_{dt} + \omega S_t \quad \quad\]</span> <span class="math inline">\(\phi &gt; 0\)</span>: Schadensintensität der schmutzigen Produktion.<span class="math inline">\(\omega \ge 0\)</span>: Natürliche Regenerationsrate der Umwelt.</p>
+<p>Das <strong>“Geschwindigkeitslimit”</strong> der Natur: Wächst <span class="math inline">\(Y_{dt}\)</span> dauerhaft mit einer Rate <span class="math inline">\(g &gt; \omega\)</span>, sinkt <span class="math inline">\(S_t\)</span> unweigerlich gegen Null – eine Umweltkatastrophe tritt ein.</p>
+</section>
+<section id="marktgleichgewicht-produktion-und-gewinne" class="level3" data-number="6.9.2">
+<h3 data-number="6.9.2" class="anchored" data-anchor-id="marktgleichgewicht-produktion-und-gewinne"><span class="header-section-number">6.9.2</span> Marktgleichgewicht: Produktion und Gewinne</h3>
+<section id="produktion-bei-gegebener-arbeitsallokation" class="level4" data-number="6.9.2.1">
+<h4 data-number="6.9.2.1" class="anchored" data-anchor-id="produktion-bei-gegebener-arbeitsallokation"><span class="header-section-number">6.9.2.1</span> Produktion bei gegebener Arbeitsallokation</h4>
+<p>In jeder Periode werden das saubere (<span class="math inline">\(Y_c\)</span>) und das schmutzige (<span class="math inline">\(Y_d\)</span>) Gut unter Einsatz von bereichsspezifischer Produktion arbeit (<span class="math inline">\(L_c, L_d\)</span>) und einem Kontinuum spezialisierter Zwischenprodukte <span class="math inline">\(x_i\)</span> hergestellt:<span class="math display">\[Y_{ct} = L_{ct}^{1-\alpha} \int_0^1 A_{cit}^{1-\alpha} x_{cit}^\alpha di \quad \quad Y_{dt} = L_{dt}^{1-\alpha} \int_0^1 A_{dit}^{1-\alpha} x_{dit}^\alpha di \quad \quad\]</span> Wir setzen das finale Gut als Numéraire (<span class="math inline">\(p = 1\)</span>). Der Monopolist für jedes Zwischenprodukt maximiert seinen Gewinn <span class="math inline">\(\pi_{jit} = \max_{x_{ji}} \{p_{jit} x_{jit} - x_{jit}\}\)</span> unter vollkommenem Wettbewerb im Endgutesektor.</p>
+<p>Dies liefert über die Grenzkostenbepreisung die Gleichgewichtsgrößen:Optimale Mengen: <span class="math inline">\(x_{jit} = \alpha^{\frac{2}{1-\alpha}} A_{jit} L_{jt}\)</span>Monopolgewinne: <span class="math inline">\(\pi_{jit} = \frac{1-\alpha}{\alpha} x_{jit}\)</span></p>
+<p>Setzt man <span class="math inline">\(x_{jit}\)</span> in die Produktionsfunktion ein, ergibt sich der sektorale Output in Abhängigkeit der durchschnittlichen Produktivität <span class="math inline">\(A_{jt} = \int_0^1 A_{jit} di\)</span>:<span class="math display">\[Y_{ct} = \alpha^{\frac{2\alpha}{1-\alpha}} A_{ct} L_{ct} \quad \quad Y_{dt} = \alpha^{\frac{2\alpha}{1-\alpha}} A_{dt} L_{dt} \quad \quad\]</span></p>
+</section>
+<section id="die-allokation-der-arbeit-im-freien-markt" class="level4" data-number="6.9.2.2">
+<h4 data-number="6.9.2.2" class="anchored" data-anchor-id="die-allokation-der-arbeit-im-freien-markt"><span class="header-section-number">6.9.2.2</span> Die Allokation der Arbeit im freien Markt</h4>
+<p>Unternehmen stellen Arbeiter bis zum Punkt ein, an dem das Grenzprodukt dem Lohnsatz <span class="math inline">\(w\)</span> entspricht. Aus den Produktionsfunktionen für den Sektor folgen die Grenzprodukte:<span class="math display">\[\frac{\partial Y_c}{\partial L_c} = (1-\alpha)\alpha^{\frac{2\alpha}{1-\alpha}} A_c \quad \quad \frac{\partial Y_d}{\partial L_d} = (1-\alpha)\alpha^{\frac{2\alpha}{1-\alpha}} A_d \quad \quad\]</span></p>
+<p>Da Arbeit vollkommen mobil ist, fließt sie vollständig in den Sektor mit der höheren durchschnittlichen Produktivität.</p>
+<p>Ist <span class="math inline">\(A_{ct} &gt; A_{dt}\)</span>, folgt <span class="math inline">\(L_{dt} = 0 \implies Y_{dt} = 0\)</span> (reine grüne Wirtschaft).</p>
+<p>Ist <span class="math inline">\(A_{dt} &gt; A_{ct}\)</span>, folgt <span class="math inline">\(L_{ct} = 0 \implies Y_{ct} = 0\)</span> (reine schmutzige Wirtschaft).</p>
+</section>
+</section>
+<section id="staatliche-regulierung-besteuerung-der-schmutzigen-produktion" class="level3" data-number="6.9.3">
+<h3 data-number="6.9.3" class="anchored" data-anchor-id="staatliche-regulierung-besteuerung-der-schmutzigen-produktion"><span class="header-section-number">6.9.3</span> Staatliche Regulierung: Besteuerung der schmutzigen Produktion</h3>
+<p>Befindet sich die Wirtschaft im schmutzigen Zustand (<span class="math inline">\(A_{dt} &gt; A_{ct}\)</span>), muss der Staat intervenieren. Er erhebt eine Steuer <span class="math inline">\(\tau\)</span> auf jede Einheit schmutzigen Outputs, wodurch der Netto-Verkaufspreis des braunen Guts auf <span class="math inline">\(1-\tau\)</span> sinkt.</p>
+<p>Dadurch ändern sich die Bedingungen im schmutzigen Sektor:Preis für Inputs: <span class="math inline">\(p_{dit} = (1-\tau)\alpha L_{dt}^{1-\alpha} A_{dit}^{1-\alpha} x_{dit}^{\alpha-1}\)</span></p>
+<p>Gleichgewichtsmenge: <span class="math inline">\(x_{dt} = (1-\tau)^{\frac{1}{1-\alpha}} \alpha^{\frac{2}{1-\alpha}} A_{dt} L_{dt}\)</span></p>
+<p>Sektoraler Output: <span class="math inline">\(Y_{dt} = (1-\tau)^{\frac{\alpha}{1-\alpha}} \alpha^{\frac{2\alpha}{1-\alpha}} A_{dt} L_{dt}\)</span></p>
+<p>Das neue Verhältnis der Grenzprodukte der Arbeit bestimmt den Umlenkungspunkt. Die Wirtschaft produziert nur dann schmutzige Güter, wenn <span class="math inline">\((1-\tau)^{\frac{1}{1-\alpha}} A_{dt} &gt; A_{ct}\)</span> gilt.</p>
+<p>Daraus leitet sich die minimale Emissions-Steuer <span class="math inline">\(\tau^{\min}\)</span> ab, die notwendig ist, um die Produktion sofort auf den sauberen Pfad zu zwingen:<span class="math display">\[\tau^{\min} = 1 - \left( \frac{A_{ct}}{A_{dt}} \right)^{1-\alpha} \quad \quad\]</span></p>
+</section>
+<section id="innovationsgleichgewicht-und-dynamische-effekte" class="level3" data-number="6.9.4">
+<h3 data-number="6.9.4" class="anchored" data-anchor-id="innovationsgleichgewicht-und-dynamische-effekte"><span class="header-section-number">6.9.4</span> Innovationsgleichgewicht und dynamische Effekte</h3>
+<p>Wird in einem Sektor <span class="math inline">\(j \in \{c, d\}\)</span> produziert, versuchen dort ansässige Entrepreneure die Produktivität durch Forschung und Entwicklung zu steigern. Ein erfolgreicher Innovator erhöht die Produktivität der Vorstufe von <span class="math inline">\(A_{j,t-1}\)</span> auf <span class="math inline">\(\gamma A_{j,t-1}\)</span> mit <span class="math inline">\(\gamma &gt; 1\)</span>.</p>
+<p>Um mit einer Wahrscheinlichkeit <span class="math inline">\(z\)</span> erfolgreich zu sein, müssen <span class="math inline">\(\epsilon z\)</span> Einheiten Arbeit in die Forschung investiert werden. Der Unternehmer maximiert:<span class="math display">\[\max_{z} \{ z \beta \pi_{jt} - w_{t-1} \epsilon z \} \quad\]</span></p>
+<p>Dies liefert die Arbitrage-Bedingung erster Ordnung:<span class="math display">\[\beta \pi_{jt} = \epsilon w_{t-1} \quad \quad (16.13)\]</span></p>
+<p>Durch Einsetzen der Monopolgewinne und der Arbeitsmarkträumungsbedingung (<span class="math inline">\(L_j + \epsilon z = 1\)</span>) erhalten wir für beide Sektoren die identische Gleichgewichtswahrscheinlichkeit für Innovationen:<span class="math display">\[z = \frac{1}{\epsilon} - \frac{1}{\alpha \beta \gamma} \quad \quad\]</span></p>
+<p><strong>Die Innovationsrate <span class="math inline">\(z\)</span> ist im jeweiligen aktiven Sektor unabhängig von der Steuer <span class="math inline">\(\tau\)</span>!</strong> Die Erhöhung von <span class="math inline">\(\tau\)</span> reduziert zwar die Gewinne des schmutzigen Sektors, senkt aber im exakt gleichen Maße die dortigen Löhne <span class="math inline">\(w_{t-1}\)</span>, sodass der Anreiz zu forschen konstant bleibt.</p>
+</section>
+<section id="gesamtwirtschaftliches-wachstum-und-die-kosten-der-steuer" class="level3" data-number="6.9.5">
+<h3 data-number="6.9.5" class="anchored" data-anchor-id="gesamtwirtschaftliches-wachstum-und-die-kosten-der-steuer"><span class="header-section-number">6.9.5</span> Gesamtwirtschaftliches Wachstum und die Kosten der Steuer</h3>
+<p>Das langfristige Wirtschaftswachstum entspricht der Wachstumsrate der durchschnittlichen Produktivität im jeweils aktiven Sektor:<span class="math display">\[A_{jt} = z \gamma A_{j,t-1} + (1-z) A_{j,t-1} \implies g = z(\gamma - 1) = \left(\frac{1}{\epsilon} - \frac{1}{\alpha \beta \gamma}\right)(\gamma - 1) \quad\]</span>Ohne Steuer verbleibt die Volkswirtschaft im schmutzigen Sektor. Sie steuert auf eine Umweltkatastrophe zu, falls die ökonomische Wachstumsrate das ökologische Geschwindigkeitslimit überschreitet:<span class="math display">\[\left(\frac{1}{\epsilon} - \frac{1}{\alpha \beta \gamma}\right)(\gamma - 1) &gt; \omega \quad \quad\]</span></p>
+<p><strong>Zentrale wirtschaftspolitische Schlussfolgerungen:</strong></p>
+<ul>
+<li><p>Kein dauerhaftes Opfer an langfristigem Wachstum: Da die Innovationsrate <span class="math inline">\(z\)</span> im sauberen Sektor exakt der im schmutzigen Sektor entspricht, führt die CO2-Steuer langfristig nicht zu einem geringeren Wachstum. Sie rettet die Wirtschaft vor dem plötzlichen Wachstumsstopp durch den ökologischen Kollaps.</p></li>
+<li><p>Kurzfristige Transitionskosten: Im Moment der Einführung der Steuer fällt das Produktionsniveau des BIP einmalig ab, da sich das Produktionsniveau um den Faktor <span class="math inline">\(A_{ct}/A_{dt} &lt; 1\)</span> reduziert.</p></li>
+<li><p><strong>Die Steuer ist temporär</strong>: Da die schmutzige Forschung nach dem Sektorwechsel stagniert, holt <span class="math inline">\(A_{ct}\)</span> im Laufe der Zeit auf und überholt <span class="math inline">\(A_{dt}\)</span> permanent. Sobald <span class="math inline">\(A_{ct} &gt; A_{dt}\)</span> gilt, kann die Steuer vollständig abgeschafft werden, da der Markt von nun an inhärent und ohne staatlichen Zwang nur noch saubere Technologien nutzt.</p></li>
+</ul>
 
 
 </section>

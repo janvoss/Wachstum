@@ -502,3 +502,77 @@ Damit diese Bedingung erfüllt ist (und somit genug Forschungsarbeit $n$ zur Ver
 3. Die von der Regierung gewählte Ressourcen-Abbaurate $q$ ist hinreichend klein.
 
 Im Gegensatz zum einfachen AK-Modell ist hier **nachhaltiges Wachstum möglich**, da durch zielgerichtete Forschung ("grüne Innovationen") systematisch Ressourcen eingespart werden können.
+
+## Schumpeterianisches Wachstum mit gerichtetem technischen Fortschritt
+
+**Motivation**: Wir erweitern unser Modell nun auf eine Welt mit diskreter Zeit ($t$) und zwei konkurrierenden Innovations- und Produktionsaktivitäten: saubere (clean) und schmutzige (dirty) Aktivitäten. Schmutzige Produktion baut den Umweltkapitalstock ab, während dieser sich mit einer exogenen Rate regeneriert. Wir untersuchen die Bedingungen für ein Marktgleichgewicht, das Risiko einer Umweltkatastrophe und die Wirkung einer staatlichen Steuer auf schmutzige Produktion.
+
+### Modellaufbau
+
+Wir nehmen an, dass die sauberen und schmutzigen Input-Körbe in der finalen Produktion perfekte Substitute sind. Für den aggregierten Output $Y_t$ gilt gemäß Gleichung:$$Y_t = \begin{cases} Y_{ct} + Y_{dt} & \text{falls } S_t > 0 \\ 0 & \text{andernfalls} \end{cases} \quad \quad$$
+
+Dabei beschreibt $S_t$ den Zustand des Umweltkapitalstocks. Sobald $S_t \le 0$ erreicht wird, kommt es zum unumkehrbaren ökologischen Kollaps und die Produktion bricht vollständig zusammen.Die Dynamik der Umweltqualität folgt Gleichung:$$S_{t+1} - S_t = -\phi Y_{dt} + \omega S_t \quad \quad$$ 
+$\phi > 0$: Schadensintensität der schmutzigen Produktion.$\omega \ge 0$: Natürliche Regenerationsrate der Umwelt.
+
+Das **"Geschwindigkeitslimit"** der Natur:  Wächst $Y_{dt}$ dauerhaft mit einer Rate $g > \omega$, sinkt $S_t$ unweigerlich gegen Null – eine Umweltkatastrophe tritt ein.
+
+### Marktgleichgewicht: Produktion und Gewinne
+
+#### Produktion bei gegebener Arbeitsallokation
+
+In jeder Periode werden das saubere ($Y_c$) und das schmutzige ($Y_d$) Gut unter Einsatz von bereichsspezifischer Produktion arbeit ($L_c, L_d$) und einem Kontinuum spezialisierter Zwischenprodukte $x_i$ hergestellt:$$Y_{ct} = L_{ct}^{1-\alpha} \int_0^1 A_{cit}^{1-\alpha} x_{cit}^\alpha di \quad \quad Y_{dt} = L_{dt}^{1-\alpha} \int_0^1 A_{dit}^{1-\alpha} x_{dit}^\alpha di \quad \quad$$
+Wir setzen das finale Gut als Numéraire ($p = 1$). Der Monopolist für jedes Zwischenprodukt maximiert seinen Gewinn $\pi_{jit} = \max_{x_{ji}} \{p_{jit} x_{jit} - x_{jit}\}$ unter vollkommenem Wettbewerb im Endgutesektor. 
+
+Dies liefert über die Grenzkostenbepreisung die Gleichgewichtsgrößen:Optimale Mengen: $x_{jit} = \alpha^{\frac{2}{1-\alpha}} A_{jit} L_{jt}$Monopolgewinne: $\pi_{jit} = \frac{1-\alpha}{\alpha} x_{jit}$
+
+Setzt man $x_{jit}$ in die Produktionsfunktion ein, ergibt sich der sektorale Output in Abhängigkeit der durchschnittlichen Produktivität $A_{jt} = \int_0^1 A_{jit} di$:$$Y_{ct} = \alpha^{\frac{2\alpha}{1-\alpha}} A_{ct} L_{ct} \quad \quad Y_{dt} = \alpha^{\frac{2\alpha}{1-\alpha}} A_{dt} L_{dt} \quad \quad$$
+
+#### Die Allokation der Arbeit im freien Markt
+
+Unternehmen stellen Arbeiter bis zum Punkt ein, an dem das Grenzprodukt dem Lohnsatz $w$ entspricht. Aus den Produktionsfunktionen für den Sektor  folgen die Grenzprodukte:$$\frac{\partial Y_c}{\partial L_c} = (1-\alpha)\alpha^{\frac{2\alpha}{1-\alpha}} A_c \quad \quad \frac{\partial Y_d}{\partial L_d} = (1-\alpha)\alpha^{\frac{2\alpha}{1-\alpha}} A_d \quad \quad$$
+
+Da Arbeit vollkommen mobil ist, fließt sie vollständig in den Sektor mit der höheren durchschnittlichen Produktivität.
+
+Ist $A_{ct} > A_{dt}$, folgt $L_{dt} = 0 \implies Y_{dt} = 0$ (reine grüne Wirtschaft).
+
+Ist $A_{dt} > A_{ct}$, folgt $L_{ct} = 0 \implies Y_{ct} = 0$ (reine schmutzige Wirtschaft).
+
+### Staatliche Regulierung: Besteuerung der schmutzigen Produktion
+
+Befindet sich die Wirtschaft im schmutzigen Zustand ($A_{dt} > A_{ct}$), muss der Staat intervenieren. Er erhebt eine Steuer $\tau$ auf jede Einheit schmutzigen Outputs, wodurch der Netto-Verkaufspreis des braunen Guts auf $1-\tau$ sinkt.
+
+Dadurch ändern sich die Bedingungen im schmutzigen Sektor:Preis für Inputs: $p_{dit} = (1-\tau)\alpha L_{dt}^{1-\alpha} A_{dit}^{1-\alpha} x_{dit}^{\alpha-1}$
+
+Gleichgewichtsmenge: $x_{dt} = (1-\tau)^{\frac{1}{1-\alpha}} \alpha^{\frac{2}{1-\alpha}} A_{dt} L_{dt}$
+
+Sektoraler Output: $Y_{dt} = (1-\tau)^{\frac{\alpha}{1-\alpha}} \alpha^{\frac{2\alpha}{1-\alpha}} A_{dt} L_{dt}$
+
+Das neue Verhältnis der Grenzprodukte der Arbeit bestimmt den Umlenkungspunkt. Die Wirtschaft produziert nur dann schmutzige Güter, wenn $(1-\tau)^{\frac{1}{1-\alpha}} A_{dt} > A_{ct}$ gilt. 
+
+Daraus leitet sich die minimale Emissions-Steuer $\tau^{\min}$ ab, die notwendig ist, um die Produktion sofort auf den sauberen Pfad zu zwingen:$$\tau^{\min} = 1 - \left( \frac{A_{ct}}{A_{dt}} \right)^{1-\alpha} \quad \quad$$
+
+
+### Innovationsgleichgewicht und dynamische Effekte
+
+Wird in einem Sektor $j \in \{c, d\}$ produziert, versuchen dort ansässige Entrepreneure die Produktivität durch Forschung und Entwicklung zu steigern. Ein erfolgreicher Innovator erhöht die Produktivität der Vorstufe von $A_{j,t-1}$ auf $\gamma A_{j,t-1}$ mit $\gamma > 1$.
+
+Um mit einer Wahrscheinlichkeit $z$ erfolgreich zu sein, müssen $\epsilon z$ Einheiten Arbeit in die Forschung investiert werden. Der Unternehmer maximiert:$$\max_{z} \{ z \beta \pi_{jt} - w_{t-1} \epsilon z \} \quad$$
+
+Dies liefert die Arbitrage-Bedingung erster Ordnung:$$\beta \pi_{jt} = \epsilon w_{t-1} \quad \quad (16.13)$$
+
+Durch Einsetzen der Monopolgewinne und der Arbeitsmarkträumungsbedingung ($L_j + \epsilon z = 1$) erhalten wir für beide Sektoren die identische Gleichgewichtswahrscheinlichkeit für Innovationen:$$z = \frac{1}{\epsilon} - \frac{1}{\alpha \beta \gamma} \quad \quad$$
+
+**Die Innovationsrate $z$ ist im jeweiligen aktiven Sektor unabhängig von der Steuer $\tau$!** Die Erhöhung von $\tau$ reduziert zwar die Gewinne des schmutzigen Sektors, senkt aber im exakt gleichen Maße die dortigen Löhne $w_{t-1}$, sodass der Anreiz zu forschen konstant bleibt.
+
+### Gesamtwirtschaftliches Wachstum und die Kosten der Steuer
+
+Das langfristige Wirtschaftswachstum entspricht der Wachstumsrate der durchschnittlichen Produktivität im jeweils aktiven Sektor:$$A_{jt} = z \gamma A_{j,t-1} + (1-z) A_{j,t-1} \implies g = z(\gamma - 1) = \left(\frac{1}{\epsilon} - \frac{1}{\alpha \beta \gamma}\right)(\gamma - 1) \quad$$Ohne Steuer verbleibt die Volkswirtschaft im schmutzigen Sektor. Sie steuert auf eine Umweltkatastrophe zu, falls die ökonomische Wachstumsrate das ökologische Geschwindigkeitslimit überschreitet:$$\left(\frac{1}{\epsilon} - \frac{1}{\alpha \beta \gamma}\right)(\gamma - 1) > \omega \quad \quad$$
+
+
+**Zentrale wirtschaftspolitische Schlussfolgerungen:**
+
+- Kein dauerhaftes Opfer an langfristigem Wachstum: Da die Innovationsrate $z$ im sauberen Sektor exakt der im schmutzigen Sektor entspricht, führt die CO2-Steuer langfristig nicht zu einem geringeren Wachstum. Sie rettet die Wirtschaft vor dem plötzlichen Wachstumsstopp durch den ökologischen Kollaps.
+
+- Kurzfristige Transitionskosten: Im Moment der Einführung der Steuer fällt das Produktionsniveau des BIP einmalig ab, da sich das Produktionsniveau um den Faktor $A_{ct}/A_{dt} < 1$ reduziert.
+
+- **Die Steuer ist temporär**: Da die schmutzige Forschung nach dem Sektorwechsel stagniert, holt $A_{ct}$ im Laufe der Zeit auf und überholt $A_{dt}$ permanent. Sobald $A_{ct} > A_{dt}$ gilt, kann die Steuer vollständig abgeschafft werden, da der Markt von nun an inhärent und ohne staatlichen Zwang nur noch saubere Technologien nutzt.
