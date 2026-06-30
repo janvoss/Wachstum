@@ -59,3 +59,23 @@
 1. Welche Merkmale werden Innovationen typischerweise zugeschrieben?
 
 1. Welche Arten von Innovationen gibt es?
+
+
+-------------
+**Noch neuere Fragen**
+
+1. Wie bestimmt sich der gleichgewichtige Kapitalstock pro Kopf und das gleichgewichtige Einkommen pro Kopf im neoklassischen Wachstumsmodell mit endogener Sparquote?
+
+1. Welchen Einfluss hat der Parameter der Risikoneigung $\sigma$ auf diese Werte?
+
+1. Worauf hat er überhaupt einen Einfluss?
+
+1. Wie wird Wachstum in sogenannten AK-Modellen mit breitem Kapitalbegriff begründet?
+
+1. Erläutern Sie, wie Wachstum im Rahmen eines Modells mit Wissensspillovers begründet wird, wenn die aggregierte Produktionsfunktion durch $Y=AK^{\alpha+\eta}$ gegeben ist und $\eta$ den Spillovereffekt repräsentiert. Welche Annahme über $(\alpha+\eta)$ ist für plausibles langfristiges Wachstum erforderlich?
+
+1. Angenommen, diese Annahme gilt. Ist das Wachstum bei endogener Sparquote dann Pareto-effizient?
+
+1. Welche Bedingung muss gelten, damit im Rahmen eines Schumpeterschen Wachstumsmodells mit einer endlichen Ressource langfristiges Wachstum dauerhfat möglich ist?
+
+1. Beschreiben Sie verbal: Wie lässt sich in einem Schumpeterschen Wachstumsmodell mit einem dreckigen und einem sauberen Sektor die Produktion vollständig auf den sauberen Sektor verlagern?
